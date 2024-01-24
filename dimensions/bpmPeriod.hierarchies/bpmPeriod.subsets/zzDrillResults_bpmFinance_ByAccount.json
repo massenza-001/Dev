@@ -1,5 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"zzDrillResults_bpmFinance_ByAccount",
-	"Expression":"{TM1DRILLDOWNMEMBER( {[bpmPeriod].[201601]}, ALL, RECURSIVE )}"
-}

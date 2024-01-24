@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"2016Qtrs",
-	"Alias":"PeriodName",
-	"Expression":"{EXCEPT(DRILLDOWNMEMBER({[bpmPeriod].[bpmPeriod].[All Years^2016]} , {[bpmPeriod].[bpmPeriod].[All Years^2016]} , RECURSIVE) , {[bpmPeriod].[bpmPeriod].[All Years^2016^201600]})}"
-}

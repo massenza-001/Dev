@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"zzDrillFinanceByAccount",
-	"Alias":"CodeName",
-	"Expression":"{TM1DRILLDOWNMEMBER( {[bpmAccount].[Operating Expenses]}, ALL, RECURSIVE )}"
-}
