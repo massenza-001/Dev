@@ -1,0 +1,22 @@
+{
+	"@type":"Subset",
+	"Name":"Model Controls",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('Server Data Directory')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('Log Path')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('CleanUp Path')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('Export_Import Path')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('Show Currency')"
+		}
+	]
+}

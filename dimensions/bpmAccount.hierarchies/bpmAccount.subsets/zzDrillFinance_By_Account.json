@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"zzDrillFinance_By_Account",
+	"Alias":"CodeName",
+	"Expression":"{TM1DRILLDOWNMEMBER( {[bpmAccount].[Gross Margin]}, ALL, RECURSIVE )}"
+}

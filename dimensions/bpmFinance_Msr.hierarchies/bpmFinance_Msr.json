@@ -1,0 +1,137 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Balance Post-Alloc",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Balance Pre-Alloc",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Original",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Allocations",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Alloc - Corp OH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Alloc - IT to other OH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rpt USD AR Change",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Rpt USD CYAR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RPT USD PYAR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rpt USD BR Change",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Rpt USD CYBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RPT USD PYBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base CYBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base CYAR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Planner Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Manager Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Variance Comment",
+			"Type":"String"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Balance Post-Alloc",
+			"ComponentName":"Balance Pre-Alloc",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Post-Alloc",
+			"ComponentName":"Total Allocations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Pre-Alloc",
+			"ComponentName":"Original",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Pre-Alloc",
+			"ComponentName":"Adjustment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Allocations",
+			"ComponentName":"Alloc - Corp OH",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Allocations",
+			"ComponentName":"Alloc - IT to other OH",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rpt USD AR Change",
+			"ComponentName":"Rpt USD CYAR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rpt USD AR Change",
+			"ComponentName":"RPT USD PYAR",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Rpt USD BR Change",
+			"ComponentName":"Rpt USD CYBR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rpt USD BR Change",
+			"ComponentName":"RPT USD PYBR",
+			"Weight":-1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmFinance_Msr.subsets/Default.json",
+		"bpmFinance_Msr.subsets/Entry.json"
+	]
+}

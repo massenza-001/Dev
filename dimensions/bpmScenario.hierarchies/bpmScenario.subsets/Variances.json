@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Variances",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Act vs Final Budget')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan vs Plan V1')"
+		}
+	]
+}

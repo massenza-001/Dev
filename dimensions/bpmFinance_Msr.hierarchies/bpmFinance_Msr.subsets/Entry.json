@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Entry",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmFinance_Msr')/Hierarchies('bpmFinance_Msr')/Elements('Original')"
+		},
+		{
+			"@id":"Dimensions('bpmFinance_Msr')/Hierarchies('bpmFinance_Msr')/Elements('Adjustment')"
+		}
+	]
+}

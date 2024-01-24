@@ -1,0 +1,328 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region Scenario Variances
+#======================================================
+# VARIRANCE Scenarios - use Account Attribute to determine sign.
+#======================================================
+[ 'Act vs Final Budget' ] = S: STET;
+[ 'Act vs Final Budget' ] = ( [ 'Actuals' ] - [ 'Final Budget' ] ) * NUMBR( DB('}ElementAttributes_bpmAccount',!bpmAccount,  'Multiplier') );
+
+[ 'Plan vs Final Budget' ] = S: STET;
+[ 'Plan vs Final Budget' ] = ( [ 'Plan' ] - [ 'Final Budget' ] ) * NUMBR( DB('}ElementAttributes_bpmAccount',!bpmAccount,  'Multiplier') );
+#EndRegion
+
+#Region - Rule over Actual into Plan Scenario
+#======================================================
+# Actual data, controlled by }bpmPeriod_Info which determines which are plan months
+# 0 = Actuals, 1 = Plan
+#======================================================
+[ 'Plan' ]= N:
+     IF( DB( 'bpmPeriod_Info', !bpmPeriod, 'IsPlanMonth' ) <= 0
+     ,
+          [ 'Actuals' ]
+     ,
+          Continue
+     );
+#EndRegion
+
+#Region PLAN BALANCE SHEET RULES
+#======================================================
+# PLAN - Balance Sheet - Acccounts
+#======================================================
+
+# Balance Sheet - Allowance for Doubtful Account
+#-----------------------------------------------------------------------------------------------------------
+[ 'Plan', '181200 ']= N:
+     [ '111100' ] * ['Allowance for Doubtful Account PCT'];
+
+# Balance Sheet - Accounts Payable
+#-----------------------------------------------------------------------------------------------------------
+[ 'Plan', '200000' ]= N:
+     ['Operating Expenses (w/o comp)', 'Total Departments'] * ['AP Pct of Non-Comp Expenses'];
+
+# Balance Sheet - Use Retain Earnings to BALANCE Balance Sheet
+#-----------------------------------------------------------------------------------------------------------
+[  '302000', '00', 'Original' ]= N:
+     [ 'Total Departments', 'Total Assets' ] -
+     ( [ 'Total Departments', 'Total Liabilities' ] +
+        [ 'Total Departments', 'Common Stock - TLC' ] +
+        [ 'Total Departments', 'APIC - TLC' ] +
+        [ 'Total Departments', '304000' ] +
+        [ 'Total Departments', 'CY Income' ] +
+        [ 'Total Departments', '301500' ]
+     );
+
+[ '302000' ]= N: 0;
+#EndRegion
+
+#Region STET ADJUSTMENT Book to allow data entry
+#======================================================
+#  Adjustments Books open for input
+#======================================================
+[ 'Adjustment' ]= STET;
+#EndRegion
+
+#Region COMPENSATION MODEL LINK - FOR PLAN SCENARIO
+# ======================================================
+# Pull data from Comp cube
+# ======================================================
+
+# Taxable Gross Pay
+[ 'Plan', '600010', 'Original' ]= N:
+	DB('bpmStaff_Alloc', !bpmScenario, 'Total Company', !bpmCompany , 'Total Departments', !bpmDepartment, 'Total Employees', !bpmPeriod, 'Taxable Gross');
+
+#FICA
+[ 'Plan', '601130', 'Original' ]= N:
+	DB('bpmStaff_Alloc', !bpmScenario, 'Total Company', !bpmCompany , 'Total Departments', !bpmDepartment, 'Total Employees', !bpmPeriod, 'FICA and Medicare');
+
+#Unemployment
+[ 'Plan', '601140', 'Original' ]= N:
+	DB('bpmStaff_Alloc', !bpmScenario, 'Total Company', !bpmCompany , 'Total Departments', !bpmDepartment, 'Total Employees', !bpmPeriod, 'Unemployment Taxes');
+
+#Medical
+[ 'Plan', '611110', 'Original' ]= N:
+	DB('bpmStaff_Alloc', !bpmScenario, 'Total Company', !bpmCompany , 'Total Departments', !bpmDepartment, 'Total Employees', !bpmPeriod, 'Dental') +
+	DB('bpmStaff_Alloc', !bpmScenario, 'Total Company', !bpmCompany , 'Total Departments', !bpmDepartment, 'Total Employees', !bpmPeriod, 'Medical');
+
+#401K
+[ 'Plan', '611190', 'Original' ]= N:
+	DB('bpmStaff_Alloc', !bpmScenario, 'Total Company', !bpmCompany , 'Total Departments', !bpmDepartment, 'Total Employees', !bpmPeriod, '401K Match');
+
+#Other Benefits
+[ 'Plan', '600050', 'Original' ]= N:
+	DB('bpmStaff_Alloc', !bpmScenario, 'Total Company', !bpmCompany , 'Total Departments', !bpmDepartment, 'Total Employees', !bpmPeriod, 'Other Benefits');
+
+#EndRegion
+
+#Region ANNUAL LINK - FOR PLAN SCENARIO
+# =====================================================
+# Pull Annual value from Annual Cube
+# =====================================================
+[ 'Plan', 'Original' ]= N:
+
+# Check if Annual has data if yes pull data in else continue
+IF( DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment,
+           !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Annual Amount' )<>0
+,
+#IF Year is fully planned
+	IF( DB( 'bpmPeriod_Info', !bpmPeriod, 'IsPlanMonth' ) <= 0
+	,
+		DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Annual Amount' )
+		*
+		( DB('bpmFinance_SpreadMethods',
+			DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Spread Method' )
+			, !bpmPeriod)
+			\
+		  DB('bpmFinance_SpreadMethods',
+			DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Spread Method' )
+			, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'))
+		)
+	,
+#Year Partially Actuals so backout YTD
+		( DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment,
+          	 !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Annual Amount' ) -
+			DB('bpmFinance', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, DB('bpmControls', 'Value', 'Plan Act Period YTD'), 'Balance Pre-Alloc')
+		)
+		*
+		( DB('bpmFinance_SpreadMethods',
+			DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Spread Method' )
+			, !bpmPeriod)
+			\
+		  ( DB('bpmFinance_SpreadMethods',
+			DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Spread Method' )
+			, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year')) -
+		    DB('bpmFinance_SpreadMethods',
+			DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'), 'Spread Method' )
+			, DB('bpmControls', 'Value', 'Plan Act Period YTD'))
+
+		   )
+		)
+	)
+,
+     CONTINUE
+);
+#EndRegion
+
+#Region LINE ITEM LINK - FOR PLAN SCENARIO
+# =====================================================
+# Pull Total Line Item value from Line Item Detail Cube
+# =====================================================
+[ 'Plan', 'Original' ]= N:
+# Check if Line Item has data if yes pull data in else continue
+IF( DB('bpmFinance_LineItem', !bpmScenario, !bpmCompany, !bpmDepartment,
+           !bpmAccount, !bpmCurrency, 'Total Line Items',
+            DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year') | 'HasData', 'Original' )<>0
+,
+     DB( 'bpmFinance_LineItem', !bpmScenario, !bpmCompany, !bpmDepartment,
+          !bpmAccount, !bpmCurrency, 'Total Line Items', !bpmPeriod, 'Original' )
+,
+     CONTINUE
+);
+#EndRegion
+
+#Region FX CALC
+#======================================================
+# FX logic CALC - NOTE result in invalid value 99999999999999 if no rate
+#======================================================
+# Convert to a specific reporting currency
+[ { 'Rpt USD CYBR', 'Rpt USD CYAR',  'Rpt USD PYBR', 'Rpt USD PYAR' } ] = N:
+# If a rate is missing, make it obvious
+IF ( DB('bpmFXRates', !bpmCurrency,
+            ATTRS( 'bpmFinance_Msr',!bpmFinance_Msr, 'Report Currency'),
+            ATTRS( 'bpmFinance_Msr',!bpmFinance_Msr,'FX Type'),
+            ATTRS( 'bpmAccount',!bpmAccount,'CurrencyType'),
+            !bpmPeriod)  = 0
+,
+     0
+,
+# Have rate so calculate FX value
+     IF ( DB('}ElementAttributes_bpmAccount', !bpmAccount, 'CurrencyType' ) @= 'None'
+     ,
+          [ 'Balance Post-Alloc' ] *
+          1
+     ,
+     IF ( DB('}ElementAttributes_bpmAccount', !bpmAccount, 'CurrencyType' ) @= 'Average'
+     ,
+# P&L Accounts
+          [ 'Balance Post-Alloc' ] *
+          DB( 'bpmFXRates', !bpmCurrency,
+                 ATTRS( 'bpmFinance_Msr',!bpmFinance_Msr, 'Report Currency'),
+                 ATTRS( 'bpmFinance_Msr',!bpmFinance_Msr,'FX Type'),
+                 'Average',
+                 !bpmPeriod
+          )
+     ,
+# BS Accounts Calculate YTD balance then back out prior period YTD value
+          DB( 'bpmFinance', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount,
+                !bpmCurrency, !bpmPeriod | 'YTD', 'Balance Post-Alloc'
+		)   *
+          DB('bpmFXRates', !bpmCurrency,
+                ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr, 'Report Currency' ),
+                ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr, 'FX Type' ),
+                'Ending Change',
+                !bpmPeriod
+          ) +
+          [ 'Balance Post-Alloc' ] *
+          DB( 'bpmFXRates', !bpmCurrency,
+               ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr, 'Report Currency' ),
+               ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr, 'FX Type' ),
+               'Previous Ending', !bpmPeriod
+          )
+     ) )
+);
+
+# Convert to the company's base (primary) currency
+[ {'Base CYBR', 'Base CYAR'} ] = N:
+# If a rate is missing, make it obvious
+IF ( DB( 'bpmFXRates', !bpmCurrency,
+          ATTRS( 'bpmCompany', !bpmCompany, 'Currency' ) | '_Rpt',
+          ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr,'FX Type' ),
+          ATTRS( 'bpmAccount', !bpmAccount, 'CurrencyType' ),
+          !bpmPeriod )  = 0
+,
+     0
+,
+# Have rate so calculate FX value
+     IF ( DB('}ElementAttributes_bpmAccount', !bpmAccount, 'CurrencyType' ) @= 'None'
+     ,
+          [ 'Balance Post-Alloc' ] *
+          1
+     ,
+     IF ( DB( '}ElementAttributes_bpmAccount', !bpmAccount, 'CurrencyType' ) @= 'Average'
+     ,
+# P&L Accounts
+          [ 'Balance Post-Alloc' ] *
+          DB( 'bpmFXRates', !bpmCurrency,
+                ATTRS( 'bpmCompany', !bpmCompany, 'Currency' ) | '_Rpt',
+                ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr, 'FX Type' ),
+                'Average',
+                !bpmPeriod
+          )
+     ,
+# BS Accounts
+          DB( 'bpmFinance', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount,
+               !bpmCurrency, 'Balance Post-Alloc', !bpmPeriod | 'YTD' )   *
+          DB( 'bpmFXRates', !bpmCurrency,
+                ATTRS( 'bpmCompany', !bpmCompany, 'Currency' ) | '_Rpt',
+                ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr,'FX Type' ),
+                'Ending Change',
+                !bpmPeriod
+          ) +
+          [ 'Balance Post-Alloc' ] *
+          DB( 'bpmFXRates', !bpmCurrency,
+                ATTRS( 'bpmCompany', !bpmCompany, 'Currency' ) | '_Rpt',
+               ATTRS( 'bpmFinance_Msr', !bpmFinance_Msr, 'FX Type' ),
+               'Previous Ending', !bpmPeriod
+          )
+     ) )
+);
+#EndRegion
+
+#Region FEEDERS
+
+FEEDERS;
+
+# ======================================================
+# Current Actual feeds PLAN
+# ======================================================
+[ 'Actuals', '2015' ] => [ 'Plan' ];
+[ 'Actuals', '2016' ] => [ 'Plan' ];
+
+# ======================================================
+# Balance Sheet Drivers
+# ======================================================
+[ 'Plan', '111100' ]=>  [ '181200' ], [ '302000' ];
+[ 'Plan', 'AP Pct of Non-Comp Expenses' ]=> [ '200000' ], [ '302000' ];
+[ 'Total Assets' ]=> [ '302000' ];
+
+# ======================================================
+# Balance Sheet feeds Cash Flow Model
+# ======================================================
+[  'Balance Post-Alloc', 'Cash Flow Items' ]=>
+     DB( 'bpmFinance_CashFlow', !bpmScenario, !bpmCompany, 'Cash and Cash Equivalents at End of Period', !bpmPeriod, 'Original');
+
+# ======================================================
+# Plan scenario feeds Finance Value in Annual
+# ======================================================
+[ 'Plan', {'2015', '2016', '2017' } ] =>
+     DB( 'bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, ATTRS( 'bpmPeriod', !bpmPeriod, 'Current Year' ),
+          IF( DB( 'bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment,
+                    !bpmAccount, !bpmCurrency, ATTRS( 'bpmPeriod', !bpmPeriod, 'Current Year' ), 'Annual Amount' ) = 0
+           ,
+                'Finance Value'
+           ,
+                'xxxx'
+           )
+     );
+
+# ======================================================
+# Plan scenario feeds Account Level Value in Line Item Detail
+# ======================================================
+[ 'Plan', {'2015', '2016', '2017' } ] =>
+     DB( 'bpmFinance_LineItem', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency,
+          IF( DB( 'bpmFinance_LineItem', !bpmScenario, !bpmCompany, !bpmDepartment,
+                    !bpmAccount, !bpmCurrency, 'Total Line Items', !bpmPeriod, !bpmFinance_Msr ) = 0
+           ,
+                'Account Level Value'
+           ,
+                'xxxx'
+           ), !bpmPeriod, !bpmFinance_Msr
+     );
+
+# ======================================================
+# FX VALUES - Total Original feeds other FX books
+# ======================================================
+[ 'Balance Post-Alloc' ]=> [ 'Rpt USD CYBR' ], [ 'Rpt USD CYAR' ];
+[ 'Balance Post-Alloc' ]=> [ 'Rpt USD PYBR' ], [ 'Rpt USD PYAR' ];
+[ 'Balance Post-Alloc' ]=> [ 'Base CYBR' ], [ 'Base CYAR' ];
+
+#=======================================================
+# Feed Reporting Cube
+#=======================================================
+[] => DB('bpmFinance_rpt', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, !bpmPeriod, !bpmFinance_Msr);
+
+
+#EndRegion

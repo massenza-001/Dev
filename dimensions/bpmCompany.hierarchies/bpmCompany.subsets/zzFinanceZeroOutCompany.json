@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"zzFinanceZeroOutCompany",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('004')"
+		}
+	]
+}

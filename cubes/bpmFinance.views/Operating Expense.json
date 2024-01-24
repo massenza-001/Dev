@@ -1,0 +1,105 @@
+{
+	"@type":"NativeView",
+	"Name":"Operating Expense",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Subsets('2016Months')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmAccount')/Hierarchies('bpmAccount')"
+				},
+				"Alias":"CodeName",
+				"Expression":"{{[bpmAccount].[Operating Expenses (w/o comp)],[bpmAccount].[Operating Expenses (w/o comp)].CHILDREN}}"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')"
+				},
+				"Expression":"TM1SubsetToSet([bpmScenario], \"Default\")"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')"
+				},
+				"Alias":"CodeName",
+				"Expression":"TM1SubsetToSet([bpmCompany], \"Default\")"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('Total Company')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')"
+				},
+				"Alias":"CodeName",
+				"Expression":"TM1SubsetToSet([bpmDepartment], \"BudgetApproval\")"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('Total Departments')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmFinance_Msr')/Hierarchies('bpmFinance_Msr')"
+				},
+				"Expression":"TM1SubsetToSet([bpmFinance_Msr], \"Default\")"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmFinance_Msr')/Hierarchies('bpmFinance_Msr')/Elements('Balance Post-Alloc')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmCurrency')/Hierarchies('bpmCurrency')"
+				},
+				"Expression":"TM1SubsetToSet([bpmCurrency], \"Default\")"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmCurrency')/Hierarchies('bpmCurrency')/Elements('Total Currency')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

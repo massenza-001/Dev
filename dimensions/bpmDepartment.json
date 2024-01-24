@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmDepartment",
+	"Hierarchies@Code.links":
+	[
+		"bpmDepartment.hierarchies/bpmDepartment.json",
+		"bpmDepartment.hierarchies/Restructure.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')"
+	}
+}

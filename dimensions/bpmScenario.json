@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmScenario",
+	"Hierarchies@Code.links":
+	[
+		"bpmScenario.hierarchies/bpmScenario.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')"
+	}
+}
