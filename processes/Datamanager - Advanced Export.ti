@@ -1,0 +1,806 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#============================
+# GRAB BaseValue from details cube and use if non zero
+#============================
+
+intBaseValue = CELLGETN( 'rdmDatamanagerDetails', pCube, pIndex, 'Value', 'BaseValue');
+
+
+strPath = CELLGETS ( 'rdmDatamanagerControls', 'VALUE', 'Export File Path');
+strFile =  strPath | pFileName;
+
+ASCIIOUTPUT ( strFile, 'blank', NUMBERTOSTRING(0), 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank',
+'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank',
+'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank',
+'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank' );
+
+
+
+
+strDim1 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 1', 'To');
+strDim2 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 2', 'To');
+strDim3 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 3', 'To');
+strDim4 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 4', 'To');
+strDim5 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 5', 'To');
+strDim6 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 6', 'To');
+strDim7 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 7', 'To');
+strDim8 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 8', 'To');
+strDim9 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 9', 'To');
+strDim10 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 10', 'To');
+strDim11 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 11', 'To');
+strDim12 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 12', 'To');
+strDim13 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 13', 'To');
+strDim14 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 14', 'To');
+strDim15 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 15', 'To');
+strDim16 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 16', 'To');
+strDim17 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 17', 'To');
+strDim18 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 18', 'To');
+strDim19 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 19', 'To');
+strDim20 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 20', 'To');
+strDim21 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 21', 'To');
+strDim22 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 22', 'To');
+strDim23 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 23', 'To');
+strDim24 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 24', 'To');
+strDim25 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 25', 'To');
+strDim26 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 26', 'To');
+strDim27 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 27', 'To');
+strDim28 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 28', 'To');
+strDim29 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 29', 'To');
+strDim30 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 30', 'To');
+strDim31 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 31', 'To');
+strDim32 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 32', 'To');
+
+
+
+
+
+DatasourceNameForServer=pCube;
+DatasourceCubeview=pView;
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#=====================================
+#  o1 is always the Value
+#=====================================
+
+IF ( intBaseValue =0);
+
+     intValue = CELLGETN ( 'rdmDatamanagerDetails', pCube, pIndex, 'Total', 'Dim Count') +1;
+     o1 = EXPAND ( '%vDim' | NUMBERTOSTRING ( intValue ) | '%' );
+ELSE;
+
+     o1 = NUMBERTOSTRING ( intBaseValue );
+
+ENDIF;
+
+#=====================================
+
+IF ( SUBST ( strDim1, 1, 3) @='DIM');
+     o2= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim1, 'Variable') );
+
+ELSEIF ( SUBST ( strDim1, 1,3) @='ATT');
+     strATTType = SUBST ( strDim1, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim1, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim1, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim1, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o2 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o2 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o2 = strDim1;
+ENDIF;
+
+IF ( SUBST ( strDim2, 1, 3) @='DIM');
+     o3= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim2, 'Variable') );
+
+ELSEIF ( SUBST ( strDim2, 1,3) @='ATT');
+     strATTType = SUBST ( strDim2, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim2, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim2, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim2, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o3 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o3 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o3 = strDim2;
+ENDIF;
+
+IF ( SUBST ( strDim3, 1, 3) @='DIM');
+     o4= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim3, 'Variable') );
+
+ELSEIF ( SUBST ( strDim3, 1,3) @='ATT');
+     strATTType = SUBST ( strDim3, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim3, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim3, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim3, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o4 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o4 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o4 = strDim3;
+ENDIF;
+
+IF ( SUBST ( strDim4, 1, 3) @='DIM');
+     o5= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim4, 'Variable') );
+
+ELSEIF ( SUBST ( strDim4, 1,3) @='ATT');
+     strATTType = SUBST ( strDim4, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim4, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim4, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim4, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o5 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o5 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o5 = strDim4;
+ENDIF;
+
+IF ( SUBST ( strDim5, 1, 3) @='DIM');
+     o6= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim5, 'Variable') );
+
+ELSEIF ( SUBST ( strDim5, 1,3) @='ATT');
+     strATTType = SUBST ( strDim5, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim5, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim5, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim5, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o6 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o6 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o6 = strDim5;
+ENDIF;
+
+IF ( SUBST ( strDim6, 1, 3) @='DIM');
+     o7= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim6, 'Variable') );
+
+ELSEIF ( SUBST ( strDim6, 1,3) @='ATT');
+     strATTType = SUBST ( strDim6, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim6, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim6, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim6, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o7 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o7 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o7 = strDim6;
+ENDIF;
+
+IF ( SUBST ( strDim7, 1, 3) @='DIM');
+     o8= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim7, 'Variable') );
+
+ELSEIF ( SUBST ( strDim7, 1,3) @='ATT');
+     strATTType = SUBST ( strDim7, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim7, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim7, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim7, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o8 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o8 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o8 = strDim7;
+ENDIF;
+
+IF ( SUBST ( strDim8, 1, 3) @='DIM');
+     o9= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim8, 'Variable') );
+
+ELSEIF ( SUBST ( strDim8, 1,3) @='ATT');
+     strATTType = SUBST ( strDim8, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim8, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim8, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim8, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o9 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o9 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o9 = strDim8;
+ENDIF;
+
+IF ( SUBST ( strDim9, 1, 3) @='DIM');
+     o10= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim9, 'Variable') );
+
+ELSEIF ( SUBST ( strDim9, 1,3) @='ATT');
+     strATTType = SUBST ( strDim9, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim9, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim9, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim9, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o10 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o10 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o10 = strDim9;
+ENDIF;
+
+IF ( SUBST ( strDim10, 1, 3) @='DIM');
+     o11= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim10, 'Variable') );
+
+ELSEIF ( SUBST ( strDim10, 1,3) @='ATT');
+     strATTType = SUBST ( strDim10, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim10, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim10, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim10, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o11 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o11 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o11 = strDim10;
+ENDIF;
+
+IF ( SUBST ( strDim11, 1, 3) @='DIM');
+     o12= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim11, 'Variable') );
+
+ELSEIF ( SUBST ( strDim11, 1,3) @='ATT');
+     strATTType = SUBST ( strDim11, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim11, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim11, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim11, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o12 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o12 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o12 = strDim11;
+ENDIF;
+
+IF ( SUBST ( strDim12, 1, 3) @='DIM');
+     o13= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim12, 'Variable') );
+
+ELSEIF ( SUBST ( strDim12, 1,3) @='ATT');
+     strATTType = SUBST ( strDim12, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim12, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim12, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim12, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o13 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o13 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o13 = strDim12;
+ENDIF;
+
+IF ( SUBST ( strDim13, 1, 3) @='DIM');
+     o14= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim13, 'Variable') );
+
+ELSEIF ( SUBST ( strDim13, 1,3) @='ATT');
+     strATTType = SUBST ( strDim13, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim13, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim13, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim13, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o14 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o14 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o14 = strDim13;
+ENDIF;
+
+IF ( SUBST ( strDim14, 1, 3) @='DIM');
+     o15= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim14, 'Variable') );
+
+ELSEIF ( SUBST ( strDim14, 1,3) @='ATT');
+     strATTType = SUBST ( strDim14, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim14, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim14, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim14, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o15 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o15 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o15 = strDim14;
+ENDIF;
+
+IF ( SUBST ( strDim15, 1, 3) @='DIM');
+     o16= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim15, 'Variable') );
+
+ELSEIF ( SUBST ( strDim15, 1,3) @='ATT');
+     strATTType = SUBST ( strDim15, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim15, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim15, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim15, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o16 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o16 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o16 = strDim15;
+ENDIF;
+
+IF ( SUBST ( strDim16, 1, 3) @='DIM');
+     o17= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim16, 'Variable') );
+
+ELSEIF ( SUBST ( strDim16, 1,3) @='ATT');
+     strATTType = SUBST ( strDim16, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim16, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim16, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim16, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o17 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o17 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o17 = strDim16;
+ENDIF;
+
+IF ( SUBST ( strDim17, 1, 3) @='DIM');
+     o18= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim17, 'Variable') );
+
+ELSEIF ( SUBST ( strDim17, 1,3) @='ATT');
+     strATTType = SUBST ( strDim17, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim17, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim17, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim17, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o18 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o18 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o18 = strDim17;
+ENDIF;
+
+IF ( SUBST ( strDim18, 1, 3) @='DIM');
+     o19= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim18, 'Variable') );
+
+ELSEIF ( SUBST ( strDim18, 1,3) @='ATT');
+     strATTType = SUBST ( strDim18, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim18, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim18, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim18, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o19 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o19 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o19 = strDim18;
+ENDIF;
+
+IF ( SUBST ( strDim19, 1, 3) @='DIM');
+     o20= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim19, 'Variable') );
+
+ELSEIF ( SUBST ( strDim19, 1,3) @='ATT');
+     strATTType = SUBST ( strDim19, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim19, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim19, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim19, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o20 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o20 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o20 = strDim19;
+ENDIF;
+
+IF ( SUBST ( strDim20, 1, 3) @='DIM');
+     o21= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim20, 'Variable') );
+
+ELSEIF ( SUBST ( strDim20, 1,3) @='ATT');
+     strATTType = SUBST ( strDim20, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim20, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim20, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim20, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o21 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o21 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o21 = strDim20;
+ENDIF;
+
+IF ( SUBST ( strDim21, 1, 3) @='DIM');
+     o22= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim21, 'Variable') );
+
+ELSEIF ( SUBST ( strDim21, 1,3) @='ATT');
+     strATTType = SUBST ( strDim21, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim21, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim21, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim21, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o22 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o22 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o22 = strDim21;
+ENDIF;
+
+IF ( SUBST ( strDim22, 1, 3) @='DIM');
+     o23= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim22, 'Variable') );
+
+ELSEIF ( SUBST ( strDim22, 1,3) @='ATT');
+     strATTType = SUBST ( strDim22, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim22, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim22, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim22, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o23 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o23 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o23 = strDim22;
+ENDIF;
+
+IF ( SUBST ( strDim23, 1, 3) @='DIM');
+     o24= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim23, 'Variable') );
+
+ELSEIF ( SUBST ( strDim23, 1,3) @='ATT');
+     strATTType = SUBST ( strDim23, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim23, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim23, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim23, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o24 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o24 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o24 = strDim23;
+ENDIF;
+
+IF ( SUBST ( strDim24, 1, 3) @='DIM');
+     o25= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim24, 'Variable') );
+
+ELSEIF ( SUBST ( strDim24, 1,3) @='ATT');
+     strATTType = SUBST ( strDim24, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim24, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim24, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim24, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o25 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o25 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o25 = strDim24;
+ENDIF;
+
+IF ( SUBST ( strDim25, 1, 3) @='DIM');
+     o26= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim25, 'Variable') );
+
+ELSEIF ( SUBST ( strDim25, 1,3) @='ATT');
+     strATTType = SUBST ( strDim25, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim25, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim25, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim25, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o26 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o26 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o26 = strDim25;
+ENDIF;
+
+IF ( SUBST ( strDim26, 1, 3) @='DIM');
+     o27= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim26, 'Variable') );
+
+ELSEIF ( SUBST ( strDim26, 1,3) @='ATT');
+     strATTType = SUBST ( strDim26, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim26, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim26, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim26, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o27 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o27 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o27 = strDim26;
+ENDIF;
+
+IF ( SUBST ( strDim27, 1, 3) @='DIM');
+     o28= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim27, 'Variable') );
+
+ELSEIF ( SUBST ( strDim27, 1,3) @='ATT');
+     strATTType = SUBST ( strDim27, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim27, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim27, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim27, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o28 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o28 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o28 = strDim27;
+ENDIF;
+
+IF ( SUBST ( strDim28, 1, 3) @='DIM');
+     o29= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim28, 'Variable') );
+
+ELSEIF ( SUBST ( strDim28, 1,3) @='ATT');
+     strATTType = SUBST ( strDim28, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim28, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim28, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim28, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o29 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o29 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o29 = strDim28;
+ENDIF;
+
+IF ( SUBST ( strDim29, 1, 3) @='DIM');
+     o30= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim29, 'Variable') );
+
+ELSEIF ( SUBST ( strDim29, 1,3) @='ATT');
+     strATTType = SUBST ( strDim29, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim29, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim29, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim29, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o30 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o30 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o30 = strDim29;
+ENDIF;
+
+IF ( SUBST ( strDim30, 1, 3) @='DIM');
+     o31= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim30, 'Variable') );
+
+ELSEIF ( SUBST ( strDim30, 1,3) @='ATT');
+     strATTType = SUBST ( strDim30, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim30, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim30, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim30, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o31 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o31 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o31 = strDim30;
+ENDIF;
+
+IF ( SUBST ( strDim31, 1, 3) @='DIM');
+     o32= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim31, 'Variable') );
+
+ELSEIF ( SUBST ( strDim31, 1,3) @='ATT');
+     strATTType = SUBST ( strDim31, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim31, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim31, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim31, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o32 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o32 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o32 = strDim31;
+ENDIF;
+
+IF ( SUBST ( strDim32, 1, 3) @='DIM');
+     o33= EXPAND ( ATTRS ( 'rdmDatamanagerDim', strDim32, 'Variable') );
+
+ELSEIF ( SUBST ( strDim32, 1,3) @='ATT');
+     strATTType = SUBST ( strDim32, 1, 5);
+     strATTDimVal = EXPAND ( ATTRS ( 'rdmDatamanagerDim', SUBST ( strDim32, 7, 5), 'Variable') );
+     strATTDim = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, SUBST ( strDim32, 7, 5) , 'Dim Name');
+     strATTMsr = TRIM ( SUBST ( strDim32, 13, 1000) );
+
+     IF ( strATTType @='ATTRS');
+          o33 = ATTRS ( strATTDim, strATTDimVal , strATTMsr);
+     ENDIF;
+
+     IF ( strATTType @='ATTRN');
+          o33 = NUMBERTOSTRING ( ATTRN ( strATTDim, strATTDimVal , strATTMsr));
+     ENDIF;
+
+ELSE;
+
+     o33 = strDim32;
+ENDIF;
+
+
+
+ASCIIOUTPUT (strFile, pCube, NUMBERTOSTRING ( pFactor), pType, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11,
+                                     o12, o13, o14, o15, o16, o17, o18, o19, o20, o21,
+                                     o22, o23, o24, o25, o26, o27, o28, o29, o30, o31,
+                                     o32, o33);
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

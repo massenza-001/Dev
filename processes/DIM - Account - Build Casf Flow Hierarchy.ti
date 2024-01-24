@@ -1,0 +1,85 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#====================================================================================
+# PURPOSE - Process will create the CF Related item roll upsin the Account dimensiont to relate to the bpmFinacnce_CashFlow cube
+#====================================================================================
+#Define Global Variables
+#-------------------------------------------------
+strDim = 'bpmAccount';
+strRoot= 'Cash Flow Items';
+
+#====================================================================================
+# Loop dimension and remove all CF Related Items
+#====================================================================================
+numChildren= ELCOMPN( strDim, strRoot );
+numChildCtr=numChildren;
+WHILE( numChildCtr >= 1 );
+    strChildElem= ELCOMP( strDim, strRoot,  numChildCtr );
+
+    DIMENSIONELEMENTDELETEDIRECT( strDim, strChildElem );
+     numChildCtr = numChildCtr - 1;
+END;
+
+#====================================================================================
+# Loop dimension and create the roll ups
+#====================================================================================
+numElems= DIMSIZ( strDim );
+numCtr = 1;
+
+# Add Root if does not exist
+#-------------------------------------------------
+IF ( DIMIX ( strDim,strRoot) = 0);
+      DIMENSIONELEMENTINSERTDIRECT ( strDim, ' ', strRoot, 'N');
+      DIMENSIONELEMENTCOMPONENTADD ( strDim, 'Stats', strRoot, 1 );
+ENDIF;
+
+# Loop dimension and create the roll ups
+#-------------------------------------------------
+WHILE( numCtr <= numElems );
+    strElem= DIMNM( strDim, numCtr );
+    strCFItem = ATTRS( strDim, strElem, 'CF Related Line Item' );
+    numCFSign = ATTRN( strDim, strElem, 'CF Related Sign' );
+    IF( numCFSign=0 );
+         numCFSign = 1;
+    ENDIF;
+
+# Add CF Item if does not exist
+#-------------------------------------------------
+     IF( strCFItem @<> '' );
+          IF ( DIMIX ( strDim,strCFItem) = 0);
+               DIMENSIONELEMENTINSERTDIRECT ( strDim, ' ', strCFItem, 'N');
+          ENDIF;
+          DIMENSIONELEMENTCOMPONENTADD ( strDim,strRoot, strCFItem, 1 );
+
+# Add element to CF Item with proper weighting
+#-------------------------------------------------
+          DIMENSIONELEMENTCOMPONENTADDDIRECT ( strDim, strCFItem, strElem, numCFSign );
+
+     ENDIF;
+     numCtr = numCtr+1;
+END;
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

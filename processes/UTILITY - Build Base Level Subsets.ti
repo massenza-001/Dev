@@ -1,0 +1,37 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#=============================================================================================
+# PURPOSE - Process will create a subset consisting of all base level elements within a dimension, sorted alphabetically.
+#
+# PARAMETERS:
+#     parDim                  -Dimension Name
+#     parSubset             -Subset Name
+#=============================================================================================
+
+# Remove the subset if it already exists
+IF ( SUBSETEXISTS ( parDim, parSubset) = 1 );
+     SUBSETDESTROY ( parDim, parSubset) ;
+ENDIF;
+
+# Create the new subset
+SUBSETCREATEBYMDX ( parSubset , '{TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [' | parDim | '] )}, 0)}, ASC)}' ) ;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

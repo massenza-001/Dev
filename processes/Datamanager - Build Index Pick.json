@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Build Index Pick",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Build Index Pick.ti",
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForServer":"rdmDatamanagerIndex",
+		"dataSourceNameForClient":"rdmDatamanagerIndex",
+		"subset":"All"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pCube",
+			"Prompt":"bpmFinance",
+			"Value":"bpmFinance",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"rdmDatamanagerIndex",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

@@ -1,0 +1,84 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+strCube = 'rdmDatamanagerDetails';
+
+#=====================================
+#Remove rules
+#=====================================
+
+EXECUTEPROCESS ('Datamanager - Remove Rule', 'pCube', strCube);
+
+strView = 'zzDataManager';
+
+IF ( VIEWEXISTS ( strCube, strView) = 0);
+     VIEWCREATE ( strCube, strView);
+ENDIF;
+
+strDim = '}Cubes';
+strSub = strView;
+
+IF ( SUBSETEXISTS ( strDim, strSub)=0);
+     SUBSETCREATE ( strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS ( strDim, strSub);
+SUBSETELEMENTINSERT ( strDim, strSub, pCube, 1);
+VIEWSUBSETASSIGN ( strCube, strView, strDim, strSub);
+
+
+strDim = 'rdmDatamanagerIndex';
+strSub = strView;
+
+IF ( SUBSETEXISTS ( strDim, strSub)=0);
+     SUBSETCREATE ( strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS ( strDim, strSub);
+SUBSETELEMENTINSERT ( strDim, strSub, pIndex, 1);
+VIEWSUBSETASSIGN ( strCube, strView, strDim, strSub);
+
+VIEWZEROOUT ( strCube, strView);
+
+
+#=================================
+# Delete Meta Information
+#=================================
+
+strUserEntered = CELLGETS ( '}rdmDatamanagerIndexMetaData', pCube, pIndex, 'UserEntered');
+
+IF ( pIndex @<>'Index 1' & strUserEntered@='Y');
+     CELLPUTS ( '', '}rdmDatamanagerIndexMetaData', pCube, pIndex, 'UserEntered');
+     CELLPUTS ( '', '}rdmDatamanagerIndexMetaData', pCube, pIndex, 'Comment');
+ENDIF;
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+
+EXECUTEPROCESS ('Datamanager - Reload Rule', 'pCube', strCube);
+
+
+
+#endregion

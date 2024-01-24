@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Remove Rule",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Remove Rule.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pFileName",
+			"Prompt":"atamanagerDetails",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":"e",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pCube",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

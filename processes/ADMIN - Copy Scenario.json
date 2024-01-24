@@ -1,0 +1,20 @@
+{
+	"@type":"Process",
+	"Name":"ADMIN - Copy Scenario",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"ADMIN - Copy Scenario.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pScenario",
+			"Prompt":"Scenario",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

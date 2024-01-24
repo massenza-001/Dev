@@ -1,0 +1,66 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Quick Move Process",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Quick Move Process.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"rdmDatamanagerDetails",
+		"dataSourceNameForClient":"rdmDatamanagerDetails",
+		"view":"Default"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pCube",
+			"Prompt":"",
+			"Value":"bpmFinance",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":"Quick Copy",
+			"Value":"Quick Copy",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"Cube",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"rdmDatamanagerIndex",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"rdmDatamanagerDim",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"rdmDatamanagerVariable",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"Value",
+			"Type":"String",
+			"Position":5,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

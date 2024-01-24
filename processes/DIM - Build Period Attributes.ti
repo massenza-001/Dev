@@ -1,0 +1,1193 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+##########################################################################################
+###  This process adds attributes to the bpmPeriod dimension
+###
+###   The following Parameters are used:
+###      pYear - Year to be built (e.g. 2013)
+###      pDim  - Dimension to maintain (bpmPeriod)
+###
+##########################################################################################
+###  VERSION CONTROL
+###      2014-10       Initial Creation - sm
+###      2015-12-10  Updated for TUMI - ng
+###      2016-02       reviewed and updated for use in BPMS V20 - DanB
+##########################################################################################
+
+# Add attributes for Captoin Default, }RollUp to match Performance Modeler
+
+#==========================================
+#>>> DEFINE ATTRIBUTES
+#==========================================
+strDim = pDim ;
+strCube = '}ElementAttributes_' | pDim ;
+
+###  PERIOD NAME ALIAS ###
+strAttr = 'PeriodName' ;
+strType = 'A' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  MM-YYYY ATTRIBUTE ###
+strAttr = 'MM-YYYY' ;
+strType = 'A' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  MONTHNO2DIGIT ATTRIBUTE ###
+strAttr = 'MonthNo' ;
+strType = 'A' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  MONTHNUM ATTRIBUTE ###
+strAttr = 'MonthNum' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  QUARTERNUM ATTRIBUTE ###
+strAttr = 'QuarterNum' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  START DATE ATTRIBUTE ### - Changed name to match IBM
+strAttr = 'Start Date' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  END DATE ATTRIBUTE ### - Changed name to match IBM
+strAttr = 'End Date' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  QUARTER ATTRIBUTE ###
+strAttr = 'Quarter' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  CURRENT YEAR ATTRIBUTE ###
+strAttr = 'Current Year' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  YoY PERIOD ATTRIBUTE ###
+strAttr = 'YoY Period' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  PREVIOUS PERIOD ATTRIBUTE ### - Changed name to match IBM
+strAttr = 'Previous Period' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  NEXT PERIOD ATTRIBUTE ###
+strAttr = 'Next Period' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  FIRST PERIOD ATTRIBUTE ### - Added to match IBM
+strAttr = 'First Period' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  LAST PERIOD ATTRIBUTE ### - Added to match IBM
+strAttr = 'Last Period' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  FULLNAME ATTRIBUTE ###
+strAttr = 'FullName' ;
+strType = 'S' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+###  CALENDAR DAYS ATTRIBUTE ###
+strAttr = 'Calendar Days' ;
+strType = 'N' ;
+strAttrDim = '}ElementAttributes_' | strDim ;
+IF ( DIMIX ( strAttrDim , strAttr ) = 1 ) ;
+      ### SKIP ###
+ELSE ; 
+      ATTRINSERT ( strDim , '' , strAttr , strType ) ;
+ENDIF ;
+
+
+#==========================================
+#>>> DEFINE CALENDAR YEAR
+#==========================================
+
+strCY = pYear;
+strCYYTD = strCY | ' YTD';
+# strOPBCY = 'OB ' | strCY ;
+#strOPBCY = strCY | 'OB' ;
+strCYBAL = strCY | ' BAL';
+
+strPY = STR( NUMBR( strCY ) - 1, 4, 0 );
+strPYYTD = strPY | ' YTD';
+
+strNY = STR( NUMBR( strCY ) + 1, 4, 0 );
+
+#==========================================
+#>>> DEFINE CY ELEMENTS
+#==========================================
+
+strCYPdOB = strCY | '00';
+strCYPd01 =  strCY | '01' ;
+strCYPd02 = strCY | '02' ;
+strCYPd03 =  strCY | '03' ;
+strCYPd04 =  strCY | '04' ;
+strCYPd05 = strCY | '05' ;
+strCYPd06 = strCY | '06' ;
+strCYPd07 = strCY | '07' ;
+strCYPd08 = strCY | '08' ;
+strCYPd09 = strCY | '09' ;
+strCYPd10 = strCY | '10' ;
+strCYPd11 = strCY | '11' ;
+strCYPd12 = strCY | '12' ;
+
+strCYQ1 =  strCY | 'Q1' ;
+strCYQ2 = strCY | 'Q2' ;
+strCYQ3 = strCY | 'Q3' ;
+strCYQ4 = strCY | 'Q4' ;
+
+
+#==========================================
+#>>> DEFINE CY YTD ELEMENTS
+#==========================================
+
+strCYPd01YTD = strCY | '01YTD ';
+strCYPd02YTD = strCY | '02YTD ';
+strCYPd03YTD =  strCY | '03YTD ';
+strCYPd04YTD =  strCY | '04YTD ';
+strCYPd05YTD =  strCY | '05YTD ';
+strCYPd06YTD =  strCY | '06YTD ';
+strCYPd07YTD =  strCY | '07YTD ';
+strCYPd08YTD =  strCY | '08YTD ';
+strCYPd09YTD =  strCY | '09YTD ';
+strCYPd10YTD =  strCY | '10YTD ';
+strCYPd11YTD =  strCY | '11YTD ';
+strCYPd12YTD =  strCY | '12YTD ';
+
+
+#==========================================
+#>>> DEFINE CY ROY ELEMENTS
+#==========================================
+
+strCYPd01ROY = strCY | '01ROY ';
+strCYPd02ROY = strCY | '02ROY ';
+strCYPd03ROY =  strCY | '03ROY ';
+strCYPd04ROY =  strCY | '04ROY ';
+strCYPd05ROY =  strCY | '05ROY ';
+strCYPd06ROY =  strCY | '06ROY ';
+strCYPd07ROY =  strCY | '07ROY ';
+strCYPd08ROY =  strCY | '08ROY ';
+strCYPd09ROY =  strCY | '09ROY ';
+strCYPd10ROY =  strCY | '10ROY ';
+strCYPd11ROY =  strCY | '11ROY ';
+strCYPd12ROY =  strCY | '12ROY ';
+
+
+#==========================================
+#>>> DEFINE ATTRIBUTES
+#==========================================
+
+attrCYPd01 = 'Jan ' | strCY;
+attrCYPd02 = 'Feb ' | strCY;
+attrCYPd03 = 'Mar ' | strCY;
+attrCYPd04 = 'Apr ' | strCY;
+attrCYPd05 = 'May ' | strCY;
+attrCYPd06 = 'Jun ' | strCY;
+attrCYPd07 = 'Jul ' | strCY;
+attrCYPd08 = 'Aug ' | strCY;
+attrCYPd09 = 'Sep ' | strCY;
+attrCYPd10 = 'Oct ' | strCY;
+attrCYPd11 = 'Nov ' | strCY;
+attrCYPd12 = 'Dec ' | strCY;
+
+attrCYQ1 = 'Q1 ' | strCY;
+attrCYQ2 = 'Q2 ' | strCY;
+attrCYQ3 = 'Q3 ' | strCY;
+attrCYQ4 = 'Q4 ' | strCY;
+
+attrCYPd01YTD = 'Jan ' | strCY | ' YTD';
+attrCYPd02YTD = 'Feb ' | strCY | ' YTD';
+attrCYPd03YTD = 'Mar ' | strCY | ' YTD';
+attrCYPd04YTD = 'Apr ' | strCY | ' YTD';
+attrCYPd05YTD = 'May ' | strCY | ' YTD';
+attrCYPd06YTD = 'Jun ' | strCY | ' YTD';
+attrCYPd07YTD = 'Jul ' | strCY | ' YTD';
+attrCYPd08YTD = 'Aug ' | strCY | ' YTD';
+attrCYPd09YTD = 'Sep ' | strCY | ' YTD';
+attrCYPd10YTD = 'Oct ' | strCY | ' YTD';
+attrCYPd11YTD = 'Nov ' | strCY | ' YTD';
+attrCYPd12YTD = 'Dec ' | strCY | ' YTD';
+
+atrCYPd01BAL = 'Jan ' | strCY | ' BAL';
+attrCYPd02BAL = 'Feb ' | strCY | ' BAL';
+attrCYPd03BAL = 'Mar ' | strCY | ' BAL';
+attrCYPd04BAL = 'Apr ' | strCY | ' BAL';
+attrCYPd05BAL = 'May ' | strCY | ' BAL';
+attrCYPd06BAL = 'Jun ' | strCY | ' BAL';
+attrCYPd07BAL = 'Jul ' | strCY | ' BAL';
+attrCYPd08BAL = 'Aug ' | strCY | ' BAL';
+attrCYPd09BAL = 'Sep ' | strCY | ' BAL';
+attrCYPd10BAL = 'Oct ' | strCY | ' BAL';
+attrCYPd11BAL = 'Nov ' | strCY | ' BAL';
+attrCYPd12BAL = 'Dec ' | strCY | ' BAL';
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#==================================================================================================
+#>>> ALIASES --- ALIASES --- ALIASES --- ALIASES --- ALIASES --- ALIASES --- ALIASES --- ALIASES --- ALIASES --- ALIASES
+#==================================================================================================
+
+#==========================================
+#>>> PERIODNAME Attribute - ALIAS FORMAT is MMM YYYY
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'OPB ' | strCY , strDim ,  strCYPdOB , 'PeriodName' ) ;
+ATTRPUTS ( 'Jan ' | strCY , strDim ,  strCYPd01 , 'PeriodName' ) ;
+ATTRPUTS ( 'Feb ' | strCY , strDim ,  strCYPd02 , 'PeriodName' ) ;
+ATTRPUTS ( 'Mar ' | strCY , strDim ,  strCYPd03 , 'PeriodName' ) ;
+ATTRPUTS ( 'Apr ' | strCY , strDim ,  strCYPd04 , 'PeriodName' ) ;
+ATTRPUTS ( 'May ' | strCY , strDim ,  strCYPd05 , 'PeriodName' ) ;
+ATTRPUTS ( 'Jun ' | strCY , strDim ,  strCYPd06 , 'PeriodName' ) ;
+ATTRPUTS ( 'Jul ' | strCY , strDim ,  strCYPd07 , 'PeriodName' ) ;
+ATTRPUTS ( 'Aug ' | strCY , strDim ,  strCYPd08 , 'PeriodName' ) ;
+ATTRPUTS ( 'Sep ' | strCY , strDim ,  strCYPd09 , 'PeriodName' ) ;
+ATTRPUTS ( 'Oct ' | strCY , strDim ,  strCYPd10 , 'PeriodName' ) ;
+ATTRPUTS ( 'Nov ' | strCY , strDim ,  strCYPd11 , 'PeriodName' ) ;
+ATTRPUTS ( 'Dec ' | strCY , strDim ,  strCYPd12 , 'PeriodName' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Q1 ' | strCY , strDim ,  strCYQ1 , 'PeriodName' ) ;
+ATTRPUTS ( 'Q2 ' | strCY , strDim ,  strCYQ2 , 'PeriodName' ) ;
+ATTRPUTS ( 'Q3 ' | strCY , strDim ,  strCYQ3 , 'PeriodName' ) ;
+ATTRPUTS ( 'Q4 ' | strCY , strDim ,  strCYQ4 , 'PeriodName' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Jan ' | strCY | ' YTD' , strDim ,  strCYPd01YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Feb ' | strCY | ' YTD' , strDim ,  strCYPd02YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Mar ' | strCY | ' YTD' , strDim ,  strCYPd03YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Apr ' | strCY | ' YTD' , strDim ,  strCYPd04YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'May ' | strCY | ' YTD' , strDim ,  strCYPd05YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Jun ' | strCY | ' YTD' , strDim ,  strCYPd06YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Jul ' | strCY | ' YTD' , strDim ,  strCYPd07YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Aug ' | strCY | ' YTD' , strDim ,  strCYPd08YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Sep ' | strCY | ' YTD' , strDim ,  strCYPd09YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Oct ' | strCY | ' YTD' , strDim ,  strCYPd10YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Nov ' | strCY | ' YTD' , strDim ,  strCYPd11YTD,  'PeriodName' ) ;
+ATTRPUTS ( 'Dec ' | strCY | ' YTD' , strDim ,  strCYPd12YTD,  'PeriodName' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Jan ' | strCY | ' ROY' , strDim ,  strCYPd01ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Feb ' | strCY | ' ROY' , strDim ,  strCYPd02ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Mar ' | strCY | ' ROY' , strDim ,  strCYPd03ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Apr ' | strCY | ' ROY' , strDim ,  strCYPd04ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'May ' | strCY | ' ROY' , strDim ,  strCYPd05ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Jun ' | strCY | ' ROY' , strDim ,  strCYPd06ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Jul ' | strCY | ' ROY' , strDim ,  strCYPd07ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Aug ' | strCY | ' ROY' , strDim ,  strCYPd08ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Sep ' | strCY | ' ROY' , strDim ,  strCYPd09ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Oct ' | strCY | ' ROY' , strDim ,  strCYPd10ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Nov ' | strCY | ' ROY' , strDim ,  strCYPd11ROY,  'PeriodName' ) ;
+ATTRPUTS ( 'Dec ' | strCY | ' ROY' , strDim ,  strCYPd12ROY,  'PeriodName' ) ;
+
+# SKIP CY and CY-YTD since same as BASE
+# ATTRPUTS ( strCY , strDim , 'PeriodName' ) ;
+# ATTRPUTS ( strCY | ' YTD ' , strDim , 'PeriodName' ) ;
+
+
+#==========================================
+#>>> MM-YYYY Alias
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'OB-' | strCY , strDim ,  strCYPdOB , 'MM-YYYY' ) ;
+ATTRPUTS ( '01-' | strCY , strDim ,  strCYPd01 , 'MM-YYYY' ) ;
+ATTRPUTS ( '02-' | strCY , strDim ,  strCYPd02 , 'MM-YYYY' ) ;
+ATTRPUTS ( '03-' | strCY , strDim ,  strCYPd03 , 'MM-YYYY' ) ;
+ATTRPUTS ( '04-' | strCY , strDim ,  strCYPd04 , 'MM-YYYY' ) ;
+ATTRPUTS ( '05-' | strCY , strDim ,  strCYPd05 , 'MM-YYYY' ) ;
+ATTRPUTS ( '06-' | strCY , strDim ,  strCYPd06 , 'MM-YYYY' ) ;
+ATTRPUTS ( '07-' | strCY , strDim ,  strCYPd07 , 'MM-YYYY' ) ;
+ATTRPUTS ( '08-' | strCY , strDim ,  strCYPd08 , 'MM-YYYY' ) ;
+ATTRPUTS ( '09-' | strCY , strDim ,  strCYPd09 , 'MM-YYYY' ) ;
+ATTRPUTS ( '10-' | strCY , strDim ,  strCYPd10 , 'MM-YYYY' ) ;
+ATTRPUTS ( '11-' | strCY , strDim ,  strCYPd11 , 'MM-YYYY' ) ;
+ATTRPUTS ( '12-' | strCY , strDim ,  strCYPd12 , 'MM-YYYY' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Q1- ' | strCY , strDim ,  strCYQ1 , 'MM-YYYY' ) ;
+ATTRPUTS ( 'Q2- ' | strCY , strDim ,  strCYQ2 , 'MM-YYYY' ) ;
+ATTRPUTS ( 'Q3- ' | strCY , strDim ,  strCYQ3 , 'MM-YYYY' ) ;
+ATTRPUTS ( 'Q4- ' | strCY , strDim ,  strCYQ4 , 'MM-YYYY' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( '01-' | strCY | ' YTD' , strDim ,  strCYPd01YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '02-' | strCY | ' YTD' , strDim ,  strCYPd02YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '03-' | strCY | ' YTD' , strDim ,  strCYPd03YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '04-' | strCY | ' YTD' , strDim ,  strCYPd04YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '05-' | strCY | ' YTD' , strDim ,  strCYPd05YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '06-' | strCY | ' YTD' , strDim ,  strCYPd06YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '07-' | strCY | ' YTD' , strDim ,  strCYPd07YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '08-' | strCY | ' YTD' , strDim ,  strCYPd08YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '09-' | strCY | ' YTD' , strDim ,  strCYPd09YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '10-' | strCY | ' YTD' , strDim ,  strCYPd10YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '11-' | strCY | ' YTD' , strDim ,  strCYPd11YTD,  'MM-YYYY' ) ;
+ATTRPUTS ( '12-' | strCY | ' YTD' , strDim ,  strCYPd12YTD,  'MM-YYYY' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( '01-' | strCY | ' ROY' , strDim ,  strCYPd01ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '02-' | strCY | ' ROY' , strDim ,  strCYPd02ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '03-' | strCY | ' ROY' , strDim ,  strCYPd03ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '04-' | strCY | ' ROY' , strDim ,  strCYPd04ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '05-' | strCY | ' ROY' , strDim ,  strCYPd05ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '06-' | strCY | ' ROY' , strDim ,  strCYPd06ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '07-' | strCY | ' ROY' , strDim ,  strCYPd07ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '08-' | strCY | ' ROY' , strDim ,  strCYPd08ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '09-' | strCY | ' ROY' , strDim ,  strCYPd09ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '10-' | strCY | ' ROY' , strDim ,  strCYPd10ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '11-' | strCY | ' ROY' , strDim ,  strCYPd11ROY,  'MM-YYYY' ) ;
+ATTRPUTS ( '12-' | strCY | ' ROY' , strDim ,  strCYPd12ROY,  'MM-YYYY' ) ;
+
+# SKIP CY and CY-YTD since same as BASE
+# ATTRPUTS ( strCY , strDim , 'MM-YYYY' ) ;
+# ATTRPUTS ( strCY | ' YTD ' , strDim , 'MM-YYYY' ) ;
+
+#==========================================
+#>>> MonthNo Alias
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( '1-' | strCY , strDim ,  strCYPd01 , 'MonthNo' ) ;
+ATTRPUTS ( '2-' | strCY , strDim ,  strCYPd02 , 'MonthNo' ) ;
+ATTRPUTS ( '3-' | strCY , strDim ,  strCYPd03 , 'MonthNo' ) ;
+ATTRPUTS ( '4-' | strCY , strDim ,  strCYPd04 , 'MonthNo' ) ;
+ATTRPUTS ( '5-' | strCY , strDim ,  strCYPd05 , 'MonthNo' ) ;
+ATTRPUTS ( '6-' | strCY , strDim ,  strCYPd06 , 'MonthNo' ) ;
+ATTRPUTS ( '7-' | strCY , strDim ,  strCYPd07 , 'MonthNo' ) ;
+ATTRPUTS ( '8-' | strCY , strDim ,  strCYPd08 , 'MonthNo' ) ;
+ATTRPUTS ( '9-' | strCY , strDim ,  strCYPd09 , 'MonthNo' ) ;
+ATTRPUTS ( '10- ' | strCY , strDim ,  strCYPd10 , 'MonthNo' ) ;
+ATTRPUTS ( '11- ' | strCY , strDim ,  strCYPd11 , 'MonthNo' ) ;
+ATTRPUTS ( '12- ' | strCY , strDim ,  strCYPd12 , 'MonthNo' ) ;
+
+#==================================================================================================
+#>>> ATTRIBUTES --- ATTRIBUTES --- ATTRIBUTES --- ATTRIBUTES --- ATTRIBUTES --- ATTRIBUTES --- ATTRIBUTES
+#==================================================================================================
+
+#==========================================
+#>>> Prior Period Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Dec ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) - 1 ), strDim ,  strCYPd01 , 'Previous Period' ) ;
+ATTRPUTS ( 'Jan ' | strCY , strDim ,  strCYPd02 , 'Previous Period' ) ;
+ATTRPUTS ( 'Feb ' | strCY , strDim ,  strCYPd03 , 'Previous Period' ) ;
+ATTRPUTS ( 'Mar ' | strCY , strDim ,  strCYPd04 , 'Previous Period' ) ;
+ATTRPUTS ( 'Apr ' | strCY , strDim ,  strCYPd05 , 'Previous Period' ) ;
+ATTRPUTS ( 'May ' | strCY , strDim ,  strCYPd06 , 'Previous Period' ) ;
+ATTRPUTS ( 'Jun ' | strCY , strDim ,  strCYPd07 , 'Previous Period' ) ;
+ATTRPUTS ( 'Jul ' | strCY , strDim ,  strCYPd08 , 'Previous Period' ) ;
+ATTRPUTS ( 'Aug ' | strCY , strDim ,  strCYPd09 , 'Previous Period' ) ;
+ATTRPUTS ( 'Sep ' | strCY , strDim ,  strCYPd10 , 'Previous Period' ) ;
+ATTRPUTS ( 'Oct ' | strCY , strDim ,  strCYPd11 , 'Previous Period' ) ;
+ATTRPUTS ( 'Nov ' | strCY , strDim ,  strCYPd12 , 'Previous Period' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Q4 ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) - 1 ), strDim ,  strCYQ1, 'Previous Period' ) ;
+ATTRPUTS ( 'Q1 ' | strCY , strDim ,  strCYQ2, 'Previous Period' ) ;
+ATTRPUTS ( 'Q2 ' | strCY , strDim ,  strCYQ3, 'Previous Period' ) ;
+ATTRPUTS ( 'Q3 ' | strCY , strDim ,  strCYQ4, 'Previous Period' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( 'Dec ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) - 1 ) | ' YTD', strDim ,  strCYPd01YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Jan ' | strCY | ' YTD', strDim ,  strCYPd02YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Feb ' | strCY | ' YTD', strDim ,  strCYPd03YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Mer ' | strCY | ' YTD', strDim ,  strCYPd04YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Apr ' | strCY | ' YTD', strDim ,  strCYPd05YTD, 'Previous Period' ) ;
+ATTRPUTS( 'May ' |strCY | ' YTD', strDim ,  strCYPd06YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Jun ' | strCY | ' YTD', strDim ,  strCYPd07YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Jul ' | strCY | ' YTD', strDim ,  strCYPd08YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Aug ' | strCY | ' YTD', strDim ,  strCYPd09YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Sep ' | strCY | ' YTD', strDim ,  strCYPd10YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Oct ' | strCY | ' YTD', strDim ,  strCYPd11YTD, 'Previous Period' ) ;
+ATTRPUTS( 'Nov ' | strCY | ' YTD', strDim ,  strCYPd12YTD, 'Previous Period' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( 'Dec ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) - 1 ) | ' ROY', strDim ,  strCYPd01ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Jan ' | strCY | ' ROY', strDim ,  strCYPd02ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Feb ' | strCY | ' ROY', strDim ,  strCYPd03ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Mer ' | strCY | ' ROY', strDim ,  strCYPd04ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Apr ' | strCY | ' ROY', strDim ,  strCYPd05ROY, 'Previous Period' ) ;
+ATTRPUTS( 'May ' |strCY | ' ROY', strDim ,  strCYPd06ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Jun ' | strCY | ' ROY', strDim ,  strCYPd07ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Jul ' | strCY | ' ROY', strDim ,  strCYPd08ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Aug ' | strCY | ' ROY', strDim ,  strCYPd09ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Sep ' | strCY | ' ROY', strDim ,  strCYPd10ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Oct ' | strCY | ' ROY', strDim ,  strCYPd11ROY, 'Previous Period' ) ;
+ATTRPUTS( 'Nov ' | strCY | ' ROY', strDim ,  strCYPd12ROY, 'Previous Period' ) ;
+
+# Update all CY, CYYTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( NUMBERTOSTRING( STRINGTONUMBER( strCY ) - 1 ), strDim ,  strCY , 'Previous Period' ) ;
+ATTRPUTS( NUMBERTOSTRING( STRINGTONUMBER( strCY ) - 1 ) | ' YTD', strDim ,  strCYYTD, 'Previous Period' ) ;
+
+#==========================================
+#>>> NextPeriod Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Feb ' | strCY , strDim ,  strCYPd01 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Mar ' | strCY , strDim ,  strCYPd02 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Apr ' | strCY , strDim ,  strCYPd03 , 'NextPeriod' ) ;
+ATTRPUTS ( 'May ' | strCY , strDim ,  strCYPd04 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Jun ' | strCY , strDim ,  strCYPd05 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Jul ' | strCY , strDim ,  strCYPd06 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Aug ' | strCY , strDim ,  strCYPd07 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Sep ' | strCY , strDim ,  strCYPd08 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Oct ' | strCY , strDim ,  strCYPd09 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Nov ' | strCY , strDim ,  strCYPd10 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Dec ' | strCY , strDim ,  strCYPd11 , 'NextPeriod' ) ;
+ATTRPUTS ( 'Jan ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) + 1 ), strDim ,  strCYPd12 , 'NextPeriod' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Q2 ' | strCY , strDim ,  strCYQ1, 'NextPeriod' ) ;
+ATTRPUTS ( 'Q3 ' | strCY , strDim ,  strCYQ2, 'NextPeriod' ) ;
+ATTRPUTS ( 'Q4 ' | strCY , strDim ,  strCYQ3, 'NextPeriod' ) ;
+ATTRPUTS ( 'Q1 ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) + 1 ), strDim ,  strCYQ4, 'NextPeriod' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( 'Feb ' | strCY | ' YTD', strDim ,  strCYPd01YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Mar ' | strCY | ' YTD', strDim ,  strCYPd02YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Apr ' | strCY | ' YTD', strDim ,  strCYPd03YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'May ' | strCY | ' YTD', strDim ,  strCYPd04YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Jun ' | strCY | ' YTD', strDim ,  strCYPd05YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Jul ' | strCY | ' YTD', strDim ,  strCYPd06YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Aug ' | strCY | ' YTD', strDim ,  strCYPd07YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Sep ' | strCY | ' YTD', strDim ,  strCYPd08YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Oct ' | strCY | ' YTD', strDim ,  strCYPd09YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Nov ' | strCY | ' YTD', strDim ,  strCYPd10YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Dec ' | strCY | ' YTD', strDim ,  strCYPd11YTD, 'NextPeriod' ) ;
+ATTRPUTS( 'Jan ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) + 1 ) | ' YTD', strDim ,  strCYPd12YTD, 'NextPeriod' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( 'Feb ' | strCY | ' ROY', strDim ,  strCYPd01ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Mar ' | strCY | ' ROY', strDim ,  strCYPd02ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Apr ' | strCY | ' ROY', strDim ,  strCYPd03ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'May ' | strCY | ' ROY', strDim ,  strCYPd04ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Jun ' | strCY | ' ROY', strDim ,  strCYPd05ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Jul ' | strCY | ' ROY', strDim ,  strCYPd06ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Aug ' | strCY | ' ROY', strDim ,  strCYPd07ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Sep ' | strCY | ' ROY', strDim ,  strCYPd08ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Oct ' | strCY | ' ROY', strDim ,  strCYPd09ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Nov ' | strCY | ' ROY', strDim ,  strCYPd10ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Dec ' | strCY | ' ROY', strDim ,  strCYPd11ROY, 'NextPeriod' ) ;
+ATTRPUTS( 'Jan ' | NUMBERTOSTRING( STRINGTONUMBER( strCY ) + 1 ) | ' ROY', strDim ,  strCYPd12ROY, 'NextPeriod' ) ;
+
+# Update all CY, CYYTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS(NUMBERTOSTRING( STRINGTONUMBER( strCY ) + 1 ), strDim ,  strCY , 'NextPeriod' ) ;
+ATTRPUTS(NUMBERTOSTRING( STRINGTONUMBER( strCY ) + 1 ) | ' YTD', strDim ,  strCYYTD, 'NextPeriod' ) ;
+
+#==========================================
+#>>> MonthNum Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( '1' , strDim ,  strCYPd01 , 'MonthNum' ) ;
+ATTRPUTS ( '2' , strDim ,  strCYPd02 , 'MonthNum' ) ;
+ATTRPUTS ( '3' , strDim ,  strCYPd03 , 'MonthNum' ) ;
+ATTRPUTS ( '4' , strDim ,  strCYPd04 , 'MonthNum' ) ;
+ATTRPUTS ( '5' , strDim ,  strCYPd05 , 'MonthNum' ) ;
+ATTRPUTS ( '6' , strDim ,  strCYPd06 , 'MonthNum' ) ;
+ATTRPUTS ( '7' , strDim ,  strCYPd07 , 'MonthNum' ) ;
+ATTRPUTS ( '8' , strDim ,  strCYPd08 , 'MonthNum' ) ;
+ATTRPUTS ( '9' , strDim ,  strCYPd09 , 'MonthNum' ) ;
+ATTRPUTS ( '10 ' , strDim ,  strCYPd10 , 'MonthNum' ) ;
+ATTRPUTS ( '11 ' , strDim ,  strCYPd11 , 'MonthNum' ) ;
+ATTRPUTS ( '12 ' , strDim ,  strCYPd12 , 'MonthNum' ) ;
+
+#==========================================
+#>>> QuarterNum Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( '1' , strDim ,  strCYPd01 , 'QuarterNum' ) ;
+ATTRPUTS ( '1' , strDim ,  strCYPd02 , 'QuarterNum' ) ;
+ATTRPUTS ( '1' , strDim ,  strCYPd03 , 'QuarterNum' ) ;
+ATTRPUTS ( '2' , strDim ,  strCYPd04 , 'QuarterNum' ) ;
+ATTRPUTS ( '2' , strDim ,  strCYPd05 , 'QuarterNum' ) ;
+ATTRPUTS ( '2' , strDim ,  strCYPd06 , 'QuarterNum' ) ;
+ATTRPUTS ( '3' , strDim ,  strCYPd07 , 'QuarterNum' ) ;
+ATTRPUTS ( '3' , strDim ,  strCYPd08 , 'QuarterNum' ) ;
+ATTRPUTS ( '3' , strDim ,  strCYPd09 , 'QuarterNum' ) ;
+ATTRPUTS ( '4' , strDim ,  strCYPd10 , 'QuarterNum' ) ;
+ATTRPUTS ( '4' , strDim ,  strCYPd11 , 'QuarterNum' ) ;
+ATTRPUTS ( '4' , strDim ,  strCYPd12 , 'QuarterNum' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( '1' | strCY , strDim ,  strCYQ1, 'QuarterNum' ) ;
+ATTRPUTS ( '2' | strCY , strDim ,  strCYQ2, 'QuarterNum' ) ;
+ATTRPUTS ( '3' | strCY , strDim ,  strCYQ3, 'QuarterNum' ) ;
+ATTRPUTS ( '4' | strCY , strDim ,  strCYQ4, 'QuarterNum' ) ;
+
+#==========================================
+#>>> Start Date Attribute - changed to match IBM Performance Modeler names
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-01- ' | '01')+21916), strDim ,  strCYPdOB , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-01- ' | '01')+21916), strDim ,  strCYPd01 , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-02- ' | '01')+21916), strDim ,  strCYPd02 ,  'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-03- ' | '01')+21916), strDim ,  strCYPd03 ,  'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-04- ' | '01')+21916), strDim ,  strCYPd04 ,  'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-05- ' | '01')+21916), strDim ,  strCYPd05 ,  'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-06- ' | '01')+21916), strDim ,  strCYPd06 , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-07- ' | '01')+21916), strDim ,  strCYPd07 , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-08- ' | '01')+21916), strDim ,  strCYPd08 , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-09- ' | '01')+21916), strDim ,  strCYPd09 , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-10- ' | '01')+21916), strDim ,  strCYPd10 , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-11- ' | '01')+21916), strDim ,  strCYPd11 , 'Start Date' ) ;
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-12- ' | '01')+21916), strDim ,  strCYPd12 , 'Start Date' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ1, 1),  'Start Date') , strDim , strCYQ1, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ2, 1),  'Start Date') , strDim , strCYQ2, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ3, 1),  'Start Date') , strDim , strCYQ3, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ4, 1),  'Start Date') , strDim , strCYQ4, 'Start Date' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd01YTD, 1),  'Start Date') , strDim , strCYPd01YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd02YTD, 1),  'Start Date') , strDim , strCYPd02YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd03YTD, 1),  'Start Date') , strDim , strCYPd03YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd04YTD, 1),  'Start Date') , strDim , strCYPd04YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd05YTD, 1),  'Start Date') , strDim , strCYPd05YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd06YTD, 1),  'Start Date') , strDim , strCYPd06YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd07YTD, 1),  'Start Date') , strDim , strCYPd07YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd08YTD, 1),  'Start Date') , strDim , strCYPd08YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd09YTD, 1),  'Start Date') , strDim , strCYPd09YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd10YTD, 1),  'Start Date') , strDim , strCYPd10YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd11YTD, 1),  'Start Date') , strDim , strCYPd11YTD, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd12YTD, 1),  'Start Date') , strDim , strCYPd12YTD, 'Start Date' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd01ROY, 1),  'Start Date') , strDim , strCYPd01ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd02ROY, 1),  'Start Date') , strDim , strCYPd02ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd03ROY, 1),  'Start Date') , strDim , strCYPd03ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd04ROY, 1),  'Start Date') , strDim , strCYPd04ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd05ROY, 1),  'Start Date') , strDim , strCYPd05ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd06ROY, 1),  'Start Date') , strDim , strCYPd06ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd07ROY, 1),  'Start Date') , strDim , strCYPd07ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd08ROY, 1),  'Start Date') , strDim , strCYPd08ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd09ROY, 1),  'Start Date') , strDim , strCYPd09ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd10ROY, 1),  'Start Date') , strDim , strCYPd10ROY, 'Start Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd11ROY, 1),  'Start Date') , strDim , strCYPd11ROY, 'Start Date' ) ;
+
+# Update all CY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCY, 1),  'Start Date') , strDim , strCY, 'Start Date' ) ;
+
+#==========================================
+#>>> End Date Attribute - changed to match IBM Performance Modeler names
+#==========================================
+# NOTE - Opening Balance is start and ends on same day.
+ATTRPUTS( NUMBERTOSTRING (DAYNO( strCY | '-01- ' | '01')+21916), strDim ,  strCYPdOB , 'End Date' ) ;
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-01- ' | '31')+21916), strDim ,  strCYPd01 , 'End Date' ) ;
+# NOTE - Handle FEB differently to handle LEAP Years - GET START date of Next Period and minus 1
+ATTRPUTS( NUMBERTOSTRING( NUMBR( ATTRS( strDim, ATTRS( strDim, strCYPd02, 'Next Period'), 'Start Date' ) ) - 1), strDim ,  strCYPd02 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-03- ' | '31')+21916), strDim ,  strCYPd03 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-04- ' | '30')+21916), strDim ,  strCYPd04 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-05- ' | '31')+21916), strDim ,  strCYPd05 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-06- ' | '30')+21916), strDim ,  strCYPd06 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-07- ' | '31')+21916), strDim ,  strCYPd07 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-08- ' | '31')+21916), strDim ,  strCYPd08 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-09- ' | '30')+21916), strDim ,  strCYPd09 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-10- ' | '31')+21916), strDim ,  strCYPd10 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-11- ' | '30')+21916), strDim ,  strCYPd11 , 'End Date' ) ;
+ATTRPUTS( NUMBERTOSTRING( DAYNO( strCY | '-12- ' | '31')+21916), strDim ,  strCYPd12 , 'End Date' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ1, ELCOMPN( strDim, strCYQ1) ),  'End Date') , strDim , strCYQ1, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ2, ELCOMPN( strDim, strCYQ2) ),  'End Date') , strDim , strCYQ2, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ3, ELCOMPN( strDim, strCYQ3) ),  'End Date') , strDim , strCYQ3, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ4, ELCOMPN( strDim, strCYQ4) ),  'End Date') , strDim , strCYQ4, 'End Date' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd01YTD, ELCOMPN( strDim, strCYPd01YTD) ),  'End Date') , strDim , strCYPd01YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd02YTD, ELCOMPN( strDim, strCYPd02YTD) ),  'End Date') , strDim , strCYPd02YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd03YTD, ELCOMPN( strDim, strCYPd03YTD) ),  'End Date') , strDim , strCYPd03YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd04YTD, ELCOMPN( strDim, strCYPd04YTD) ),  'End Date') , strDim , strCYPd04YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd05YTD, ELCOMPN( strDim, strCYPd05YTD) ),  'End Date') , strDim , strCYPd05YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd06YTD, ELCOMPN( strDim, strCYPd06YTD) ),  'End Date') , strDim , strCYPd06YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd07YTD, ELCOMPN( strDim, strCYPd07YTD) ),  'End Date') , strDim , strCYPd07YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd08YTD, ELCOMPN( strDim, strCYPd08YTD) ),  'End Date') , strDim , strCYPd08YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd09YTD, ELCOMPN( strDim, strCYPd09YTD) ),  'End Date') , strDim , strCYPd09YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd10YTD, ELCOMPN( strDim, strCYPd10YTD) ),  'End Date') , strDim , strCYPd10YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd11YTD, ELCOMPN( strDim, strCYPd11YTD) ),  'End Date') , strDim , strCYPd11YTD, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd12YTD, ELCOMPN( strDim, strCYPd12YTD) ),  'End Date') , strDim , strCYPd12YTD, 'End Date' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd01ROY, ELCOMPN( strDim, strCYPd01ROY) ),  'End Date') , strDim , strCYPd01ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd02ROY, ELCOMPN( strDim, strCYPd02ROY) ),  'End Date') , strDim , strCYPd02ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd03ROY, ELCOMPN( strDim, strCYPd03ROY) ),  'End Date') , strDim , strCYPd03ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd04ROY, ELCOMPN( strDim, strCYPd04ROY) ),  'End Date') , strDim , strCYPd04ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd05ROY, ELCOMPN( strDim, strCYPd05ROY) ),  'End Date') , strDim , strCYPd05ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd06ROY, ELCOMPN( strDim, strCYPd06ROY) ),  'End Date') , strDim , strCYPd06ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd07ROY, ELCOMPN( strDim, strCYPd07ROY) ),  'End Date') , strDim , strCYPd07ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd08ROY, ELCOMPN( strDim, strCYPd08ROY) ),  'End Date') , strDim , strCYPd08ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd09ROY, ELCOMPN( strDim, strCYPd09ROY) ),  'End Date') , strDim , strCYPd09ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd10ROY, ELCOMPN( strDim, strCYPd10ROY) ),  'End Date') , strDim , strCYPd10ROY, 'End Date' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd11ROY, ELCOMPN( strDim, strCYPd11ROY) ),  'End Date') , strDim , strCYPd11ROY, 'End Date' ) ;
+
+# Update all CY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCY, ELCOMPN( strDim, strCY) ),  'End Date') , strDim , strCY, 'End Date' ) ;
+
+#==========================================
+#>>> Last Period Attribute - changed to match IBM Performance Modeler names
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( CELLGETS( strCube, strCYPdOB, 'Period Name') , strDim ,  strCYPdOB , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd01, 'Period Name') , strDim ,  strCYPd01 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd02, 'Period Name') , strDim ,  strCYPd02 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd03, 'Period Name') , strDim ,  strCYPd03 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd04, 'Period Name') , strDim ,  strCYPd04 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd05, 'Period Name') , strDim ,  strCYPd05 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd06, 'Period Name') , strDim ,  strCYPd06 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd07, 'Period Name') , strDim ,  strCYPd07 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd08, 'Period Name') , strDim ,  strCYPd08 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd09, 'Period Name') , strDim ,  strCYPd09 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd10, 'Period Name') , strDim ,  strCYPd10 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd11, 'Period Name') , strDim ,  strCYPd11 , 'Last Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd12, 'Period Name') , strDim ,  strCYPd12 , 'Last Period' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ1, ELCOMPN( strDim, strCYQ1) ), 'Period Name') , strDim , strCYQ1, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ2, ELCOMPN( strDim, strCYQ2) ), 'Period Name') , strDim , strCYQ2, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ3, ELCOMPN( strDim, strCYQ3) ), 'Period Name') , strDim , strCYQ3, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ4, ELCOMPN( strDim, strCYQ4) ), 'Period Name') , strDim , strCYQ4, 'Last Period' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd01YTD, ELCOMPN( strDim, strCYPd01YTD) ), 'Period Name') , strDim , strCYPd01YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd02YTD, ELCOMPN( strDim, strCYPd02YTD) ), 'Period Name') , strDim , strCYPd02YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd03YTD, ELCOMPN( strDim, strCYPd03YTD) ), 'Period Name') , strDim , strCYPd03YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd04YTD, ELCOMPN( strDim, strCYPd04YTD) ), 'Period Name') , strDim , strCYPd04YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd05YTD, ELCOMPN( strDim, strCYPd05YTD) ), 'Period Name') , strDim , strCYPd05YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd06YTD, ELCOMPN( strDim, strCYPd06YTD) ), 'Period Name') , strDim , strCYPd06YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd07YTD, ELCOMPN( strDim, strCYPd07YTD) ), 'Period Name') , strDim , strCYPd07YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd08YTD, ELCOMPN( strDim, strCYPd08YTD) ), 'Period Name') , strDim , strCYPd08YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd09YTD, ELCOMPN( strDim, strCYPd09YTD) ), 'Period Name') , strDim , strCYPd09YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd10YTD, ELCOMPN( strDim, strCYPd10YTD) ), 'Period Name') , strDim , strCYPd10YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd11YTD, ELCOMPN( strDim, strCYPd11YTD) ), 'Period Name') , strDim , strCYPd11YTD, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd12YTD, ELCOMPN( strDim, strCYPd12YTD) ), 'Period Name') , strDim , strCYPd12YTD, 'Last Period' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd01ROY, ELCOMPN( strDim, strCYPd01ROY) ), 'Period Name') , strDim , strCYPd01ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd02ROY, ELCOMPN( strDim, strCYPd02ROY) ), 'Period Name') , strDim , strCYPd02ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd03ROY, ELCOMPN( strDim, strCYPd03ROY) ), 'Period Name') , strDim , strCYPd03ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd04ROY, ELCOMPN( strDim, strCYPd04ROY) ), 'Period Name') , strDim , strCYPd04ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd05ROY, ELCOMPN( strDim, strCYPd05ROY) ), 'Period Name') , strDim , strCYPd05ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd06ROY, ELCOMPN( strDim, strCYPd06ROY) ), 'Period Name') , strDim , strCYPd06ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd07ROY, ELCOMPN( strDim, strCYPd07ROY) ), 'Period Name') , strDim , strCYPd07ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd08ROY, ELCOMPN( strDim, strCYPd08ROY) ), 'Period Name') , strDim , strCYPd08ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd09ROY, ELCOMPN( strDim, strCYPd09ROY) ), 'Period Name') , strDim , strCYPd09ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd10ROY, ELCOMPN( strDim, strCYPd10ROY) ), 'Period Name') , strDim , strCYPd10ROY, 'Last Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd11ROY, ELCOMPN( strDim, strCYPd11ROY) ), 'Period Name') , strDim , strCYPd11ROY, 'Last Period' ) ;
+
+# Update all CY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCY, ELCOMPN( strDim, strCY) ), 'Period Name') , strDim , strCY, 'Last Period' ) ;
+
+#==========================================
+#>>> First Period Attribute - changed to match IBM Performance Modeler names
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS( CELLGETS( strCube, strCYPdOB, 'Period Name') , strDim ,  strCYPdOB , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd01, 'Period Name') , strDim ,  strCYPd01 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd02, 'Period Name') , strDim ,  strCYPd02 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd03, 'Period Name') , strDim ,  strCYPd03 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd04, 'Period Name') , strDim ,  strCYPd04 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd05, 'Period Name') , strDim ,  strCYPd05 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd06, 'Period Name') , strDim ,  strCYPd06 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd07, 'Period Name') , strDim ,  strCYPd07 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd08, 'Period Name') , strDim ,  strCYPd08 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd09, 'Period Name') , strDim ,  strCYPd09 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd10, 'Period Name') , strDim ,  strCYPd10 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd11, 'Period Name') , strDim ,  strCYPd11 , 'First Period' ) ;
+ATTRPUTS( CELLGETS( strCube, strCYPd12, 'Period Name') , strDim ,  strCYPd12 , 'First Period' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ1, 1 ) , 'Period Name') , strDim , strCYQ1, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ2, 1 ) , 'Period Name') , strDim , strCYQ2, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ3, 1 ) , 'Period Name') , strDim , strCYQ3, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYQ4, 1 ) , 'Period Name') , strDim , strCYQ4, 'First Period' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd01YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd02YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd03YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd04YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd05YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd06YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd07YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd08YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd09YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd10YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd11YTD, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, strCYPd01 , 'Period Name') , strDim , strCYPd12YTD, 'First Period' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd01ROY, 1 ) , 'Period Name') , strDim , strCYPd01ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd02ROY, 1 ) , 'Period Name') , strDim , strCYPd02ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd03ROY, 1 ) , 'Period Name') , strDim , strCYPd03ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd04ROY, 1 ) , 'Period Name') , strDim , strCYPd04ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd05ROY, 1 ) , 'Period Name') , strDim , strCYPd05ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd06ROY, 1 ) , 'Period Name') , strDim , strCYPd06ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd07ROY, 1 ) , 'Period Name') , strDim , strCYPd07ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd08ROY, 1 ) , 'Period Name') , strDim , strCYPd08ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd09ROY, 1 ) , 'Period Name') , strDim , strCYPd09ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd10ROY, 1 ) , 'Period Name') , strDim , strCYPd10ROY, 'First Period' ) ;
+ATTRPUTS ( CELLGETS( strCube, ELCOMP( strDim, strCYPd11ROY, 1 ) , 'Period Name') , strDim , strCYPd11ROY, 'First Period' ) ;
+
+# Update all CY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( CELLGETS( strCube, strCYQ1 , 'Period Name') , strDim , strCY, 'First Period' ) ;
+
+
+#==========================================
+#>>> CalendarDays Attribute 
+#==========================================
+
+# NOTE - Handle special elements OB and Final ROY
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTN( 0, strDim ,  strCYPdOB, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd01, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd01, 'Start Date' ) ) + 1, strDim ,  strCYPd01, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd02, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd02, 'Start Date' ) ) + 1, strDim ,  strCYPd02, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd03, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd03, 'Start Date' ) ) + 1, strDim ,  strCYPd03, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd04, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd04, 'Start Date' ) ) + 1, strDim ,  strCYPd04, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd05, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd05, 'Start Date' ) ) + 1, strDim ,  strCYPd05, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd06, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd06, 'Start Date' ) ) + 1, strDim ,  strCYPd06, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd07, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd07, 'Start Date' ) ) + 1, strDim ,  strCYPd07, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd08, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd08, 'Start Date' ) ) + 1, strDim ,  strCYPd08, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd09, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd09, 'Start Date' ) ) + 1, strDim ,  strCYPd09, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd10, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd10, 'Start Date' ) ) + 1, strDim ,  strCYPd10, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd11, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd11, 'Start Date' ) ) + 1, strDim ,  strCYPd11, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd12, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd12, 'Start Date' ) ) + 1, strDim ,  strCYPd12, 'Calendar Days' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYQ1, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYQ1, 'Start Date' ) ) + 1, strDim ,  strCYQ1, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYQ2, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYQ2, 'Start Date' ) ) + 1, strDim ,  strCYQ2, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYQ3, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYQ3, 'Start Date' ) ) + 1, strDim ,  strCYQ3, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYQ4, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYQ4, 'Start Date' ) ) + 1, strDim ,  strCYQ4, 'Calendar Days' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd01YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd01YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd01YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd02YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd02YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd02YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd03YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd03YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd03YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd04YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd04YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd04YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd05YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd05YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd05YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd06YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd06YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd06YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd07YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd07YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd07YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd08YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd08YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd08YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd09YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd09YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd09YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd10YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd10YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd10YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd11YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd11YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd11YTD, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd12YTD, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd12YTD, 'Start Date' ) ) + 1, strDim ,  strCYPd12YTD, 'Calendar Days' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd01ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd01ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd01ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd02ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd02ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd02ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd03ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd03ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd03ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd04ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd04ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd04ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd05ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd05ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd05ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd06ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd06ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd06ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd07ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd07ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd07ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd08ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd08ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd08ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd09ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd09ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd09ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd10ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd10ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd10ROY, 'Calendar Days' ) ;
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCYPd11ROY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCYPd11ROY, 'Start Date' ) ) + 1, strDim ,  strCYPd11ROY, 'Calendar Days' ) ;
+ATTRPUTN( 0, strDim ,  strCYPd12ROY, 'Calendar Days' ) ;
+
+# Update all CY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTN( NUMBR( CELLGETS( strCube, strCY, 'End Date' ) ) - NUMBR( CELLGETS( strCube, strCY, 'Start Date' ) ) + 1, strDim ,  strCY, 'Calendar Days' ) ;
+
+#==========================================
+#>>> Quarter Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Q1-' | strCY , strDim ,  strCYPd01 , 'Quarter' ) ;
+ATTRPUTS ( 'Q1-' | strCY , strDim ,  strCYPd02 , 'Quarter' ) ;
+ATTRPUTS ( 'Q1-' | strCY , strDim ,  strCYPd03 , 'Quarter' ) ;
+ATTRPUTS ( 'Q2-' | strCY , strDim ,  strCYPd04 , 'Quarter' ) ;
+ATTRPUTS ( 'Q2-' | strCY , strDim ,  strCYPd05 , 'Quarter' ) ;
+ATTRPUTS ( 'Q2-' | strCY , strDim ,  strCYPd06 , 'Quarter' ) ;
+ATTRPUTS ( 'Q3-' | strCY , strDim ,  strCYPd07 , 'Quarter' ) ;
+ATTRPUTS ( 'Q3-' | strCY , strDim ,  strCYPd08 , 'Quarter' ) ;
+ATTRPUTS ( 'Q3-' | strCY , strDim ,  strCYPd09 , 'Quarter' ) ;
+ATTRPUTS ( 'Q4-' | strCY , strDim ,  strCYPd10 , 'Quarter' ) ;
+ATTRPUTS ( 'Q4-' | strCY , strDim ,  strCYPd11 , 'Quarter' ) ;
+ATTRPUTS ( 'Q4-' | strCY , strDim ,  strCYPd12 , 'Quarter' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Q1-' | strCY , strDim ,  strCYQ1, 'Quarter' ) ;
+ATTRPUTS ( 'Q2-' | strCY , strDim ,  strCYQ2, 'Quarter' ) ;
+ATTRPUTS ( 'Q3-' | strCY , strDim ,  strCYQ3, 'Quarter' ) ;
+ATTRPUTS ( 'Q4-' | strCY , strDim ,  strCYQ4, 'Quarter' ) ;
+
+
+#==========================================
+#>>> Current Year Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strCY , strDim , strCYPdOB ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd01 , 'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd02 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd03 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd04 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd05 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd06 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd07 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd08 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd09 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd10 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd11 ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd12 ,  'Current Year' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strCY , strDim ,  strCYQ1,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYQ2,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYQ3,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYQ4,  'Current Year' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strCY , strDim ,  strCYPd01YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd02YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd03YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd04YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd05YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd06YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd07YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd08YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd09YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd10YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd11YTD,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd12YTD,  'Current Year' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strCY , strDim ,  strCYPd01ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd02ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd03ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd04ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd05ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd06ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd07ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd08ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd09ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd10ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd11ROY,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYPd12ROY,  'Current Year' ) ;
+
+
+# Update all CY, CYYTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strCY , strDim ,  strCY ,  'Current Year' ) ;
+ATTRPUTS ( strCY , strDim ,  strCYYTD, 'Current Year' ) ;
+
+#==========================================
+#>>> YoY Period Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strPY | '00' , strDim , strCYPdOB ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '01' , strDim , strCYPd01 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '02' , strDim , strCYPd02 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '03' , strDim , strCYPd03 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '04' , strDim , strCYPd04 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '05' , strDim , strCYPd05 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '06' , strDim , strCYPd06 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '07' , strDim , strCYPd07 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '08' , strDim , strCYPd08 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '09' , strDim , strCYPd09 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '10' , strDim , strCYPd10 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '11' , strDim , strCYPd11 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '02' , strDim , strCYPd12 ,  'YoY Period' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strPY | 'Q1' , strDim , strCYQ1 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | 'Q2' , strDim , strCYQ2 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | 'Q3' , strDim , strCYQ3 ,  'YoY Period' ) ;
+ATTRPUTS ( strPY | 'Q4' , strDim , strCYQ4 ,  'YoY Period' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strPY | '01YTD' , strDim ,  strCYPd01YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '02YTD' , strDim ,  strCYPd02YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '03YTD' , strDim ,  strCYPd03YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '04YTD' , strDim ,  strCYPd04YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '05YTD' , strDim ,  strCYPd05YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '06YTD' , strDim ,  strCYPd06YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '07YTD' , strDim ,  strCYPd07YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '08YTD' , strDim ,  strCYPd08YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '09YTD' , strDim ,  strCYPd09YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '10YTD' , strDim ,  strCYPd10YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '11YTD' , strDim ,  strCYPd11YTD,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '12YTD' , strDim ,  strCYPd12YTD,  'YoY Period' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strPY | '01ROY' , strDim ,  strCYPd01ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '02ROY' , strDim ,  strCYPd02ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '03ROY' , strDim ,  strCYPd03ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '04ROY' , strDim ,  strCYPd04ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '05ROY' , strDim ,  strCYPd05ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '06ROY' , strDim ,  strCYPd06ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '07ROY' , strDim ,  strCYPd07ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '08ROY' , strDim ,  strCYPd08ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '09ROY' , strDim ,  strCYPd09ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '10ROY' , strDim ,  strCYPd10ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '11ROY' , strDim ,  strCYPd11ROY,  'YoY Period' ) ;
+ATTRPUTS ( strPY | '12ROY' , strDim ,  strCYPd12ROY,  'YoY Period' ) ;
+
+# Update all CY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strPY , strDim ,  strCY ,  'YoY Period' ) ;
+
+#==========================================
+#>>> YoY Next Period Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strNY | '00' , strDim , strCYPdOB ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '01' , strDim , strCYPd01 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '02' , strDim , strCYPd02 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '03' , strDim , strCYPd03 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '04' , strDim , strCYPd04 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '05' , strDim , strCYPd05 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '06' , strDim , strCYPd06 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '07' , strDim , strCYPd07 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '08' , strDim , strCYPd08 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '09' , strDim , strCYPd09 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '10' , strDim , strCYPd10 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '11' , strDim , strCYPd11 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '02' , strDim , strCYPd12 ,  'YoY Next Period' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strNY | 'Q1' , strDim , strCYQ1 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | 'Q2' , strDim , strCYQ2 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | 'Q3' , strDim , strCYQ3 ,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | 'Q4' , strDim , strCYQ4 ,  'YoY Next Period' ) ;
+
+# Update all YTD
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strNY | '01YTD' , strDim ,  strCYPd01YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '02YTD' , strDim ,  strCYPd02YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '03YTD' , strDim ,  strCYPd03YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '04YTD' , strDim ,  strCYPd04YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '05YTD' , strDim ,  strCYPd05YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '06YTD' , strDim ,  strCYPd06YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '07YTD' , strDim ,  strCYPd07YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '08YTD' , strDim ,  strCYPd08YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '09YTD' , strDim ,  strCYPd09YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '10YTD' , strDim ,  strCYPd10YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '11YTD' , strDim ,  strCYPd11YTD,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '12YTD' , strDim ,  strCYPd12YTD,  'YoY Next Period' ) ;
+
+# Update all ROY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strNY | '01ROY' , strDim ,  strCYPd01ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '02ROY' , strDim ,  strCYPd02ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '03ROY' , strDim ,  strCYPd03ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '04ROY' , strDim ,  strCYPd04ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '05ROY' , strDim ,  strCYPd05ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '06ROY' , strDim ,  strCYPd06ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '07ROY' , strDim ,  strCYPd07ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '08ROY' , strDim ,  strCYPd08ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '09ROY' , strDim ,  strCYPd09ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '10ROY' , strDim ,  strCYPd10ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '11ROY' , strDim ,  strCYPd11ROY,  'YoY Next Period' ) ;
+ATTRPUTS ( strNY | '12ROY' , strDim ,  strCYPd12ROY,  'YoY Next Period' ) ;
+
+# Update all CY
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( strNY , strDim ,  strCY ,  'YoY Next Period' ) ;
+
+#==========================================
+#>>> FullName Attribute
+#==========================================
+
+# Update all N Level Periods
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Opening Balance ' | strCY , strDim , strCYPdOB, 'FullName') ;
+ATTRPUTS ( 'January ' | strCY , strDim ,  strCYPd01 , 'FullName' ) ;
+ATTRPUTS ( 'February ' | strCY , strDim ,  strCYPd02 , 'FullName' ) ;
+ATTRPUTS ( 'March ' | strCY , strDim ,  strCYPd03 , 'FullName' ) ;
+ATTRPUTS ( 'April ' | strCY , strDim ,  strCYPd04 , 'FullName' ) ;
+ATTRPUTS ( 'May ' | strCY , strDim ,  strCYPd05 , 'FullName' ) ;
+ATTRPUTS ( 'June ' | strCY , strDim ,  strCYPd06 , 'FullName' ) ;
+ATTRPUTS ( 'July ' | strCY , strDim ,  strCYPd07 , 'FullName' ) ;
+ATTRPUTS ( 'August ' | strCY , strDim ,  strCYPd08 , 'FullName' ) ;
+ATTRPUTS ( 'September ' | strCY , strDim ,  strCYPd09 , 'FullName' ) ;
+ATTRPUTS ( 'October ' | strCY , strDim ,  strCYPd10 , 'FullName' ) ;
+ATTRPUTS ( 'November ' | strCY , strDim ,  strCYPd11 , 'FullName' ) ;
+ATTRPUTS ( 'December ' | strCY , strDim ,  strCYPd12 , 'FullName' ) ;
+
+# Update all QUARTERS
+#------------------------------------------------------------------------------------------------------
+ATTRPUTS ( 'Quarter 1 ' | strCY , strDim ,  strCYQ1 , 'FullName' ) ;
+ATTRPUTS ( 'Quarter 2 ' | strCY , strDim ,  strCYQ2 , 'FullName' ) ;
+ATTRPUTS ( 'Quarter 3 ' | strCY , strDim ,  strCYQ3 , 'FullName' ) ;
+ATTRPUTS ( 'Quarter 4 ' | strCY , strDim ,  strCYQ4 , 'FullName' ) ;
+
+
+
+
+#endregion

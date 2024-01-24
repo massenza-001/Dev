@@ -1,0 +1,29 @@
+{
+	"@type":"Process",
+	"Name":"ADMIN - Delete Client and Group",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"ADMIN - Delete Client and Group.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"dataSourceNameForServer":"C:/Temp/TM1Names.txt",
+		"dataSourceNameForClient":"C:\\Temp\\TM1Names.txt",
+		"asciiHeaderRecords":0,
+		"asciiQuoteCharacter":"\"",
+		"asciiDecimalSeparator":".",
+		"asciiThousandSeparator":",",
+		"asciiDelimiterType":"Character",
+		"asciiDelimiterChar":","
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vName",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

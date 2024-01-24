@@ -1,0 +1,38 @@
+{
+	"@type":"Process",
+	"Name":"DIM - Build Company Target Dim",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"DIM - Build Company Target Dim.ti",
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForServer":"bpmCompany",
+		"dataSourceNameForClient":"bpmCompany",
+		"subset":"All"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pServer",
+			"Prompt":"Name of Server",
+			"Value":"bpm",
+			"Type":"String"
+		},
+		{
+			"Name":"pDimension",
+			"Prompt":"Name of Company Dimension",
+			"Value":"Company",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vCompany",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

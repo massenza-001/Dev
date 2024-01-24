@@ -1,0 +1,12 @@
+{
+	"@type":"Process",
+	"Name":"ADMIN - BPMS Copy Scenario - CALL3",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"ADMIN - BPMS Copy Scenario - CALL3.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

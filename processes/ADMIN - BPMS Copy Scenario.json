@@ -1,0 +1,44 @@
+{
+	"@type":"Process",
+	"Name":"ADMIN - BPMS Copy Scenario",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"ADMIN - BPMS Copy Scenario.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"parCube",
+			"Prompt":"Cube? <blank> for all",
+			"Value":"bpmFinance",
+			"Type":"String"
+		},
+		{
+			"Name":"parSourceScenario",
+			"Prompt":"Source Scenario",
+			"Value":"Actuals",
+			"Type":"String"
+		},
+		{
+			"Name":"parSourceYear",
+			"Prompt":"Source Year",
+			"Value":"2015",
+			"Type":"String"
+		},
+		{
+			"Name":"parTargetScenario",
+			"Prompt":"Target Scenario",
+			"Value":"Plan V4",
+			"Type":"String"
+		},
+		{
+			"Name":"parTargetYear",
+			"Prompt":"Target Year",
+			"Value":"2015",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

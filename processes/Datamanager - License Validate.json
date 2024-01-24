@@ -1,0 +1,20 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - License Validate",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"Datamanager - License Validate.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pLic",
+			"Prompt":"",
+			"Value":"V5-10000ET500",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

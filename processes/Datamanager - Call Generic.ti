@@ -1,0 +1,216 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#==========================================
+# Version control
+# Version 5.0.21
+# Server and Client need to match
+#==========================================
+
+CELLPUTS ( 'PROCESS STARTED', 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Current Status');
+
+numStartTime = NOW;
+strStartTime = TIMST (numStartTime, '\Y-\m-\d \h:\i');
+CELLPUTS (strStartTime, 'rdmDatamanagerDetails',pCube,pIndex,'VALUE','Start Time');
+
+#=====================
+# LIC CHECK
+# Do not process code if License does not exist
+#=====================
+
+#retVal = EXECUTEPROCESS ('Datamanager - License Validate File');
+#IF ( retVal =ProcessExitByQuit() );
+#     PROCESSQUIT;
+#ENDIF;
+
+#======================
+# Set Database Dir for creating files based on the Log Dir
+#======================
+
+IF ( CELLGETS ( 'rdmDatamanagerControls', 'Value', 'Export File Path') @='');
+     intLen = LONG (GetProcessErrorFileDirectory) - 5;
+     strDataPath = SUBST (GetProcessErrorFileDirectory , 1, intLen) | 'upload\datamanager\';
+     CELLPUTS ( strDataPath, 'rdmDatamanagerControls', 'Value', 'Export File Path');
+ENDIF;
+
+#=====================
+# Check for \ at the end of the export path if it is blank then append \ to it
+#====================
+
+strExportPathVal = CELLGETS ( 'rdmDatamanagerControls', 'Value', 'Export File Path');
+intExportLen = LONG ( strExportPathVal);
+strCheckVal = SUBST ( strExportPathVal, intExportLen, 1);
+
+IF ( strCheckVal @<>'\');
+     strNewExportPath = strExportPathVal | '\';
+     CELLPUTS ( strNewExportPath, 'rdmDatamanagerControls', 'Value', 'Export File Path');
+ENDIF;
+
+#=======================
+# GET PARAMETERS
+#=======================
+
+strFileName = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'File Name');
+strType = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Type');
+strToCube = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'To Cube');
+intFactor = CELLGETN( 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Factor');
+strTimeStamp = TIMST (NOW, '\Y\m\d\h\i\s' );
+strZeroOut = ATTRS ( 'rdmDataManagerTypes', strType, 'Zero Out');
+strRemoveRuleFlag = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Remove Rule');
+
+#===================================
+
+IF ( intFactor = 0);
+     intFactor = 1;
+ELSE;
+     intFactor = intFactor;
+ENDIF;
+
+IF ( strFileName @='');
+     strFileName = 'ZZDATAMANAGEREXPORTFILE' | strTimeStamp | '.txt';
+ELSE;
+      strFileName = strFileName;
+ENDIF;
+
+
+#===================================
+# Validate Index - End Process if process returns an error
+#===================================
+
+retVal = EXECUTEPROCESS ( 'Datamanager - Validate Index', 'pCube', pCube, 'pIndex', pIndex);
+
+IF ( retVal =ProcessExitByBreak() );
+# UPDATE DETAILS CUBE WITH STATUS IF FAILS VALIDATION
+     CELLPUTS ( 'FAILED VALIDATION', 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Current Status');
+     PROCESSQUIT;
+ENDIF;
+
+
+
+#=======================
+# BUILD QUERY
+#=======================
+
+strView = 'zzDataManager';
+strType = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Type');
+
+intError = DIMIX ( 'rdmDataManagerTypes', strType);
+
+IF ( strType @='CUSTOM PROCESS');
+      CELLPUTS ( 'ERROR TYPE IS CUSTOM PROCESS', 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Current Status');
+     PROCESSQUIT;
+ENDIF;
+
+IF ( intError = 0);
+      CELLPUTS ( 'ERROR IN BUILD QUERY SECTION', 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Current Status');
+     PROCESSQUIT;
+ENDIF;
+
+IF ( intError <>0);
+  IF ( strType@<>'COMPLETE STRING COPY');
+     EXECUTEPROCESS ( 'Datamanager - Build Query', 'pCube', pCube, 'pIndex', pIndex, 'pView', strView);
+  ELSE;
+     EXECUTEPROCESS ( 'Datamanager - Build String Query', 'pCube', pCube, 'pIndex', pIndex, 'pView', strView);
+  ENDIF;
+ENDIF;
+
+#================================
+# CREATE FILE
+#================================
+
+
+IF ( DIMIX ( 'rdmDataManagerTypes', strType) <>0);
+     strProcess = ATTRS ( 'rdmDataManagerTypes', strType, 'Process');
+ENDIF;
+
+IF ( strProcess @<>'');
+     EXECUTEPROCESS ( strProcess, 'pView', strView, 'pFileName', strFileName, 'pType', strType, 'pFactor', intFactor,
+       'pCube', pCube, 'pIndex', pIndex);
+ENDIF;
+
+
+#================================
+# REMOVE RULE FILE
+#================================
+
+IF ( strRemoveRuleFlag @='Y');
+        EXECUTEPROCESS ( 'Datamanager - Remove Rule',  'pFileName', '', 'pIndex', '', 'pCube', pCube);
+ENDIF;
+
+#=======================
+# ZERO OUT
+#=======================
+
+IF ( DIMIX ( 'rdmDataManagerTypes', strType) <>0);
+     strProcess = ATTRS ( 'rdmDataManagerTypes', strType, 'Zero Out Process');
+ENDIF;
+
+IF ( strZeroOut @='Y' & strProcess@<>'');
+     EXECUTEPROCESS ( strProcess, 'pCube', pCube, 'pIndex', pIndex);
+ENDIF;
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+#=============================
+# PROCESS RESULTS
+#=============================
+
+IF ( DIMIX ( 'rdmDataManagerTypes', strType) <>0);
+     strProcess = ATTRS ( 'rdmDataManagerTypes', strType, 'Import Process');
+ENDIF;
+
+IF ( strProcess @<>'');
+     EXECUTEPROCESS ( strProcess, 'pFileName', strFileName, 'pIndex', pIndex, 'pCube', pCube);
+ENDIF;
+
+
+#================================
+# RELOAD RULE FILE
+#================================
+
+IF ( strRemoveRuleFlag @='Y');
+        EXECUTEPROCESS ( 'Datamanager - Reload Rule', 'pFileName', '', 'pIndex', '', 'pCube', pCube);
+ENDIF;
+
+
+
+CELLPUTS ( 'PROCESS COMPLETED', 'rdmDatamanagerDetails', pCube, pIndex, 'VALUE', 'Current Status');
+
+numEndTime = NOW;
+strEndTime = TIMST (numEndTime, '\Y-\m-\d \h:\i');
+CELLPUTS (strEndTime, 'rdmDatamanagerDetails',pCube,pIndex,'VALUE','End Time');
+
+numDuration = numEndTime - numStartTime;
+strDuration = TIMST (numDuration, '\h:\i:\s');
+CELLPUTS (strDuration, 'rdmDatamanagerDetails',pCube,pIndex,'VALUE','Duration');
+#endregion

@@ -1,0 +1,132 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#=======================
+# GET PARAMETERS
+#=======================
+
+strView = 'zzMoveQuickCopy';
+strCube = 'rdmDatamanagerDetails';
+
+strSubSet = strView;
+#===================
+# Create View
+#===================
+
+IF ( VIEWEXISTS ( strCube, strView) =1);
+     VIEWDESTROY ( strCube, strView);
+ENDIF;
+
+VIEWCREATE ( strCube ,strView);
+
+#==================
+# Create Subset
+#==================
+
+strDim = 'rdmDatamanagerIndex';
+IF( SUBSETEXISTS (strDim, strSubSet) = 1);
+            SUBSETDELETEALLELEMENTS (strDim, strSubSet);
+      ELSE;
+          SUBSETCREATE (strDim, strSubSet);
+ENDIF;
+
+SUBSETELEMENTINSERT ( strDim, strSubSet, pIndex, 1);
+VIEWSUBSETASSIGN ( strCube, strView, strDim, strSubSet);
+
+
+strDim = '}Cubes';
+IF( SUBSETEXISTS (strDim, strSubSet) = 1);
+            SUBSETDELETEALLELEMENTS (strDim, strSubSet);
+      ELSE;
+          SUBSETCREATE (strDim, strSubSet);
+ENDIF;
+
+SUBSETELEMENTINSERT ( strDim, strSubSet, pCube, 1);
+VIEWSUBSETASSIGN ( strCube, strView, strDim, strSubSet);
+
+DATASOURCECUBEVIEW = strView;
+
+strFoundIndex = 'N';
+
+
+
+
+
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#=====================
+# Start Index Loop
+#=====================
+
+intLoop = DIMSIZ( 'rdmDatamanagerIndex' );
+intCtr = 1;
+
+
+IF ( strFoundINdex @='N');
+  WHILE ( intCTR <= intLoop);
+
+        strIndex = 'Index ' | NUMBERTOSTRING ( intCTR);
+ 
+        strType = CELLGETS ( strCube, pCube, strIndex, 'Value', 'TYPE');
+   
+      
+       IF ( strType @='');
+              CELLPUTN ( intCTR, '}rdmDatamanagerIndexCounter', pCube, 'VALUE');
+             strFoundIndex = 'Y';
+             strCurrentIndex = strIndex;
+             intCTR = intLoop;
+      ENDIF;             
+
+      intCTR = intCTR +1;
+  END;
+ENDIF;
+
+
+    IF ( strFoundIndex @='Y');
+
+
+
+
+                    IF ( rdmDatamanagerVariable @='REMOVE RULE' % rdmDatamanagerVariable@='FROM' % rdmDatamanagerVariable@='TYPE' 
+                                % rdmDatamanagerVariable@='TO');
+                          CELLPUTS(VALUE, strCube, pCube, strIndex, rdmDatamanagerDim, rdmDatamanagerVariable);
+                    ENDIF;
+
+#               IF ( SUBST ( strType ,1, 6) @='TOCUBE');
+                    IF ( rdmDatamanagerVariable @='To Cube');
+                          CELLPUTS(VALUE, strCube, pCube, strIndex, rdmDatamanagerDim, rdmDatamanagerVariable);
+                    ENDIF;
+#              ENDIF;
+
+                    IF ( rdmDatamanagerVariable @='BASEVALUE' % rdmDatamanagerVariable@='Factor');
+                          CELLPUTN( STRINGTONUMBER(VALUE), strCube, pCube, strIndex, rdmDatamanagerDim, rdmDatamanagerVariable);
+                    ENDIF;
+
+
+   ENDIF;
+
+
+
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

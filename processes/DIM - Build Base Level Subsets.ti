@@ -1,0 +1,111 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#=============================================================================================
+# PURPOSE - Process will create Base Level (level-n) static subsets for the defined dimension.
+#
+# PARAMETERS:
+#     parDim               - Dimension Name
+#     parAlias             - Alias to sort by (if needed)
+#=============================================================================================
+
+#=============================================================================================
+# REVISIONS:
+#=============================================================================================
+
+#===================================
+# >>> Define Global Variables
+#===================================
+strControlsCube = '}bpmControls';
+
+#===================================
+# >>> Create Static n-level Subset
+#===================================
+strSub = parSubsetName;
+
+IF (SUBSETEXISTS (parDim, strSub) = 0);
+     SUBSETCREATE (parDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS (parDim, strSub);
+IF( parAlias @<> '' );
+     SUBSETALIASSET( parDim, strSub, parAlias );
+ENDIF;
+
+
+#===================================
+# >>> Create Temp Dynamic Subset
+#===================================
+strTimeStamp = NUMBERTOSTRING (NOW);
+strTimeStamp = SUBST (strTimeStamp, LONG (strTimeStamp) - 5, 5);
+
+strTempSub = 'zzTemp_level-n_' | strTimeStamp;
+
+IF (SUBSETEXISTS (parDim, strTempSub) = 1);
+     SUBSETDESTROY (parDim, strTempSub);
+ENDIF;
+
+IF (parAlias @= '');
+     SUBSETCREATEBYMDX  (strTempSub, '{TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [' | parDim | '] )}, 0)}, ASC)}');
+ELSE;
+     SUBSETCREATEBYMDX  (strTempSub,
+     '{ORDER({TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [' | parDim | '] )}, 0)}, ASC)},[' | parDim | '].[' | parAlias | '],BASC)}');
+ENDIF;
+
+#===================================
+# >>> Create Export of Dynamic Subset to be processed in Metadata
+#===================================
+strExportPath = CELLGETS (strControlsCube, 'Value', 'Log Path');
+strExportFile = strExportPath | parDim | '_' | parSubsetName | '.txt';
+
+numCtr = SUBSETGETSIZE (parDim, strTempSub);
+
+WHILE (numCtr > 0);
+     strElem = SUBSETGETELEMENTNAME (parDim, strTempSub, numCtr);
+          ASCIIOUTPUT (strExportFile, strElem, strElem);
+     numCtr = numCtr - 1;
+
+END;
+
+#===================================
+# >>> Destroy Temp Subset
+#===================================
+SUBSETDESTROY (parDim, strTempSub);
+
+#===================================
+# >>> Dynamically set Source as Extract File created above
+#===================================
+DATASOURCENAMEFORSERVER = strExportFile;
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#===================================
+# >>> Add Base Level Elements to Subset
+#===================================
+SUBSETELEMENTINSERT (parDim, strSub, vElement, 1);
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+
+
+#endregion

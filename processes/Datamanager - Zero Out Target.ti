@@ -1,0 +1,149 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#===================================
+# Build View
+#===================================
+
+strCubeName = pCube;
+
+strView = 'zzDataManager';
+
+IF ( VIEWEXISTS ( strCubeName, strView) =1);
+     VIEWDESTROY ( strCubeName, strView);
+ENDIF;
+
+VIEWCREATE ( strCubeName ,strView);
+#VIEWSETSKIPCALCS(strCubeName, strView, 0 );
+
+
+
+#===================================
+# Process dims and create subsets while looping through the Finance cube
+#===================================
+
+intLoop = 32;
+intDIMCTR = 1;
+strSubSet = strView;
+strCube = strCubeName;
+
+intZero = 0;
+
+WHILE ( intDIMCTR <= intLoop );
+
+    strDimValue = 'Dim ' | NUMBERTOSTRING ( intDIMCTR);
+    strIndex = pIndex;
+
+
+    strDimension = TABDIM (strCube, intDIMCTR);
+
+#==================================
+#Check the FROM dimensions and use the FROM side if TARGET is blank but the FROM side is filled in
+#==================================
+
+    strCheckFROM = CELLGETS( 'rdmDatamanagerDetails', strCube, strIndex, strDimValue, 'FROM');
+    strCheckTO = CELLGETS( 'rdmDatamanagerDetails', strCube, strIndex, strDimValue, 'TO');
+
+    IF ( strCheckFROM @<>'' & strCheckTO @='');
+
+          strCheckElem = strCheckFROM;
+
+    ELSE;
+
+          strCheckElem = strCheckTO;
+
+   ENDIF;
+
+# DanB - FEB 25 2016 - Move this line up and out of IF satatement.  To fix error where SUBSET name same as Element Name
+# This fix will work BUT the SUBSET will rule over the Element Name.  So a subset called PLAN with 3 elements will be zeroed out NOT just the element called PLAN
+         intCheckElem = DIMIX ( strDimension, strCheckElem);
+         IF ( strCheckElem @<>'' & SUBSETEXISTS ( strDimension, strCheckElem) =0);
+             IF ( DIMIX ( strDimension, strCheckElem) =0);
+                 PROCESSBREAK;
+             ENDIF;
+        ENDIF;
+
+
+     strCheckType = DTYPE ( strDimension, strCheckElem);
+
+
+#==========================
+# Checking out of Loop
+#==========================
+
+   IF ( strDimension @='');
+        intDIMCTR = intLoop;
+   ENDIF;
+
+
+  IF( strDimension @<>'' & strCheckElem @<>'' & intCheckElem <>0);
+
+      IF( SUBSETEXISTS (strDimension, strSubSet) = 1);
+            SUBSETDELETEALLELEMENTS (strDimension, strSubSet);
+      ELSE;
+          SUBSETCREATE (strDimension, strSubSet);
+     ENDIF;
+
+
+# if tabdim is not blank and value is not blank do code below
+
+  IF ( SUBSETEXISTS ( strDimension, strCheckElem) = 1);
+         VIEWSUBSETASSIGN(strCubeName, strView, strDimension, strCheckElem);
+  ELSE;
+     IF( strCheckType@='C');
+          IF( ELLEV( strDimension, strCheckElem)=0 );
+               SUBSETELEMENTINSERT(strDimension, strSubset,strCheckElem,1);
+          ELSE;
+               intSize = DIMSIZ( strDimension );
+               intCtr = 1;
+               WHILE( intCtr <= intSize );
+                    strElem = DIMNM( strDimension, intCtr );
+                    IF( ELISANC( strDimension, strCheckElem, strElem )<>0 & ELLEV( strDimension, strElem )=0 );
+                         SUBSETELEMENTINSERT(strDimension, strSubset, strElem,1);
+                    ENDIF;
+                    intCtr = intCtr + 1;
+               END;
+          ENDIF;
+     ELSE;
+          SUBSETELEMENTINSERT(strDimension, strSubset,strCheckElem,1);
+     ENDIF;
+     VIEWSUBSETASSIGN(strCubeName, strView, strDimension, strSubset);
+
+
+
+intZero = 1;
+
+
+ENDIF;
+ENDIF;
+
+intDIMCTR = intDIMCTR + 1;
+END;
+
+
+IF ( intZero =1);
+     VIEWZEROOUT ( strCubeName, strView);
+ENDIF;
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+
+
+#endregion

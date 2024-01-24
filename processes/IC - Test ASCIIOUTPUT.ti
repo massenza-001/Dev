@@ -1,0 +1,7 @@
+#region Metadata
+
+
+ASCIIOUTPUT('IC/export_v4.csv',vAccount);
+
+
+#endregion

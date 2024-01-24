@@ -1,0 +1,445 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> #
+# PROCESS STATS - PROLOG
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> #
+
+### VARIABLE DECLARATION
+strProcessStatsCube ='ProcessStatistics';
+strProcessesDim = '}Processes';
+strStatIndexDim = 'StatIndex';
+strStatMsrDim = 'Stat_Msr';
+strMsrUser = 'Last Run By';
+strMsrParameters = 'Parameters';
+strMsrStartTime = 'Start Time';
+strMsrEndTime = 'End Time';
+strMsrDuration = 'Duration';
+strMsrRecordCount = 'Record Count';
+strProcessIndex = '1';
+
+numStatsRecordCount = 0;
+strProcessName = GETPROCESSNAME();
+strUserName = IF(DIMIX('}Clients', TM1User() ) = 0, TM1User(), IF(ATTRS('}Clients', TM1User(), '}TM1_DefaultDisplayValue') @= '', TM1User(), ATTRS('}Clients', TM1User(), '}TM1_DefaultDisplayValue') ) );
+strStatsStartDate = TIMST (NOW, '\Y \M \d \h:\i:\s');
+numStatsStartTime = NOW;
+
+### Parameter Responses; Update as Necessary;
+strParName1 = '';
+strParResponse1= '';
+
+strParResponses = '';
+
+IF ( strParName1 @<> '' );
+   strParResponses = strParResponses | strParName1 | ':'  | strParResponse1 | ';' ;
+ENDIF;
+
+#### PROCESS STATS END
+
+
+###############################################################
+# VARIABLES
+###############################################################
+
+dimCo = 'Company';
+dimDept = 'Department';
+
+###############################################################
+# COMPANY SUBSETS
+###############################################################
+
+dimUse = dimCo;
+
+subName = 'Corporate Burst';
+sMDX = '{ { [Company].[Gray Television Consolidated] }, 
+               { [Company].[Broadcasting] },
+               { [Company].[Station Broadcasting (excl Licensee)] },
+               { [Company].[TV Stations] },
+               {TM1SORT({TM1FILTERBYLEVEL( { TM1DRILLDOWNMEMBER( { [Company].[TV Stations] }, ALL, RECURSIVE ) }, 0)}, ASC)},
+               { [Company].[TV Support Services] },
+               {TM1SORT({TM1FILTERBYLEVEL( { TM1DRILLDOWNMEMBER( { [Company].[TV Support Services] }, ALL, RECURSIVE ) }, 0)},ASC)},
+               { [Company].[Licensee] },
+               {TM1SORT({TM1FILTERBYLEVEL( { TM1DRILLDOWNMEMBER( { [Company].[Licensee] }, ALL, RECURSIVE ) }, 0)},ASC)},
+               { [Company].[Corporate] },
+               {TM1SORT({TM1FILTERBYLEVEL( { TM1DRILLDOWNMEMBER( { [Company].[Corporate] }, ALL, RECURSIVE ) }, 0)},ASC)},
+               { [Company].[Production Co] },
+               {TM1SORT({TM1FILTERBYLEVEL( { TM1DRILLDOWNMEMBER( { [Company].[Production Co] }, ALL, RECURSIVE ) }, 0)},ASC)}}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'BaseLevel';
+sMDX = '{{[Company].[Select A Company]},
+              {EXCEPT({TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [Company] )}, 0)}, ASC)},{[Company].[Select A Company]})}} ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'BaseLevel-NoAlias';
+sMDX = '{{[Company].[Select A Company]},
+              {EXCEPT({TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [Company] )}, 0)}, ASC)},{[Company].[Select A Company]})}} ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Loop_Admin';
+sMDX = '{ TM1DRILLDOWNMEMBER( { [ Company ].[ Albany, GA ] }, ALL, RECURSIVE ) } ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Tax-GTI Cons';
+sMDX = '{ { [Company].[Gray Television, Inc. (Consolidated)] }, { [Company].[Gray Television, Inc. (Consolidated)].children }} ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Company Expanded';
+sMDX = '{ { [Company].[Select a Company] },{ TM1DRILLDOWNMEMBER( { [Company].[Total Company] }, ALL, RECURSIVE ) }} ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'TV Rollup by Market';
+sMDX = '{ { [Company].[TV Stations] },{TM1SORT({[Company].[TV Stations].Children},ASC)}}  ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'MarketCode');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Gray Consolidated by Market';
+sMDX = '{ { [Company].[Gray Television Consolidated] },{TM1SORT({[Company].[TV Stations].Children},ASC)},{ [Company].[TV Support Services] },
+            { [Company].[Licensee] },{ [Company].[Corporate] },{ [Company].[Production Co] },{ [Company].[Other Nonconsolidated Entities] }}  ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'MarketCode');
+SUBSETMDXSET( dimUse, subName, '');
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Gray Consolidated BaseLevel';
+sMDX = '{{TM1SORT({TM1FILTERBYLEVEL( { TM1DRILLDOWNMEMBER( { [Company].[Gray Television Consolidated] }, ALL, RECURSIVE ) }, 0)},ASC)},
+               { [Company].[Gray Television Consolidated] }}  ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+###############################################################
+# DEPARTMENT SUBSETS
+###############################################################
+
+dimUse = dimDept;
+
+
+subName = 'Operating Department Expanded';
+sMDX = ' {{[Department].[Select a Department]},{TM1DRILLDOWNMEMBER( {[Department].[Operating Expense Departments]}, ALL, RECURSIVE )}} ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Operating Dept Base Level-Stations';
+sMDX = '{{[Department].[Select a Department]}, 
+               [Department].[500],
+               [Department].[520],
+               [Department].[530],
+               [Department].[540],
+               [Department].[550],
+               [Department].[560],
+               [Department].[565],
+               [Department].[570],
+               [Department].[590],
+               [Department].[800],
+               [Department].[860]}}} ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'BaseLevel';
+sMDX = 'TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [Department] )}, 0)}, ASC)}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'BaseLevel-NoAlias';
+sMDX = 'TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [Department] )}, 0)}, ASC)}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Expense Departments';
+sMDX = '{{[Department].[Select a Department]},
+               {TM1DRILLDOWNMEMBER( {[Department].[Operating Expense Departments]}, ALL, RECURSIVE )},
+               {TM1DRILLDOWNMEMBER( {[Department].[Non-operating Expense Departments]}, ALL, RECURSIVE )},
+               {TM1DRILLDOWNMEMBER( {[Department].[Income Tax Expense Department]}, ALL, RECURSIVE )}} ';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Expense Departments Base';
+sMDX = '{{[Department].[Select a Department]},
+               { TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[Department].[Operating Expense Departments]},ALL,RECURSIVE)},0)},
+               {TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[Department].[Non-operating Expense Departments]}, ALL, RECURSIVE )},0)},
+               { TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[Department].[Income Tax Expense Department]}, ALL, RECURSIVE )},0)}}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Misc Revenue Depts';
+sMDX = ' {{[Department].[Select a Department]},
+               {TM1DRILLDOWNMEMBER( {[Department].[Total Misc Revenue Departments]}, ALL, RECURSIVE )}}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Misc Revenue Depts Base Level';
+sMDX = '{{[Department].[Select a Department]},
+                { TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[Department].[Total Misc Revenue Departments]}, ALL, RECURSIVE )},0)}}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Operating Depts-Station Grid';
+sMDX = '{{[Department].[Select a Department]}, 
+               {TM1DRILLDOWNMEMBER( {[Department].[Total Operating Depts-Stations]}, ALL, RECURSIVE )}}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Revenue by Stations Dept Base';
+sMDX = '{{[Department].[Select a Department]},
+               { TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[Department].[Revenue by Station Depts]}, ALL, RECURSIVE )},0)}}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+subName = 'Total Revenue by Stations Depts';
+sMDX = ' {{[Department].[Select a Department]},
+               {TM1DRILLDOWNMEMBER( {[Department].[Revenue by Station Depts]}, ALL, RECURSIVE )}}';
+
+IF( SUBSETEXISTS( dimUse, subName) = 0);
+     SUBSETCREATEBYMDX( subName, sMDX);
+ELSE;
+     SUBSETMDXSET( dimUse, subName, sMDX);
+ENDIF;
+SUBSETALIASSET( dimUse, subName, 'CodeName');
+SUBSETMDXSET( dimUse, subName, '');
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> #
+# PROCESS STATS - EPILOG
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> #
+
+### Establish End Time,Duration, and Print All Responses to Process Statistics cube
+
+numStatsEndTime = NOW;
+strStatsEndDate = TIMST (NOW, '\Y \M \d \h:\i:\s');
+numElapsedSeconds = ROUND ((numStatsEndTime  - numStatsStartTime ) / 0.000011574074074074);
+strElapsedSeconds = NUMBERTOSTRING( numElapsedSeconds );
+numStatsIndexCount = 25;
+
+### Cycle Through Each record and copy the data to the next index (i.e. 24 > 25, 23 > 24, etc.) for each measure
+
+WHILE ( numStatsIndexCount > 0 );
+
+   IF ( numStatsIndexCount -1 <>0 );
+
+      ### Establish the Indexes to copy data from/to
+      strStatsIndexFrom = NUMBERTOSTRING( numStatsIndexCount -1 );
+      strStatsIndexTo = NUMBERTOSTRING( numStatsIndexCount );
+
+      ### Automatically Copy Across All Measures 
+      numProcessStatMsrCount = DIMSIZ( strStatMsrDim );
+      WHILE ( numProcessStatMsrCount  > 0 );
+         strProcessMsr = DIMNM( strStatMsrDim , numProcessStatMsrCount  );
+
+         strCubeResponse = CELLGETS( strProcessStatsCube , strProcessName , strStatsIndexFrom , strProcessMsr);
+         CELLPUTS( strCubeResponse , strProcessStatsCube , strProcessName , strStatsIndexTo , strProcessMsr);
+
+         ### Uncomment Below to see the processes and parameters being executed in this loop
+         ####ASCIIOUTPUT('ADMIN - Process Logging Example.txt' , 'pProcess', strProcessName , 'pIndexFrom', strStatsIndexFrom , 'pIndexTo' , strStatsIndexTo , 'pProcessMsr' , strProcessMsr );
+
+         numProcessStatMsrCount = numProcessStatMsrCount  -1;
+      END;
+
+   ENDIF;
+
+   numStatsIndexCount = numStatsIndexCount -1;
+END;
+
+### Print Responses Into First Index for this process
+CELLPUTS( strUserName , strProcessStatsCube , strProcessName , strProcessIndex , strMsrUser );
+CELLPUTS( strParResponses , strProcessStatsCube , strProcessName , strProcessIndex , strMsrParameters );
+CELLPUTS( strStatsStartDate , strProcessStatsCube , strProcessName , strProcessIndex , strMsrStartTime );
+CELLPUTS( strStatsEndDate , strProcessStatsCube , strProcessName , strProcessIndex , strMsrEndTime );
+CELLPUTS( strElapsedSeconds , strProcessStatsCube , strProcessName , strProcessIndex , strMsrDuration );
+CELLPUTS( NUMBERTOSTRING(numStatsRecordCount ), strProcessStatsCube , strProcessName , strProcessIndex , strMsrRecordCount );
+
+#### PROCESS STATS END
+
+#endregion

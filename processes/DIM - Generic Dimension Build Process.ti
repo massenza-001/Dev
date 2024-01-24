@@ -1,0 +1,106 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#=============================================================================================
+# PURPOSE - Process will create a dimension based on a data feed with the following column structure:
+#                           Parent, Child, Description, Weight, Type
+#
+#
+# PARAMETERS:
+#     pDimension  - Dimension Name
+#=============================================================================================
+
+
+
+#=============================================
+#    Define Global Variables
+#=============================================
+
+strDim = pDimension;
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#=============================================
+#    Define Global Variables
+#=============================================
+
+
+
+strParent = vParent;
+strChild = vChild;
+strDesc = vDescription;
+nWeight = vWeight;
+strType = vType;
+
+
+#==========================================
+#  Check if Parent exist and add to Dimension
+#==========================================
+
+#ADD ELEMENT TO DIMENSION AND HIERARCHY
+
+   IF ( DIMIX ( strDim,strParent) = 0);
+         DIMENSIONELEMENTINSERT ( strDim, ' ', strParent, 'N');
+   ENDIF;
+
+
+
+#==========================================
+#  Check if Child exist and add to Dimension
+#==========================================
+
+#ADD ELEMENT TO DIMENSION AND HIERARCHY
+
+        IF ( DIMIX ( strDim,strChild) = 0);
+             DIMENSIONELEMENTINSERT ( strDim, ' ', strChild, strType);
+        ENDIF;
+
+
+#==========================================
+#  Create parent-child relationship
+#==========================================
+DIMENSIONELEMENTCOMPONENTADD ( strDim,strParent,strChild, nWeight);
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#=============================================
+#    Define Global Variables
+#=============================================
+
+
+
+strParent = vParent;
+strChild = vChild;
+strDesc = vDescription;
+nWeight = vWeight;
+strType = vType;
+
+strDim2 = ('}ElementAttributes_' | pDimension);
+
+strAttr = 'Description';
+
+
+#==========================================
+#  Add Attribute to Dimension
+#=========================================
+
+CELLPUTS (strDesc, strDim2, vChild, strAttr);
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

@@ -1,0 +1,26 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Reset Batch Index",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Reset Batch Index.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pBatch",
+			"Prompt":"dex",
+			"Value":"Revelwood",
+			"Type":"String"
+		},
+		{
+			"Name":"pBatchIndex",
+			"Prompt":"Batch 2",
+			"Value":"Batch 2",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"UTILITY - Create CodeName and NameCode Aliases",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"UTILITY - Create CodeName and NameCode Aliases.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"parDim",
+			"Prompt":"Dim Name?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parAlias1",
+			"Prompt":"Alias #1 Name",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parAlias2",
+			"Prompt":"Alias #2 Name",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

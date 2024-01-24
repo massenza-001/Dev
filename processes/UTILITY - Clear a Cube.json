@@ -1,0 +1,20 @@
+{
+	"@type":"Process",
+	"Name":"UTILITY - Clear a Cube",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"UTILITY - Clear a Cube.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"parCube",
+			"Prompt":"Cube Name?",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

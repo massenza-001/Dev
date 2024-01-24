@@ -1,0 +1,44 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+strApp = 'bpm';
+strAlias = '';
+strSubsetName = 'Base Level';
+
+strDim1= strApp | 'Department';
+strDim2 = strApp | 'Company';
+strDim3 = strApp | 'Account';
+strDim4 = strApp | 'Control';
+
+ExecuteProcess('DIM - Build Base Level Subsets', 'parDim', strDim1, 'parAlias', strAlias, 'parSubsetName', strSubsetName);
+ExecuteProcess('DIM - Build Base Level Subsets', 'parDim', strDim2, 'parAlias', strAlias, 'parSubSetName', strSubsetName);
+ExecuteProcess('DIM - Build Base Level Subsets', 'parDim', strDim3, 'parAlias', strAlias, 'parSubSetName', strSubsetName);
+ExecuteProcess('DIM - Build Base Level Subsets', 'parDim', strDim4, 'parAlias', strAlias, 'parSubSetName', strSubsetName);
+
+ExecuteProcess('DIM - Create CodeName and NameCode Aliases', 'pDim', strDim1, 'pAlias1', 'CodeName', 'pAlias2', 'Namecode');
+ExecuteProcess('DIM - Create CodeName and NameCode Aliases', 'pDim', strDim2, 'pAlias1', 'CodeName', 'pAlias2', 'Namecode');
+ExecuteProcess('DIM - Create CodeName and NameCode Aliases', 'pDim', strDim3, 'pAlias1', 'CodeName', 'pAlias2', 'Namecode');
+ExecuteProcess('DIM - Create CodeName and NameCode Aliases', 'pDim', strDim4, 'pAlias1', 'CodeName', 'pAlias2', 'Namecode');
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

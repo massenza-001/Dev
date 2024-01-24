@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Build Query Cons",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"Datamanager - Build Query Cons.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pCube",
+			"Prompt":"",
+			"Value":"bpmFinance",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":"e",
+			"Value":"Index 2",
+			"Type":"String"
+		},
+		{
+			"Name":"pView",
+			"Prompt":"",
+			"Value":"zzTESTING",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

@@ -1,0 +1,17 @@
+#region Prolog
+
+# strCube = 'bpmFinance';
+
+#numValue = CELLGETN ( strCube, 'x');
+
+ ASCIIOUTPUT ( 'LeeTest.csv', 'xxx');
+
+
+
+
+#endregion
+#region Metadata
+
+
+
+#endregion

@@ -1,0 +1,540 @@
+#region Prolog
+
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#============================
+# GRAB BaseValue from details cube and use if non zero
+#============================
+
+intBaseValue = CELLGETN( 'rdmDatamanagerDetails', pCube, pIndex, 'Value', 'BaseValue');
+
+#============================
+
+
+strPath = CELLGETS ( 'rdmDatamanagerControls', 'VALUE', 'Export File Path');
+
+IF ( pType @='EXPORT' & SCAN ( '\', pFileName) >0);
+     strFile = pFileName;
+ELSE;
+     strFile =  strPath | pFileName;
+ENDIF;
+
+
+
+strDim1 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 1', 'To');
+strDim2 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 2', 'To');
+strDim3 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 3', 'To');
+strDim4 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 4', 'To');
+strDim5 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 5', 'To');
+strDim6 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 6', 'To');
+strDim7 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 7', 'To');
+strDim8 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 8', 'To');
+strDim9 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 9', 'To');
+strDim10 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 10', 'To');
+strDim11 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 11', 'To');
+strDim12 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 12', 'To');
+strDim13 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 13', 'To');
+strDim14 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 14', 'To');
+strDim15 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 15', 'To');
+strDim16 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 16', 'To');
+strDim17 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 17', 'To');
+strDim18 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 18', 'To');
+strDim19 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 19', 'To');
+strDim20 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 20', 'To');
+strDim21 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 21', 'To');
+strDim22 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 22', 'To');
+strDim23 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 23', 'To');
+strDim24 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 24', 'To');
+strDim25 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 25', 'To');
+strDim26 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 26', 'To');
+strDim27 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 27', 'To');
+strDim28 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 28', 'To');
+strDim29 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 29', 'To');
+strDim30 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 30', 'To');
+strDim31 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 31', 'To');
+strDim32 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 32', 'To');
+
+
+strDimName1 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 1', 'Dim Name');
+strDimName2 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 2', 'Dim Name');
+strDimName3 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 3', 'Dim Name');
+strDimName4 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 4', 'Dim Name');
+strDimName5 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 5', 'Dim Name');
+strDimName6 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 6', 'Dim Name');
+strDimName7 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 7', 'Dim Name');
+strDimName8 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 8', 'Dim Name');
+strDimName9 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 9', 'Dim Name');
+strDimName10 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 10', 'Dim Name');
+strDimName11 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 11', 'Dim Name');
+strDimName12 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 12', 'Dim Name');
+strDimName13 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 13', 'Dim Name');
+strDimName14 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 14', 'Dim Name');
+strDimName15 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 15', 'Dim Name');
+strDimName16 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 16', 'Dim Name');
+strDimName17 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 17', 'Dim Name');
+strDimName18 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 18', 'Dim Name');
+strDimName19 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 19', 'Dim Name');
+strDimName20 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 20', 'Dim Name');
+strDimName21 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 21', 'Dim Name');
+strDimName22 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 22', 'Dim Name');
+strDimName23 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 23', 'Dim Name');
+strDimName24 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 24', 'Dim Name');
+strDimName25 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 25', 'Dim Name');
+strDimName26 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 26', 'Dim Name');
+strDimName27 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 27', 'Dim Name');
+strDimName28 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 28', 'Dim Name');
+strDimName29 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 29', 'Dim Name');
+strDimName30 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 30', 'Dim Name');
+strDimName31 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 31', 'Dim Name');
+strDimName32 = CELLGETS( 'rdmDatamanagerDetails', pCube, pIndex, 'Dim 32', 'Dim Name');
+
+
+
+
+DatasourceNameForServer=pCube;
+
+DatasourceCubeview=pView;
+
+DatasourceASCIIQuoteCharacter = ' ';
+DatasourceASCIIDelimiter= ' | ' ;
+
+
+ASCIIOUTPUT ( strFile, 'blank', NUMBERTOSTRING(0), 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank',
+'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank',
+'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank',
+'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank' );
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#=====================================
+#  o1 is always the Value
+#=====================================
+
+IF ( intBaseValue =0);
+
+     intValue = CELLGETN ( 'rdmDatamanagerDetails', pCube, pIndex, 'Total', 'Dim Count') +1;
+     o1 = EXPAND ( '%vDim' | NUMBERTOSTRING ( intValue ) | '%' );
+ELSE;
+
+     o1 = NUMBERTOSTRING ( intBaseValue );
+
+ENDIF;
+
+#=====================================
+
+
+IF ( strDimName1 @<>'');
+
+    IF ( strDim1 @='' );
+     o2= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim1', 'Variable') );
+
+     ELSE;
+
+     o2 = strDim1;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName2 @<>'');
+
+    IF ( strDim2 @='' );
+     o3= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim2', 'Variable') );
+
+     ELSE;
+
+     o3 = strDim2;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName3 @<>'');
+
+    IF ( strDim3 @='' );
+     o4= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim3', 'Variable') );
+
+     ELSE;
+
+     o4 = strDim3;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName4 @<>'');
+
+    IF ( strDim4 @='' );
+     o5= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim4', 'Variable') );
+
+     ELSE;
+
+     o5 = strDim4;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName5 @<>'');
+
+    IF ( strDim5 @='' );
+     o6= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim5', 'Variable') );
+
+     ELSE;
+
+     o6 = strDim5;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName6 @<>'');
+
+    IF ( strDim6 @='' );
+     o7= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim6', 'Variable') );
+
+     ELSE;
+
+     o7 = strDim6;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName7 @<>'');
+
+    IF ( strDim7 @='' );
+     o8= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim7', 'Variable') );
+
+     ELSE;
+
+     o8 = strDim7;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName8 @<>'');
+
+    IF ( strDim8 @='' );
+     o9= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim8', 'Variable') );
+
+     ELSE;
+
+     o9 = strDim8;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName9 @<>'');
+
+    IF ( strDim9 @='' );
+     o10= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim9', 'Variable') );
+
+     ELSE;
+
+     o10 = strDim9;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName10 @<>'');
+
+    IF ( strDim10 @='' );
+     o11= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim10', 'Variable') );
+
+     ELSE;
+
+     o11 = strDim10;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName11 @<>'');
+
+    IF ( strDim11 @='' );
+     o12= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim11', 'Variable') );
+
+     ELSE;
+
+     o12 = strDim11;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName12 @<>'');
+
+    IF ( strDim12 @='' );
+     o13= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim12', 'Variable') );
+
+     ELSE;
+
+     o13 = strDim12;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName13 @<>'');
+
+    IF ( strDim13 @='' );
+     o14= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim13', 'Variable') );
+
+     ELSE;
+
+     o14 = strDim13;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName14 @<>'');
+
+    IF ( strDim14 @='' );
+     o15= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim14', 'Variable') );
+
+     ELSE;
+
+     o15 = strDim14;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName15 @<>'');
+
+    IF ( strDim15 @='' );
+     o16= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim15', 'Variable') );
+
+     ELSE;
+
+     o16 = strDim15;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName16 @<>'');
+
+    IF ( strDim16 @='' );
+     o17= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim16', 'Variable') );
+
+     ELSE;
+
+     o17 = strDim16;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName17 @<>'');
+
+    IF ( strDim17 @='' );
+     o18= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim17', 'Variable') );
+
+     ELSE;
+
+     o18 = strDim17;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName18 @<>'');
+
+    IF ( strDim18 @='' );
+     o19= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim18', 'Variable') );
+
+     ELSE;
+
+     o19 = strDim18;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName19 @<>'');
+
+    IF ( strDim19 @='' );
+     o20= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim19', 'Variable') );
+
+     ELSE;
+
+     o20 = strDim19;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName20 @<>'');
+
+    IF ( strDim20 @='' );
+     o21= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim20', 'Variable') );
+
+     ELSE;
+
+     o21 = strDim20;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName21 @<>'');
+
+    IF ( strDim21 @='' );
+     o22= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim21', 'Variable') );
+
+     ELSE;
+
+     o22 = strDim21;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName22 @<>'');
+
+    IF ( strDim22 @='' );
+     o23= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim22', 'Variable') );
+
+     ELSE;
+
+     o23 = strDim22;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName23 @<>'');
+
+    IF ( strDim23 @='' );
+     o24= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim23', 'Variable') );
+
+     ELSE;
+
+     o24 = strDim23;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName24 @<>'');
+
+    IF ( strDim24 @='' );
+     o25= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim24', 'Variable') );
+
+     ELSE;
+
+     o25 = strDim24;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName25 @<>'');
+
+    IF ( strDim25 @='' );
+     o26= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim25', 'Variable') );
+
+     ELSE;
+
+     o26 = strDim25;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName26 @<>'');
+
+    IF ( strDim26 @='' );
+     o27= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim26', 'Variable') );
+
+     ELSE;
+
+     o27 = strDim26;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName27 @<>'');
+
+    IF ( strDim27 @='' );
+     o28= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim27', 'Variable') );
+
+     ELSE;
+
+     o28 = strDim27;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName28 @<>'');
+
+    IF ( strDim28 @='' );
+     o29= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim28', 'Variable') );
+
+     ELSE;
+
+     o29 = strDim28;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName29 @<>'');
+
+    IF ( strDim29 @='' );
+     o30= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim29', 'Variable') );
+
+     ELSE;
+
+     o30 = strDim29;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName30 @<>'');
+
+    IF ( strDim30 @='' );
+     o31= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim30', 'Variable') );
+
+     ELSE;
+
+     o31 = strDim30;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName31 @<>'');
+
+    IF ( strDim31 @='' );
+     o32= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim31', 'Variable') );
+
+     ELSE;
+
+     o32 = strDim31;
+    ENDIF;
+
+ENDIF;
+
+IF ( strDimName32 @<>'');
+
+    IF ( strDim32 @='' );
+     o33= EXPAND ( ATTRS ( 'rdmDatamanagerDim', 'Dim32', 'Variable') );
+
+     ELSE;
+
+     o33 = strDim32;
+    ENDIF;
+
+ENDIF;
+
+
+
+ASCIIOUTPUT (strFile, pCube, NUMBERTOSTRING ( pFactor), pType, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11,
+                                     o12, o13, o14, o15, o16, o17, o18, o19, o20, o21,
+                                     o22, o23, o24, o25, o26, o27, o28, o29, o30, o31,
+                                     o32, o33);
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+
+#endregion

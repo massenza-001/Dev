@@ -1,0 +1,43 @@
+{
+	"@type":"Process",
+	"Name":"FOR - Create 2024 Expense Structure",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"FOR - Create 2024 Expense Structure.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"dataSourceNameForServer":"../../../../../../../Work/Clients/Fordham/2023/Account Remap/2024ExpenseStructure.csv",
+		"dataSourceNameForClient":"../Contents('Files')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('Work')/Contents('Clients')/Contents('Fordham')/Contents('2023')/Contents('Account Remap')/Contents('2024ExpenseStructure.csv')",
+		"asciiHeaderRecords":1,
+		"asciiQuoteCharacter":"\"",
+		"asciiDecimalSeparator":".",
+		"asciiThousandSeparator":",",
+		"asciiDelimiterType":"Character",
+		"asciiDelimiterChar":","
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vAcct",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vName",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vInclude",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

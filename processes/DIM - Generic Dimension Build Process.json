@@ -1,0 +1,65 @@
+{
+	"@type":"Process",
+	"Name":"DIM - Generic Dimension Build Process",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"DIM - Generic Dimension Build Process.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"dataSourceNameForServer":"../../../../../../../Vendors/Revelwood/Offering/TM1/TM1Server/Imports/GenericDim.csv",
+		"dataSourceNameForClient":"../Contents('Files')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('..')/Contents('Vendors')/Contents('Revelwood')/Contents('Offering')/Contents('TM1')/Contents('TM1Server')/Contents('Imports')/Contents('GenericDim.csv')",
+		"asciiHeaderRecords":0,
+		"asciiQuoteCharacter":"\"",
+		"asciiDecimalSeparator":".",
+		"asciiThousandSeparator":",",
+		"asciiDelimiterType":"Character",
+		"asciiDelimiterChar":","
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDimension",
+			"Prompt":"Name of Dimension to populate",
+			"Value":"bpmGeneric",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vParent",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vChild",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vDescription",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vWeight",
+			"Type":"Numeric",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vType",
+			"Type":"String",
+			"Position":5,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

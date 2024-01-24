@@ -1,0 +1,38 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+strDim = 'bpmCompany';
+
+strNameCube = '}bpmNewCompany';
+strElement = CELLGETS ( strNameCube, 'Index5', 'NewCompanyCode');
+
+
+IF ( strElement @<> '' );
+     DIMENSIONELEMENTDELETE (strDim, strElement);
+ENDIF;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+# CLEAR OUT THE EXISTING INDEX
+
+CELLPUTS ( '', strNameCube, 'Index5', 'New CompanyCode');
+
+
+#endregion

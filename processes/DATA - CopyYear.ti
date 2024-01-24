@@ -1,0 +1,50 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+strCube='bpmFinance';
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+strPeriod= SUBST( bpmPeriod, 1, 3 ) | ' 2014';
+
+numRAND = RAND();
+IF( numRAND > .9 );
+     numValue= Value *0.92;
+ELSEIF( numRAND > .8 );
+     numValue= Value *1.07;
+ELSEIF( numRAND > .7 );
+     numValue= Value *1.22;
+ELSEIF( numRAND > .6 );
+     numValue= Value *1.03;
+ELSEIF( numRAND > .5 );
+     numValue= Value *0.96;
+ELSEIF( numRAND > .4 );
+     numValue= Value *1.12;
+ELSEIF( numRAND > .3);
+     numValue= Value *1.00;
+ELSEIF( numRAND > .2 );
+     numValue= Value *0.94;
+ELSEIF( numRAND > .1 );
+     numValue= Value *1.03;
+ENDIF;
+
+
+CELlPUTN( numvalue, strCube, bpmScenario, bpmCompany, bpmDepartment, bpmAccount, bpmCurrency, bpmBook, STRPeriod );
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
