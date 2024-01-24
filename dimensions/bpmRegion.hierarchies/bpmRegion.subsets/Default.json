@@ -1,0 +1,32 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"Abbrev",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('USA')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Northeast')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Northwest')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Mid Atlantic')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Midwest')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US South')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Southwest')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US West')"
+		}
+	]
+}

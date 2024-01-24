@@ -1,0 +1,100 @@
+{
+	"@type":"Subset",
+	"Name":"CapExRpt",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 1')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 2')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 3')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 4')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 5')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 6')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 7')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 8')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 9')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 10')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 11')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 12')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 13')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 14')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 15')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 16')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 17')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 18')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 19')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 20')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 21')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 22')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 23')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 24')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 25')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 26')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 27')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 28')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 29')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Item 30')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Index')/Hierarchies('bpmCapEx_Index')/Elements('Total Items')"
+		}
+	]
+}

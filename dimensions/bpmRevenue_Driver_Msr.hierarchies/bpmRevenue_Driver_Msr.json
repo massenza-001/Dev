@@ -1,0 +1,68 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmRevenue_Driver_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Units",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit Gross Profit",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Unit Price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit Cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross Profit",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Direct Cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Indirect Cost",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Unit Gross Profit",
+			"ComponentName":"Unit Price",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unit Gross Profit",
+			"ComponentName":"Unit Cost",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"Direct Cost",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"Indirect Cost",
+			"Weight":-1
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,632 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmRegion",
+	"Elements":
+	[
+		{
+			"Name":"Worldwide",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Domestic",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Canada",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"USA",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"US Northeast",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Connecticut",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Maine",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Massachusetts",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Hampshire",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Jersey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New York",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Pennsylvania",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Vermont",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US Northwest",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Idaho",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Minnesota",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Montana",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nebraska",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"North Dakota",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"South Dakota",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Wyoming",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US Mid Atlantic",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Tennessee",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Maryland",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"North Carolina",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Virginia",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US Midwest",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Arkansas",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Colorado",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kansas",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US South",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Alabama",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Florida",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Georgia",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Louisiana",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Missouri",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"South Carolina",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Oklahoma",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US Southwest",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Arizona",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Mexico",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nevada",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Texas",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Utah",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US West",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"California",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Oregon",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Washington",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"International",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Africa",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Kenya",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"South Africa",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Zaire",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Zimbabwe",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Morocco",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Asia",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"China",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Japan",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Europe",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"France",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Germany",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Italy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Spain",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Central America",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Panama",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"South America",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Brazil",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Venezuela",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mexico",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Worldwide",
+			"ComponentName":"Domestic",
+			"Weight":1
+		},
+		{
+			"ParentName":"Worldwide",
+			"ComponentName":"International",
+			"Weight":1
+		},
+		{
+			"ParentName":"Domestic",
+			"ComponentName":"Canada",
+			"Weight":1
+		},
+		{
+			"ParentName":"Domestic",
+			"ComponentName":"USA",
+			"Weight":1
+		},
+		{
+			"ParentName":"USA",
+			"ComponentName":"US Northeast",
+			"Weight":1
+		},
+		{
+			"ParentName":"USA",
+			"ComponentName":"US Northwest",
+			"Weight":1
+		},
+		{
+			"ParentName":"USA",
+			"ComponentName":"US Mid Atlantic",
+			"Weight":1
+		},
+		{
+			"ParentName":"USA",
+			"ComponentName":"US Midwest",
+			"Weight":1
+		},
+		{
+			"ParentName":"USA",
+			"ComponentName":"US South",
+			"Weight":1
+		},
+		{
+			"ParentName":"USA",
+			"ComponentName":"US Southwest",
+			"Weight":1
+		},
+		{
+			"ParentName":"USA",
+			"ComponentName":"US West",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"Connecticut",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"Maine",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"Massachusetts",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"New Hampshire",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"New Jersey",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"New York",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"Pennsylvania",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northeast",
+			"ComponentName":"Vermont",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northwest",
+			"ComponentName":"Idaho",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northwest",
+			"ComponentName":"Minnesota",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northwest",
+			"ComponentName":"Montana",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northwest",
+			"ComponentName":"Nebraska",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northwest",
+			"ComponentName":"North Dakota",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northwest",
+			"ComponentName":"South Dakota",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Northwest",
+			"ComponentName":"Wyoming",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Mid Atlantic",
+			"ComponentName":"Tennessee",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Mid Atlantic",
+			"ComponentName":"Maryland",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Mid Atlantic",
+			"ComponentName":"North Carolina",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Mid Atlantic",
+			"ComponentName":"Virginia",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Midwest",
+			"ComponentName":"Arkansas",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Midwest",
+			"ComponentName":"Colorado",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Midwest",
+			"ComponentName":"Kansas",
+			"Weight":1
+		},
+		{
+			"ParentName":"US South",
+			"ComponentName":"Alabama",
+			"Weight":1
+		},
+		{
+			"ParentName":"US South",
+			"ComponentName":"Florida",
+			"Weight":1
+		},
+		{
+			"ParentName":"US South",
+			"ComponentName":"Georgia",
+			"Weight":1
+		},
+		{
+			"ParentName":"US South",
+			"ComponentName":"Louisiana",
+			"Weight":1
+		},
+		{
+			"ParentName":"US South",
+			"ComponentName":"Missouri",
+			"Weight":1
+		},
+		{
+			"ParentName":"US South",
+			"ComponentName":"South Carolina",
+			"Weight":1
+		},
+		{
+			"ParentName":"US South",
+			"ComponentName":"Oklahoma",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Southwest",
+			"ComponentName":"Arizona",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Southwest",
+			"ComponentName":"New Mexico",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Southwest",
+			"ComponentName":"Nevada",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Southwest",
+			"ComponentName":"Texas",
+			"Weight":1
+		},
+		{
+			"ParentName":"US Southwest",
+			"ComponentName":"Utah",
+			"Weight":1
+		},
+		{
+			"ParentName":"US West",
+			"ComponentName":"California",
+			"Weight":1
+		},
+		{
+			"ParentName":"US West",
+			"ComponentName":"Oregon",
+			"Weight":1
+		},
+		{
+			"ParentName":"US West",
+			"ComponentName":"Washington",
+			"Weight":1
+		},
+		{
+			"ParentName":"International",
+			"ComponentName":"Africa",
+			"Weight":1
+		},
+		{
+			"ParentName":"International",
+			"ComponentName":"Asia",
+			"Weight":1
+		},
+		{
+			"ParentName":"International",
+			"ComponentName":"Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"International",
+			"ComponentName":"Central America",
+			"Weight":1
+		},
+		{
+			"ParentName":"International",
+			"ComponentName":"South America",
+			"Weight":1
+		},
+		{
+			"ParentName":"Africa",
+			"ComponentName":"Kenya",
+			"Weight":1
+		},
+		{
+			"ParentName":"Africa",
+			"ComponentName":"South Africa",
+			"Weight":1
+		},
+		{
+			"ParentName":"Africa",
+			"ComponentName":"Zaire",
+			"Weight":1
+		},
+		{
+			"ParentName":"Africa",
+			"ComponentName":"Zimbabwe",
+			"Weight":1
+		},
+		{
+			"ParentName":"Africa",
+			"ComponentName":"Morocco",
+			"Weight":1
+		},
+		{
+			"ParentName":"Asia",
+			"ComponentName":"China",
+			"Weight":1
+		},
+		{
+			"ParentName":"Asia",
+			"ComponentName":"Japan",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"France",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"Germany",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"Italy",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"Spain",
+			"Weight":1
+		},
+		{
+			"ParentName":"Central America",
+			"ComponentName":"Panama",
+			"Weight":1
+		},
+		{
+			"ParentName":"South America",
+			"ComponentName":"Brazil",
+			"Weight":1
+		},
+		{
+			"ParentName":"South America",
+			"ComponentName":"Venezuela",
+			"Weight":1
+		},
+		{
+			"ParentName":"South America",
+			"ComponentName":"Mexico",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmRegion.subsets/BaseLevel.json",
+		"bpmRegion.subsets/Default.json",
+		"bpmRegion.subsets/Summary.json"
+	]
+}

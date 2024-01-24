@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"CodeName",
+	"Expression":"TM1TOGGLEDRILLSTATE({{[bpmAccount].[Account Hiearchies],[bpmAccount].[Account Hiearchies].CHILDREN}} , {[bpmAccount].[Net Income After Allocations],[bpmAccount].[Net Income After Allocations^Net Income],[bpmAccount].[Net Income After Allocations^Net Income^EBITDA]} , EXPAND_BELOW , RECURSIVE)"
+}

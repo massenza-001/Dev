@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('nomProject')/Hierarchies('nomProject')/Elements('Total Projects')"
+		}
+	]
+}

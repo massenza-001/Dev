@@ -1,0 +1,73 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCapEx_AssetType",
+	"Elements":
+	[
+		{
+			"Name":"Total Asset Types",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Computer Hardware",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Software",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Electronic Equipment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Furniture-Other",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Production Equipment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Lease Hold Improvements",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Asset Types",
+			"ComponentName":"Computer Hardware",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Asset Types",
+			"ComponentName":"Software",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Asset Types",
+			"ComponentName":"Other Electronic Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Asset Types",
+			"ComponentName":"Furniture-Other",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Asset Types",
+			"ComponentName":"Production Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Asset Types",
+			"ComponentName":"Lease Hold Improvements",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmCapEx_AssetType.subsets/BaseLevel.json",
+		"bpmCapEx_AssetType.subsets/Default.json"
+	]
+}

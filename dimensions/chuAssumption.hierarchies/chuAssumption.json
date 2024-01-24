@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"chuAssumption",
+	"Elements":
+	[
+		{
+			"Name":"Advertising Percent",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

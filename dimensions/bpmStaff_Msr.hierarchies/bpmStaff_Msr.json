@@ -1,0 +1,178 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmStaff_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Employed",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Taxable Gross",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Gross Pay",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Taxes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Fica and Medicare",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FICA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medicare",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unemployment Taxes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"State Unemployment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Federal Unemployment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Taxes",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Benefits",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"401KMatch",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medical",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dental",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Life Insurance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Benefits",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Headcount FTPT",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Headcount - Full Time",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Headcount - Part Time",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Taxable Gross",
+			"ComponentName":"Gross Pay",
+			"Weight":1
+		},
+		{
+			"ParentName":"Taxable Gross",
+			"ComponentName":"Bonus",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Taxes",
+			"ComponentName":"Fica and Medicare",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Taxes",
+			"ComponentName":"Unemployment Taxes",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Taxes",
+			"ComponentName":"Other Taxes",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fica and Medicare",
+			"ComponentName":"FICA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fica and Medicare",
+			"ComponentName":"Medicare",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unemployment Taxes",
+			"ComponentName":"State Unemployment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unemployment Taxes",
+			"ComponentName":"Federal Unemployment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Benefits",
+			"ComponentName":"401KMatch",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Benefits",
+			"ComponentName":"Medical",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Benefits",
+			"ComponentName":"Dental",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Benefits",
+			"ComponentName":"Life Insurance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Benefits",
+			"ComponentName":"Other Benefits",
+			"Weight":1
+		},
+		{
+			"ParentName":"Headcount FTPT",
+			"ComponentName":"Headcount - Full Time",
+			"Weight":1
+		},
+		{
+			"ParentName":"Headcount FTPT",
+			"ComponentName":"Headcount - Part Time",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmStaff_Msr.subsets/zzUsedInReport.json"
+	]
+}

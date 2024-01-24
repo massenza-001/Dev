@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmCapEx_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmCapEx_Msr.hierarchies/bpmCapEx_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmCapEx_Msr')/Hierarchies('bpmCapEx_Msr')"
+	}
+}

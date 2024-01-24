@@ -1,0 +1,68 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmStaff_Default_Msr",
+	"Elements":
+	[
+		{
+			"Name":"401K Match %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"401K Wage",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"St Un %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"St Un Wage",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medical Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dental Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Life Insurance Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Benefits Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fed Un %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fed Un Wage",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FICA %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FICA Wage",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medicare %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Tax Rate %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Work Hours in Pay Period",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,23 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFX_Rpt",
+	"Elements":
+	[
+		{
+			"Name":"USD_Rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EUR_Rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAD_Rpt",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmFX_Rpt.subsets/Base Level.json"
+	]
+}

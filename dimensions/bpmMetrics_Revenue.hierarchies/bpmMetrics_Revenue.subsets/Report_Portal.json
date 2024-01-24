@@ -1,0 +1,16 @@
+{
+	"@type":"Subset",
+	"Name":"Report_Portal",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmMetrics_Revenue')/Hierarchies('bpmMetrics_Revenue')/Elements('Sales revenue')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Revenue')/Hierarchies('bpmMetrics_Revenue')/Elements('Quantity sold')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Revenue')/Hierarchies('bpmMetrics_Revenue')/Elements('Order count')"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmFinance_LineItem')/Hierarchies('bpmFinance_LineItem')/Elements('Total Account Value')"
+		},
+		{
+			"@id":"Dimensions('bpmFinance_LineItem')/Hierarchies('bpmFinance_LineItem')/Elements('Account Level Value')"
+		},
+		{
+			"@id":"Dimensions('bpmFinance_LineItem')/Hierarchies('bpmFinance_LineItem')/Elements('Total Line Items')"
+		}
+	]
+}

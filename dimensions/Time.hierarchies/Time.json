@@ -1,0 +1,554 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Time",
+	"Elements":
+	[
+		{
+			"Name":"2013",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q1 2013",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jan 2013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feb 2013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mar 2013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q2 2013",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Apr 2013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"May 2013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jun 2013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q3 2013",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jul 2013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2012",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q1 2012",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jan 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feb 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mar 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q2 2012",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Apr 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"May 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jun 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q3 2012",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jul 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Aug 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sep 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q4 2012",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Oct 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nov 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dec 2012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2011",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q1 2011",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jan 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feb 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mar 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q2 2011",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Apr 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"May 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jun 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q3 2011",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jul 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Aug 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sep 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q4 2011",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Oct 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nov 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dec 2011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2010",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q1 2010",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jan 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feb 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mar 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q2 2010",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Apr 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"May 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jun 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q3 2010",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jul 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Aug 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sep 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Q4 2010",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Oct 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nov 2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dec 2010",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"2013",
+			"ComponentName":"Q1 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"2013",
+			"ComponentName":"Q2 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"2013",
+			"ComponentName":"Q3 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2013",
+			"ComponentName":"Jan 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2013",
+			"ComponentName":"Feb 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2013",
+			"ComponentName":"Mar 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2013",
+			"ComponentName":"Apr 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2013",
+			"ComponentName":"May 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2013",
+			"ComponentName":"Jun 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2013",
+			"ComponentName":"Jul 2013",
+			"Weight":1
+		},
+		{
+			"ParentName":"2012",
+			"ComponentName":"Q1 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"2012",
+			"ComponentName":"Q2 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"2012",
+			"ComponentName":"Q3 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"2012",
+			"ComponentName":"Q4 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2012",
+			"ComponentName":"Jan 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2012",
+			"ComponentName":"Feb 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2012",
+			"ComponentName":"Mar 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2012",
+			"ComponentName":"Apr 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2012",
+			"ComponentName":"May 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2012",
+			"ComponentName":"Jun 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2012",
+			"ComponentName":"Jul 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2012",
+			"ComponentName":"Aug 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2012",
+			"ComponentName":"Sep 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2012",
+			"ComponentName":"Oct 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2012",
+			"ComponentName":"Nov 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2012",
+			"ComponentName":"Dec 2012",
+			"Weight":1
+		},
+		{
+			"ParentName":"2011",
+			"ComponentName":"Q1 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"2011",
+			"ComponentName":"Q2 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"2011",
+			"ComponentName":"Q3 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"2011",
+			"ComponentName":"Q4 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2011",
+			"ComponentName":"Jan 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2011",
+			"ComponentName":"Feb 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2011",
+			"ComponentName":"Mar 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2011",
+			"ComponentName":"Apr 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2011",
+			"ComponentName":"May 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2011",
+			"ComponentName":"Jun 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2011",
+			"ComponentName":"Jul 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2011",
+			"ComponentName":"Aug 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2011",
+			"ComponentName":"Sep 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2011",
+			"ComponentName":"Oct 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2011",
+			"ComponentName":"Nov 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2011",
+			"ComponentName":"Dec 2011",
+			"Weight":1
+		},
+		{
+			"ParentName":"2010",
+			"ComponentName":"Q1 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"2010",
+			"ComponentName":"Q2 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"2010",
+			"ComponentName":"Q3 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"2010",
+			"ComponentName":"Q4 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2010",
+			"ComponentName":"Jan 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2010",
+			"ComponentName":"Feb 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1 2010",
+			"ComponentName":"Mar 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2010",
+			"ComponentName":"Apr 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2010",
+			"ComponentName":"May 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2 2010",
+			"ComponentName":"Jun 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2010",
+			"ComponentName":"Jul 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2010",
+			"ComponentName":"Aug 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3 2010",
+			"ComponentName":"Sep 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2010",
+			"ComponentName":"Oct 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2010",
+			"ComponentName":"Nov 2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4 2010",
+			"ComponentName":"Dec 2010",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Time.subsets/2014-2017.json",
+		"Time.subsets/__BACKUP_All Members.json",
+		"Time.subsets/All Members.json"
+	]
+}

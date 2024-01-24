@@ -1,0 +1,19 @@
+{
+	"@type":"Subset",
+	"Name":"MainList",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Actuals')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Final Budget')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Predictive')"
+		}
+	]
+}

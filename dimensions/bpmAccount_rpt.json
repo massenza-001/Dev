@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmAccount_rpt",
+	"Hierarchies@Code.links":
+	[
+		"bpmAccount_rpt.hierarchies/bpmAccount_rpt.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmAccount_rpt')/Hierarchies('bpmAccount_rpt')"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"@type":"Subset",
+	"Name":"Report_Portal",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Total of Product')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Insect Repellents')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Sunscreen')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Tents')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('BackPacks')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Accessories')"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"nomIndex",
+	"Hierarchies@Code.links":
+	[
+		"nomIndex.hierarchies/nomIndex.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('nomIndex')/Hierarchies('nomIndex')"
+	}
+}

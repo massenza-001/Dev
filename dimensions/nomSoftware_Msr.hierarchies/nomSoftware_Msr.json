@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomSoftware_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Dollars",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

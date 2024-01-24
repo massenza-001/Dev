@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomSoftwareInfo_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Dollars",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"In Service Month",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

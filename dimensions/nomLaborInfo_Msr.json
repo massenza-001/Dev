@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"nomLaborInfo_Msr",
+	"Hierarchies@Code.links":
+	[
+		"nomLaborInfo_Msr.hierarchies/nomLaborInfo_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('nomLaborInfo_Msr')/Hierarchies('nomLaborInfo_Msr')"
+	}
+}

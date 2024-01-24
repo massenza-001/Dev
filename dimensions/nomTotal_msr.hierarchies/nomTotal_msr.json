@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomTotal_msr",
+	"Elements":
+	[
+		{
+			"Name":"Amount",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

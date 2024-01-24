@@ -1,0 +1,26 @@
+{
+	"@type":"Subset",
+	"Name":"Base Level",
+	"Alias":"CodeName",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('001')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('002')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('003')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('004')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('005')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('Corporate')"
+		}
+	]
+}

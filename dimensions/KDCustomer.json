@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"KDCustomer",
+	"Hierarchies@Code.links":
+	[
+		"KDCustomer.hierarchies/KDCustomer.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')"
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Balance Post-Alloc')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Balance Pre-Alloc')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Original')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Adjustment')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Total Allocations')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Rpt USD CYBR')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Rpt USD CYAR')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Base CYBR')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Base CYAR')"
+		}
+	]
+}

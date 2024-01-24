@@ -1,0 +1,42 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomSoftware",
+	"Elements":
+	[
+		{
+			"Name":"Total Software",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Software1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Software2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Software3",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Software",
+			"ComponentName":"Software1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Software",
+			"ComponentName":"Software2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Software",
+			"ComponentName":"Software3",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

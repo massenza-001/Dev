@@ -1,0 +1,16 @@
+{
+	"@type":"Subset",
+	"Name":"nomInput",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Final Budget')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('What If - 1')"
+		}
+	]
+}

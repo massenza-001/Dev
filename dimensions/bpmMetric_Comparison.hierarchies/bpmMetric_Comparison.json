@@ -1,0 +1,28 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmMetric_Comparison",
+	"Elements":
+	[
+		{
+			"Name":"Act vs Last Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Act vs Final Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Plan vs Final Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Plan vs Predictive",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmMetric_Comparison.subsets/All Members.json",
+		"bpmMetric_Comparison.subsets/Report Portal.json"
+	]
+}

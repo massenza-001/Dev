@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmRevenue_Price_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Average Unit Price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Incentive Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit Net Sales Price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit Direct Cost",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

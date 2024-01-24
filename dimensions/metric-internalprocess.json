@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"metric-internalprocess",
+	"Hierarchies@Code.links":
+	[
+		"metric-internalprocess.hierarchies/metric-internalprocess.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('metric-internalprocess')/Hierarchies('metric-internalprocess')"
+	}
+}

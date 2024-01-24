@@ -1,0 +1,32 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmSubmissionStatus_msr",
+	"Elements":
+	[
+		{
+			"Name":"Mgr Submit Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Mgr Submit Status",
+			"Type":"String"
+		},
+		{
+			"Name":"Mgr Submit Timestamp",
+			"Type":"String"
+		},
+		{
+			"Name":"Submit Counter",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Submit Pct Complete",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Submit Descendant",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

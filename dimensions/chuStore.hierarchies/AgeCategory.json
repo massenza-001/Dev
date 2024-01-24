@@ -1,0 +1,303 @@
+{
+	"@type":"Hierarchy",
+	"Name":"AgeCategory",
+	"Elements":
+	[
+		{
+			"Name":"Total Age Categories",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"10-20",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"005",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"006",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"007",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"008",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"NewStore1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"No Category",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"NewStore2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Over 20",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"001",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"002",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"003",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"004",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Under 10",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"009",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"014",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"015",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"016",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"017",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"018",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"019",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"020",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"021",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"022",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"023",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"024",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"025",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Age Categories",
+			"ComponentName":"10-20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Age Categories",
+			"ComponentName":"New",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Age Categories",
+			"ComponentName":"No Category",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Age Categories",
+			"ComponentName":"Over 20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Age Categories",
+			"ComponentName":"Under 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"10-20",
+			"ComponentName":"005",
+			"Weight":1
+		},
+		{
+			"ParentName":"10-20",
+			"ComponentName":"006",
+			"Weight":1
+		},
+		{
+			"ParentName":"10-20",
+			"ComponentName":"007",
+			"Weight":1
+		},
+		{
+			"ParentName":"10-20",
+			"ComponentName":"008",
+			"Weight":1
+		},
+		{
+			"ParentName":"New",
+			"ComponentName":"NewStore1",
+			"Weight":1
+		},
+		{
+			"ParentName":"No Category",
+			"ComponentName":"NewStore2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Over 20",
+			"ComponentName":"001",
+			"Weight":1
+		},
+		{
+			"ParentName":"Over 20",
+			"ComponentName":"002",
+			"Weight":1
+		},
+		{
+			"ParentName":"Over 20",
+			"ComponentName":"003",
+			"Weight":1
+		},
+		{
+			"ParentName":"Over 20",
+			"ComponentName":"004",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"009",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"014",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"015",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"016",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"017",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"018",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"019",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"020",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"021",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"022",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"023",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"024",
+			"Weight":1
+		},
+		{
+			"ParentName":"Under 10",
+			"ComponentName":"025",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

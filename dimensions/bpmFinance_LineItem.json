@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFinance_LineItem",
+	"Hierarchies@Code.links":
+	[
+		"bpmFinance_LineItem.hierarchies/bpmFinance_LineItem.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFinance_LineItem')/Hierarchies('bpmFinance_LineItem')"
+	}
+}

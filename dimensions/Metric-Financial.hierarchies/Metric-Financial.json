@@ -1,0 +1,47 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Metric-Financial",
+	"Elements":
+	[
+		{
+			"Name":"Gross profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross margin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee expense",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Training cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Calculated Bonus",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Metric-Financial.subsets/All Members.json"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"@type":"Subset",
+	"Name":"Monthly Controls",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('Current Actual Period')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('Current Actual Month')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('Current Actual Year')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('GL Load Period Start')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')/Hierarchies('bpmControl')/Elements('GL Load Period End')"
+		}
+	]
+}

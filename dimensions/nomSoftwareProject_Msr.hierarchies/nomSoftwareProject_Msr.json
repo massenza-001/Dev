@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomSoftwareProject_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Percent",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

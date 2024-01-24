@@ -1,0 +1,100 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDatamanagerVariable",
+	"Elements":
+	[
+		{
+			"Name":"View Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Current Status",
+			"Type":"String"
+		},
+		{
+			"Name":"Consolidated View",
+			"Type":"String"
+		},
+		{
+			"Name":"Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Cube",
+			"Type":"String"
+		},
+		{
+			"Name":"Index",
+			"Type":"String"
+		},
+		{
+			"Name":"Filter",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Remove Rule",
+			"Type":"String"
+		},
+		{
+			"Name":"BaseValue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim Count To Cube",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim Count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Type",
+			"Type":"String"
+		},
+		{
+			"Name":"File Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Factor",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FROM",
+			"Type":"String"
+		},
+		{
+			"Name":"TO",
+			"Type":"String"
+		},
+		{
+			"Name":"To Cube Dim Name",
+			"Type":"String"
+		},
+		{
+			"Name":"To Cube",
+			"Type":"String"
+		},
+		{
+			"Name":"Start Time",
+			"Type":"String"
+		},
+		{
+			"Name":"End Time",
+			"Type":"String"
+		},
+		{
+			"Name":"Duration",
+			"Type":"String"
+		},
+		{
+			"Name":"Suppress Save Log Prompt",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"zzMoveQuickCopy",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('rdmDatamanagerIndex')/Hierarchies('rdmDatamanagerIndex')/Elements('Index 2')"
+		}
+	]
+}

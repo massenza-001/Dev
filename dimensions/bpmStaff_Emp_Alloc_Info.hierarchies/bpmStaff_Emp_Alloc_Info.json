@@ -1,0 +1,33 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmStaff_Emp_Alloc_Info",
+	"Elements":
+	[
+		{
+			"Name":"Total Allocation",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Allocation % - Entered",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation % - Calculated",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Allocation",
+			"ComponentName":"Allocation % - Entered",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Allocation",
+			"ComponentName":"Allocation % - Calculated",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,28 @@
+{
+	"@type":"Subset",
+	"Name":"zz_Secure Gateway Test_ZeroOut",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('Select Element')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('Corporate')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('001')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('002')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('003')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('004')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('005')"
+		}
+	]
+}

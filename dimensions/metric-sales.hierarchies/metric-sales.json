@@ -1,0 +1,31 @@
+{
+	"@type":"Hierarchy",
+	"Name":"metric-sales",
+	"Elements":
+	[
+		{
+			"Name":"Sales revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quantity sold",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Order count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"metric-sales.subsets/All Members.json"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"Metric Indicators",
+	"Hierarchies@Code.links":
+	[
+		"Metric Indicators.hierarchies/Metric Indicators.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')"
+	}
+}

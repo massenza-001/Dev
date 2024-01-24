@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"Metric-Financial",
+	"Hierarchies@Code.links":
+	[
+		"Metric-Financial.hierarchies/Metric-Financial.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Metric-Financial')/Hierarchies('Metric-Financial')"
+	}
+}

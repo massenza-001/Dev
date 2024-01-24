@@ -1,0 +1,523 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmAccount_rpt",
+	"Elements":
+	[
+		{
+			"Name":"Net Income",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"EBITDA",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Gross Margin",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Net Sales",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"410000 - Record Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"410003 - Merchandise Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"410004 - Online Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"410005 - Other Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"433006 - Sales Discounts",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"433007 - Sales Returns",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COGS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"413007 - COGS Records",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"413006 - COGS Merchandise",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"413010 - COGS Online Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"413049 - COGS Royalties",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"413011 - COGS Other",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Operating Expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Compensation",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"600010 - Base Salaries",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"600020 - Overtime",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"601100 - Workmens Compensation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"611110 - Medical Insurance Expense",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"601130 - FICA Taxes",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"601140 - Unemployment Taxes",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"611190 - 401(k) Match Expense",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"600050 - Benefits (Calculated)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Advertising",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"613100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"613120",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"613130",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"613140",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rent",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"608070",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"608071",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"608030",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Utilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"617010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"687020",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"617030",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"607100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Insurance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"658110",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Office Supplies",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"608290",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"608250",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"618240",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Donations",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"608300",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Professional Fees",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"608350",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"608310",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Travel",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"606100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"616310",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"616320",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"636201",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Maintenance",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Net Income",
+			"ComponentName":"EBITDA",
+			"Weight":1
+		},
+		{
+			"ParentName":"EBITDA",
+			"ComponentName":"Gross Margin",
+			"Weight":1
+		},
+		{
+			"ParentName":"EBITDA",
+			"ComponentName":"Operating Expenses",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Gross Margin",
+			"ComponentName":"Net Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Margin",
+			"ComponentName":"COGS",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"410000 - Record Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"410003 - Merchandise Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"410004 - Online Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"410005 - Other Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"433006 - Sales Discounts",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"433007 - Sales Returns",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"413007 - COGS Records",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"413006 - COGS Merchandise",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"413010 - COGS Online Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"413049 - COGS Royalties",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"413011 - COGS Other",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Compensation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Advertising",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Rent",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Utilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Insurance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Office Supplies",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Donations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Professional Fees",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Expenses",
+			"ComponentName":"Travel",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"600010 - Base Salaries",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"600020 - Overtime",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"601100 - Workmens Compensation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"611110 - Medical Insurance Expense",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"601130 - FICA Taxes",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"601140 - Unemployment Taxes",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"611190 - 401(k) Match Expense",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"600050 - Benefits (Calculated)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Advertising",
+			"ComponentName":"613100",
+			"Weight":1
+		},
+		{
+			"ParentName":"Advertising",
+			"ComponentName":"613120",
+			"Weight":1
+		},
+		{
+			"ParentName":"Advertising",
+			"ComponentName":"613130",
+			"Weight":1
+		},
+		{
+			"ParentName":"Advertising",
+			"ComponentName":"613140",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rent",
+			"ComponentName":"608070",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rent",
+			"ComponentName":"608071",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rent",
+			"ComponentName":"608030",
+			"Weight":1
+		},
+		{
+			"ParentName":"Utilities",
+			"ComponentName":"617010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Utilities",
+			"ComponentName":"687020",
+			"Weight":1
+		},
+		{
+			"ParentName":"Utilities",
+			"ComponentName":"617030",
+			"Weight":1
+		},
+		{
+			"ParentName":"Utilities",
+			"ComponentName":"607100",
+			"Weight":1
+		},
+		{
+			"ParentName":"Insurance",
+			"ComponentName":"658110",
+			"Weight":1
+		},
+		{
+			"ParentName":"Office Supplies",
+			"ComponentName":"608290",
+			"Weight":1
+		},
+		{
+			"ParentName":"Office Supplies",
+			"ComponentName":"608250",
+			"Weight":1
+		},
+		{
+			"ParentName":"Office Supplies",
+			"ComponentName":"618240",
+			"Weight":1
+		},
+		{
+			"ParentName":"Donations",
+			"ComponentName":"608300",
+			"Weight":1
+		},
+		{
+			"ParentName":"Professional Fees",
+			"ComponentName":"608350",
+			"Weight":1
+		},
+		{
+			"ParentName":"Professional Fees",
+			"ComponentName":"608310",
+			"Weight":1
+		},
+		{
+			"ParentName":"Travel",
+			"ComponentName":"606100",
+			"Weight":1
+		},
+		{
+			"ParentName":"Travel",
+			"ComponentName":"616310",
+			"Weight":1
+		},
+		{
+			"ParentName":"Travel",
+			"ComponentName":"616320",
+			"Weight":1
+		},
+		{
+			"ParentName":"Travel",
+			"ComponentName":"636201",
+			"Weight":1
+		}
+	],
+	"DefaultMemberName":"Net Income",
+	"LevelNames":
+	[
+		"Total Net Income",
+		"Account Category",
+		"Account Type",
+		"Account Group",
+		"Account"
+	],
+	"Subsets@Code.links":[]
+}

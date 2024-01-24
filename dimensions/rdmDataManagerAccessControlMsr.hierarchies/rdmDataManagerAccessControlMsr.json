@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDataManagerAccessControlMsr",
+	"Elements":
+	[
+		{
+			"Name":"Access",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

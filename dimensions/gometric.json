@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"gometric",
+	"Hierarchies@Code.links":
+	[
+		"gometric.hierarchies/gometric.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('gometric')/Hierarchies('gometric')"
+	}
+}

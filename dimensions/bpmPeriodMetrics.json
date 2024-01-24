@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmPeriodMetrics",
+	"Hierarchies@Code.links":
+	[
+		"bpmPeriodMetrics.hierarchies/bpmPeriodMetrics.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmPeriodMetrics')/Hierarchies('bpmPeriodMetrics')"
+	}
+}

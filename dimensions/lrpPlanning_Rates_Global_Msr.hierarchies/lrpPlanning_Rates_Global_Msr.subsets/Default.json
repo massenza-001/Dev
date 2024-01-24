@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('lrpPlanning_Rates_Global_Msr')/Hierarchies('lrpPlanning_Rates_Global_Msr')/Elements('Credits')"
+		}
+	]
+}

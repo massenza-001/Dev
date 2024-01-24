@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmCapEx_AssetType",
+	"Hierarchies@Code.links":
+	[
+		"bpmCapEx_AssetType.hierarchies/bpmCapEx_AssetType.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmCapEx_AssetType')/Hierarchies('bpmCapEx_AssetType')"
+	}
+}

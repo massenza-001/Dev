@@ -1,0 +1,274 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmDepartment_rpt",
+	"Elements":
+	[
+		{
+			"Name":"Total Departments",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Sales and Marketing",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"46",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"47",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"54",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"55",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"56",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Manufacturing and Distribution",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"48",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"49",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"50",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"General and Administrative",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"57",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"58",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"59",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"60",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"61",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Finance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"41",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"52",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"90",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Production",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"42",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"43",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"44",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"45",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"30",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Departments",
+			"ComponentName":"Sales and Marketing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Departments",
+			"ComponentName":"Manufacturing and Distribution",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Departments",
+			"ComponentName":"General and Administrative",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Departments",
+			"ComponentName":"Finance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Departments",
+			"ComponentName":"Production",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Departments",
+			"ComponentName":"Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales and Marketing",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales and Marketing",
+			"ComponentName":"46",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales and Marketing",
+			"ComponentName":"47",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales and Marketing",
+			"ComponentName":"54",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales and Marketing",
+			"ComponentName":"55",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales and Marketing",
+			"ComponentName":"56",
+			"Weight":1
+		},
+		{
+			"ParentName":"Manufacturing and Distribution",
+			"ComponentName":"48",
+			"Weight":1
+		},
+		{
+			"ParentName":"Manufacturing and Distribution",
+			"ComponentName":"49",
+			"Weight":1
+		},
+		{
+			"ParentName":"Manufacturing and Distribution",
+			"ComponentName":"50",
+			"Weight":1
+		},
+		{
+			"ParentName":"General and Administrative",
+			"ComponentName":"57",
+			"Weight":1
+		},
+		{
+			"ParentName":"General and Administrative",
+			"ComponentName":"58",
+			"Weight":1
+		},
+		{
+			"ParentName":"General and Administrative",
+			"ComponentName":"59",
+			"Weight":1
+		},
+		{
+			"ParentName":"General and Administrative",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"General and Administrative",
+			"ComponentName":"61",
+			"Weight":1
+		},
+		{
+			"ParentName":"Finance",
+			"ComponentName":"41",
+			"Weight":1
+		},
+		{
+			"ParentName":"Finance",
+			"ComponentName":"52",
+			"Weight":1
+		},
+		{
+			"ParentName":"Finance",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production",
+			"ComponentName":"42",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production",
+			"ComponentName":"43",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production",
+			"ComponentName":"44",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production",
+			"ComponentName":"45",
+			"Weight":1
+		},
+		{
+			"ParentName":"Revenue",
+			"ComponentName":"30",
+			"Weight":1
+		}
+	],
+	"DefaultMemberName":"Total Departments",
+	"LevelNames":
+	[
+		"Total Departments",
+		"Department Group",
+		"Department"
+	],
+	"Subsets@Code.links":[]
+}

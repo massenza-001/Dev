@@ -1,0 +1,32 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDataManagerBatchMsr",
+	"Elements":
+	[
+		{
+			"Name":"ValidBatch",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Filter",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cube",
+			"Type":"String"
+		},
+		{
+			"Name":"Index",
+			"Type":"String"
+		},
+		{
+			"Name":"Run",
+			"Type":"String"
+		},
+		{
+			"Name":"Comment",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

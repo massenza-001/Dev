@@ -1,0 +1,64 @@
+{
+	"@type":"Hierarchy",
+	"Name":"lrpMeasure",
+	"Elements":
+	[
+		{
+			"Name":"Units",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Credit Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Credit Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Credits",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Credits",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Calc",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CalcResult",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CalcAdj",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Calc",
+			"ComponentName":"CalcResult",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Calc",
+			"ComponentName":"CalcAdj",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"lrpMeasure.subsets/Default.json"
+	]
+}

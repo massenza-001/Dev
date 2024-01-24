@@ -1,0 +1,121 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Name')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Emp Count')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Hire Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Last Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Transfer In Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Transfer Out Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('FTE')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('HeadCount')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Annual Salary')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('PTE')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Hourly Rate')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Work Hours')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Pay Method')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Bonus $')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Bonus Amount')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Bonus Eligible')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Bonus Month')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Bonus Percent')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Company Currency')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Final Currency')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('1st Raise Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('1st Raise %25')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Salary Post 1st Raise')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('2nd Raise Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('2nd Raise %25')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Salary Post 2nd Raise')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('3rd Raise %25')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('3rd Raise Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Salary Post 3rd Raise')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('4th Raise %25')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('4th Raise Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Salary Post 4th Raise')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('5th Raise %25')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('5th Raise Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Salary Post 5th Raise')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('6th Raise %25')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('6th Raise Date')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')/Hierarchies('bpmStaff_Emp_Info_Msr')/Elements('Salary Post 6th Raise')"
+		}
+	]
+}

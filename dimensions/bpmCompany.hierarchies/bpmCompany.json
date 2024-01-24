@@ -1,0 +1,90 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCompany",
+	"Elements":
+	[
+		{
+			"Name":"Select Element",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Company",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Corporate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"001",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"002",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"003",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"004",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"005",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Company",
+			"ComponentName":"Corporate",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Company",
+			"ComponentName":"001",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Company",
+			"ComponentName":"002",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Company",
+			"ComponentName":"003",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Company",
+			"ComponentName":"004",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Company",
+			"ComponentName":"005",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmCompany.subsets/Base Level.json",
+		"bpmCompany.subsets/Default.json",
+		"bpmCompany.subsets/LevelNSorted.json",
+		"bpmCompany.subsets/PickNoAlias.json",
+		"bpmCompany.subsets/zz_Secure Gateway Test_ZeroOut.json",
+		"bpmCompany.subsets/zz_zzCCCTest_ZeroOut.json",
+		"bpmCompany.subsets/zzCCC_CloudtoOnPrem.json",
+		"bpmCompany.subsets/zzDrill_Finance_By_Account.json",
+		"bpmCompany.subsets/zzDrill_Finance_By_Company.json",
+		"bpmCompany.subsets/zzDrill_Finance_By_Dept.json",
+		"bpmCompany.subsets/zzDrill_Finance_TM1_Details.json",
+		"bpmCompany.subsets/zzDrillFinance_By_Account.json",
+		"bpmCompany.subsets/zzDrillFinanceByAccount.json",
+		"bpmCompany.subsets/zzFinanceCopyCompany.json",
+		"bpmCompany.subsets/zzFinanceZeroOutCompany.json"
+	]
+}

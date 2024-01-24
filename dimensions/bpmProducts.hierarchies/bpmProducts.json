@@ -1,0 +1,343 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmProducts",
+	"Elements":
+	[
+		{
+			"Name":"Total of Product",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Insect Repellents",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BugShield Extreme",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BugShield Lotion",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BugShield Lotion Lite",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BugShield Natural",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BugShield Spray",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sunscreen",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Sun Blocker",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sun Shelter 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sun Shelter 30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sun Shelter Stick",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sun Shield",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tents",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Quarter Dome 2 Person",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quarter Dome 4 Person",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quarter Dome Family",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kingdom Campsite 100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kingdom Campsite 150",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kingdom Campsite 300",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kingdom Campsite Deluxe Family",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BackPacks",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Trail Pack 40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Trail Pack 60",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Trail Pack 32",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Day Pack Lite",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Day Pack 22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Summit Pack 85",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Summit Pack 90",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Accessories",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Compression Dry Sack 100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Compression Dry Sack 200",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Compression Dry Sack UltraLite",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tent and Gear Waterproof Spray",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tear Repair Tape",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nylon Utility Cord 50ft",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nylon Utility Cord 100ft",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total of Product",
+			"ComponentName":"Insect Repellents",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total of Product",
+			"ComponentName":"Sunscreen",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total of Product",
+			"ComponentName":"Tents",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total of Product",
+			"ComponentName":"BackPacks",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total of Product",
+			"ComponentName":"Accessories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Insect Repellents",
+			"ComponentName":"BugShield Extreme",
+			"Weight":1
+		},
+		{
+			"ParentName":"Insect Repellents",
+			"ComponentName":"BugShield Lotion",
+			"Weight":1
+		},
+		{
+			"ParentName":"Insect Repellents",
+			"ComponentName":"BugShield Lotion Lite",
+			"Weight":1
+		},
+		{
+			"ParentName":"Insect Repellents",
+			"ComponentName":"BugShield Natural",
+			"Weight":1
+		},
+		{
+			"ParentName":"Insect Repellents",
+			"ComponentName":"BugShield Spray",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sunscreen",
+			"ComponentName":"Sun Blocker",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sunscreen",
+			"ComponentName":"Sun Shelter 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sunscreen",
+			"ComponentName":"Sun Shelter 30",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sunscreen",
+			"ComponentName":"Sun Shelter Stick",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sunscreen",
+			"ComponentName":"Sun Shield",
+			"Weight":1
+		},
+		{
+			"ParentName":"Tents",
+			"ComponentName":"Quarter Dome 2 Person",
+			"Weight":1
+		},
+		{
+			"ParentName":"Tents",
+			"ComponentName":"Quarter Dome 4 Person",
+			"Weight":1
+		},
+		{
+			"ParentName":"Tents",
+			"ComponentName":"Quarter Dome Family",
+			"Weight":1
+		},
+		{
+			"ParentName":"Tents",
+			"ComponentName":"Kingdom Campsite 100",
+			"Weight":1
+		},
+		{
+			"ParentName":"Tents",
+			"ComponentName":"Kingdom Campsite 150",
+			"Weight":1
+		},
+		{
+			"ParentName":"Tents",
+			"ComponentName":"Kingdom Campsite 300",
+			"Weight":1
+		},
+		{
+			"ParentName":"Tents",
+			"ComponentName":"Kingdom Campsite Deluxe Family",
+			"Weight":1
+		},
+		{
+			"ParentName":"BackPacks",
+			"ComponentName":"Trail Pack 40",
+			"Weight":1
+		},
+		{
+			"ParentName":"BackPacks",
+			"ComponentName":"Trail Pack 60",
+			"Weight":1
+		},
+		{
+			"ParentName":"BackPacks",
+			"ComponentName":"Trail Pack 32",
+			"Weight":1
+		},
+		{
+			"ParentName":"BackPacks",
+			"ComponentName":"Day Pack Lite",
+			"Weight":1
+		},
+		{
+			"ParentName":"BackPacks",
+			"ComponentName":"Day Pack 22",
+			"Weight":1
+		},
+		{
+			"ParentName":"BackPacks",
+			"ComponentName":"Summit Pack 85",
+			"Weight":1
+		},
+		{
+			"ParentName":"BackPacks",
+			"ComponentName":"Summit Pack 90",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Compression Dry Sack 100",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Compression Dry Sack 200",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Compression Dry Sack UltraLite",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Tent and Gear Waterproof Spray",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Tear Repair Tape",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Nylon Utility Cord 50ft",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Nylon Utility Cord 100ft",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmProducts.subsets/BaseLevel.json",
+		"bpmProducts.subsets/Report_Portal.json"
+	]
+}

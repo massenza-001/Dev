@@ -1,0 +1,14 @@
+{
+	"@type":"Dimension",
+	"Name":"chuStore",
+	"Hierarchies@Code.links":
+	[
+		"chuStore.hierarchies/chuStore.json",
+		"chuStore.hierarchies/AgeCategory.json",
+		"chuStore.hierarchies/Type.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('chuStore')/Hierarchies('chuStore')"
+	}
+}

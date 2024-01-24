@@ -1,0 +1,190 @@
+{
+	"@type":"Hierarchy",
+	"Name":"lrpBU",
+	"Elements":
+	[
+		{
+			"Name":"Total Business Units",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU01",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU02",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU03",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU04",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU05",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU06",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU07",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU08",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU09",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU19",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU01",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU02",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU03",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU04",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU05",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU06",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU07",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU08",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU09",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Business Units",
+			"ComponentName":"BU19",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"lrpBU.subsets/BaseLevel.json",
+		"lrpBU.subsets/Default.json"
+	]
+}

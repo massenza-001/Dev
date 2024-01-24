@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmStaff_Emp_Alloc_Info",
+	"Hierarchies@Code.links":
+	[
+		"bpmStaff_Emp_Alloc_Info.hierarchies/bpmStaff_Emp_Alloc_Info.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmStaff_Emp_Alloc_Info')/Hierarchies('bpmStaff_Emp_Alloc_Info')"
+	}
+}

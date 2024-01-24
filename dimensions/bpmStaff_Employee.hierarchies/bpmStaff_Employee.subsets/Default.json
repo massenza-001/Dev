@@ -1,0 +1,20 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"CodeName",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmStaff_Employee')/Hierarchies('bpmStaff_Employee')/Elements('Total Employees')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Employee')/Hierarchies('bpmStaff_Employee')/Elements('Total Filled')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Employee')/Hierarchies('bpmStaff_Employee')/Elements('Total Open')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Employee')/Hierarchies('bpmStaff_Employee')/Elements('Total New')"
+		}
+	]
+}

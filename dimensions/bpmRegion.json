@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmRegion",
+	"Hierarchies@Code.links":
+	[
+		"bpmRegion.hierarchies/bpmRegion.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')"
+	}
+}

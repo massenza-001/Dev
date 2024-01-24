@@ -1,0 +1,106 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Total Products')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Jazz')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Helium Mushroom')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Fungus in the Grass')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Millennium')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Nuclear Fusion')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Volcanic Eruption')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Ground Zero')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('New Age')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Quantum')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Elements of Nature')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Willows in the Breeze')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Oldies')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Huh')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Doobie Do')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Sweet N'' Lo')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Mr. Serious')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('As the World Turns')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('One Life to Live')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Slow Mo')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Anthology of Time')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Lovin'' Memories')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Pop/Rock')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Snap Crackle Pop')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Get Up and Go')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Electric Maze')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Killer Instinct')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Sign of Destruction')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Hip Hop')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Bobby Wheeler')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('Just OK')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('So Happy')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')/Hierarchies('bpmProduct')/Elements('So Sad')"
+		}
+	]
+}

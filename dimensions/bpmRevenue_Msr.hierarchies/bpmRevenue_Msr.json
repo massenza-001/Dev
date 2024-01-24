@@ -1,0 +1,78 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmRevenue_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Volume - Units",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit Net Sales Price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit Direct Cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross Margin",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Gross Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Costs of Goods Sold",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Direct COGS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Indirect COGS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Planner Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Manager Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Variance Comment",
+			"Type":"String"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Gross Margin",
+			"ComponentName":"Gross Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Margin",
+			"ComponentName":"Total Costs of Goods Sold",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Total Costs of Goods Sold",
+			"ComponentName":"Direct COGS",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Costs of Goods Sold",
+			"ComponentName":"Indirect COGS",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmRevenue_Msr.subsets/Default.json"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"nomDeskAllocation_msr",
+	"Hierarchies@Code.links":
+	[
+		"nomDeskAllocation_msr.hierarchies/nomDeskAllocation_msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('nomDeskAllocation_msr')/Hierarchies('nomDeskAllocation_msr')"
+	}
+}

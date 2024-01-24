@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmMetric_Comparison",
+	"Hierarchies@Code.links":
+	[
+		"bpmMetric_Comparison.hierarchies/bpmMetric_Comparison.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmMetric_Comparison')/Hierarchies('bpmMetric_Comparison')"
+	}
+}

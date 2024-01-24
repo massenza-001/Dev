@@ -1,0 +1,78 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCompany_Target",
+	"Elements":
+	[
+		{
+			"Name":"Select Element",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Corporate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"001",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"002",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"003",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"004",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"005",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Target Company",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Target Company",
+			"ComponentName":"Select Element",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Company",
+			"ComponentName":"Corporate",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Company",
+			"ComponentName":"001",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Company",
+			"ComponentName":"002",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Company",
+			"ComponentName":"003",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Company",
+			"ComponentName":"004",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Company",
+			"ComponentName":"005",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

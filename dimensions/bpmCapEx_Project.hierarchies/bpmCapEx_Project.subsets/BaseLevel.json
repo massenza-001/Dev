@@ -1,0 +1,20 @@
+{
+	"@type":"Subset",
+	"Name":"BaseLevel",
+	"Alias":"Name",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmCapEx_Project')/Hierarchies('bpmCapEx_Project')/Elements('Archive')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Project')/Hierarchies('bpmCapEx_Project')/Elements('BPM')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Project')/Hierarchies('bpmCapEx_Project')/Elements('Inventory')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_Project')/Hierarchies('bpmCapEx_Project')/Elements('No Project')"
+		}
+	]
+}

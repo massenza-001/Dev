@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Plan V1",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('What If - 1')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan V1')"
+		}
+	]
+}

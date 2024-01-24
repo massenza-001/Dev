@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmPeriodInfo_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Percent of Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"IsPlanMonth",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

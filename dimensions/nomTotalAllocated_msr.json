@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"nomTotalAllocated_msr",
+	"Hierarchies@Code.links":
+	[
+		"nomTotalAllocated_msr.hierarchies/nomTotalAllocated_msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('nomTotalAllocated_msr')/Hierarchies('nomTotalAllocated_msr')"
+	}
+}

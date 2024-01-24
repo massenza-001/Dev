@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"lrpMeasure",
+	"Hierarchies@Code.links":
+	[
+		"lrpMeasure.hierarchies/lrpMeasure.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('lrpMeasure')/Hierarchies('lrpMeasure')"
+	}
+}

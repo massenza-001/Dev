@@ -1,0 +1,144 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmSubItem",
+	"Elements":
+	[
+		{
+			"Name":"Total SubItems",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Case",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Motherboard",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Processor",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"32 GB Memory Card",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"64 GB Memory Card",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"500 GB Hard Drive",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1 TB Hard Drive",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2 TB Hard Drive",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"5.25 inch Floppy Drive",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mouse",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Keyboard",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Monitor",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Printer",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Power Cable",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Case",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Motherboard",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Processor",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"32 GB Memory Card",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"64 GB Memory Card",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"500 GB Hard Drive",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"1 TB Hard Drive",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"2 TB Hard Drive",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"5.25 inch Floppy Drive",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Mouse",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Keyboard",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Monitor",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Printer",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total SubItems",
+			"ComponentName":"Power Cable",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmSubItem.subsets/Default.json"
+	]
+}

@@ -1,0 +1,261 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_LineItem",
+	"Elements":
+	[
+		{
+			"Name":"Total Account Value",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Account Level Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Line Items",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Line 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 24",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 25",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Account Value",
+			"ComponentName":"Account Level Value",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Account Value",
+			"ComponentName":"Total Line Items",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 5",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 6",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 7",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 8",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 9",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 19",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 21",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 22",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 23",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 24",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Line Items",
+			"ComponentName":"Line 25",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmFinance_LineItem.subsets/Default.json"
+	]
+}

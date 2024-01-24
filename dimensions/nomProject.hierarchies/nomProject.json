@@ -1,0 +1,64 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomProject",
+	"Elements":
+	[
+		{
+			"Name":"Total Projects",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Project1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Project2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Project3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"leetest",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"stan",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"Project1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"Project2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"Project3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"leetest",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"stan",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"nomProject.subsets/BaseLevel.json",
+		"nomProject.subsets/Default.json"
+	]
+}

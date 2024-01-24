@@ -1,0 +1,22 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmCurrency')/Hierarchies('bpmCurrency')/Elements('Total Currency')"
+		},
+		{
+			"@id":"Dimensions('bpmCurrency')/Hierarchies('bpmCurrency')/Elements('USD')"
+		},
+		{
+			"@id":"Dimensions('bpmCurrency')/Hierarchies('bpmCurrency')/Elements('EUR')"
+		},
+		{
+			"@id":"Dimensions('bpmCurrency')/Hierarchies('bpmCurrency')/Elements('CAD')"
+		},
+		{
+			"@id":"Dimensions('bpmCurrency')/Hierarchies('bpmCurrency')/Elements('MXP')"
+		}
+	]
+}

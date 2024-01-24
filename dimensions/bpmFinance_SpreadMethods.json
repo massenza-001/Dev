@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFinance_SpreadMethods",
+	"Hierarchies@Code.links":
+	[
+		"bpmFinance_SpreadMethods.hierarchies/bpmFinance_SpreadMethods.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')"
+	}
+}

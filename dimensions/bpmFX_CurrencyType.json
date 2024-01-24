@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFX_CurrencyType",
+	"Hierarchies@Code.links":
+	[
+		"bpmFX_CurrencyType.hierarchies/bpmFX_CurrencyType.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFX_CurrencyType')/Hierarchies('bpmFX_CurrencyType')"
+	}
+}

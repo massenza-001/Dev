@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"rdmDataManagerBatchMsr",
+	"Hierarchies@Code.links":
+	[
+		"rdmDataManagerBatchMsr.hierarchies/rdmDataManagerBatchMsr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('rdmDataManagerBatchMsr')/Hierarchies('rdmDataManagerBatchMsr')"
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_SpreadMethods",
+	"Elements":
+	[
+		{
+			"Name":"Monthly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Start of Qtr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"End of Qtr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Seasonal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4-4-5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4-5-4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"5-4-4",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,46 @@
+{
+	"@type":"Subset",
+	"Name":"zzUsedInReport",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Gross Pay')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Bonus')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('FICA')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Medicare')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('State Unemployment')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Federal Unemployment')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('401KMatch')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Medical')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Dental')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Life Insurance')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Other Benefits')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Headcount - Full Time')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Headcount - Part Time')"
+		}
+	]
+}

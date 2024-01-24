@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmSubmissionStatus_msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmSubmissionStatus_msr.hierarchies/bpmSubmissionStatus_msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmSubmissionStatus_msr')/Hierarchies('bpmSubmissionStatus_msr')"
+	}
+}

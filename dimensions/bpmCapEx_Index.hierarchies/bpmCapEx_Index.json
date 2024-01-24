@@ -1,0 +1,289 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCapEx_Index",
+	"Elements":
+	[
+		{
+			"Name":"Total Items",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Item 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 24",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 25",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 26",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 27",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 28",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 29",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Item 30",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 5",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 6",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 7",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 8",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 9",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 19",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 21",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 22",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 23",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 24",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 25",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 26",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 27",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 28",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 29",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Item 30",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmCapEx_Index.subsets/CapExRpt.json",
+		"bpmCapEx_Index.subsets/Default.json"
+	]
+}

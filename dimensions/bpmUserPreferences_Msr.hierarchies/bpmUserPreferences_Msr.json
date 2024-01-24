@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmUserPreferences_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Report_Portal_Metric_Comparison",
+			"Type":"String"
+		},
+		{
+			"Name":"Report_Portal_Period",
+			"Type":"String"
+		},
+		{
+			"Name":"Report_Portal_Finance_Metric",
+			"Type":"String"
+		},
+		{
+			"Name":"Report_Portal_Sales_Metric",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

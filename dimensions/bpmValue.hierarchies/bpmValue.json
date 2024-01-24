@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmValue",
+	"Elements":
+	[
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

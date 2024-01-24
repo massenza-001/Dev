@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmDepartment_rpt",
+	"Hierarchies@Code.links":
+	[
+		"bpmDepartment_rpt.hierarchies/bpmDepartment_rpt.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmDepartment_rpt')/Hierarchies('bpmDepartment_rpt')"
+	}
+}

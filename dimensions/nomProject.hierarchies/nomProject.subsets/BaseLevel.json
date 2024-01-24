@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"BaseLevel",
+	"Expression":"{TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [nomProject] )}, 0)}, ASC)}"
+}

@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"YelpTest",
+	"ElementsSortType":"ByHierarchy",
+	"Elements":
+	[
+		{
+			"Name":"TEst",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Test2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Test3",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"YelpTest.subsets/All Members.json"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"rdmDataManagerAccessControlMsr",
+	"Hierarchies@Code.links":
+	[
+		"rdmDataManagerAccessControlMsr.hierarchies/rdmDataManagerAccessControlMsr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('rdmDataManagerAccessControlMsr')/Hierarchies('rdmDataManagerAccessControlMsr')"
+	}
+}

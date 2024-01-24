@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"rdmDatamanagerValue",
+	"Hierarchies@Code.links":
+	[
+		"rdmDatamanagerValue.hierarchies/rdmDatamanagerValue.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('rdmDatamanagerValue')/Hierarchies('rdmDatamanagerValue')"
+	}
+}

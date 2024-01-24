@@ -1,0 +1,89 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_LineItem_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Balance Post-Alloc",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Balance Pre-Alloc",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Original",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Allocations",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Alloc - Corp OH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Alloc - IT to other OH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rpt USD CYBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rpt USD CYAR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base CYBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base CYAR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Comment",
+			"Type":"String"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Balance Post-Alloc",
+			"ComponentName":"Balance Pre-Alloc",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Post-Alloc",
+			"ComponentName":"Total Allocations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Pre-Alloc",
+			"ComponentName":"Original",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Pre-Alloc",
+			"ComponentName":"Adjustment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Allocations",
+			"ComponentName":"Alloc - Corp OH",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Allocations",
+			"ComponentName":"Alloc - IT to other OH",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}
