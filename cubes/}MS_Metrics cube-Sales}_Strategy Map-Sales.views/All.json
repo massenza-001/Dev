@@ -1,0 +1,72 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MS_Metrics cube-Sales}_Strategy Map-Sales')/Hierarchies('}MS_Metrics cube-Sales}_Strategy Map-Sales')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MS_Metrics cube-Sales}_Strategy Map-Sales')/Hierarchies('}MS_Metrics cube-Sales}_Strategy Map-Sales')/Elements('Financial')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Elements('Total of  Country')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('product')/Hierarchies('product')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('product')/Hierarchies('product')/Elements('Total of Product')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('retailer')/Hierarchies('retailer')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('retailer')/Hierarchies('retailer')/Elements('Total of Retailer')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Elements('2013')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Elements('Status')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

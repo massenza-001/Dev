@@ -1,0 +1,53 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Subsets('2016Months')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')/Elements('Monthly')"
+					},
+					{
+						"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')/Elements('Start of Qtr')"
+					},
+					{
+						"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')/Elements('End of Qtr')"
+					},
+					{
+						"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')/Elements('Seasonal')"
+					},
+					{
+						"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')/Elements('4-4-5')"
+					},
+					{
+						"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')/Elements('4-5-4')"
+					},
+					{
+						"@id":"Dimensions('bpmFinance_SpreadMethods')/Hierarchies('bpmFinance_SpreadMethods')/Elements('5-4-4')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

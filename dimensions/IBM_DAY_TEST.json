@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"IBM_DAY_TEST",
+	"Hierarchies@Code.links":
+	[
+		"IBM_DAY_TEST.hierarchies/IBM_DAY_TEST.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('IBM_DAY_TEST')/Hierarchies('IBM_DAY_TEST')"
+	}
+}

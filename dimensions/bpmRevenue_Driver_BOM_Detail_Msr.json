@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmRevenue_Driver_BOM_Detail_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmRevenue_Driver_BOM_Detail_Msr.hierarchies/bpmRevenue_Driver_BOM_Detail_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmRevenue_Driver_BOM_Detail_Msr')/Hierarchies('bpmRevenue_Driver_BOM_Detail_Msr')"
+	}
+}

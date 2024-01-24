@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"rdmDataManagerBatch",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('rdmDataManagerBatchName')"
+		},
+		{
+			"@id":"Dimensions('rdmDataManagerBatchIndex')"
+		},
+		{
+			"@id":"Dimensions('rdmDataManagerBatchMsr')"
+		}
+	],
+	"Rules@Code.link":"rdmDataManagerBatch.rules",
+	"Views@Code.links":
+	[
+		"rdmDataManagerBatch.views/All.json",
+		"rdmDataManagerBatch.views/rdmDataManagerBatch.json"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFinance_Comp_PayDay_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmFinance_Comp_PayDay_Msr.hierarchies/bpmFinance_Comp_PayDay_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFinance_Comp_PayDay_Msr')/Hierarchies('bpmFinance_Comp_PayDay_Msr')"
+	}
+}

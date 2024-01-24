@@ -1,0 +1,42 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('metric-marketing')/Hierarchies('metric-marketing')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('metric-marketing')/Hierarchies('metric-marketing')/Elements('Customer survey')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Marketing_I')/Hierarchies('}MI_Metrics cube-Marketing_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Marketing_I')/Hierarchies('}MI_Metrics cube-Marketing_I')/Elements('1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Marketing_D')/Hierarchies('}MI_Metrics cube-Marketing_D')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Marketing_D')/Hierarchies('}MI_Metrics cube-Marketing_D')/Elements('Impacting Metric')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

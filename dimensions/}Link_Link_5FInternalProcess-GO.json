@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}Link_Link_5FInternalProcess-GO",
+	"Hierarchies@Code.links":
+	[
+		"}Link_Link_5FInternalProcess-GO.hierarchies/}Link_Link_5FInternalProcess-GO.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}Link_Link_5FInternalProcess-GO')/Hierarchies('}Link_Link_5FInternalProcess-GO')"
+	}
+}

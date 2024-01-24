@@ -1,0 +1,44 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('nomNewProj_Msr')/Hierarchies('nomNewProj_Msr')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('nomNewProj_Msr')/Hierarchies('nomNewProj_Msr')/Elements('New Project')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('nomIndex')/Hierarchies('nomIndex')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('nomIndex')/Hierarchies('nomIndex')/Elements('Index1')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

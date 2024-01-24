@@ -1,0 +1,23 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MD_GO_Scorecards}_Diagram-Process_I",
+	"Elements":
+	[
+		{
+			"Name":"1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MD_GO_Scorecards}_Diagram-Process_I.subsets/All Members.json"
+	]
+}

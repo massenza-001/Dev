@@ -1,0 +1,38 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs Add Element",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs Add Element.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDim",
+			"Prompt":"Dim?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pElement",
+			"Prompt":"Element?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pParent",
+			"Prompt":"Parent?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pType",
+			"Prompt":"Type?",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

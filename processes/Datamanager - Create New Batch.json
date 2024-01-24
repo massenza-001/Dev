@@ -1,0 +1,20 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Create New Batch",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Create New Batch.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pBatchName",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

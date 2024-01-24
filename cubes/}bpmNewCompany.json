@@ -1,0 +1,14 @@
+{
+	"@type":"Cube",
+	"Name":"}bpmNewCompany",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmIndex')"
+		},
+		{
+			"@id":"Dimensions('bpmNewCompany_Msr')"
+		}
+	],
+	"Views@Code.links":[]
+}

@@ -1,0 +1,38 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs_DisconnectConsolidations",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs_DisconnectConsolidations.ti",
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForServer":"zDates",
+		"dataSourceNameForClient":"zDates",
+		"subset":"Default"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDimName",
+			"Prompt":"DimName",
+			"Value":"QUBEdocs Definitions",
+			"Type":"String"
+		},
+		{
+			"Name":"pConsolidation",
+			"Prompt":"Consolidaton (blank for all)",
+			"Value":"All Definitions",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vElement",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

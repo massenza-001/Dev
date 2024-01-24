@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmStaff_Calcs",
+	"Hierarchies@Code.links":
+	[
+		"bpmStaff_Calcs.hierarchies/bpmStaff_Calcs.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmStaff_Calcs')/Hierarchies('bpmStaff_Calcs')"
+	}
+}

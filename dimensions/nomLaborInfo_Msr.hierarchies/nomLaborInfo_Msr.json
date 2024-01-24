@@ -1,0 +1,62 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomLaborInfo_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Total Cost",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Annual Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Benefits and Taxes",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cost Per Hour",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Rate",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Benefits Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tax Rate",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Cost",
+			"ComponentName":"Annual Salary",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Cost",
+			"ComponentName":"Benefits and Taxes",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Rate",
+			"ComponentName":"Benefits Rate",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Rate",
+			"ComponentName":"Tax Rate",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"nomLaborInfo_Msr.subsets/Default.json"
+	]
+}

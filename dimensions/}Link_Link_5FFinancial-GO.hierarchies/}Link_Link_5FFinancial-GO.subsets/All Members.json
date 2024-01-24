@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"All Members",
+	"Alias":"Caption_default",
+	"Expression":"[}Link_Link_5FFinancial-GO].MEMBERS"
+}

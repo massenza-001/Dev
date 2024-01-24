@@ -1,0 +1,236 @@
+{
+	"@type":"Hierarchy",
+	"Name":"gometric",
+	"Elements":
+	[
+		{
+			"Name":"Gross profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross margin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Calculated Bonus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quantity sold",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee expense",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Training cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Recruitment days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Order count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Retailer survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Campaign count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inventory Turn",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders-All methods",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Orders(E-mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Fax)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Sales visit)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Special)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Telephone)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Web)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns-All reasons",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Returns(Defective product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Incomplete product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Unsatisfactory product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Wrong product ordered)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Wrong product shipped)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Headcount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee ranking",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee Termination",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Succession ready",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Orders-All methods",
+			"ComponentName":"Orders(E-mail)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders-All methods",
+			"ComponentName":"Orders(Fax)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders-All methods",
+			"ComponentName":"Orders(Mail)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders-All methods",
+			"ComponentName":"Orders(Sales visit)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders-All methods",
+			"ComponentName":"Orders(Special)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders-All methods",
+			"ComponentName":"Orders(Telephone)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders-All methods",
+			"ComponentName":"Orders(Web)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns-All reasons",
+			"ComponentName":"Returns(Defective product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns-All reasons",
+			"ComponentName":"Returns(Incomplete product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns-All reasons",
+			"ComponentName":"Returns(Unsatisfactory product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns-All reasons",
+			"ComponentName":"Returns(Wrong product ordered)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns-All reasons",
+			"ComponentName":"Returns(Wrong product shipped)",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"gometric.subsets/__BACKUP_{0fd6d39a-7482-4272-ac06-de1e895a13a4}.json",
+		"gometric.subsets/__BACKUP_{93fb6646-914c-46e4-9749-794b8f6fd7b9}.json",
+		"gometric.subsets/All Members.json"
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDatamanagerValue",
+	"Elements":
+	[
+		{
+			"Name":"UserEntered",
+			"Type":"String"
+		},
+		{
+			"Name":"Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

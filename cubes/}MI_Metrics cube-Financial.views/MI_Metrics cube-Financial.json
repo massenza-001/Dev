@@ -1,0 +1,42 @@
+{
+	"@type":"NativeView",
+	"Name":"MI_Metrics cube-Financial",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric-Financial')/Hierarchies('Metric-Financial')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Metric-Financial')/Hierarchies('Metric-Financial')/Elements('Gross profit')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Financial_I')/Hierarchies('}MI_Metrics cube-Financial_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Financial_I')/Hierarchies('}MI_Metrics cube-Financial_I')/Elements('1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Financial_D')/Hierarchies('}MI_Metrics cube-Financial_D')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-Financial_D')/Hierarchies('}MI_Metrics cube-Financial_D')/Elements('Impacting Metric')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MS_Metrics cube-Marketing}_Strategy Map-Marketing",
+	"Hierarchies@Code.links":
+	[
+		"}MS_Metrics cube-Marketing}_Strategy Map-Marketing.hierarchies/}MS_Metrics cube-Marketing}_Strategy Map-Marketing.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MS_Metrics cube-Marketing}_Strategy Map-Marketing')/Hierarchies('}MS_Metrics cube-Marketing}_Strategy Map-Marketing')"
+	}
+}

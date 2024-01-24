@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Build String Query",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Build String Query.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pCube",
+			"Prompt":"zzDataManager",
+			"Value":"}bpmFinance_Entry_Cmt",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":"e",
+			"Value":"Index 1",
+			"Type":"String"
+		},
+		{
+			"Name":"pView",
+			"Prompt":"",
+			"Value":"zzDataManager",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

@@ -1,0 +1,11 @@
+{
+	"@type":"Subset",
+	"Name":"zzDrill_Finance_By_Dept",
+	"Alias":"CodeName",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmAccount')/Hierarchies('bpmAccount')/Elements('617010')"
+		}
+	]
+}

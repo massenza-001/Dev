@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Members",
+	"Expression":"[}MS_Metrics cube-Financial}_Strategy Map-Financial].MEMBERS"
+}

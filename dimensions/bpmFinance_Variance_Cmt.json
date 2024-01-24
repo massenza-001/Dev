@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFinance_Variance_Cmt",
+	"Hierarchies@Code.links":
+	[
+		"bpmFinance_Variance_Cmt.hierarchies/bpmFinance_Variance_Cmt.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFinance_Variance_Cmt')/Hierarchies('bpmFinance_Variance_Cmt')"
+	}
+}

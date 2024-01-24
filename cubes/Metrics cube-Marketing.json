@@ -1,0 +1,26 @@
+{
+	"@type":"Cube",
+	"Name":"Metrics cube-Marketing",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('country')"
+		},
+		{
+			"@id":"Dimensions('Time')"
+		},
+		{
+			"@id":"Dimensions('metric-marketing')"
+		},
+		{
+			"@id":"Dimensions('Metric Indicators')"
+		}
+	],
+	"Rules@Code.link":"Metrics cube-Marketing.rules",
+	"Views@Code.links":
+	[
+		"Metrics cube-Marketing.views/All.json",
+		"Metrics cube-Marketing.views/Metrics cube-Marketing.json",
+		"Metrics cube-Marketing.views/View-Marketing.json"
+	]
+}

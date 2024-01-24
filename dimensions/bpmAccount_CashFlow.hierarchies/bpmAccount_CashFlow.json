@@ -1,0 +1,186 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmAccount_CashFlow",
+	"Elements":
+	[
+		{
+			"Name":"Cash and Cash Equivalents at End of Period",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash and Cash Equivalents at Beginning of Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Increase (Decrease) in Cash and Cash Equivalents",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash Flow from Operations",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Net Income",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Depreciation & Amortization",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Stock-based Compensation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Changes in Assets and Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Current Assets (Increase) / Decrease",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Non-Current Assets (Increase) / Decrease",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Liabilities Increase / (Decrease)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Non-Current Liabilities Increase / (Decrease)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Flow from Investing Activities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Purchases of Property and Equipment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Acquisitions of businesses and purchase of intangibles",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Purchases and Sales of Marketable Securities",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Change in Restricted Cash and Deposits",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Flow from Financing Activities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Net Proceeds from Issuance of Preferred Stock",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Proceeds from Exercise of Stock Options",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Cash and Cash Equivalents at End of Period",
+			"ComponentName":"Cash and Cash Equivalents at Beginning of Period",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash and Cash Equivalents at End of Period",
+			"ComponentName":"Net Increase (Decrease) in Cash and Cash Equivalents",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase (Decrease) in Cash and Cash Equivalents",
+			"ComponentName":"Cash Flow from Operations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase (Decrease) in Cash and Cash Equivalents",
+			"ComponentName":"Cash Flow from Investing Activities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase (Decrease) in Cash and Cash Equivalents",
+			"ComponentName":"Cash Flow from Financing Activities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Operations",
+			"ComponentName":"Net Income",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Operations",
+			"ComponentName":"Depreciation & Amortization",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Operations",
+			"ComponentName":"Stock-based Compensation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Operations",
+			"ComponentName":"Changes in Assets and Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Changes in Assets and Liabilities",
+			"ComponentName":"Current Assets (Increase) / Decrease",
+			"Weight":1
+		},
+		{
+			"ParentName":"Changes in Assets and Liabilities",
+			"ComponentName":"Non-Current Assets (Increase) / Decrease",
+			"Weight":1
+		},
+		{
+			"ParentName":"Changes in Assets and Liabilities",
+			"ComponentName":"Current Liabilities Increase / (Decrease)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Changes in Assets and Liabilities",
+			"ComponentName":"Non-Current Liabilities Increase / (Decrease)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Investing Activities",
+			"ComponentName":"Purchases of Property and Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Investing Activities",
+			"ComponentName":"Acquisitions of businesses and purchase of intangibles",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Investing Activities",
+			"ComponentName":"Purchases and Sales of Marketable Securities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Investing Activities",
+			"ComponentName":"Change in Restricted Cash and Deposits",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Financing Activities",
+			"ComponentName":"Net Proceeds from Issuance of Preferred Stock",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash Flow from Financing Activities",
+			"ComponentName":"Proceeds from Exercise of Stock Options",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

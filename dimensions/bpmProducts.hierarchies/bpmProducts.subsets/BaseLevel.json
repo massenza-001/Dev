@@ -1,0 +1,100 @@
+{
+	"@type":"Subset",
+	"Name":"BaseLevel",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('BugShield Extreme')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('BugShield Lotion')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('BugShield Lotion Lite')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('BugShield Natural')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('BugShield Spray')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Compression Dry Sack 100')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Compression Dry Sack 200')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Compression Dry Sack UltraLite')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Day Pack 22')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Day Pack Lite')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Kingdom Campsite 100')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Kingdom Campsite 150')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Kingdom Campsite 300')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Kingdom Campsite Deluxe Family')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Nylon Utility Cord 100ft')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Nylon Utility Cord 50ft')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Quarter Dome 2 Person')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Quarter Dome 4 Person')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Quarter Dome Family')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Summit Pack 85')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Summit Pack 90')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Sun Blocker')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Sun Shelter 15')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Sun Shelter 30')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Sun Shelter Stick')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Sun Shield')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Tear Repair Tape')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Tent and Gear Waterproof Spray')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Trail Pack 32')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Trail Pack 40')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Trail Pack 60')"
+		}
+	]
+}

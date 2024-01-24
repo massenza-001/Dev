@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmMenu_Info",
+	"Hierarchies@Code.links":
+	[
+		"bpmMenu_Info.hierarchies/bpmMenu_Info.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmMenu_Info')/Hierarchies('bpmMenu_Info')"
+	}
+}

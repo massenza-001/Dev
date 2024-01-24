@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFX_Rpt",
+	"Hierarchies@Code.links":
+	[
+		"bpmFX_Rpt.hierarchies/bpmFX_Rpt.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFX_Rpt')/Hierarchies('bpmFX_Rpt')"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"@type":"Cube",
+	"Name":"}rdmWebControls",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('}Clients')"
+		},
+		{
+			"@id":"Dimensions('rdmWebControls')"
+		}
+	],
+	"Rules@Code.link":"}rdmWebControls.rules",
+	"Views@Code.links":[]
+}

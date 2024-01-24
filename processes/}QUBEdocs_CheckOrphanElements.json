@@ -1,0 +1,20 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs_CheckOrphanElements",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs_CheckOrphanElements.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDimName",
+			"Prompt":"Dim Name?",
+			"Value":"QUBEdocs Definition",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

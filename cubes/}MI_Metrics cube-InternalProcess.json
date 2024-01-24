@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MI_Metrics cube-InternalProcess",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('metric-internalprocess')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-InternalProcess_I')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-InternalProcess_D')"
+		}
+	],
+	"Rules@Code.link":"}MI_Metrics cube-InternalProcess.rules",
+	"Views@Code.links":
+	[
+		"}MI_Metrics cube-InternalProcess.views/All.json",
+		"}MI_Metrics cube-InternalProcess.views/MI_Metrics cube-InternalProcess.json"
+	]
+}

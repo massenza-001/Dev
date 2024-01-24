@@ -1,0 +1,58 @@
+{
+	"@type":"NativeView",
+	"Name":"Metrics cube-InternalProcess",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('metric-internalprocess')/Hierarchies('metric-internalprocess')/Subsets('All Members')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Elements('Total of  Country')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('product')/Hierarchies('product')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('product')/Hierarchies('product')/Elements('Total of Product')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Elements('2013')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

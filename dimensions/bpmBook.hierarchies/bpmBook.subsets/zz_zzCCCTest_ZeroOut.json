@@ -1,0 +1,31 @@
+{
+	"@type":"Subset",
+	"Name":"zz_zzCCCTest_ZeroOut",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Original')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Adjustment')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Alloc - Corp OH')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Alloc - IT to other OH')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Rpt USD CYBR')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Rpt USD CYAR')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Base CYBR')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')/Hierarchies('bpmBook')/Elements('Base CYAR')"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MI_Metrics cube-HumanResource_D",
+	"Hierarchies@Code.links":
+	[
+		"}MI_Metrics cube-HumanResource_D.hierarchies/}MI_Metrics cube-HumanResource_D.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MI_Metrics cube-HumanResource_D')/Hierarchies('}MI_Metrics cube-HumanResource_D')"
+	}
+}

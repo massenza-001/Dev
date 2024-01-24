@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}Link_Link_5FMarketing-GO",
+	"Hierarchies@Code.links":
+	[
+		"}Link_Link_5FMarketing-GO.hierarchies/}Link_Link_5FMarketing-GO.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}Link_Link_5FMarketing-GO')/Hierarchies('}Link_Link_5FMarketing-GO')"
+	}
+}

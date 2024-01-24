@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDatamanagerControls",
+	"Elements":
+	[
+		{
+			"Name":"TM1 Version >= 10.1.1",
+			"Type":"String"
+		},
+		{
+			"Name":"Export File Path",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

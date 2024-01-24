@@ -1,0 +1,21 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+['Index 1','Comment'] =S: 'QUICK RUN';
+
+['Comment'] =S:
+
+  IF ( DB('}rdmDatamanagerIndexMetaData',!}Cubes,!rdmDatamanagerIndex,'UserEntered')@<>'Y'  &
+
+       DB('rdmDatamanagerDetails',!}Cubes,!rdmDatamanagerIndex,'Value','Type') @<>''
+
+   ,
+
+       'ADMIN_CREATED'
+
+  ,
+
+      STET
+
+  );

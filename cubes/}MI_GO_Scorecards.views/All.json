@@ -1,0 +1,42 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('gometric')/Hierarchies('gometric')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Gross profit')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_GO_Scorecards_I')/Hierarchies('}MI_GO_Scorecards_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_GO_Scorecards_I')/Hierarchies('}MI_GO_Scorecards_I')/Elements('1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_GO_Scorecards_D')/Hierarchies('}MI_GO_Scorecards_D')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_GO_Scorecards_D')/Hierarchies('}MI_GO_Scorecards_D')/Elements('Impacting Metric')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

@@ -1,0 +1,40 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#LASTCHANGE Modified process to work with the 3.0 release
+#GENERALCOMMENT This process runs the QUBEdocs application to refresh the web based documentation
+#DATASOURCECOMMENT 
+#PROLOGCOMMENT The application is run via the command line based on a REST API call
+#METADATACOMMENT Not Applicable
+#DATACOMMENT Not Applicable
+#EPILOGCOMMENT Not Applicable
+
+IF(pServer @= '');
+ ITEMREJECT('QUBEdocs server not defined.  Please run QUBEdocs Update with a QUBEdocs server name specified.');
+ PROCESSERROR;
+ELSE;
+ sConStr =  'cmd /c start ' | 'http://' | pServer | '/qubedocs/#/generate/connection(' | pConnection | ')';
+ENDIF;
+
+
+EXECUTECOMMAND(sConStr,0);
+ASCIIOUTPUT('QUBEdocsConStr.txt',sConStr);
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

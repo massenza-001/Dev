@@ -1,0 +1,66 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmRevenue_Driver_BOM_Detail_Msr')/Hierarchies('bpmRevenue_Driver_BOM_Detail_Msr')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmRevenue_Driver_BOM_Detail_Msr')/Hierarchies('bpmRevenue_Driver_BOM_Detail_Msr')/Elements('Cost')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Subsets('Default')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Subsets('Default')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Scenario Hierarchies')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Total SubItems')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Total SubItems')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

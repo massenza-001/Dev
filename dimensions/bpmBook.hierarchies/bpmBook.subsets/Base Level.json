@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Base Level",
+	"Expression":"{TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [bpmBook] )}, 0)}, ASC)}"
+}

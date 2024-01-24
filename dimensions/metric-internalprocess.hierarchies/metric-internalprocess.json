@@ -1,0 +1,63 @@
+{
+	"@type":"Hierarchy",
+	"Name":"metric-internalprocess",
+	"Elements":
+	[
+		{
+			"Name":"Inventory Turn",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (E-mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Fax)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Sales visit)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Special)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Telephone)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Web)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Defective product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Incomplete product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Unsatisfactory product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Wrong product ordered)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Wrong product shipped)",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"metric-internalprocess.subsets/All Members.json"
+	]
+}

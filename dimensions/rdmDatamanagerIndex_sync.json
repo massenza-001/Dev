@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"rdmDatamanagerIndex_sync",
+	"Hierarchies@Code.links":
+	[
+		"rdmDatamanagerIndex_sync.hierarchies/rdmDatamanagerIndex_sync.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('rdmDatamanagerIndex_sync')/Hierarchies('rdmDatamanagerIndex_sync')"
+	}
+}

@@ -1,0 +1,35 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+strDim = 'bpmCompany';
+pCompany = DimensionElementPrincipalName( strDim, pCompany );
+
+strDim = 'bpmDepartment';
+pDepartment = DimensionElementPrincipalName( strDim, pDepartment );
+
+strDim = 'bpmAccount';
+pAccount = DimensionElementPrincipalName( strDim, pAccount );
+
+strDim = 'bpmPeriod';
+pPeriod = DimensionElementPrincipalName( strDim, pPeriod );
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+RETURNSQLTABLEHANDLE;
+#****End: Generated Statements****
+#endregion

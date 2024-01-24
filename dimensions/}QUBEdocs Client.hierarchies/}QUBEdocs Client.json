@@ -1,0 +1,366 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}QUBEdocs Client",
+	"Elements":
+	[
+		{
+			"Name":"All Clients",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Server",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Admin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:mmackevi@us.ibm.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:dbernatchez@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:llazarow@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:egoff@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:rgordy@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:sbethea@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:japwah@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:nfrigo@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:dcole@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:ngordy@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:smusselman@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:aneedham@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"LDAP:u:uid=bp0101_tm1_automation,ou=people\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:crusso@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:spannell@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:kdisessa@revelwood.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:dileep.dwivedi@prolifics.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:Mark.Erdmann@prolifics.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:Hiten.Pansar@prolifics.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:Kevin.Fisher@prolifics.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:Rabi.Jabbar@prolifics.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:bmarr@ecapitaladvisors.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:hmckonly@waypointco.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:kwarren@waypointco.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:iboltz@cubewise.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:james.p.holley@accenture.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:Arica.Ostreicher@LocusSolution.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:jbullis@ecapitaladvisors.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:jbrzozowski@data41.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:dawood.nagda@accenture.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:Chad.Owen@LocusSolution.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:d.watts@dataclaritycorp.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:maurizio.gravina@accenture.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:jpusztai@cubewise.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:rmelloy@ecapitaladvisors.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:cstauffer@ecapitaladvisors.com\")",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAMID(\"pans:u:bcombs@revelwood.com\")",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"Server",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"Admin",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:mmackevi@us.ibm.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:dbernatchez@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:llazarow@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:egoff@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:rgordy@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:sbethea@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:japwah@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:nfrigo@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:dcole@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:ngordy@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:smusselman@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:aneedham@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"LDAP:u:uid=bp0101_tm1_automation,ou=people\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:crusso@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:spannell@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:kdisessa@revelwood.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:dileep.dwivedi@prolifics.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:Mark.Erdmann@prolifics.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:Hiten.Pansar@prolifics.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:Kevin.Fisher@prolifics.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:Rabi.Jabbar@prolifics.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:bmarr@ecapitaladvisors.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:hmckonly@waypointco.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:kwarren@waypointco.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:iboltz@cubewise.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:james.p.holley@accenture.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:Arica.Ostreicher@LocusSolution.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:jbullis@ecapitaladvisors.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:jbrzozowski@data41.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:dawood.nagda@accenture.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:Chad.Owen@LocusSolution.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:d.watts@dataclaritycorp.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:maurizio.gravina@accenture.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:jpusztai@cubewise.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:rmelloy@ecapitaladvisors.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:cstauffer@ecapitaladvisors.com\")",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Clients",
+			"ComponentName":"CAMID(\"pans:u:bcombs@revelwood.com\")",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

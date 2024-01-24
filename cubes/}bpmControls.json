@@ -1,0 +1,15 @@
+{
+	"@type":"Cube",
+	"Name":"}bpmControls",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmValue')"
+		},
+		{
+			"@id":"Dimensions('bpmControl')"
+		}
+	],
+	"Rules@Code.link":"}bpmControls.rules",
+	"Views@Code.links":[]
+}

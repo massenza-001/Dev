@@ -1,0 +1,26 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Zero Details Index (pCube)(pIndex)",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Zero Details Index (pCube)(pIndex).ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pCube",
+			"Prompt":"",
+			"Value":"bpmFinance_Comp_Emp_Info",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":" ",
+			"Value":"Index 1",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

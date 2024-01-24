@@ -1,0 +1,87 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+strCube = 'rdmDataManagerBatch';
+strBatch = pBatch;
+
+#=================
+#Clear Details Cube
+#=================
+EXECUTEPROCESS ( 'Datamanager - Zero Details Index (pCube)(pIndex)', 'pCube', strCube, 'pIndex', 'Quick Copy');
+
+#==================
+# Delete Index in the Batch Cube
+#==================
+
+CELLPUTS ( 'ZERO OUT', 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'VALUE', 'TYPE');
+CELLPUTS (  pBatch, 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'Dim 1', 'From');
+CELLPUTS (  pBatchIndex, 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'Dim 2', 'From');
+
+EXECUTEPROCESS ( 'Datamanager - Call Generic', 'pCube', strCube, 'pIndex', 'Quick Copy');
+
+#=================
+#Clear Details Cube
+#=================
+EXECUTEPROCESS ( 'Datamanager - Zero Details Index (pCube)(pIndex)', 'pCube', strCube, 'pIndex', 'Quick Copy');
+
+#===================
+#Reset Batch Index after deletion
+#===================
+
+CELLPUTS ( 'EXPORT', 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'VALUE', 'TYPE');
+CELLPUTS (  'zzResetBatch.txt', 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'VALUE', 'File Name');
+CELLPUTS (  pBatch, 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'Dim 1', 'From');
+
+#====================
+# Call DM process
+#====================
+
+EXECUTEPROCESS ( 'Datamanager - Call Generic', 'pCube', strCube, 'pIndex', 'Quick Copy');
+
+
+#=================
+#Clear Details Cube
+#=================
+EXECUTEPROCESS ( 'Datamanager - Zero Details Index (pCube)(pIndex)', 'pCube', strCube, 'pIndex', 'Quick Copy');
+
+#==================
+# Delete Index in the Batch Cube
+#==================
+
+CELLPUTS ( 'ZERO OUT', 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'VALUE', 'TYPE');
+CELLPUTS (  pBatch, 'rdmDatamanagerDetails', strCube, 'Quick Copy', 'Dim 1', 'From');
+
+
+EXECUTEPROCESS ( 'Datamanager - Call Generic', 'pCube', strCube, 'pIndex', 'Quick Copy');
+
+#===================
+# Load File
+#===================
+EXECUTEPROCESS ( 'Datamanager - Reset Batch Index Load');
+
+
+
+
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

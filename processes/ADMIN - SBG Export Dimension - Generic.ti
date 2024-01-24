@@ -1,0 +1,108 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+##########################################################################################
+###  Created Feb 2023 - LL
+###
+###  This process exports elements, parent name, and one attribute from a dimension
+###
+###   The following Parameters are used:
+###      pdim - Select Dimension
+###      pRoot - Select Root Element
+###      pAttribName - Existing Attribute
+###
+##########################################################################################
+###  VERSION CONTROL
+###
+###  2023-02-01 Initial process built - LL
+###
+##########################################################################################
+
+#=============================
+# Known TM1 FP6 error work around
+#=============================
+DisableMTQViewConstruct();
+
+
+#===================================
+# >>> DEFINE VARIABLES
+#===================================
+
+strAnc = pRoot;
+strDim = pDim;
+strAttr = pAttribName;
+
+### IF THE ATTRIBUTE PARAMETER IS NOT POPULATED THEN SET IT TO 'DESCRIPTION' ###
+IF ( strAttr @= '');
+     strAttr = 'Description';
+ENDIF;
+
+strTimeofDay = TIMST ( NOW () , '\Y\m\d\h\i' ) ;
+
+strPath = CELLGETS ( 'glbControls' , 'Value' , 'Server FTP Directory' ) | 'Exports\BI Exports\' ;
+strFile = 'TM1_DIMENSION - ' | pDim | ' - ' | pRoot | ' - ' | ' All Elements' | '.csv' ;
+strFullPath = strPath | strFile;
+
+
+#=============================================================================================
+#>>> LOOP THROUGH DIMENSION 
+#=============================================================================================
+
+numDimSiz = DIMSIZ ( pDim) ;
+numCounter = 1 ;
+
+### HEADER ROW ###
+ASCIIOUTPUT ( strFullPath ,  'Dimension' ,  'Element' , 'Parent',  pAttribName ) ;
+
+
+### LOOP THROUGH ALL ELEMENTS IN THE DIMENSION ### 
+WHILE ( numCounter <= numDimSiz  ) ;
+     strElement = DIMNM ( strDim ,  numCounter ) ;
+     strName = ATTRS ( strDim ,  strElement ,  pAttribName ) ;
+
+     ### ONLY LOOK FURTHER AT ELEMENTS WITHIN THE ROOT ###
+     IF( (ELISANC( strDim ,  strAnc ,  strElement ) =1 ) ) ;
+           numParentLoop = ELPARN ( strDim, strElement);
+           numParentCounter = 1;
+
+           ### LOOP THROUGH ALL PARENTS OF THE ELEMENT AND DETERMINE WHICH ONE IS WITHIN THE ROOT ###
+           WHILE ( numParentCounter <= numParentLoop);
+                strParent = ELPAR ( strDim, strElement, numParentCounter );
+                IF ( ELISANC ( strDim, strAnc, strParent) = 1 % strAnc @= strParent );
+                     strParentToUse = strParent ;
+                     numParentCounter = numParentLoop ;
+                ENDIF;
+                numParentCounter = numParentCounter + 1 ;
+           END;
+
+           ### OUTPUT THE ELEMENTS WITHIN THE ROOT AND THE PARENT
+           ASCIIOUTPUT ( strFullPath ,  pdim ,  strElement , strParentToUse,  strName ) ;
+
+     ELSEIF (strElement @= strAnc) ;
+
+           ### OUTPUT THE ROOT AND LEAVE THE PARENT COLUMN BLANK
+           ASCIIOUTPUT ( strFullPath ,  pdim ,  strElement , '',  strName) ;
+     ENDIF ;
+
+    numCounter = numCounter + 1 ;
+
+END;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

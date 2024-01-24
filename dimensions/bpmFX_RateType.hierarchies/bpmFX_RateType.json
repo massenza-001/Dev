@@ -1,0 +1,27 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFX_RateType",
+	"Elements":
+	[
+		{
+			"Name":"CYAR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CYBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PYAR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PYBR",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmFX_RateType.subsets/Default.json"
+	]
+}

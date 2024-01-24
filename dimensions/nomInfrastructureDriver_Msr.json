@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"nomInfrastructureDriver_Msr",
+	"Hierarchies@Code.links":
+	[
+		"nomInfrastructureDriver_Msr.hierarchies/nomInfrastructureDriver_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('nomInfrastructureDriver_Msr')/Hierarchies('nomInfrastructureDriver_Msr')"
+	}
+}

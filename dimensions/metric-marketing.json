@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"metric-marketing",
+	"Hierarchies@Code.links":
+	[
+		"metric-marketing.hierarchies/metric-marketing.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('metric-marketing')/Hierarchies('metric-marketing')"
+	}
+}

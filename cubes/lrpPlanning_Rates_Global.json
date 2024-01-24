@@ -1,0 +1,21 @@
+{
+	"@type":"Cube",
+	"Name":"lrpPlanning_Rates_Global",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('lrpScenario')"
+		},
+		{
+			"@id":"Dimensions('lrpYears')"
+		},
+		{
+			"@id":"Dimensions('lrpPlanning_Rates_Global_Msr')"
+		}
+	],
+	"Rules@Code.link":"lrpPlanning_Rates_Global.rules",
+	"Views@Code.links":
+	[
+		"lrpPlanning_Rates_Global.views/Default.json"
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"bpmStaff_Rates_Company",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Default_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmStaff_Rates_Company.rules",
+	"Views@Code.links":
+	[
+		"bpmStaff_Rates_Company.views/Default.json"
+	]
+}

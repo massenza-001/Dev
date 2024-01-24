@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomIndex",
+	"Elements":
+	[
+		{
+			"Name":"Index1",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

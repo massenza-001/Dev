@@ -1,0 +1,124 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+
+#Region Approval
+
+['Plan',  'Project Approval'] = S:
+     ATTRS('bpmCapEx_Project', DB('bpmFinance_Capex_Info',
+     'Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Project'),
+     'Approved') ;
+
+# =======================================================
+# Approval logic: if line approval is not blank, use line approval, else if project approval is
+#                          not blank, use project approval, otherwise no approval
+# =======================================================
+
+['Plan' , 'Final Approval'] =S:
+      IF( DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Line Approval') @<> ''
+          ,DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Line Approval')
+           ,IF( DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Project Approval') @<> ''
+                ,DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Project Approval')
+               , 'No' )
+           );
+
+#EndRegion
+
+#Region Currency
+
+# ========================================================
+# Currency logic: if line currency is entered, use it, else if company currency is not blank, use it,
+#                          else default to USD
+
+# ========================================================
+
+['Plan', 'Company Currency'] = S:
+      IF( DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Description') @=''
+           ,''
+           ,ATTRS('bpmCompany',  !bpmCompany, 'Currency')
+            );
+
+['Plan', 'Final Currency'] = S:
+     IF( DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Description') @=''
+          ,''
+          ,IF( DB('bpmFinance_Capex_Info','Plan',!bpmCompany, !bpmDepartment,!bpmCapEx_Index, 'Line Currency') @<> ''
+               , DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index, 'Line Currency')
+               , IF( DB('bpmFinance_Capex_Info','Plan', !bpmCompany, !bpmDepartment,!bpmCapEx_Index,'Company Currency') @<> ''
+                      , DB('bpmFinance_Capex_Info','Plan',!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Company Currency')
+	      , 'USD'
+                       )
+              )
+         );
+
+#EndRegion
+
+#Region AssetLife
+
+['Plan' ,'Asset Life'] = N:
+     IF( DB('bpmFinance_Capex_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Description')@=''
+           ,0
+           ,IF( ATTRN ( 'bpmCapEx_AssetType', DB('bpmFinance_Capex_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmCapEx_Index,'Asset Type'), 'Asset Life') = 0
+                 ,STET
+	 ,ATTRN ( 'bpmCapEx_AssetType', DB('bpmFinance_Capex_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmCapEx_Index,'Asset Type'), 'Asset Life')
+	)
+           );
+
+#EndRegion
+
+#Region Qty
+
+['Plan' ,'Qty'] = N:
+      IF( ['Asset Life'] = 0
+             % ['Purchase Date'] = 0
+           , 0
+          , STET);
+
+['Plan' ,'Qty'] =   C: 0 ;
+
+#EndRegion
+
+#Region Cost
+['Plan' ,'Cost Each'] = N:
+         IF( ['Asset Life'] = 0
+                % ['Purchase Date'] = 0
+             , 0
+            , STET);
+
+['Plan' ,'Cost Each'] = C: 0 ;
+
+['Plan' ,'Total Cost']= N:
+        ['Qty'] * ['Cost Each'];
+
+#EndRegion
+
+#Region Count
+['Plan' ,'Asset Count'] =N:
+     IF ( DB('bpmFinance_Capex_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmCapEx_Index,'Description') @=''
+           , 0
+           , 1
+          );
+#EndRegion
+
+#===================================
+
+FEEDERS;
+#===================================
+
+[ 'Plan', 'QTY'] => ['TOTAL COST'] ;
+
+[ 'Plan', 'Description'] => ['Asset Count'];
+
+['Plan', {'Purchase Date', 'Total Cost', 'Project', 'Asset Type', 'Asset Life', 'Final Approval', 'Final Currency'}]  =>
+        DB('bpmFinance_Capex',
+             !bpmScenario, !bpmCompany, !bpmDepartment,
+             DB('bpmFinance_Capex_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                  !bpmCapEx_Index,'Asset Type'),
+             !bpmCapEx_Index,
+             DB('bpmFinance_Capex_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                 !bpmCapEx_Index,'Project'),
+             'Total Currency', 'Plan Years', 'Depreciation', 'All' );
+

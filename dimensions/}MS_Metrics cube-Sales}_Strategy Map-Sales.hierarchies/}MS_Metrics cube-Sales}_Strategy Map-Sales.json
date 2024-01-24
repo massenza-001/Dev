@@ -1,0 +1,94 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MS_Metrics cube-Sales}_Strategy Map-Sales",
+	"Elements":
+	[
+		{
+			"Name":"Financial",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Grow Revenue",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Sales revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Reduce Expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Price discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Learning & Innovation",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Increase volumn",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Quantity sold",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Increase orders",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Order count",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Financial",
+			"ComponentName":"Grow Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Financial",
+			"ComponentName":"Reduce Expenses",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow Revenue",
+			"ComponentName":"Sales revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Expenses",
+			"ComponentName":"Price discount",
+			"Weight":1
+		},
+		{
+			"ParentName":"Learning & Innovation",
+			"ComponentName":"Increase volumn",
+			"Weight":1
+		},
+		{
+			"ParentName":"Learning & Innovation",
+			"ComponentName":"Increase orders",
+			"Weight":1
+		},
+		{
+			"ParentName":"Increase volumn",
+			"ComponentName":"Quantity sold",
+			"Weight":1
+		},
+		{
+			"ParentName":"Increase orders",
+			"ComponentName":"Order count",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MS_Metrics cube-Sales}_Strategy Map-Sales.subsets/All Members.json"
+	]
+}

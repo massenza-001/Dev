@@ -1,0 +1,21 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region Submit Counter and Percent Complete
+[ 'Submit Descendant' ]= N: 1; C: CONSOLIDATECHILDREN( 'bpmDepartment', 'bpmCompany'  );
+
+# If name not blank then count as submitted.
+[ 'Submit Counter' ] = N: IF( DB('bpmFinance_SubmissionStatus', !bpmCompany, !bpmDepartment, !bpmYear, 'Mgr Submit TimeStamp')@<>'', 1, 0 );
+
+# Calculate Pct Complete using Number of Children
+[ 'Submit Pct Complete' ]= [ 'Submit Counter' ] \ [ 'Submit Descendant' ];
+#EndRegion
+
+#Region FEEDERS
+
+FEEDERS;
+
+['Mgr Submit Name' ] => [ 'Submit Counter' ];
+#EndRegion

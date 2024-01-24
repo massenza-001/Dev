@@ -1,0 +1,43 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('Period Hierarchies')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('All Years')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2014')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2015')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2016')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2017')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('All YTD')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2014YTD')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2015YTD')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2016YTD')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('2017YTD')"
+		},
+		{
+			"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')/Elements('HasData')"
+		}
+	]
+}

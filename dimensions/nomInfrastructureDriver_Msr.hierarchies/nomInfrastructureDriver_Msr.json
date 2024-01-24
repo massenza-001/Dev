@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomInfrastructureDriver_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Driver Account",
+			"Type":"String"
+		},
+		{
+			"Name":"Percent",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

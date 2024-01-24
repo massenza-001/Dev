@@ -1,0 +1,25 @@
+{
+	"@type":"Cube",
+	"Name":"}MS_Metrics cube-Financial}_Strategy Map-Financial",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('country')"
+		},
+		{
+			"@id":"Dimensions('Time')"
+		},
+		{
+			"@id":"Dimensions('}MS_Metrics cube-Financial}_Strategy Map-Financial')"
+		},
+		{
+			"@id":"Dimensions('Metric Indicators')"
+		}
+	],
+	"Rules@Code.link":"}MS_Metrics cube-Financial}_Strategy Map-Financial.rules",
+	"Views@Code.links":
+	[
+		"}MS_Metrics cube-Financial}_Strategy Map-Financial.views/All.json",
+		"}MS_Metrics cube-Financial}_Strategy Map-Financial.views/MS_Metrics cube-Financial}_Strategy Map-Financial.json"
+	]
+}

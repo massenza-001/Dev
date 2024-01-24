@@ -1,0 +1,31 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}Links",
+	"Elements":
+	[
+		{
+			"Name":"}Link_Link_5FFinancial-GO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"}Link_Link_5FHumanResource-GO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"}Link_Link_5FInternalProcess-GO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"}Link_Link_5FMarketing-GO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"}Link_Link_5FSales-GO",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}Links.subsets/All Members.json"
+	]
+}

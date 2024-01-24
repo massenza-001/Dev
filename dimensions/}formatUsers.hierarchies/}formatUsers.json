@@ -1,0 +1,15 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}formatUsers",
+	"Elements":
+	[
+		{
+			"Name":"formatMemberCAMID(\"pans:u:dbernatchez@revelwood.com\")",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}formatUsers.subsets/All Members.json"
+	]
+}

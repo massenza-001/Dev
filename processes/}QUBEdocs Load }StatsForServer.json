@@ -1,0 +1,46 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs Load }StatsForServer",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs Load }StatsForServer.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"}StatsForServer",
+		"dataSourceNameForClient":"}StatsForServer",
+		"view":"}QUBEdocs All"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pStatVersion",
+			"Prompt":"Version / Instance",
+			"Value":"LATEST",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vStat",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vTimeInterval",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vStatValue",
+			"Type":"Numeric",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

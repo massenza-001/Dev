@@ -1,0 +1,16 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('lrpScenario')/Hierarchies('lrpScenario')/Elements('Plan')"
+		},
+		{
+			"@id":"Dimensions('lrpScenario')/Hierarchies('lrpScenario')/Elements('Plan V1')"
+		},
+		{
+			"@id":"Dimensions('lrpScenario')/Hierarchies('lrpScenario')/Elements('Final Budget')"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MI_GO_Scorecards_D",
+	"Hierarchies@Code.links":
+	[
+		"}MI_GO_Scorecards_D.hierarchies/}MI_GO_Scorecards_D.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MI_GO_Scorecards_D')/Hierarchies('}MI_GO_Scorecards_D')"
+	}
+}

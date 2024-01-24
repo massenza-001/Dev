@@ -1,0 +1,75 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+s_TimeStamp1 = TimSt (Now, '\Y\m\d\h\i\s');
+uniqueRunSuffix = TM1User() | '.' | s_TimeStamp1;
+
+#Link id:}Link_Link_5FSales-GO
+#Create per-run Source View for this regular link process
+varRunSrcViewName = Drill_ID;
+ViewDestroy('Metrics cube-Sales', varRunSrcViewName);
+ViewCreate('Metrics cube-Sales', varRunSrcViewName );
+
+var1SourceViewSubset = varRunSrcViewName;
+
+#Set view orientation
+ViewRowDimensionSet('Metrics cube-Sales', varRunSrcViewName, 'metric-sales', 1 );
+ViewColumnDimensionSet('Metrics cube-Sales', varRunSrcViewName, 'Metric Indicators', 1 );
+ViewTitleDimensionSet('Metrics cube-Sales', varRunSrcViewName, 'Time');
+ViewTitleDimensionSet('Metrics cube-Sales', varRunSrcViewName, 'country');
+ViewTitleDimensionSet('Metrics cube-Sales', varRunSrcViewName, 'product');
+ViewTitleDimensionSet('Metrics cube-Sales', varRunSrcViewName, 'retailer');
+
+#Unmapped dimension: 'product'
+SubsetDestroy('product', var1SourceViewSubset);
+SubsetCreateByMDX(var1SourceViewSubset, '{TM1DRILLDOWNMEMBER( {[product].[Total of Product]}, ALL, RECURSIVE)}');
+ViewSubsetAssign('Metrics cube-Sales', varRunSrcViewName, 'product', var1SourceViewSubset );
+
+#Unmapped dimension: 'retailer'
+SubsetDestroy('retailer', var1SourceViewSubset);
+SubsetCreateByMDX(var1SourceViewSubset, '{TM1DRILLDOWNMEMBER( {[retailer].[Total of Retailer]}, ALL, RECURSIVE)}');
+ViewSubsetAssign('Metrics cube-Sales', varRunSrcViewName, 'retailer', var1SourceViewSubset );
+
+
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+varRunSrcViewName = Drill_ID;
+var1SourceViewSubset = varRunSrcViewName;
+
+#Auto mapped dimension: 'country'
+vTitle = Pcountry;
+ViewTitleElementSet('Metrics cube-Sales', varRunSrcViewName,'country', DIMIX('country', vTitle));
+
+#Auto mapped dimension: 'Time'
+vTitle = PTime;
+ViewTitleElementSet('Metrics cube-Sales', varRunSrcViewName,'Time', DIMIX('Time', vTitle));
+
+#Unmapped dimension: 'product'
+vTitle = 'Total of Product';
+j=1;
+WHILE(j > 0 & j<=SUBSETGETSIZE('product', var1SourceViewSubset));
+vElem=SUBSETGETELEMENTNAME('product', var1SourceViewSubset, j);
+IF ((vElem @= vTitle));
+ViewTitleElementSet('Metrics cube-Sales', varRunSrcViewName,'product', j);
+j=-1;
+ENDIF;
+j=j+1;
+END;
+
+#Unmapped dimension: 'retailer'
+vTitle = 'Total of Retailer';
+j=1;
+WHILE(j > 0 & j<=SUBSETGETSIZE('retailer', var1SourceViewSubset));
+vElem=SUBSETGETELEMENTNAME('retailer', var1SourceViewSubset, j);
+IF ((vElem @= vTitle));
+ViewTitleElementSet('Metrics cube-Sales', varRunSrcViewName,'retailer', j);
+j=-1;
+ENDIF;
+j=j+1;
+END;
+
+ReturnViewHandle('Metrics cube-Sales',Drill_ID);
+
+#endregion

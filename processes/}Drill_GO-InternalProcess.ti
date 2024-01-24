@@ -1,0 +1,57 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+s_TimeStamp1 = TimSt (Now, '\Y\m\d\h\i\s');
+uniqueRunSuffix = TM1User() | '.' | s_TimeStamp1;
+
+#Link id:}Link_Link_5FInternalProcess-GO
+#Create per-run Source View for this regular link process
+varRunSrcViewName = Drill_ID;
+ViewDestroy('Metrics cube-InternalProcess', varRunSrcViewName);
+ViewCreate('Metrics cube-InternalProcess', varRunSrcViewName );
+
+var1SourceViewSubset = varRunSrcViewName;
+
+#Set view orientation
+ViewRowDimensionSet('Metrics cube-InternalProcess', varRunSrcViewName, 'metric-internalprocess', 1 );
+ViewColumnDimensionSet('Metrics cube-InternalProcess', varRunSrcViewName, 'Metric Indicators', 1 );
+ViewTitleDimensionSet('Metrics cube-InternalProcess', varRunSrcViewName, 'Time');
+ViewTitleDimensionSet('Metrics cube-InternalProcess', varRunSrcViewName, 'country');
+ViewTitleDimensionSet('Metrics cube-InternalProcess', varRunSrcViewName, 'product');
+
+#Unmapped dimension: 'product'
+SubsetDestroy('product', var1SourceViewSubset);
+SubsetCreateByMDX(var1SourceViewSubset, '{TM1DRILLDOWNMEMBER( {[product].[Total of Product]}, ALL, RECURSIVE)}');
+ViewSubsetAssign('Metrics cube-InternalProcess', varRunSrcViewName, 'product', var1SourceViewSubset );
+
+
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+varRunSrcViewName = Drill_ID;
+var1SourceViewSubset = varRunSrcViewName;
+
+#Auto mapped dimension: 'country'
+vTitle = Pcountry;
+ViewTitleElementSet('Metrics cube-InternalProcess', varRunSrcViewName,'country', DIMIX('country', vTitle));
+
+#Auto mapped dimension: 'Time'
+vTitle = PTime;
+ViewTitleElementSet('Metrics cube-InternalProcess', varRunSrcViewName,'Time', DIMIX('Time', vTitle));
+
+#Unmapped dimension: 'product'
+vTitle = 'Total of Product';
+j=1;
+WHILE(j > 0 & j<=SUBSETGETSIZE('product', var1SourceViewSubset));
+vElem=SUBSETGETELEMENTNAME('product', var1SourceViewSubset, j);
+IF ((vElem @= vTitle));
+ViewTitleElementSet('Metrics cube-InternalProcess', varRunSrcViewName,'product', j);
+j=-1;
+ENDIF;
+j=j+1;
+END;
+
+ReturnViewHandle('Metrics cube-InternalProcess',Drill_ID);
+
+#endregion

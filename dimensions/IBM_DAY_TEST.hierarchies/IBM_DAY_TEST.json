@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"IBM_DAY_TEST",
+	"Elements":
+	[
+		{
+			"Name":"42",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,231 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#===================================
+# Build View
+#===================================
+
+
+#=======================
+# Set time stamp for log file
+#======================
+
+strTimeStamp = ' ' | TIMST (NOW, '\Y\m\d\h\i\s' ) | ' ';
+strLogPath = CELLGETS ( 'rdmDatamanagerControls', 'VALUE', 'Export File Path');
+strFile = strLogPath | pCube | pIndex | strTimeStamp;
+strErrorMessage = '';
+
+strCubeName = pCube;
+strType = CELLGETS( 'rdmDatamanagerDetails', strCubeName, pIndex, 'VALUE', 'TYPE');
+
+#===================================
+# Process dims and create subsets while looping through the Finance cube
+#===================================
+
+intLoop = 32;
+intDIMCTR = 1;
+strCube = strCubeName;
+
+intError = 0;
+
+
+WHILE ( intDIMCTR <= intLoop );
+
+      strDimValue = 'Dim ' | NUMBERTOSTRING ( intDIMCTR);
+      strDimension = TABDIM (strCube, intDIMCTR);
+
+     strCheckElem = CELLGETS( 'rdmDatamanagerDetails', strCube, pIndex, strDimValue, 'FROM');
+     strCheckElemTO = CELLGETS( 'rdmDatamanagerDetails', strCube, pIndex, strDimValue, 'TO');
+
+     strCheckType = DTYPE ( strDimension, strCheckElem);
+
+#===================
+#Validate Index by checking that all From elements are valid
+# and that all target elements are base level
+#===================
+
+
+#Check From elemet
+
+IF ( strCheckElem @<>'');
+    intValid = DIMIX ( strDimension, strCheckElem);
+    intSubValid = SUBSETEXISTS ( strDimension, strCheckElem);
+    intValid = intValid + intSubValid;
+
+    IF ( intValid = 0);
+        intError = intError +1;
+        strErrorMessage = strErrorMessage | 'Error with Validation 1';
+    ENDIF;
+
+
+
+
+ENDIF;
+
+#Check TO Element
+IF ( strCheckElemTO @<>'');
+
+#  IF ( SUBST ( strCheckElemTO, 1, 3) @='DIM' %  SUBST ( strCheckElemTO, 1, 3) @='ATT');
+#       intValidTYPE = 0;
+#  ELSE;
+        intValidTYPE = ELLEV ( strDimension, strCheckElemTO);
+#  ENDIF;
+
+
+    IF ( intValidType <> 0);
+        intError = intError +1;
+        strErrorMessage = strErrorMessage | 'Error with Validation 2';
+    ENDIF;
+
+
+ENDIF;
+
+
+#==========================
+# Checking out of Loop
+#==========================
+
+   IF ( strDimension @='');
+        intDIMCTR = intLoop;
+   ENDIF;
+
+
+intDIMCTR = intDIMCTR + 1;
+END;
+
+
+#=================================================================================
+
+intLoop = 32;
+intDIMCTR2 = 1;
+strCube = strCubeName;
+
+WHILE ( intDIMCTR2 <= intLoop );
+
+
+      strDimValue = 'Dim ' | NUMBERTOSTRING ( intDIMCTR2);
+      strTOCUBEVal = CELLGETS( 'rdmDatamanagerDetails', strCube, pIndex, 'VALUE', 'To Cube');
+      strDimension = TABDIM ( strTOCUBEVal, intDIMCTR2);
+
+#==========================
+# TOCUBE Validation
+#==========================
+
+IF ( SCAN ( 'TOCUBE', strType) >0 & strDimension @<>'');
+
+    strVal = CELLGETS( 'rdmDatamanagerDetails', strCube, pIndex, strDimValue, 'To Cube');
+
+   IF ( SUBST ( strVal, 1, 3) @='Dim');
+#          strDimPick = 'Dim ' | SUBST ( strVal, 5, 1);
+          strDimPick = strVal;
+   ELSE;
+          strDimPick = SUBST ( strVal, 7, SCAN ( '_' , SUBST ( strVal, 7, 1000) )-1);
+#          strDimPick = 'Dim ' | SUBST ( strVal, 11, 1);
+   ENDIF;
+
+
+ IF ( SUBST ( strVal, 1, 3) @='Dim' % SUBST ( strVal, 1, 3) @='ATT');
+
+        strCheckTOCUBEFROM = CELLGETS( 'rdmDatamanagerDetails', strCube, pIndex, strDimPick, 'Dim Name');
+        strCheckTOCUBE = CELLGETS( 'rdmDatamanagerDetails', strCube, pIndex, strDimValue, 'To Cube Dim Name');
+
+#====ALLOW OVERRIDE FOR CROSS DIMENSION ATTRIBUTE LOOKUP - 09282011
+#=====SKIP THIS CHECK FOR TOCUBEEXPORT and maybe for all 2 cube processes - ETK REMOVE THIS ERROR CHECK FOR IT IS NOT NEEDED
+
+#        IF ( strCheckTOCUBEFROM @<>strCheckTOCUBE);
+#             intError = intError +1;
+#             strErrorMessage = strErrorMessage | 'Error with Validation 3';
+#        ENDIF;
+
+
+ ELSE;
+
+      strCheckElem = CELLGETS( 'rdmDatamanagerDetails', strCube, pIndex, strDimValue, 'To Cube');
+      intValid = DIMIX ( strDimension, strCheckElem);
+      intValidTYPE = ELLEV ( strDimension, strCheckElem);
+
+
+
+     IF ( intValid = 0);
+        intError = intError +1;
+        strErrorMessage = strErrorMessage | 'Error with Validation 3';
+    ENDIF;
+
+
+
+    IF ( intValidType <> 0);
+        intError = intError +1;
+        strErrorMessage = strErrorMessage | 'Error with Overall Validation Review Setup ';
+    ENDIF;
+
+
+ ENDIF;
+
+ENDIF;
+
+#==========================
+# Checking out of Loop
+#==========================
+
+   IF ( strDimension @='');
+        intDIMCTR2 = intLoop;
+   ENDIF;
+
+
+intDIMCTR2 = intDIMCTR2 + 1;
+END;
+
+
+IF ( intError >0);
+     ASCIIOUTPUT ( strFile | 'Validation_FINALVALIDATION.log', pCube, pIndex, 'ERROR WITH INDEX', strErrorMessage);
+     PROCESSBREAK;
+ENDIF;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endregion

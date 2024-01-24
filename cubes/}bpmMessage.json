@@ -1,0 +1,15 @@
+{
+	"@type":"Cube",
+	"Name":"}bpmMessage",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmMessage')"
+		},
+		{
+			"@id":"Dimensions('bpmGlobal_Value')"
+		}
+	],
+	"Rules@Code.link":"}bpmMessage.rules",
+	"Views@Code.links":[]
+}

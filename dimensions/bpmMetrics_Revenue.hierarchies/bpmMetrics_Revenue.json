@@ -1,0 +1,36 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmMetrics_Revenue",
+	"Elements":
+	[
+		{
+			"Name":"Sales revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quantity sold",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Order count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Average Price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Average Order Size",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmMetrics_Revenue.subsets/All Members.json",
+		"bpmMetrics_Revenue.subsets/Report_Portal.json"
+	]
+}

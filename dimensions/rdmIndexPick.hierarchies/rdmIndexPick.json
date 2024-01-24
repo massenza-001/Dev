@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmIndexPick",
+	"Elements":
+	[
+		{
+			"Name":"Index 1 - QUICK RUN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 2 - VIDEO",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

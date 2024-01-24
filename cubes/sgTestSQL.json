@@ -1,0 +1,37 @@
+{
+	"@type":"Cube",
+	"Name":"sgTestSQL",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')"
+		},
+		{
+			"@id":"Dimensions('bpmDepartment')"
+		},
+		{
+			"@id":"Dimensions('bpmAccount')"
+		},
+		{
+			"@id":"Dimensions('bpmCurrency')"
+		},
+		{
+			"@id":"Dimensions('bpmBook')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		}
+	],
+	"Rules@Code.link":"sgTestSQL.rules",
+	"Views@Code.links":
+	[
+		"sgTestSQL.views/data load.json",
+		"sgTestSQL.views/ExportData.json",
+		"sgTestSQL.views/zz_Secure Gateway Test_ZeroOut.json",
+		"sgTestSQL.views/zz_zzCCCTest_ZeroOut.json",
+		"sgTestSQL.views/zzCCC_CloudtoOnPrem.json"
+	]
+}

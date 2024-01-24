@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"chuFinance",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('chuStore')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmFinance_Msr')"
+		}
+	],
+	"Rules@Code.link":"chuFinance.rules",
+	"Views@Code.links":
+	[
+		"chuFinance.views/Default.json"
+	]
+}

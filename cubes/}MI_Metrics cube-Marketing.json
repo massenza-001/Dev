@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MI_Metrics cube-Marketing",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('metric-marketing')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-Marketing_I')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-Marketing_D')"
+		}
+	],
+	"Rules@Code.link":"}MI_Metrics cube-Marketing.rules",
+	"Views@Code.links":
+	[
+		"}MI_Metrics cube-Marketing.views/All.json",
+		"}MI_Metrics cube-Marketing.views/MI_Metrics cube-Marketing.json"
+	]
+}

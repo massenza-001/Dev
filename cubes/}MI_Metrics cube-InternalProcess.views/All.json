@@ -1,0 +1,42 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('metric-internalprocess')/Hierarchies('metric-internalprocess')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('metric-internalprocess')/Hierarchies('metric-internalprocess')/Elements('Inventory Turn')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-InternalProcess_I')/Hierarchies('}MI_Metrics cube-InternalProcess_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-InternalProcess_I')/Hierarchies('}MI_Metrics cube-InternalProcess_I')/Elements('1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-InternalProcess_D')/Hierarchies('}MI_Metrics cube-InternalProcess_D')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-InternalProcess_D')/Hierarchies('}MI_Metrics cube-InternalProcess_D')/Elements('Impacting Metric')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

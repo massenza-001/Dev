@@ -1,0 +1,8 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+# DON'T ALLOW DEPARTMENTAL OVERRIDES FOR SOME VALUES
+[{ 'Fed Un %', 'Fed Un Wage', 'FICA %', 'FICA Wage', 'Medicare %',
+    '401K Match %', '401K Wage',
+    'St Un %', 'St Un Wage' } ] = N: 0;

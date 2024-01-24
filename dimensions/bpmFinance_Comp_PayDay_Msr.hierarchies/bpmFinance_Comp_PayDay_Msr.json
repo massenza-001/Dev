@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_Comp_PayDay_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Pay Periods",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Percent of Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Calendar YTD Percent",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

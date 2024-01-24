@@ -1,0 +1,48 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+strCube = 'rdmDataManagerBatch';
+intLoop = DIMSIZ ('rdmDataManagerBatchIndex');
+intCTR   = 1;
+
+WHILE ( intCTR <= intLoop);
+
+      strBatchIndex = 'Batch ' | NUMBERTOSTRING ( intCTR);
+
+        strCheck = CELLGETS ( strCube, pBatch, strBatchIndex, 'CUBE');
+
+
+        IF ( strCheck @='');
+
+
+               CELLPUTS ( pCube, strCube, pBatch, strBatchIndex, 'CUBE');
+               CELLPUTS ( pIndex, strCube, pBatch, strBatchIndex, 'INDEX');
+               CELLPUTS ( 'Y', strCube, pBatch, strBatchIndex, 'RUN');
+               CELLPUTS ( 'Added From Excel', strCube, pBatch, strBatchIndex, 'COMMENT');
+
+               intCTR = intLoop;
+
+     ENDIF;
+
+
+intCTR = intCTR +1;
+END;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

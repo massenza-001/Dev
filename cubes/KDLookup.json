@@ -1,0 +1,17 @@
+{
+	"@type":"Cube",
+	"Name":"KDLookup",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('KDCustomer')"
+		},
+		{
+			"@id":"Dimensions('bpmValue')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"KDLookup.views/Default.json"
+	]
+}

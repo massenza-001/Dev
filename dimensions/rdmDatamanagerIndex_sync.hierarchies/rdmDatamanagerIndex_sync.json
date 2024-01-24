@@ -1,0 +1,963 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDatamanagerIndex_sync",
+	"Elements":
+	[
+		{
+			"Name":"Modular Index",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"IMPORT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Index",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Process Index",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"ZERO OUT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EXPORT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COPY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Excel Batch",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 24",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 25",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 26",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 27",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 28",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 29",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 31",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 32",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 33",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 34",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 35",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 36",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 37",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 38",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 39",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 41",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 42",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 43",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 44",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 45",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 46",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 47",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 48",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 49",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Process 50",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 24",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 25",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 26",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 27",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 28",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 29",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 31",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 32",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 33",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 34",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 35",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 36",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 37",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 38",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 39",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 41",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 42",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 43",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 44",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 45",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 46",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 47",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 48",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 49",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Index 50",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Modular Index",
+			"ComponentName":"ZERO OUT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Modular Index",
+			"ComponentName":"EXPORT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Modular Index",
+			"ComponentName":"COPY",
+			"Weight":1
+		},
+		{
+			"ParentName":"Modular Index",
+			"ComponentName":"IMPORT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 5",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 6",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 7",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 8",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 9",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 19",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 21",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 22",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 23",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 24",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 25",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 26",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 27",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 28",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 29",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 30",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 31",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 32",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 33",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 34",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 35",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 36",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 37",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 38",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 39",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 40",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 41",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 42",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 43",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 44",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 45",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 46",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 47",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 48",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 49",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Index",
+			"ComponentName":"Index 50",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 5",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 6",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 7",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 8",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 9",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 19",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 21",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 22",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 23",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 24",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 25",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 26",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 27",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 28",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 29",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 30",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 31",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 32",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 33",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 34",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 35",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 36",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 37",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 38",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 39",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 40",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 41",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 42",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 43",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 44",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 45",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 46",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 47",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 48",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 49",
+			"Weight":1
+		},
+		{
+			"ParentName":"Process Index",
+			"ComponentName":"Process 50",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

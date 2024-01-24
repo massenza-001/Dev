@@ -1,0 +1,62 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MS_Metrics cube-InternalProcess}_Strategy Map-IP')/Hierarchies('}MS_Metrics cube-InternalProcess}_Strategy Map-IP')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MS_Metrics cube-InternalProcess}_Strategy Map-IP')/Hierarchies('}MS_Metrics cube-InternalProcess}_Strategy Map-IP')/Elements('Internal Processes')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Elements('Total of  Country')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('product')/Hierarchies('product')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('product')/Hierarchies('product')/Elements('Total of Product')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Elements('2013')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Elements('Status')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

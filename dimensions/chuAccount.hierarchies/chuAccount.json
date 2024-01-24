@@ -1,0 +1,184 @@
+{
+	"@type":"Hierarchy",
+	"Name":"chuAccount",
+	"Elements":
+	[
+		{
+			"Name":"Gross Profit",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Sales",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Food Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bar Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Retail Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"To Go Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COGS and Expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"COGS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Food COGS Percent",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Food COGS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bar COGS Percent",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bar COGS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Retail COGS Percent",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Retail COGS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Labor",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Advertising",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Stats",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Entrees",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Food Per Entree",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"COGS and Expenses",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Sales",
+			"ComponentName":"Food Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales",
+			"ComponentName":"Bar Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales",
+			"ComponentName":"Retail Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Sales",
+			"ComponentName":"To Go Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS and Expenses",
+			"ComponentName":"COGS",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS and Expenses",
+			"ComponentName":"Expenses",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"Food COGS Percent",
+			"Weight":0
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"Food COGS",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"Bar COGS Percent",
+			"Weight":0
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"Bar COGS",
+			"Weight":1
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"Retail COGS Percent",
+			"Weight":0
+		},
+		{
+			"ParentName":"COGS",
+			"ComponentName":"Retail COGS",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"Labor",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"Advertising",
+			"Weight":1
+		},
+		{
+			"ParentName":"Stats",
+			"ComponentName":"Entrees",
+			"Weight":0
+		},
+		{
+			"ParentName":"Stats",
+			"ComponentName":"Food Per Entree",
+			"Weight":0
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"chuAccount.subsets/Default.json"
+	]
+}

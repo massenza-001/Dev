@@ -1,0 +1,69 @@
+{
+	"@type":"Hierarchy",
+	"Name":"KDCustomer",
+	"Elements":
+	[
+		{
+			"Name":"Total Customers",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Customer 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer Negative",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Customers",
+			"ComponentName":"Customer 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Customers",
+			"ComponentName":"Customer 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Customers",
+			"ComponentName":"Customer 3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Customers",
+			"ComponentName":"Customer 4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Customers",
+			"ComponentName":"Customer 5",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Customers",
+			"ComponentName":"Customer Negative",
+			"Weight":-1
+		}
+	],
+	"Subsets@Code.links":[]
+}

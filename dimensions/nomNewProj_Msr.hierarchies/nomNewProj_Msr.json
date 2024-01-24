@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomNewProj_Msr",
+	"Elements":
+	[
+		{
+			"Name":"New Project",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomLabor_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Hours",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dollars",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

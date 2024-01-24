@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmMenuItemTypeMsr",
+	"Elements":
+	[
+		{
+			"Name":"ICON",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

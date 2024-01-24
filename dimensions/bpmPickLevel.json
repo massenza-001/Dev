@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmPickLevel",
+	"Hierarchies@Code.links":
+	[
+		"bpmPickLevel.hierarchies/bpmPickLevel.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmPickLevel')/Hierarchies('bpmPickLevel')"
+	}
+}

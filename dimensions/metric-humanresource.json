@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"metric-humanresource",
+	"Hierarchies@Code.links":
+	[
+		"metric-humanresource.hierarchies/metric-humanresource.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('metric-humanresource')/Hierarchies('metric-humanresource')"
+	}
+}

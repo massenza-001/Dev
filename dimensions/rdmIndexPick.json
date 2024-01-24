@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"rdmIndexPick",
+	"Hierarchies@Code.links":
+	[
+		"rdmIndexPick.hierarchies/rdmIndexPick.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('rdmIndexPick')/Hierarchies('rdmIndexPick')"
+	}
+}

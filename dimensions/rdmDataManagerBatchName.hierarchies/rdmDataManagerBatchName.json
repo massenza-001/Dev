@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDataManagerBatchName",
+	"Elements":
+	[
+		{
+			"Name":"RDMDebug",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fiscal Year Roll",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

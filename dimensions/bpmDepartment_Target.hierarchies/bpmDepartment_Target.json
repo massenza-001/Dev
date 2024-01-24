@@ -1,0 +1,231 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmDepartment_Target",
+	"Elements":
+	[
+		{
+			"Name":"Select Element",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"46",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"47",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"54",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"55",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"56",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"48",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"49",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"50",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"57",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"58",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"59",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"60",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"61",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"41",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"52",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"90",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"42",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"43",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"44",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"45",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"00",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Target Department",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"Select Element",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"46",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"47",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"54",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"55",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"56",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"48",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"49",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"50",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"57",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"58",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"59",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"61",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"41",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"52",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"42",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"43",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"44",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"45",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"30",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Target Department",
+			"ComponentName":"00",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

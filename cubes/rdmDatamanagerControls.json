@@ -1,0 +1,19 @@
+{
+	"@type":"Cube",
+	"Name":"rdmDatamanagerControls",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('rdmDatamanagerValue')"
+		},
+		{
+			"@id":"Dimensions('rdmDatamanagerControls')"
+		}
+	],
+	"Rules@Code.link":"rdmDatamanagerControls.rules",
+	"Views@Code.links":
+	[
+		"rdmDatamanagerControls.views/All.json",
+		"rdmDatamanagerControls.views/rdmDatamanagerControls.json"
+	]
+}

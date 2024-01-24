@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MI_Metrics cube-Financial_D",
+	"Hierarchies@Code.links":
+	[
+		"}MI_Metrics cube-Financial_D.hierarchies/}MI_Metrics cube-Financial_D.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MI_Metrics cube-Financial_D')/Hierarchies('}MI_Metrics cube-Financial_D')"
+	}
+}

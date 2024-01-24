@@ -1,0 +1,19 @@
+{
+	"@type":"Subset",
+	"Name":"Report_Portal",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Gross profit')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Gross margin')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Revenue')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Product cost')"
+		}
+	]
+}

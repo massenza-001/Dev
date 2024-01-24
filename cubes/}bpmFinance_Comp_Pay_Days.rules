@@ -1,0 +1,30 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+['Monthly', 'Pay Periods', 'Plan'] = C: 12;
+['Monthly', 'Pay Periods', 'Plan'] = N: 1;
+
+
+['Plan', 'Percent of Year']= ['Pay Periods'] \  ['Plan','2015','Pay Periods'];
+
+['Plan', 'Calendar YTD Percent', 'Jan 2015']= N: ['Percent of Year'];
+
+['Plan', 'Calendar YTD Percent']=N:
+    ['Percent of Year'] +
+#     DB('}bpmFinance_Comp_Pay_Days', 'Plan',
+#	          ATTRS( 'bpmPeriod', !bpmPeriod, 'PrevPeriod'),
+#                          !bpmStaff_Pay_Cycle,'Calendar YTD Percent'
+
+DB('}bpmFinance_Comp_Pay_Days','Plan', DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'PrevPeriod'),!bpmFinance_Comp_Pay_Cycle,'Calendar YTD Percent'
+     )
+;
+
+
+
+FEEDERS;
+['Plan', 'Pay Periods']  => ['Percent of Year'];
+
+
+

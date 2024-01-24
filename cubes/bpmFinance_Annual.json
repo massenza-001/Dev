@@ -1,0 +1,33 @@
+{
+	"@type":"Cube",
+	"Name":"bpmFinance_Annual",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')"
+		},
+		{
+			"@id":"Dimensions('bpmDepartment')"
+		},
+		{
+			"@id":"Dimensions('bpmAccount')"
+		},
+		{
+			"@id":"Dimensions('bpmCurrency')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')"
+		},
+		{
+			"@id":"Dimensions('bpmFinance_Annual_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmFinance_Annual.rules",
+	"Views@Code.links":
+	[
+		"bpmFinance_Annual.views/All.json"
+	]
+}

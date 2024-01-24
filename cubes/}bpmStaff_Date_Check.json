@@ -1,0 +1,33 @@
+{
+	"@type":"Cube",
+	"Name":"}bpmStaff_Date_Check",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')"
+		},
+		{
+			"@id":"Dimensions('bpmDepartment')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Employee')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Calcs')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_DateMsr')"
+		}
+	],
+	"Rules@Code.link":"}bpmStaff_Date_Check.rules",
+	"Views@Code.links":
+	[
+		"}bpmStaff_Date_Check.views/Default.json"
+	]
+}

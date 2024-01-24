@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Members",
+	"Expression":"[}MS_GO_Scorecards}_GO Strategy Map].MEMBERS"
+}

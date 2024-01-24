@@ -1,0 +1,12 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs Build Client",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs Build Client.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Members",
+	"Expression":"[}MD_GO_Scorecards}_Diagram-Process_I].MEMBERS"
+}

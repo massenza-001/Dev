@@ -1,0 +1,19 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCapEx_Result",
+	"Elements":
+	[
+		{
+			"Name":"Asset Purchase",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Depreciation",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmCapEx_Result.subsets/Default.json"
+	]
+}

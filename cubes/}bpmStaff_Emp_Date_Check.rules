@@ -1,0 +1,208 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+['Plan', '6th End', 'Date Value'] = N:
+# Determine END Date to apply 6th Raise in this Period
+     MIN(
+          IF(
+          DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Last Date')= 0,
+          99999999999,
+          DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Last Date')
+             )
+          ,
+          IF(
+          DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer Out Date') = 0,
+          99999999999,
+          DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer Out Date')
+             )
+     );
+
+['Plan', '5th End', 'Date Value'] = N: ['6th Start'] - 1;
+['Plan', '4th End', 'Date Value'] = N: ['5th Start'] - 1;
+['Plan', '3rd End', 'Date Value'] = N: ['4th Start'] - 1;
+['Plan', '2nd End', 'Date Value'] = N: ['3rd Start'] - 1;
+['Plan', '1st End', 'Date Value'] = N: ['2nd Start'] - 1;
+['Plan', 'Base End', 'Date Value'] = N: ['1st Start'] - 1;
+
+['Plan', '6th Start', 'Date Value'] = N:
+# Determine START Date to apply 6th Raise in this Period
+# If No Raise Date it does not apply
+IF(
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')= 0 &
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') = 0 ,
+    ['6th End'] + 1,
+# If Hire Date greater than end date or Transfer In date greater than end date it does not apply then 6th Raise Date does NOT apply
+# If 6th Raise Date greater than end date or 6th Raise Date set to zero then 6th Raise Date does NOT apply
+   IF(
+     DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >= ['6th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') >= ['6th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'6th Raise Date')>= ['6th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'6th Raise Date') = 0,
+         ['6th End'] + 1
+      ,
+# Get START using start of period or 6th Raise Date
+         DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'6th Raise Date')
+
+   )
+);
+
+['Plan', '5th Start', 'Date Value'] = N:
+# Determine START Date to apply 5th Raise in this Period
+# If No Raise Date it does not apply
+IF(
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')= 0 &
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') = 0 ,
+    ['5th End'] + 1,
+# If Hire Date greater than end date or Transfer In date greater than end date it does not apply then 5th Raise Date does NOT apply
+# If 5th Raise Date greater than end date or 5th Raise Date set to zero then 5th Raise Date does NOT apply
+   IF(
+     DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >= ['5th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') >= ['5th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'5th Raise Date')>= ['5th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'5th Raise Date') = 0,
+         ['5th End'] + 1
+      ,
+# Get START using start of period or 5th Raise Date
+         DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'5th Raise Date')
+
+   )
+);
+
+['Plan', '4th Start', 'Date Value'] = N:
+# Determine START Date to apply 4th Raise in this Period
+# If No Raise Date it does not apply
+IF(
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')= 0 &
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') = 0 ,
+    ['4th End'] + 1,
+# If Hire Date greater than end date or Transfer In date greater than end date it does not apply then 4th Raise Date does NOT apply
+# If 4th Raise Date greater than end date or 4th Raise Date set to zero then 4th Raise Date does NOT apply
+   IF(
+     DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >= ['4th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') >= ['4th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'4th Raise Date')>= ['4th End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'4th Raise Date') = 0,
+         ['4th End'] + 1
+      ,
+# Get START using start of period or 4th Raise Date
+         DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'4th Raise Date')
+   )
+);
+
+['Plan', '3rd Start', 'Date Value'] = N:
+# Determine START Date to apply 3rd Raise in this Period
+# If No Raise Date it does not apply
+IF(
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')= 0 &
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') = 0 ,
+    ['3rd End'] + 1,
+# If Hire Date greater than end date or Transfer In date greater than end date it does not apply then 3rd Raise Date does NOT apply
+# If 3rd Raise Date greater than end date or 3rd Raise Date set to zero then 3rd Raise Date does NOT apply
+   IF(
+     DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >= ['3rd End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') >= ['3rd End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'3rd Raise Date')>= ['3rd End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'3rd Raise Date') = 0,
+         ['3rd End'] + 1
+      ,
+# Get START using start of period or 3rd Raise Date
+        DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'3rd Raise Date')
+   )
+);
+
+['Plan', '2nd Start', 'Date Value'] = N:
+# Determine START Date to apply 2nd Raise in this Period
+# If No Raise Date it does not apply
+IF(
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')= 0 &
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') = 0 ,
+    ['2nd End'] + 1,
+# If Hire Date greater than end date or Transfer In date greater than end date it does not apply then 2nd Raise Date does NOT apply
+# If 2nd Raise Date greater than end date or 2nd Raise Date set to zero then 2nd Raise Date does NOT apply
+   IF(
+     DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >= ['2nd End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') >= ['2nd End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'2nd Raise Date')>= ['2nd End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'2nd Raise Date') = 0,
+         ['2nd End'] + 1
+      ,
+# Get START using start of period or 2nd Raise Date
+         DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'2nd Raise Date')
+   )
+);
+
+['Plan', '1st Start', 'Date Value'] = N:
+# Determine START Date to apply 1st Raise in this Period
+# If No Raise Date it does not apply
+IF(
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')= 0 &
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') = 0 ,
+    ['1st End'] + 1,
+# If Hire Date greater than end date or Transfer In date greater than end date it does not apply then 1st Raise Date does NOT apply
+# If 1st Raise Date greater than end date or 1st Raise Date set to zero then 1st Raise Date does NOT apply
+   IF(
+     DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >= ['1st End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') >= ['1st End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'1st Raise Date')>= ['1st End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'1st Raise Date') = 0,
+         ['1st End'] + 1
+      ,
+          IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >=
+              DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'1st Raise Date' ),
+              DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')
+          ,
+# Get START using start of period or 1st Raise Date
+              DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'1st Raise Date')
+          )
+   )
+);
+
+['Plan', 'Base Start', 'Date Value'] = N:
+# Determine START Date to apply BASE in this Period
+# If Not hired or transferred in it does not apply
+IF(
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date')= 0 &
+    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date')= 0 ,
+    ['Base End'] + 1,
+# If Hire Date greater than end date or Transfer In date greater than end date it does not apply then BASE Date does NOT apply
+   IF(
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date') >= ['Base End']
+      %
+      DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date') >= ['Base End'],
+         ['Base End'] + 1
+      ,
+# Get START using start of period or Hire or Transfer Date
+# or hire date if mid-month
+             MAX (
+                DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Hire date'),
+                DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Transfer In Date')
+              )
+   )
+);
+
+
+
+FEEDERS;
+
+
+

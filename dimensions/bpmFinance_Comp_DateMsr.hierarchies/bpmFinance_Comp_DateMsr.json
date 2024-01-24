@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_Comp_DateMsr",
+	"Elements":
+	[
+		{
+			"Name":"Percent",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Date Value",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

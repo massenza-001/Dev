@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MI_Metrics cube-Sales_D",
+	"Hierarchies@Code.links":
+	[
+		"}MI_Metrics cube-Sales_D.hierarchies/}MI_Metrics cube-Sales_D.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MI_Metrics cube-Sales_D')/Hierarchies('}MI_Metrics cube-Sales_D')"
+	}
+}

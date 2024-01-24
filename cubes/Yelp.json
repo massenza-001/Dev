@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"Yelp",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('YelpTest')"
+		},
+		{
+			"@id":"Dimensions('bpmScenario')"
+		}
+	],
+	"Rules@Code.link":"Yelp.rules",
+	"Views@Code.links":
+	[
+		"Yelp.views/All.json",
+		"Yelp.views/Yelp.json"
+	]
+}

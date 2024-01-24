@@ -1,0 +1,51 @@
+{
+	"@type":"Hierarchy",
+	"Name":"TEMP",
+	"Elements":
+	[
+		{
+			"Name":"Post Allocated Balance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Allocations",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Pre Allocated Balance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Orginal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustments",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Post Allocated Balance",
+			"ComponentName":"Allocations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Post Allocated Balance",
+			"ComponentName":"Pre Allocated Balance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Pre Allocated Balance",
+			"ComponentName":"Orginal",
+			"Weight":1
+		},
+		{
+			"ParentName":"Pre Allocated Balance",
+			"ComponentName":"Adjustments",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

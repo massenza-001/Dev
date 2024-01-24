@@ -1,0 +1,79 @@
+{
+	"@type":"Process",
+	"Name":"CHU - Preseed a store",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"CHU - Preseed a store.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"chuFinance",
+		"dataSourceNameForClient":"chuFinance",
+		"view":"Default"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pStoreSrc",
+			"Prompt":"Source Store",
+			"Value":"024",
+			"Type":"String"
+		},
+		{
+			"Name":"pStoreTgt",
+			"Prompt":"Target Store",
+			"Value":"NewStore1",
+			"Type":"String"
+		},
+		{
+			"Name":"pYearTgt",
+			"Prompt":"Target Year",
+			"Value":"2020",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vScenario",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vStore",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vMsr",
+			"Type":"String",
+			"Position":5,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vAccount",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vPeriod",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vValue",
+			"Type":"Numeric",
+			"Position":6,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

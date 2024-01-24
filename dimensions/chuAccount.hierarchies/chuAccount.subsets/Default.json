@@ -1,0 +1,55 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Gross Profit')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Sales')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Food Sales')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Bar Sales')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Retail Sales')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('To Go Sales')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('COGS and Expenses')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('COGS')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Food COGS')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Bar COGS')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Retail COGS')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Expenses')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Labor')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Stats')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Entrees')"
+		},
+		{
+			"@id":"Dimensions('chuAccount')/Hierarchies('chuAccount')/Elements('Food Per Entree')"
+		}
+	]
+}

@@ -1,0 +1,163 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmStaff_Emp_Info_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Emp Count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Hire Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Last Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Transfer In Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Transfer Out Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FTE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"HeadCount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Annual Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PTE",
+			"Type":"String"
+		},
+		{
+			"Name":"Hourly Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Work Hours",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Pay Method",
+			"Type":"String"
+		},
+		{
+			"Name":"Bonus $",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus Amount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus Eligible",
+			"Type":"String"
+		},
+		{
+			"Name":"Bonus Month",
+			"Type":"String"
+		},
+		{
+			"Name":"Bonus Percent",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Company Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"Final Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"1st Raise Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1st Raise %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary Post 1st Raise",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2nd Raise Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2nd Raise %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary Post 2nd Raise",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3rd Raise %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3rd Raise Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary Post 3rd Raise",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4th Raise %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4th Raise Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary Post 4th Raise",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"5th Raise %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"5th Raise Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary Post 5th Raise",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"6th Raise %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"6th Raise Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary Post 6th Raise",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmStaff_Emp_Info_Msr.subsets/Default.json"
+	]
+}

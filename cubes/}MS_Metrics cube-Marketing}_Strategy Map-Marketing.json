@@ -1,0 +1,25 @@
+{
+	"@type":"Cube",
+	"Name":"}MS_Metrics cube-Marketing}_Strategy Map-Marketing",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('country')"
+		},
+		{
+			"@id":"Dimensions('Time')"
+		},
+		{
+			"@id":"Dimensions('}MS_Metrics cube-Marketing}_Strategy Map-Marketing')"
+		},
+		{
+			"@id":"Dimensions('Metric Indicators')"
+		}
+	],
+	"Rules@Code.link":"}MS_Metrics cube-Marketing}_Strategy Map-Marketing.rules",
+	"Views@Code.links":
+	[
+		"}MS_Metrics cube-Marketing}_Strategy Map-Marketing.views/All.json",
+		"}MS_Metrics cube-Marketing}_Strategy Map-Marketing.views/MS_Metrics cube-Marketing}_Strategy Map-Marketing.json"
+	]
+}

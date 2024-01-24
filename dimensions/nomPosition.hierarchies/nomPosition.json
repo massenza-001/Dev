@@ -1,0 +1,42 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomPosition",
+	"Elements":
+	[
+		{
+			"Name":"Total Positions",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Position1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Position2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Position3",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Positions",
+			"ComponentName":"Position1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Positions",
+			"ComponentName":"Position2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Positions",
+			"ComponentName":"Position3",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

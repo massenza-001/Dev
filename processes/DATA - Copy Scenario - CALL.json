@@ -1,0 +1,78 @@
+{
+	"@type":"Process",
+	"Name":"DATA - Copy Scenario - CALL",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"DATA - Copy Scenario - CALL.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"rdmDatamanagerDetails",
+		"dataSourceNameForClient":"rdmDatamanagerDetails",
+		"view":"rdmDatamanagerDetails"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pSrcScenario",
+			"Prompt":"Source Scenario?",
+			"Value":"Plan",
+			"Type":"String"
+		},
+		{
+			"Name":"pTgtScenario",
+			"Prompt":"Target Scenario?",
+			"Value":"Plan V5",
+			"Type":"String"
+		},
+		{
+			"Name":"pSrcPeriod",
+			"Prompt":"Source Period?",
+			"Value":"2015",
+			"Type":"String"
+		},
+		{
+			"Name":"pTgtPeriod",
+			"Prompt":"Target Period?",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vRDMDim",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vVariable",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vCubes",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vRDMIndex",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vValue",
+			"Type":"String",
+			"Position":5,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

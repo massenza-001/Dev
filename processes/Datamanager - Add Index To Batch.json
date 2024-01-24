@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Add Index To Batch",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Add Index To Batch.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pCube",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pBatch",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

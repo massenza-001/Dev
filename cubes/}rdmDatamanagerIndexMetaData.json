@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"}rdmDatamanagerIndexMetaData",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('}Cubes')"
+		},
+		{
+			"@id":"Dimensions('rdmDatamanagerIndex')"
+		},
+		{
+			"@id":"Dimensions('rdmDatamanagerValue')"
+		}
+	],
+	"Rules@Code.link":"}rdmDatamanagerIndexMetaData.rules",
+	"Views@Code.links":[]
+}

@@ -1,0 +1,28 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('chuStore')/Hierarchies('chuStore')/Elements('Total Stores')"
+		},
+		{
+			"@id":"Dimensions('chuStore')/Hierarchies('chuStore')/Elements('TX')"
+		},
+		{
+			"@id":"Dimensions('chuStore')/Hierarchies('chuStore')/Elements('TN')"
+		},
+		{
+			"@id":"Dimensions('chuStore')/Hierarchies('chuStore')/Elements('AL')"
+		},
+		{
+			"@id":"Dimensions('chuStore')/Hierarchies('chuStore')/Elements('KY')"
+		},
+		{
+			"@id":"Dimensions('chuStore')/Hierarchies('chuStore')/Elements('IN')"
+		},
+		{
+			"@id":"Dimensions('chuStore')/Hierarchies('chuStore')/Elements('TBD')"
+		}
+	]
+}

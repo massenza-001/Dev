@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MI_GO_Scorecards",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('gometric')"
+		},
+		{
+			"@id":"Dimensions('}MI_GO_Scorecards_I')"
+		},
+		{
+			"@id":"Dimensions('}MI_GO_Scorecards_D')"
+		}
+	],
+	"Rules@Code.link":"}MI_GO_Scorecards.rules",
+	"Views@Code.links":
+	[
+		"}MI_GO_Scorecards.views/All.json",
+		"}MI_GO_Scorecards.views/MI_GO_Scorecards.json"
+	]
+}

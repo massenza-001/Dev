@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"rdmWebControls",
+	"Hierarchies@Code.links":
+	[
+		"rdmWebControls.hierarchies/rdmWebControls.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('rdmWebControls')/Hierarchies('rdmWebControls')"
+	}
+}

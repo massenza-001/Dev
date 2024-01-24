@@ -1,0 +1,12 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Web Call",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Web Call.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

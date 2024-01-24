@@ -1,0 +1,40 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+strDim = 'nomProject';
+strParent = 'Total Projects';
+
+
+strNameCube = 'nomNewProj';
+strName = CELLGETS ( strNameCube, 'Index1', 'New Project');
+
+
+IF ( strName @<> '' );
+     DIMENSIONELEMENTINSERT (strDim, '', strName, 'N');
+     DIMENSIONELEMENTCOMPONENTADD ( strDim, strParent, strName, 1);
+ENDIF;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+# CLEAR OUT THE EXISTING INDEX
+
+CELLPUTS ( '', strNameCube, 'Index1', 'New Project');
+
+#endregion

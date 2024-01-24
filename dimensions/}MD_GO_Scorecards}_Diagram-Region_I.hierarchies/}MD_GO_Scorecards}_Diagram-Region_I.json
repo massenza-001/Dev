@@ -1,0 +1,19 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MD_GO_Scorecards}_Diagram-Region_I",
+	"Elements":
+	[
+		{
+			"Name":"1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MD_GO_Scorecards}_Diagram-Region_I.subsets/All Members.json"
+	]
+}

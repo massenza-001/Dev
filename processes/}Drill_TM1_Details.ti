@@ -1,0 +1,202 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+# Define Dimensions
+
+#Page Dims
+dimScenario= 'bomScenario';
+dimYear= 'bpmyear';
+dimCurrency = 'bpmCurrency';
+dimbook= 'bpmBook';
+
+#Row Dims
+dimCompany = 'bpmCompany';
+dimDepartment = 'bpmDepartment';
+dimAccount = 'bpmAccount';
+
+#Column Dims
+dimPeriod='bpmPeriod';
+
+# Convert Variables into base element rather than alias
+
+pCompany = DIMNM( dimCompany , DIMIX ( dimCompany , bpmCompany ) );
+pDepartment = DIMNM( dimDepartment , DIMIX ( dimDepartment , bpmDepartment ) );
+pAccount = DIMNM( dimAccount , DIMIX ( dimAccount , bpmAccount ) );
+pCurrency= DIMNM( dimCurrency, DIMIX( dimCurrency, bpmCurrency ));
+pBook = DIMNM( dimBook , DIMIX ( dimBook , bpmBook ) );
+pPeriod = DIMNM( dimPeriod , DIMIX ( dimPeriod , bpmPeriod ) );
+
+# SUBSET and VIEW Name
+strCubeName='bpmFinance';
+subRef='zzDrillResults_bpmFinance_TM1Details';
+
+IF( VIEWEXISTS( strCubeName, subRef )=1 );
+     VIEWDESTROY( strCubeName, subRef );
+ENDIF;
+
+VIEWCREATE( strCubeName, subRef );
+VIEWROWSUPPRESSZEROESSET( strCubeName, subRef, 1 );
+VIEWCOLUMNSUPPRESSZEROESSET( strCubeName, subRef, 1 );
+
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, 'bpmScenario');
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, 'bpmBook');
+
+dimRef=dimCurrency;
+dimElemIndex= DIMIX( dimRef,  pCurrency);
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, dimRef);
+VIEWTITLEELEMENTSET( strCubeName, subRef, dimRef, dimElemIndex );
+
+#The 7 Dims all have an existing MDX driven , ASC sorted, N-level subset, that has the same name.
+#SubsetName = 'LevelN_Sorted';
+#intIndex = SUBSETGETSIZE ( dimRef , SubsetName ) ;
+#   sChild = SUBSETGETELEMENTNAME ( dimRef , SubsetName , intIndex ) ;
+
+#UPDATE Subsets in VIEW
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimCompany;
+sParent=pCompany;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+
+#--- LOOP thru all the BASE elements in the subset and
+#--- ADD children of the drilled element to the subset
+SubsetName = 'Base Level';
+intIndex = SUBSETGETSIZE ( dimRef , SubsetName ) ;
+WHILE( intIndex > 0 );
+   sChild = SUBSETGETELEMENTNAME ( dimRef , SubsetName , intIndex ) ;
+   IF( ELLEV( dimRef, sChild ) = 0 );
+      IF( sParent @= sChild % ELISANC( dimRef, sParent, sChild ) = 1 );
+          SUBSETELEMENTINSERT( dimRef, subRef, sChild, 1 );
+      ENDIF;
+   ENDIF;
+   intIndex = intIndex - 1;
+END;
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'CodeName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+ENDIF;
+
+VIEWROWDIMENSIONSET( strCubeName, subRef, dimRef, 1);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimDepartment;
+sParent=pDepartment;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+
+#--- LOOP thru all the BASE elements in the subset and
+#--- ADD children of the drilled element to the subset
+SubsetName = 'Base Level';
+intIndex = SUBSETGETSIZE ( dimRef , SubsetName ) ;
+WHILE( intIndex > 0 );
+   sChild = SUBSETGETELEMENTNAME ( dimRef , SubsetName , intIndex ) ;
+   IF( ELLEV( dimRef, sChild ) = 0 );
+      IF( sParent @= sChild % ELISANC( dimRef, sParent, sChild ) = 1 );
+          SUBSETELEMENTINSERT( dimRef, subRef, sChild, 1 );
+      ENDIF;
+   ENDIF;
+   intIndex = intIndex - 1;
+END;
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'CodeName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+ENDIF;
+
+VIEWROWDIMENSIONSET( strCubeName, subRef, dimRef, 2);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimAccount;
+sParent=pAccount;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+#--- LOOP thru all the BASE elements in the subset and
+#--- ADD children of the drilled element to the subset
+SubsetName = 'Base Level';
+intIndex = SUBSETGETSIZE ( dimRef , SubsetName ) ;
+WHILE( intIndex > 0 );
+   sChild = SUBSETGETELEMENTNAME ( dimRef , SubsetName , intIndex ) ;
+   IF( ELLEV( dimRef, sChild ) = 0 );
+      IF( sParent @= sChild % ELISANC( dimRef, sParent, sChild ) = 1 );
+          SUBSETELEMENTINSERT( dimRef, subRef, sChild, 1 );
+      ENDIF;
+   ENDIF;
+   intIndex = intIndex - 1;
+END;
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'CodeName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+ENDIF;
+
+VIEWROWDIMENSIONSET( strCubeName, subRef, dimRef, 3);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimPeriod;
+sParent=pPeriod;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+
+#--- LOOP thru all the BASE elements in the dimension and
+#--- ADD children of the drilled element to the subset
+intIndex = DIMSIZ( dimRef );
+WHILE( intIndex > 0 );
+   sChild = DIMNM( dimRef, intIndex );
+   IF( ELLEV( dimRef, sChild ) = 0 );
+      IF( sParent @= sChild % ELISANC( dimRef, sParent, sChild ) = 1 );
+          SUBSETELEMENTINSERT( dimRef, subRef, sChild, 1 );
+      ENDIF;
+   ENDIF;
+   intIndex = intIndex - 1;
+END;
+
+VIEWCOLUMNDIMENSIONSET( strCubeName, subRef, dimRef, 2);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+RETURNVIEWHANDLE('bpmFinance','zzDrill_Finance_TM1_Details');
+#****End: Generated Statements****
+#endregion

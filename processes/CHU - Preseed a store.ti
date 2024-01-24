@@ -1,0 +1,226 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#=============================================================================================
+# PURPOSE - Process will copy plan data into the bpmFinance cube to pre-seed a new company
+#                      based on a relative "year 1" date, which is an attribute of the company
+#=============================================================================================
+
+#====================================================
+#   Define Global Variables
+#====================================================
+strCube = 'chuFinance';
+strScenario = 'Plan';
+
+
+#====================================================
+# >>> Zero Out Data for Scenario, Store and Year Parameters
+#====================================================
+
+# Create Zero out view
+#-------------------------------------------------------------------------------------------------------
+strView = 'zzFinanceZeroOutStore';
+strSub = strView;
+
+IF (VIEWEXISTS (strCube, strView) <> 0);
+    VIEWDESTROY (strCube, strView);
+ENDIF;
+
+VIEWCREATE (strCube, strView);
+
+# Assign Scenario Parameter
+#-------------------------------------------------------------------------------------------------------
+strDim = 'bpmScenario';
+strElement = strScenario;
+
+IF (SUBSETEXISTS (strDim, strSub) = 0);
+     SUBSETCREATE (strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS (strDim, strSub);
+SUBSETELEMENTINSERT ( strDim, strSub, strElement, 1 );
+VIEWSUBSETASSIGN (strCube, strView, strDim, strSub);
+
+# Assign Store Parameter
+#-------------------------------------------------------------------------------------------------------
+strDim = 'chuStore';
+strElement = pStoreTgt;
+
+IF (SUBSETEXISTS (strDim, strSub) = 0);
+     SUBSETCREATE (strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS (strDim, strSub);
+SUBSETELEMENTINSERT ( strDim, strSub, strElement, 1 );
+VIEWSUBSETASSIGN (strCube, strView, strDim, strSub);
+
+# Assign YearParameter
+#-------------------------------------------------------------------------------------------------------
+strDim = 'bpmPeriod';
+strRoot = pYearTgt;
+
+IF (SUBSETEXISTS (strDim, strSub) = 0);
+     SUBSETCREATE (strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS (strDim, strSub);
+numCtr = 1;
+numCtrMax = DIMSIZ (strDim);
+WHILE (numCtr <= numCtrMax);
+     strElem = DIMNM (strDim, numCtr);
+     IF (ELLEV (strDim, strElem)= 0 & ELISANC (strDim, strRoot, strElem) = 1);
+          SUBSETELEMENTINSERT (strDim, strSub, strElem, 1);
+     ENDIF;
+     numCtr = numCtr + 1;
+END;
+
+VIEWSUBSETASSIGN (strCube, strView, strDim, strSub);
+
+
+
+# Perform Zero Out
+#-------------------------------------------------------------------------------------------------------
+VIEWZEROOUT (strCube, strView);
+
+# Clean up - 
+#  Remove temporary View and Subsets
+#-------------------------------------------------------------------------------------------------------
+VIEWDESTROY (strCube, strView);
+strDim = 'bpmScenario';
+SUBSETDESTROY (strDim, strSub);
+strDim = 'chuStore';
+SUBSETDESTROY (strDim, strSub);
+strDim = 'bpmPeriod';
+SUBSETDESTROY (strDim, strSub);
+
+
+
+
+#====================================================
+# >>> Redefine source
+#====================================================
+# Create new source view
+#-------------------------------------------------------------------------------------------------------
+strView = 'zzFinanceCopyStore';
+strSub = strView;
+
+IF (VIEWEXISTS (strCube, strView) <> 0);
+    VIEWDESTROY (strCube, strView);
+ENDIF;
+
+VIEWCREATE (strCube, strView);
+
+# Assign Scenario Parameter
+#-------------------------------------------------------------------------------------------------------
+strDim = 'bpmScenario';
+strElement = strScenario;
+
+IF (SUBSETEXISTS (strDim, strSub) = 0);
+     SUBSETCREATE (strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS (strDim, strSub);
+SUBSETELEMENTINSERT ( strDim, strSub, strElement, 1 );
+VIEWSUBSETASSIGN (strCube, strView, strDim, strSub);
+
+# Assign Company Parameter
+#-------------------------------------------------------------------------------------------------------
+strDim = 'chuStore';
+strElement = pStoreSrc;
+
+IF (SUBSETEXISTS (strDim, strSub) = 0);
+     SUBSETCREATE (strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS (strDim, strSub);
+SUBSETELEMENTINSERT ( strDim, strSub, strElement, 1 );
+VIEWSUBSETASSIGN (strCube, strView, strDim, strSub);
+
+# Assign YearParameter
+#-------------------------------------------------------------------------------------------------------
+strDim = 'bpmPeriod';
+strRoot = ATTRS ( 'chuStore', pStoreSrc, 'Year');
+
+IF (SUBSETEXISTS (strDim, strSub) = 0);
+     SUBSETCREATE (strDim, strSub);
+ENDIF;
+
+SUBSETDELETEALLELEMENTS (strDim, strSub);
+numCtr = 1;
+numCtrMax = DIMSIZ (strDim);
+WHILE (numCtr <= numCtrMax);
+     strElem = DIMNM (strDim, numCtr);
+     IF (ELLEV (strDim, strElem)= 0 & ELISANC (strDim, strRoot, strElem) = 1);
+          SUBSETELEMENTINSERT (strDim, strSub, strElem, 1);
+     ENDIF;
+     numCtr = numCtr + 1;
+END;
+
+VIEWSUBSETASSIGN (strCube, strView, strDim, strSub);
+
+# Redefine source view
+#-------------------------------------------------------------------------------------------------------
+DATASOURCECUBEVIEW=strView;
+
+
+
+# Update Attributes for new store
+#-------------------------------------------------------------------------------------------------------
+ATTRPUTS ( '01/01/' | pYearTgt, 'chuStore', pStoreTgt, 'Date');
+
+strType = ATTRS ( 'chuStore', pStoreSrc, 'Type');
+ATTRPUTS ( strType, 'chuStore', pStoreTgt, 'Type');
+
+strState = ATTRS ( 'chuStore', pStoreSrc, 'State');
+ATTRPUTS ( strState, 'chuStore', pStoreTgt, 'State');
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+IF ( CELLISUPDATEABLE ( strCube, 
+                                             vScenario, 
+                                             pStoreTgt, 
+                                             vAccount, 
+                                             pYearTgt | SUBST ( vPeriod, 5, 2), 
+                                             vMsr ) = 1);
+
+          CELLPUTN ( vValue, strCube, 
+                               vScenario, 
+                               pStoreTgt, 
+                               vAccount, 
+                               pYearTgt | SUBST ( vPeriod, 5, 2), 
+                               vMsr );
+
+ENDIF;
+
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+# Clean up - 
+#  Remove temporary View and Subsets
+#-------------------------------------------------------------------------------------------------------
+VIEWDESTROY (strCube, strView);
+strDim = 'bpmScenario';
+SUBSETDESTROY (strDim, strSub);
+strDim = 'chuStore';
+SUBSETDESTROY (strDim, strSub);
+strDim = 'bpmPeriod';
+SUBSETDESTROY (strDim, strSub);
+
+#endregion

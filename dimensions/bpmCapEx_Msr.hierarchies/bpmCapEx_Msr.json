@@ -1,0 +1,71 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCapEx_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Asset Count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Asset Type",
+			"Type":"String"
+		},
+		{
+			"Name":"Description",
+			"Type":"String"
+		},
+		{
+			"Name":"Project",
+			"Type":"String"
+		},
+		{
+			"Name":"Asset Life",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Purchase Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Qty",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cost Each",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Company Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"Line Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"Final Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"Project Approval",
+			"Type":"String"
+		},
+		{
+			"Name":"Line Approval",
+			"Type":"String"
+		},
+		{
+			"Name":"Final Approval",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmCapEx_Msr.subsets/Default.json"
+	]
+}

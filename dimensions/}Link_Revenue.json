@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}Link_Revenue",
+	"Hierarchies@Code.links":
+	[
+		"}Link_Revenue.hierarchies/}Link_Revenue.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}Link_Revenue')/Hierarchies('}Link_Revenue')"
+	}
+}

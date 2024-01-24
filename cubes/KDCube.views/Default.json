@@ -1,0 +1,90 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('2020Q1')"
+					},
+					{
+						"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('202001')"
+					},
+					{
+						"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('202002')"
+					},
+					{
+						"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('202003')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')"
+				},
+				"Alias":"Abbrev",
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('New York')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Texas')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')/Elements('Total Customers')"
+					},
+					{
+						"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')/Elements('Customer 1')"
+					},
+					{
+						"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')/Elements('Customer 2')"
+					},
+					{
+						"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')/Elements('Customer 3')"
+					},
+					{
+						"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')/Elements('Customer 4')"
+					},
+					{
+						"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')/Elements('Customer 5')"
+					},
+					{
+						"@id":"Dimensions('KDCustomer')/Hierarchies('KDCustomer')/Elements('Customer Negative')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

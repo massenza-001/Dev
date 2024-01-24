@@ -1,0 +1,25 @@
+{
+	"@type":"Subset",
+	"Name":"Plan Years",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmYear')/Hierarchies('bpmYear')/Elements('2015')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')/Hierarchies('bpmYear')/Elements('2016')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')/Hierarchies('bpmYear')/Elements('2017')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')/Hierarchies('bpmYear')/Elements('2018')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')/Hierarchies('bpmYear')/Elements('2019')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')/Hierarchies('bpmYear')/Elements('2020')"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"@type":"Hierarchy",
+	"Name":"retailer",
+	"Elements":
+	[
+		{
+			"Name":"Department Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Direct Marketing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sports Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warehouse Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total of Retailer",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total of Retailer",
+			"ComponentName":"Department Store",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total of Retailer",
+			"ComponentName":"Direct Marketing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total of Retailer",
+			"ComponentName":"Sports Store",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total of Retailer",
+			"ComponentName":"Warehouse Store",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"retailer.subsets/All Members.json"
+	]
+}

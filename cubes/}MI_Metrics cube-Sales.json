@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MI_Metrics cube-Sales",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('metric-sales')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-Sales_I')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-Sales_D')"
+		}
+	],
+	"Rules@Code.link":"}MI_Metrics cube-Sales.rules",
+	"Views@Code.links":
+	[
+		"}MI_Metrics cube-Sales.views/All.json",
+		"}MI_Metrics cube-Sales.views/MI_Metrics cube-Sales.json"
+	]
+}

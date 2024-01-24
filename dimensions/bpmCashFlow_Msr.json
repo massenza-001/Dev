@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmCashFlow_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmCashFlow_Msr.hierarchies/bpmCashFlow_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmCashFlow_Msr')/Hierarchies('bpmCashFlow_Msr')"
+	}
+}

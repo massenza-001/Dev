@@ -1,0 +1,202 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+['Plan', '6th End', 'Percent']= N:
+# If the Date End less than start then 6th Raise does not apply
+IF( ['Date Value'] < ['6th Start', 'Date Value'],
+   STET
+,
+#Else Takes the END Date value minus the START date divided by number of Days in the Month
+   ( ['Date Value'] -
+     IF( ['5th End', 'Date Value'] < ['5th Start', 'Date Value'],
+        ['6th Start', 'Date Value'] - 1
+     ,
+        ['5th End', 'Date Value']
+     )
+   ) \
+      NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'CalendarDays'))
+
+
+);
+
+['Plan', '5th End', 'Percent']= N:
+# If the Date End less than start then 5th Raise does not apply
+IF( ['Date Value'] < ['5th Start', 'Date Value'],
+   STET
+,
+#Else Takes the END Date value minus the START date divided by number of Days in the Month
+   ( ['Date Value'] -
+     IF( ['4th End', 'Date Value'] < ['4th Start', 'Date Value'],
+        ['5th Start', 'Date Value'] - 1
+     ,
+        ['4th End', 'Date Value']
+     )
+   ) \
+       NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'CalendarDays'))
+);
+
+['Plan', '4th End', 'Percent']= N:
+# If the Date End less than start then 4th Raise does not apply
+IF( ['Date Value'] < ['4th Start', 'Date Value'],
+   STET
+,
+#Else Takes the END Date value minus the START date divided by number of Days in the Month
+   ( ['Date Value'] -
+     IF( ['3rd End', 'Date Value'] < ['3rd Start', 'Date Value'],
+        ['4th Start', 'Date Value'] - 1
+     ,
+        ['3rd End', 'Date Value']
+     )
+   ) \
+       NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'CalendarDays'))
+);
+
+['Plan', '3rd End', 'Percent']= N:
+# If the Date End less than start then 3rd Raise does not apply
+IF( ['Date Value'] < ['3rd Start', 'Date Value'],
+   STET
+,
+#Else Takes the END Date value minus the START date divided by number of Days in the Month
+   ( ['Date Value'] -
+     IF( ['2nd End', 'Date Value'] < ['2nd Start', 'Date Value'],
+        ['3rd Start', 'Date Value'] - 1
+     ,
+        ['2nd End', 'Date Value']
+     )
+   ) \
+       NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'CalendarDays'))
+);
+
+['Plan', '2nd End', 'Percent']= N:
+# If the Date End less than start then 2nd Raise does not apply
+IF( ['Date Value'] < ['2nd Start', 'Date Value'],
+   STET
+,
+#Else Takes the END Date value minus the START date divided by number of Days in the Month
+   ( ['Date Value'] -
+     IF( ['1st End', 'Date Value'] < ['1st Start', 'Date Value'],
+        ['2nd Start', 'Date Value'] - 1
+     ,
+        ['1st End', 'Date Value']
+     )
+   ) \
+       NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'CalendarDays'))
+);
+
+['Plan', '1st End', 'Percent']= N:
+# If the Date End less than start then 1st Raise does not apply
+IF( ['Date Value'] < ['1st Start', 'Date Value'],
+   STET
+,
+#Else Takes the END Date value minus the START date divided by number of Days in the Month
+   ( ['Date Value'] -
+     IF( ['Base End', 'Date Value'] < ['Base Start', 'Date Value'],
+        ['1st Start', 'Date Value'] - 1
+     ,
+        ['Base End', 'Date Value']
+     )
+   ) \
+       NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'CalendarDays'))
+);
+
+['Plan', 'Base End', 'Percent']= N:
+# If the Date End less than start then Base Raise does not apply
+IF( ['Date Value'] < ['Base Start', 'Date Value'],
+   STET
+,
+#Else Takes the END Date value minus the START date divided by number of Days in the Month
+   ( ['Base End', 'Date Value'] - ['Base Start', 'Date Value'] + 1 )
+    \
+       NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'CalendarDays'))
+);
+
+##############################
+
+['Plan', '6th End', 'Date Value'] = N:
+# Determine END Date to apply 6th Raise in this Period
+MIN(
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'End Date')),
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'6th End','Date Value')
+       );
+
+['Plan', '5th End', 'Date Value'] = N:
+MIN(
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'End Date')),
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'5th End', 'Date Value')
+     );
+['Plan', '4th End', 'Date Value'] = N:
+MIN(
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'End Date')),
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'4th End', 'Date Value')
+     );
+['Plan', '3rd End', 'Date Value'] = N:
+MIN(
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'End Date')),
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'3rd End', 'Date Value')
+     );
+['Plan', '2nd End', 'Date Value'] = N:
+MIN(
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'End Date')),
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'2nd End', 'Date Value')
+     );
+['Plan', '1st End', 'Date Value'] = N:
+MIN(
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'End Date')),
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'1st End', 'Date Value')
+     );
+
+['Plan', 'Base End', 'Date Value'] = N:
+MIN(
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'End Date')),
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Base End', 'Date Value')
+     );
+
+['Plan', '6th Start', 'Date Value'] = N:
+# Get START using start of period or 6th Raise Date
+MAX(
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'6th Start', 'Date Value'),
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))
+     );
+
+['Plan', '5th Start', 'Date Value'] = N:
+MAX(
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'5th Start', 'Date Value'),
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))
+     );
+
+['Plan', '4th Start', 'Date Value'] = N:
+MAX(
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'4th Start', 'Date Value'),
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))
+     );
+
+['Plan', '3rd Start', 'Date Value'] = N:
+MAX(
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'3rd Start', 'Date Value'),
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))
+     );
+
+['Plan', '2nd Start', 'Date Value'] = N:
+MAX(
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'2nd Start', 'Date Value'),
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))
+     );
+
+['Plan', '1st Start', 'Date Value'] = N:
+MAX(
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'1st Start', 'Date Value'),
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))
+     );
+
+['Plan', 'Base Start', 'Date Value'] = N:
+MAX(
+     DB('}bpmStaff_Emp_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Base Start', 'Date Value'),
+     NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))
+     );
+
+
+FEEDERS;
+
+['Plan', 'Percent'] => DB('bpmFinance_Staff',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,!bpmPeriod,'Employed') ;

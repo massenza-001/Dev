@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"nomDeskAllocation_msr",
+	"Elements":
+	[
+		{
+			"Name":"Percent",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

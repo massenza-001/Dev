@@ -1,0 +1,2649 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}QUBEdocs Object",
+	"Elements":
+	[
+		{
+			"Name":"All Objects",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"All Chores",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CHO:ADMIN - Save Data",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CHO:QUBEdocs Daily",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Cubes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CUB:bpmControls",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_Annual",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_Capex",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_Capex_Info",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_CashFlow",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_LineItem",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_SpreadMethods",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_SubmissionStatus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFinance_Variance_Cmt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmFXRates",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmMetrics_Finance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmMetrics_Finance2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmMetrics_Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmPeriod_Info",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenue_Assumptions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenue_Driver",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenue_Driver_BOM",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenue_Driver_BOM_Detail",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenue_Price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenues",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmRevenues_Assumptions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmStaff",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmStaff_Alloc",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmStaff_Emp_Alloc_Info",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmStaff_Emp_Info",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmStaff_Rates_Company",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmStaff_RatesDepartment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:bpmUserPreferences",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:chuAssumptionsGlobal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:chuAssumptionsStore",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:chuFinance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:GO_Scorecards",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:lrpPlanning",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:lrpPlanning_Rates_BU",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:lrpPlanning_Rates_Global",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:Metrics cube-Financial",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:Metrics cube-HumanResource",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:Metrics cube-InternalProcess",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:Metrics cube-Marketing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:Metrics cube-Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomDeskAllocation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomInfrastructure",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomInfrastructureDriver",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomLabor",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomLaborInfo",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomNewProj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomSoftware",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomSoftwareInfo",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomSoftwareProject",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomTotal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:nomTotalAllocated",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:QubeDocs Definitions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:rdmDataManagerAccessControl",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:rdmDataManagerBatch",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:rdmDatamanagerControls",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:rdmDatamanagerDetails",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:sgTestSQL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUB:Yelp",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Dimensions",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"DIM:bpmAccount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmAccount_CashFlow",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmAccount_rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmBook",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCapEx_AssetType",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCapEx_Index",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCapEx_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCapEx_Project",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCapEx_Result",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCashFlow_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmChannel",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCompany",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCompany_Target",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmControl",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCountry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCurrency",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmCurrency_Rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmDepartment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmDepartment:Restructure",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmDepartment_rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmDepartment_Target",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_Annual_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_Comp_Calcs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_Comp_DateMsr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_Comp_Pay_Cycle",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_Comp_PayDay_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_LineItem",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_LineItem_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_SpreadMethods",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFinance_Variance_Cmt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFX_CurrencyType",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFX_RateType",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmFX_Rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmGlobal_Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmIndex",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmItem",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMenu",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMenu_Info",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMenuItemType",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMenuItemTypeMsr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMessage",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMetric_Comparison",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMetric_Indicator_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMetrics_Finance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmMetrics_Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmNewCompany_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmPeriod",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmPeriod_rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmPeriodInfo_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmPeriodMetrics",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmPickLevel",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmProduct",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmProducts",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmRegion",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmRevenue_Assumptions_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmRevenue_Driver_BOM_Detail_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmRevenue_Driver_BOM_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmRevenue_Driver_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmRevenue_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmRevenue_Price_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmSales_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmScenario",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_Calcs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_DateMsr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_Default_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_Emp_Alloc_Info",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_Emp_Info_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_Employee",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_Pay_Cycle",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmStaff_PayDay_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmSubItem",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmSubmissionStatus_msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmUserPreferences_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmValue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmYear",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:bpmYesNo",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:chuAccount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:chuAssumption",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:chuStore",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:chuStore:AgeCategory",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:chuStore:Type",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:country",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:gometric",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:lrpBU",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:lrpMeasure",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:lrpPlanning_Rates_Global_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:lrpScenario",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:lrpYears",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:Metric-Financial",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:metric-humanresource",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:metric-internalprocess",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:metric-marketing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:metric-sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:Metric Indicators",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomDesk",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomDeskAllocation_msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomIndex",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomInfrastructureAccount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomInfrastructureDriver_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomLabor_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomLaborInfo_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomNewProj_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomPosition",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomProject",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomSoftware",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomSoftware_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomSoftwareInfo_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomSoftwareProject_Msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomTotal_msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:nomTotalAllocated_msr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:product",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:QubeDocs Application",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:QubeDocs Definition",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:QUBEdocs Import Folders",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:QubeDocs Measure",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:QUBEdocs Setup Item",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDataManagerAccessControlMsr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDataManagerBatchIndex",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDataManagerBatchMsr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDataManagerBatchName",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDatamanagerControls",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDatamanagerDim",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDatamanagerIndex",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDatamanagerIndex_sync",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDataManagerTypes",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDatamanagerValue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmDatamanagerVariable",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmIndexPick",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:rdmWebControls",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:retailer",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:TESTTIME",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:testtime2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:TESTTIMETI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:Time",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:yelpProject",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:yelpProject_Msrs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:yelpProjectEmployee",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DIM:YelpTest",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Processes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PRO:ADMIN - Add Group",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - BPMS Copy Scenario",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - BPMS Copy Scenario - CALL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - BPMS Copy Scenario - CALL2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - BPMS Copy Scenario - CALL3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - Clear a Cube",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - Copy Scenario",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - Refresh MDX Hierarchy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:ADMIN - Save Data",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:CHU - Build store hierarchy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:CHU - Preseed a store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DATA - Copy Scenario - CALL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DATA - CopyYear",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DATA - Dump Finance Comp Emp Info",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DATA - FX - Load - Eur USRpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DATA - Generic Data Load",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DATA - Load GL Data for Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DATA - Load Staff for start of Planning Cycle",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Add Index To Batch",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Advanced Export",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Batch Call",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Build Index Pick",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Build N Level Subset",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Build Query",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Build Query Cons",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Build String Query",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Call Generic",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Create New Batch",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Generic Import Process",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Generic Process",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - License Validate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - License Validate File",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Modular (From)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Modular (To)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DataManager - Move Finance_LineItem Plan to What If - 1 - All Years",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DataManager - Move Finance_LineItem Plan to What If - 1 - One Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DataManager - Move Finance Plan to What IF - 1 - All Years",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DataManager - Move Finance Plan to What If - 1 - One Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DataManager - Move Plan to What If - 1 - All Years Call",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DataManager - Move Plan to What If - 1 - One Year Call",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Quick Move Process",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Reload Rule",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Remove Rule",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Reset Batch Index",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Reset Batch Index Load",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Rule Fix",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Sample Caller",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Single File Import",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - TOCUBE Process",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Validate Index",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Web Call",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Zero Details",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Zero Details Index (pCube)(pIndex)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Zero Details TOCUBE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Zero Out",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Zero Out Target",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Zero Out TOCUBE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Datamanager - Zero Val",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Account - Build Casf Flow Hierarchy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Add Element to bpmCompany dimension",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Add Element to nomProject dimension",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Build Base Level Subsets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Build Company Target Dim",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Build Company Target Dimension",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Build Period Attributes",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Build Period Hierarchy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Build Period Hierarchy - CALL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Build Trailing Hierarchy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Create CodeName and NameCode Aliases",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Delete Element from bpmCompany dimension",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Dimension Maintenance Call",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Generic Dimension Build Process",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Remove hierarchy from dimension",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:DIM - Sort bpmPeriod Dimension",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:LEETEMP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:LEETEMP2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:QUBEdocs Create Package",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:QUBEdocs Refresh",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:QUBEdocs Send Package",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:Secure Gateway Test",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:SUBMIT - Submit intersection",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:zzCCC_CloudtoOnPrem",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:zzCCCTest",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PRO:zzToDelete - DIM - Update - bpmAccount_rpt - Isolate Op Exp",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Server",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Objects",
+			"ComponentName":"All Chores",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Objects",
+			"ComponentName":"All Cubes",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Objects",
+			"ComponentName":"All Dimensions",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Objects",
+			"ComponentName":"All Processes",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Objects",
+			"ComponentName":"Server",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Chores",
+			"ComponentName":"CHO:ADMIN - Save Data",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Chores",
+			"ComponentName":"CHO:QUBEdocs Daily",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmControls",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_Annual",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_Capex",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_Capex_Info",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_CashFlow",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_LineItem",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_rpt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_SpreadMethods",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_SubmissionStatus",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFinance_Variance_Cmt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmFXRates",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmMetrics_Finance",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmMetrics_Finance2",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmMetrics_Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmPeriod_Info",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenue_Assumptions",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenue_Driver",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenue_Driver_BOM",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenue_Driver_BOM_Detail",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenue_Price",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenues",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmRevenues_Assumptions",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmStaff",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmStaff_Alloc",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmStaff_Emp_Alloc_Info",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmStaff_Emp_Info",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmStaff_Rates_Company",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmStaff_RatesDepartment",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:bpmUserPreferences",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:chuAssumptionsGlobal",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:chuAssumptionsStore",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:chuFinance",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:GO_Scorecards",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:lrpPlanning",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:lrpPlanning_Rates_BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:lrpPlanning_Rates_Global",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:Metrics cube-Financial",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:Metrics cube-HumanResource",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:Metrics cube-InternalProcess",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:Metrics cube-Marketing",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:Metrics cube-Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomDeskAllocation",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomInfrastructure",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomInfrastructureDriver",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomLabor",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomLaborInfo",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomNewProj",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomSoftware",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomSoftwareInfo",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomSoftwareProject",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomTotal",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:nomTotalAllocated",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:QubeDocs Definitions",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:rdmDataManagerAccessControl",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:rdmDataManagerBatch",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:rdmDatamanagerControls",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:rdmDatamanagerDetails",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:sgTestSQL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Cubes",
+			"ComponentName":"CUB:Yelp",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmAccount",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmAccount_CashFlow",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmAccount_rpt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmBook",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCapEx_AssetType",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCapEx_Index",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCapEx_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCapEx_Project",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCapEx_Result",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCashFlow_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmChannel",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCompany",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCompany_Target",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmControl",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCountry",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCurrency",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmCurrency_Rpt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmDepartment",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmDepartment:Restructure",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmDepartment_rpt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmDepartment_Target",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_Annual_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_Comp_Calcs",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_Comp_DateMsr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_Comp_Pay_Cycle",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_Comp_PayDay_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_LineItem",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_LineItem_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_SpreadMethods",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFinance_Variance_Cmt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFX_CurrencyType",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFX_RateType",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmFX_Rpt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmGlobal_Value",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmIndex",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmItem",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMenu",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMenu_Info",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMenuItemType",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMenuItemTypeMsr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMessage",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMetric_Comparison",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMetric_Indicator_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMetrics_Finance",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmMetrics_Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmNewCompany_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmPeriod",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmPeriod_rpt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmPeriodInfo_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmPeriodMetrics",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmPickLevel",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmProduct",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmProducts",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmRegion",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmRevenue_Assumptions_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmRevenue_Driver_BOM_Detail_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmRevenue_Driver_BOM_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmRevenue_Driver_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmRevenue_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmRevenue_Price_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmSales_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmScenario",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_Calcs",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_DateMsr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_Default_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_Emp_Alloc_Info",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_Emp_Info_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_Employee",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_Pay_Cycle",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmStaff_PayDay_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmSubItem",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmSubmissionStatus_msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmUserPreferences_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmValue",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmYear",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:bpmYesNo",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:chuAccount",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:chuAssumption",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:chuStore",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:chuStore:AgeCategory",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:chuStore:Type",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:country",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:gometric",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:lrpBU",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:lrpMeasure",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:lrpPlanning_Rates_Global_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:lrpScenario",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:lrpYears",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:Metric-Financial",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:metric-humanresource",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:metric-internalprocess",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:metric-marketing",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:metric-sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:Metric Indicators",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomDesk",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomDeskAllocation_msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomIndex",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomInfrastructureAccount",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomInfrastructureDriver_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomLabor_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomLaborInfo_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomNewProj_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomPosition",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomProject",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomSoftware",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomSoftware_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomSoftwareInfo_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomSoftwareProject_Msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomTotal_msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:nomTotalAllocated_msr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:product",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:QubeDocs Application",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:QubeDocs Definition",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:QUBEdocs Import Folders",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:QubeDocs Measure",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:QUBEdocs Setup Item",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDataManagerAccessControlMsr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDataManagerBatchIndex",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDataManagerBatchMsr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDataManagerBatchName",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDatamanagerControls",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDatamanagerDim",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDatamanagerIndex",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDatamanagerIndex_sync",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDataManagerTypes",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDatamanagerValue",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmDatamanagerVariable",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmIndexPick",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:rdmWebControls",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:retailer",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:TESTTIME",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:testtime2",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:TESTTIMETI",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:Time",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:yelpProject",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:yelpProject_Msrs",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:yelpProjectEmployee",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Dimensions",
+			"ComponentName":"DIM:YelpTest",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - Add Group",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - BPMS Copy Scenario",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - BPMS Copy Scenario - CALL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - BPMS Copy Scenario - CALL2",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - BPMS Copy Scenario - CALL3",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - Clear a Cube",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - Copy Scenario",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - Refresh MDX Hierarchy",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:ADMIN - Save Data",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:CHU - Build store hierarchy",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:CHU - Preseed a store",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DATA - Copy Scenario - CALL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DATA - CopyYear",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DATA - Dump Finance Comp Emp Info",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DATA - FX - Load - Eur USRpt",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DATA - Generic Data Load",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DATA - Load GL Data for Period",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DATA - Load Staff for start of Planning Cycle",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Add Index To Batch",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Advanced Export",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Batch Call",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Build Index Pick",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Build N Level Subset",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Build Query",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Build Query Cons",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Build String Query",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Call Generic",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Create New Batch",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Generic Import Process",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Generic Process",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - License Validate",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - License Validate File",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Modular (From)",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Modular (To)",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DataManager - Move Finance_LineItem Plan to What If - 1 - All Years",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DataManager - Move Finance_LineItem Plan to What If - 1 - One Year",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DataManager - Move Finance Plan to What IF - 1 - All Years",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DataManager - Move Finance Plan to What If - 1 - One Year",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DataManager - Move Plan to What If - 1 - All Years Call",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DataManager - Move Plan to What If - 1 - One Year Call",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Quick Move Process",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Reload Rule",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Remove Rule",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Reset Batch Index",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Reset Batch Index Load",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Rule Fix",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Sample Caller",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Single File Import",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - TOCUBE Process",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Validate Index",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Web Call",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Zero Details",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Zero Details Index (pCube)(pIndex)",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Zero Details TOCUBE",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Zero Out",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Zero Out Target",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Zero Out TOCUBE",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Datamanager - Zero Val",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Account - Build Casf Flow Hierarchy",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Add Element to bpmCompany dimension",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Add Element to nomProject dimension",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Build Base Level Subsets",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Build Company Target Dim",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Build Company Target Dimension",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Build Period Attributes",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Build Period Hierarchy",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Build Period Hierarchy - CALL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Build Trailing Hierarchy",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Create CodeName and NameCode Aliases",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Delete Element from bpmCompany dimension",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Dimension Maintenance Call",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Generic Dimension Build Process",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Remove hierarchy from dimension",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:DIM - Sort bpmPeriod Dimension",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:LEETEMP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:LEETEMP2",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:QUBEdocs Create Package",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:QUBEdocs Refresh",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:QUBEdocs Send Package",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:Secure Gateway Test",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:SUBMIT - Submit intersection",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:zzCCC_CloudtoOnPrem",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:zzCCCTest",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Processes",
+			"ComponentName":"PRO:zzToDelete - DIM - Update - bpmAccount_rpt - Isolate Op Exp",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}QUBEdocs Object.subsets/Chores.json",
+		"}QUBEdocs Object.subsets/Cubes.json",
+		"}QUBEdocs Object.subsets/Dimensions.json",
+		"}QUBEdocs Object.subsets/Processes.json"
+	]
+}

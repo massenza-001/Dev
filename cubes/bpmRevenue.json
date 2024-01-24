@@ -1,0 +1,40 @@
+{
+	"@type":"Cube",
+	"Name":"bpmRevenue",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmProduct')"
+		},
+		{
+			"@id":"Dimensions('bpmRegion')"
+		},
+		{
+			"@id":"Dimensions('bpmChannel')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmRevenue.rules",
+	"MeasuresDimension":
+	{
+		"@id":"Dimensions('bpmRevenue_Msr')"
+	},
+	"TimeDimension":
+	{
+		"@id":"Dimensions('bpmPeriod')"
+	},
+	"Views@Code.links":
+	[
+		"bpmRevenue.views/All.json",
+		"bpmRevenue.views/Scenario Compare.json",
+		"bpmRevenue.views/Trend By Product.json"
+	]
+}

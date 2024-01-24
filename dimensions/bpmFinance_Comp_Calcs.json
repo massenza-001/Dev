@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFinance_Comp_Calcs",
+	"Hierarchies@Code.links":
+	[
+		"bpmFinance_Comp_Calcs.hierarchies/bpmFinance_Comp_Calcs.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFinance_Comp_Calcs')/Hierarchies('bpmFinance_Comp_Calcs')"
+	}
+}

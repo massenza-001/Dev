@@ -1,0 +1,36 @@
+{
+	"@type":"Cube",
+	"Name":"bpmMetrics_Finance2",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmCountry')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriodMetrics')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Comparison')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmMetrics_Finance2.rules",
+	"MeasuresDimension":
+	{
+		"@id":"Dimensions('bpmMetric_Indicator_Msr')"
+	},
+	"TimeDimension":
+	{
+		"@id":"Dimensions('bpmPeriodMetrics')"
+	},
+	"Views@Code.links":
+	[
+		"bpmMetrics_Finance2.views/All.json",
+		"bpmMetrics_Finance2.views/Default.json"
+	]
+}

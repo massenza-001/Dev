@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"yelpProject_Msrs",
+	"ElementsSortType":"ByHierarchy",
+	"Elements":
+	[
+		{
+			"Name":"Hours",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cost Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cost",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"yelpProject_Msrs.subsets/All Members.json"
+	]
+}

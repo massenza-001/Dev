@@ -1,0 +1,58 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCurrency",
+	"Elements":
+	[
+		{
+			"Name":"Total Currency",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EUR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MXP",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Currency",
+			"ComponentName":"USD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Currency",
+			"ComponentName":"EUR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Currency",
+			"ComponentName":"CAD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Currency",
+			"ComponentName":"MXP",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmCurrency.subsets/BaseLevel.json",
+		"bpmCurrency.subsets/Default.json",
+		"bpmCurrency.subsets/zz_Secure Gateway Test_ZeroOut.json",
+		"bpmCurrency.subsets/zz_zzCCCTest_ZeroOut.json",
+		"bpmCurrency.subsets/zzCCC_CloudtoOnPrem.json"
+	]
+}

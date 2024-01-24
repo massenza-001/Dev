@@ -1,0 +1,39 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+s_TimeStamp1 = TimSt (Now, '\Y\m\d\h\i\s');
+uniqueRunSuffix = TM1User() | '.' | s_TimeStamp1;
+
+#Link id:}Link_Link_5FFinancial-GO
+#Create per-run Source View for this regular link process
+varRunSrcViewName = Drill_ID;
+ViewDestroy('Metrics cube-Financial', varRunSrcViewName);
+ViewCreate('Metrics cube-Financial', varRunSrcViewName );
+
+var1SourceViewSubset = varRunSrcViewName;
+
+#Set view orientation
+ViewRowDimensionSet('Metrics cube-Financial', varRunSrcViewName, 'Metric-Financial', 1 );
+ViewColumnDimensionSet('Metrics cube-Financial', varRunSrcViewName, 'Metric Indicators', 1 );
+ViewTitleDimensionSet('Metrics cube-Financial', varRunSrcViewName, 'Time');
+ViewTitleDimensionSet('Metrics cube-Financial', varRunSrcViewName, 'country');
+
+
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+varRunSrcViewName = Drill_ID;
+var1SourceViewSubset = varRunSrcViewName;
+
+#Auto mapped dimension: 'country'
+vTitle = Pcountry;
+ViewTitleElementSet('Metrics cube-Financial', varRunSrcViewName,'country', DIMIX('country', vTitle));
+
+#Auto mapped dimension: 'Time'
+vTitle = PTime;
+ViewTitleElementSet('Metrics cube-Financial', varRunSrcViewName,'Time', DIMIX('Time', vTitle));
+
+ReturnViewHandle('Metrics cube-Financial',Drill_ID);
+
+#endregion

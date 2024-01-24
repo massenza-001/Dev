@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmUserPreferences_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmUserPreferences_Msr.hierarchies/bpmUserPreferences_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmUserPreferences_Msr')/Hierarchies('bpmUserPreferences_Msr')"
+	}
+}

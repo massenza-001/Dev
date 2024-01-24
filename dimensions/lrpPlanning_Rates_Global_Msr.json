@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"lrpPlanning_Rates_Global_Msr",
+	"Hierarchies@Code.links":
+	[
+		"lrpPlanning_Rates_Global_Msr.hierarchies/lrpPlanning_Rates_Global_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('lrpPlanning_Rates_Global_Msr')/Hierarchies('lrpPlanning_Rates_Global_Msr')"
+	}
+}

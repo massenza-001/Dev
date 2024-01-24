@@ -1,0 +1,121 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MS_Metrics cube-Financial}_Strategy Map-Financial",
+	"Elements":
+	[
+		{
+			"Name":"Financial",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Grow Revenue",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Gross profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross margin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Productivity & Growth",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Reduce expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Product cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee expense",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Training cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Expand revenue",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Financial",
+			"ComponentName":"Grow Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow Revenue",
+			"ComponentName":"Gross profit",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow Revenue",
+			"ComponentName":"Gross margin",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow Revenue",
+			"ComponentName":"Bonus",
+			"Weight":1
+		},
+		{
+			"ParentName":"Productivity & Growth",
+			"ComponentName":"Reduce expenses",
+			"Weight":1
+		},
+		{
+			"ParentName":"Productivity & Growth",
+			"ComponentName":"Expand revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce expenses",
+			"ComponentName":"Product cost",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce expenses",
+			"ComponentName":"Salary",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce expenses",
+			"ComponentName":"Employee expense",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce expenses",
+			"ComponentName":"Training cost",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expand revenue",
+			"ComponentName":"Revenue",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MS_Metrics cube-Financial}_Strategy Map-Financial.subsets/All Members.json"
+	]
+}

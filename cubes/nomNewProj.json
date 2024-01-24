@@ -1,0 +1,17 @@
+{
+	"@type":"Cube",
+	"Name":"nomNewProj",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('nomIndex')"
+		},
+		{
+			"@id":"Dimensions('nomNewProj_Msr')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"nomNewProj.views/Default.json"
+	]
+}

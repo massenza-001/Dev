@@ -1,0 +1,167 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmStaff_Calcs",
+	"Elements":
+	[
+		{
+			"Name":"Total Start",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Total End",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Base Start",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1st Start",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1st End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2nd Start",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2nd End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3rd Start",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3rd End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4th Start",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4th End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"5th Start",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"5th End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"6th Start",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"6th End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Result",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Result",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MIP Result",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Start",
+			"ComponentName":"Base Start",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Start",
+			"ComponentName":"1st Start",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Start",
+			"ComponentName":"2nd Start",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Start",
+			"ComponentName":"3rd Start",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Start",
+			"ComponentName":"4th Start",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Start",
+			"ComponentName":"5th Start",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Start",
+			"ComponentName":"6th Start",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total End",
+			"ComponentName":"Base End",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total End",
+			"ComponentName":"1st End",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total End",
+			"ComponentName":"2nd End",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total End",
+			"ComponentName":"3rd End",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total End",
+			"ComponentName":"4th End",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total End",
+			"ComponentName":"5th End",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total End",
+			"ComponentName":"6th End",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Result",
+			"ComponentName":"Result",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Result",
+			"ComponentName":"MIP Result",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

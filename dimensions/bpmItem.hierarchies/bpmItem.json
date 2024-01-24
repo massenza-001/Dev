@@ -1,0 +1,114 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmItem",
+	"Elements":
+	[
+		{
+			"Name":"Total Items",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Computers",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Low End Computer",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mid Range Computer",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"High End Computer",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Accessories",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Monitor",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Printer",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kits",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Kit 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kit 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Kit 3",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Computers",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Accessories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Items",
+			"ComponentName":"Kits",
+			"Weight":1
+		},
+		{
+			"ParentName":"Computers",
+			"ComponentName":"Low End Computer",
+			"Weight":1
+		},
+		{
+			"ParentName":"Computers",
+			"ComponentName":"Mid Range Computer",
+			"Weight":1
+		},
+		{
+			"ParentName":"Computers",
+			"ComponentName":"High End Computer",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Monitor",
+			"Weight":1
+		},
+		{
+			"ParentName":"Accessories",
+			"ComponentName":"Printer",
+			"Weight":1
+		},
+		{
+			"ParentName":"Kits",
+			"ComponentName":"Kit 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Kits",
+			"ComponentName":"Kit 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Kits",
+			"ComponentName":"Kit 3",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

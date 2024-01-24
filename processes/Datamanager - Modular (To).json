@@ -1,0 +1,44 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Modular (To)",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Modular (To).ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"parType",
+			"Prompt":"",
+			"Value":"EXPORT",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim",
+			"Prompt":"",
+			"Value":"bpmCompany",
+			"Type":"String"
+		},
+		{
+			"Name":"parElem",
+			"Prompt":"",
+			"Value":"Total",
+			"Type":"String"
+		},
+		{
+			"Name":"parCube",
+			"Prompt":"",
+			"Value":"bpmFinance",
+			"Type":"String"
+		},
+		{
+			"Name":"parView",
+			"Prompt":"",
+			"Value":"zzExportPlan",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

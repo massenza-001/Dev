@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"bpmPeriod_Info",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriodInfo_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmPeriod_Info.rules",
+	"Views@Code.links":
+	[
+		"bpmPeriod_Info.views/All.json"
+	]
+}

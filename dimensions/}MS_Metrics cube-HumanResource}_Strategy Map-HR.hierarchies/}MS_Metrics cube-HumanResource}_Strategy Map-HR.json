@@ -1,0 +1,143 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MS_Metrics cube-HumanResource}_Strategy Map-HR",
+	"Elements":
+	[
+		{
+			"Name":"Innovation",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Improve performance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Employee ranking",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sick days taken",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Increase productivity",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Head count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee termination",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Succession ready",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Recruitment days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Satisfaction",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Satisfy employees",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Employee survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Vacation days taken",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Learning",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Update knowledge",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Training days",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Innovation",
+			"ComponentName":"Improve performance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Innovation",
+			"ComponentName":"Increase productivity",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve performance",
+			"ComponentName":"Employee ranking",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve performance",
+			"ComponentName":"Sick days taken",
+			"Weight":1
+		},
+		{
+			"ParentName":"Increase productivity",
+			"ComponentName":"Head count",
+			"Weight":1
+		},
+		{
+			"ParentName":"Increase productivity",
+			"ComponentName":"Employee termination",
+			"Weight":1
+		},
+		{
+			"ParentName":"Increase productivity",
+			"ComponentName":"Succession ready",
+			"Weight":1
+		},
+		{
+			"ParentName":"Increase productivity",
+			"ComponentName":"Recruitment days",
+			"Weight":1
+		},
+		{
+			"ParentName":"Satisfaction",
+			"ComponentName":"Satisfy employees",
+			"Weight":1
+		},
+		{
+			"ParentName":"Satisfy employees",
+			"ComponentName":"Employee survey",
+			"Weight":1
+		},
+		{
+			"ParentName":"Satisfy employees",
+			"ComponentName":"Vacation days taken",
+			"Weight":1
+		},
+		{
+			"ParentName":"Learning",
+			"ComponentName":"Update knowledge",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update knowledge",
+			"ComponentName":"Training days",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MS_Metrics cube-HumanResource}_Strategy Map-HR.subsets/All Members.json"
+	]
+}

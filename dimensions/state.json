@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"state",
+	"Hierarchies@Code.links":
+	[
+		"state.hierarchies/state.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('state')/Hierarchies('state')"
+	}
+}

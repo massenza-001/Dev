@@ -1,0 +1,51 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmChannel",
+	"Elements":
+	[
+		{
+			"Name":"Total Channels",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Retail",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Internet",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Distribution",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sports Store",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Channels",
+			"ComponentName":"Retail",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Channels",
+			"ComponentName":"Internet",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Channels",
+			"ComponentName":"Distribution",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Channels",
+			"ComponentName":"Sports Store",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

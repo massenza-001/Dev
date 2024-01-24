@@ -1,0 +1,53 @@
+{
+	"@type":"Process",
+	"Name":"}Drill_GO-InternalProcess",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"}Drill_GO-InternalProcess.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"Metrics cube-InternalProcess",
+		"dataSourceNameForClient":"",
+		"view":"Metrics cube-InternalProcess"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"cubename",
+			"Prompt":"",
+			"Value":"GO_Scorecards",
+			"Type":"String"
+		},
+		{
+			"Name":"Drill_ID",
+			"Prompt":"",
+			"Value":"Drill.1369413184187",
+			"Type":"String"
+		},
+		{
+			"Name":"Pcountry",
+			"Prompt":"country",
+			"Value":"Total of  Country",
+			"Type":"String"
+		},
+		{
+			"Name":"PTime",
+			"Prompt":"Time",
+			"Value":"2013",
+			"Type":"String"
+		},
+		{
+			"Name":"Pgometric",
+			"Prompt":"gometric",
+			"Value":"Gross profit",
+			"Type":"String"
+		},
+		{
+			"Name":"PMetric_Indicators",
+			"Prompt":"Metric Indicators",
+			"Value":"Status",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

@@ -1,0 +1,32 @@
+{
+	"@type":"Cube",
+	"Name":"bpmStaff_Emp_Info",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')"
+		},
+		{
+			"@id":"Dimensions('bpmDepartment')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Employee')"
+		},
+		{
+			"@id":"Dimensions('bpmStaff_Emp_Info_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmStaff_Emp_Info.rules",
+	"MeasuresDimension":
+	{
+		"@id":"Dimensions('bpmStaff_Emp_Info_Msr')"
+	},
+	"Views@Code.links":
+	[
+		"bpmStaff_Emp_Info.views/Default.json",
+		"bpmStaff_Emp_Info.views/PW_Filled.json"
+	]
+}

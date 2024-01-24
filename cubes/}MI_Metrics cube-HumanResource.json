@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MI_Metrics cube-HumanResource",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('metric-humanresource')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-HumanResource_I')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-HumanResource_D')"
+		}
+	],
+	"Rules@Code.link":"}MI_Metrics cube-HumanResource.rules",
+	"Views@Code.links":
+	[
+		"}MI_Metrics cube-HumanResource.views/All.json",
+		"}MI_Metrics cube-HumanResource.views/MI_Metrics cube-HumanResource.json"
+	]
+}

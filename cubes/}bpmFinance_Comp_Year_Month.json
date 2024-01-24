@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"}bpmFinance_Comp_Year_Month",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		}
+	],
+	"Rules@Code.link":"}bpmFinance_Comp_Year_Month.rules",
+	"Views@Code.links":[]
+}

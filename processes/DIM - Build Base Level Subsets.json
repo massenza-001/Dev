@@ -1,0 +1,56 @@
+{
+	"@type":"Process",
+	"Name":"DIM - Build Base Level Subsets",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"DIM - Build Base Level Subsets.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"dataSourceNameForServer":"C:/Work/Clients/CX2/TM1Server/Logs/build_subset_blank.txt",
+		"dataSourceNameForClient":"C:\\Work\\Clients\\CX2\\TM1Server\\Logs\\build_subset_blank.txt",
+		"asciiHeaderRecords":0,
+		"asciiQuoteCharacter":"\"",
+		"asciiDecimalSeparator":".",
+		"asciiThousandSeparator":",",
+		"asciiDelimiterType":"Character",
+		"asciiDelimiterChar":","
+	},
+	"Parameters":
+	[
+		{
+			"Name":"parDim",
+			"Prompt":"Dim Name?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parAlias",
+			"Prompt":"Alias Name?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parSubSetName",
+			"Prompt":"Subset Name",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vSortElement",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vElement",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

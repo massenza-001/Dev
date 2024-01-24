@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"TESTTIMETI",
+	"Hierarchies@Code.links":
+	[
+		"TESTTIMETI.hierarchies/TESTTIMETI.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('TESTTIMETI')/Hierarchies('TESTTIMETI')"
+	}
+}

@@ -1,0 +1,57 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#============================
+# using new 10.1.1 feature to serlize cubes and hopefully remove SAVEDATAALL below
+#============================
+
+
+IF ( CELLGETS ( 'rdmDatamanagerControls', 'Value', 'TM1 Version >= 10.1.1') @='Y');
+     Synchronized ( pCube);
+ENDIF;
+
+
+strCube = pCube;
+strRule = strCube | '.RUX';
+strBlankRule = 'DataManagerBlankRule.txt';
+strTempRule = 'RuleHoldDataManager' | '.txt';
+strCommandLine = 'xcopy /q /y ' | strRule | ' ' | strTempRule;
+ExecuteCommand(strCommandLine, 1);
+RuleLoadFromFile(strCube, strBlankRule);
+
+
+#=======================
+# Added SAVEDATAALL per Cognos until they have a code
+# fix for the 9.4 locking bug related to removing a rule
+#=======================
+
+#SAVEDATAALL;
+
+
+
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+#endregion

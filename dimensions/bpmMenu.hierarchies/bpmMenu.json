@@ -1,0 +1,554 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmMenu",
+	"Elements":
+	[
+		{
+			"Name":"/menu",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RAMMenu",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Planning",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Compensation",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Planning Library",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Reporting",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Reporting Library",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Corporate",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Financials for Filing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quarterly Financial Update",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Real Estate",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Inventory Roll-Forward",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quarterly Reports",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"USFR",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"EBITDA Bridge",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Income Statement w CAPEX Summary by QTR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Administration",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Portal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Reporting Portal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web RAMMenu",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"web General Account Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Line Item Detail Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Payroll Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Payroll Allocation Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Capital Expense Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Benefits Rates Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Portal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Revenue Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Submission Status",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"webReports",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"web Summary Trend by Conpany",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web PnL Variance Analysis",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web PnL Scenario by Account",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"web Dept Scenario by Account",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Compensation Reports",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Payroll Calendarized Results Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll Calendarized Results by Measure Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll Allocation Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll Allocated Calendarized Results Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"webDashboard",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Expense Reports",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"General Expense Entry by Account - Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"General Expense Entry by Account - Forecast",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"General Expense Entry by Account - LRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"General Expense Entry by CD - Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"General Expense Entry by CD - Forecast",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"General Expense Entry by CD - LRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Account by Department Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line Item Detail Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Finance Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PnL Variance by Account Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quarterly Trend by Account Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Submission Status Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll Allocation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Benefits Rates Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll - Result - Report",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NTI Income Recognition",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NTI Invoice Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"USFR Timber Samples",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"RAMMenu",
+			"ComponentName":"Planning",
+			"Weight":1
+		},
+		{
+			"ParentName":"RAMMenu",
+			"ComponentName":"Reporting",
+			"Weight":1
+		},
+		{
+			"ParentName":"RAMMenu",
+			"ComponentName":"Administration",
+			"Weight":1
+		},
+		{
+			"ParentName":"Planning",
+			"ComponentName":"Expenses",
+			"Weight":1
+		},
+		{
+			"ParentName":"Planning",
+			"ComponentName":"Compensation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Planning",
+			"ComponentName":"Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Planning",
+			"ComponentName":"Planning Library",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"General Expense Entry by Account - Budget",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"General Expense Entry by Account - Forecast",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"General Expense Entry by Account - LRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"General Expense Entry by CD - Budget",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"General Expense Entry by CD - Forecast",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"General Expense Entry by CD - LRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expenses",
+			"ComponentName":"Expense Reports",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"Payroll Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"Payroll Allocation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"Benefits Rates Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation",
+			"ComponentName":"Payroll - Result - Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Revenue",
+			"ComponentName":"NTI Income Recognition",
+			"Weight":1
+		},
+		{
+			"ParentName":"Revenue",
+			"ComponentName":"NTI Invoice Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"Revenue",
+			"ComponentName":"USFR Timber Samples",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reporting",
+			"ComponentName":"Reporting Library",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reporting",
+			"ComponentName":"Corporate",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reporting",
+			"ComponentName":"Real Estate",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reporting",
+			"ComponentName":"USFR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Corporate",
+			"ComponentName":"Financials for Filing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Corporate",
+			"ComponentName":"Quarterly Financial Update",
+			"Weight":1
+		},
+		{
+			"ParentName":"Real Estate",
+			"ComponentName":"Inventory Roll-Forward",
+			"Weight":1
+		},
+		{
+			"ParentName":"Real Estate",
+			"ComponentName":"Quarterly Reports",
+			"Weight":1
+		},
+		{
+			"ParentName":"USFR",
+			"ComponentName":"EBITDA Bridge",
+			"Weight":1
+		},
+		{
+			"ParentName":"USFR",
+			"ComponentName":"Income Statement w CAPEX Summary by QTR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Administration",
+			"ComponentName":"Portal",
+			"Weight":1
+		},
+		{
+			"ParentName":"Administration",
+			"ComponentName":"Reporting Portal",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web General Account Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Line Item Detail Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Payroll Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Payroll Allocation Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Capital Expense Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Benefits Rates Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Portal",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Revenue Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"web Submission Status",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"webReports",
+			"Weight":1
+		},
+		{
+			"ParentName":"web RAMMenu",
+			"ComponentName":"webDashboard",
+			"Weight":1
+		},
+		{
+			"ParentName":"webReports",
+			"ComponentName":"web Summary Trend by Conpany",
+			"Weight":1
+		},
+		{
+			"ParentName":"webReports",
+			"ComponentName":"web PnL Variance Analysis",
+			"Weight":1
+		},
+		{
+			"ParentName":"webReports",
+			"ComponentName":"web PnL Scenario by Account",
+			"Weight":1
+		},
+		{
+			"ParentName":"webReports",
+			"ComponentName":"web Dept Scenario by Account",
+			"Weight":1
+		},
+		{
+			"ParentName":"webReports",
+			"ComponentName":"Compensation Reports",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation Reports",
+			"ComponentName":"Payroll Calendarized Results Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation Reports",
+			"ComponentName":"Payroll Calendarized Results by Measure Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation Reports",
+			"ComponentName":"Payroll Allocation Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Compensation Reports",
+			"ComponentName":"Payroll Allocated Calendarized Results Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expense Reports",
+			"ComponentName":"Account by Department Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expense Reports",
+			"ComponentName":"Line Item Detail Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expense Reports",
+			"ComponentName":"Finance Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expense Reports",
+			"ComponentName":"PnL Variance by Account Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expense Reports",
+			"ComponentName":"Quarterly Trend by Account Report",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expense Reports",
+			"ComponentName":"Submission Status Report",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

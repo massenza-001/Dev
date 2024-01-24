@@ -1,0 +1,40 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region Monthly
+['Monthly', 'Pay Periods', 'Plan'] = C: 12;
+['Monthly', 'Pay Periods', 'Plan'] = N: 1;
+#EndRegion
+
+#Region Daily
+['Daily', 'Pay Periods' ]= DB('}ElementAttributes_bpmPeriod', !bpmPeriod, 'Calendar Days');
+#EndRegion
+
+#Region Percent of Year
+['Plan', 'Percent of Year']=
+     ['Pay Periods']
+     \
+     DB('}bpmStaff_Pay_Days',!bpmScenario,
+          DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+          !bpmStaff_Pay_Cycle,'Pay Periods') ;
+#EndRegion
+
+#Region Calendar YTD Percent
+['Plan', 'Calendar YTD Percent'] = N:
+     IF ( SUBST (!bpmPeriod, 5, 2) @= '01'
+         ,
+           ['Percent of Year']
+         ,
+           ['Percent of Year'] +
+           DB('}bpmStaff_Pay_Days',!bpmScenario, DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period'),!bpmStaff_Pay_Cycle,'Calendar YTD Percent')
+         ) ;
+#EndRegion
+
+#Region FEEDERS
+
+FEEDERS;
+['Plan', 'Pay Periods']  => ['Percent of Year'];
+#EndRegion
+

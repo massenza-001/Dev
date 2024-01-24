@@ -1,0 +1,12 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs Exec Stats",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs Exec Stats.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

@@ -1,0 +1,42 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('metric-humanresource')/Hierarchies('metric-humanresource')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('metric-humanresource')/Hierarchies('metric-humanresource')/Elements('Head count')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-HumanResource_I')/Hierarchies('}MI_Metrics cube-HumanResource_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-HumanResource_I')/Hierarchies('}MI_Metrics cube-HumanResource_I')/Elements('1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-HumanResource_D')/Hierarchies('}MI_Metrics cube-HumanResource_D')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MI_Metrics cube-HumanResource_D')/Hierarchies('}MI_Metrics cube-HumanResource_D')/Elements('Impacting Metric')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

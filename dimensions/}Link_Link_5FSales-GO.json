@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}Link_Link_5FSales-GO",
+	"Hierarchies@Code.links":
+	[
+		"}Link_Link_5FSales-GO.hierarchies/}Link_Link_5FSales-GO.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}Link_Link_5FSales-GO')/Hierarchies('}Link_Link_5FSales-GO')"
+	}
+}

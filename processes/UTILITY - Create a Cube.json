@@ -1,0 +1,140 @@
+{
+	"@type":"Process",
+	"Name":"UTILITY - Create a Cube",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"UTILITY - Create a Cube.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"parNewCube",
+			"Prompt":"New Cube Name",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim1",
+			"Prompt":"Dim 1",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim2",
+			"Prompt":"Dim 2",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim3",
+			"Prompt":"Dim 3",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim4",
+			"Prompt":"Dim 4",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim5",
+			"Prompt":"Dim 5",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim6",
+			"Prompt":"Dim 6",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim7",
+			"Prompt":"Dim 7",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim8",
+			"Prompt":"Dim 8",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim9",
+			"Prompt":"Dim 9",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim10",
+			"Prompt":"Dim 10",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim11",
+			"Prompt":"Dim 11",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim12",
+			"Prompt":"Dim 12",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim13",
+			"Prompt":"Dim 13",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim14",
+			"Prompt":"Dim 14",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim15",
+			"Prompt":"Dim 15",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim16",
+			"Prompt":"Dim 16",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim17",
+			"Prompt":"Dim 17",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim18",
+			"Prompt":"Dim 18",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim19",
+			"Prompt":"Dim 19",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"parDim20",
+			"Prompt":"Dim 20",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

@@ -1,0 +1,15 @@
+{
+	"@type":"Cube",
+	"Name":"}bpmMenuItemType",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmMenuItemType')"
+		},
+		{
+			"@id":"Dimensions('bpmMenuItemTypeMsr')"
+		}
+	],
+	"Rules@Code.link":"}bpmMenuItemType.rules",
+	"Views@Code.links":[]
+}

@@ -1,0 +1,38 @@
+{
+	"@type":"NativeView",
+	"Name":"MD_GO_Scorecards}_Diagram-Region",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_D')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_D')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_I')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_I')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_I')/Elements('1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

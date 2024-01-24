@@ -1,0 +1,25 @@
+{
+	"@type":"Subset",
+	"Name":"BaseLevel",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmCapEx_AssetType')/Hierarchies('bpmCapEx_AssetType')/Elements('Computer Hardware')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_AssetType')/Hierarchies('bpmCapEx_AssetType')/Elements('Software')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_AssetType')/Hierarchies('bpmCapEx_AssetType')/Elements('Other Electronic Equipment')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_AssetType')/Hierarchies('bpmCapEx_AssetType')/Elements('Furniture-Other')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_AssetType')/Hierarchies('bpmCapEx_AssetType')/Elements('Production Equipment')"
+		},
+		{
+			"@id":"Dimensions('bpmCapEx_AssetType')/Hierarchies('bpmCapEx_AssetType')/Elements('Lease Hold Improvements')"
+		}
+	]
+}

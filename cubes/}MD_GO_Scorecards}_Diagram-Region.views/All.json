@@ -1,0 +1,42 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_D')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_D')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_D')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_D')/Elements('Secondary Member')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Elements('Total of  Country')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_I')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_I')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_I')/Elements('1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

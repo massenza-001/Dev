@@ -1,0 +1,12 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs Folder Import",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs Folder Import.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmMetric_Indicator_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmMetric_Indicator_Msr.hierarchies/bpmMetric_Indicator_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Report Portal",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmMetric_Comparison')/Hierarchies('bpmMetric_Comparison')/Elements('Act vs Last Year')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Comparison')/Hierarchies('bpmMetric_Comparison')/Elements('Act vs Final Budget')"
+		}
+	]
+}

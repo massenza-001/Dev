@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmFinance_Comp_Pay_Cycle",
+	"Hierarchies@Code.links":
+	[
+		"bpmFinance_Comp_Pay_Cycle.hierarchies/bpmFinance_Comp_Pay_Cycle.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmFinance_Comp_Pay_Cycle')/Hierarchies('bpmFinance_Comp_Pay_Cycle')"
+	}
+}

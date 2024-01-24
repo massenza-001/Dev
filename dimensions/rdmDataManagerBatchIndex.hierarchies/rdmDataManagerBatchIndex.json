@@ -1,0 +1,915 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDataManagerBatchIndex",
+	"Elements":
+	[
+		{
+			"Name":"Total Batch",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Batch 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 24",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 25",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 26",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 27",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 28",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 29",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 31",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 32",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 33",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 34",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 35",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 36",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 37",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 38",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 39",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 41",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 42",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 43",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 44",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 45",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 46",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 47",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 48",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 49",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 50",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 51",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 52",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 53",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 54",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 55",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 56",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 57",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 58",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 59",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 60",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 61",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 62",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 63",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 64",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 65",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 66",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 67",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 68",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 69",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 70",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 71",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 72",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 73",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 74",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 75",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 76",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 77",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 78",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 79",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 80",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 81",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 82",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 83",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 84",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 85",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 86",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 87",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 88",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 89",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 90",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 91",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 92",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 93",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 94",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 95",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 96",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 97",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 98",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 99",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Batch 100",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 5",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 6",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 7",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 8",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 9",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 19",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 21",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 22",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 23",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 24",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 25",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 26",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 27",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 28",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 29",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 30",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 31",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 32",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 33",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 34",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 35",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 36",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 37",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 38",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 39",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 40",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 41",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 42",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 43",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 44",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 45",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 46",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 47",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 48",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 49",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 50",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 51",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 52",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 53",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 54",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 55",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 56",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 57",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 58",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 59",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 60",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 61",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 62",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 63",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 64",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 65",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 66",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 67",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 68",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 69",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 70",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 71",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 72",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 73",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 74",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 75",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 76",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 77",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 78",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 79",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 80",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 81",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 82",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 83",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 84",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 85",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 86",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 87",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 88",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 89",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 90",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 91",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 92",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 93",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 94",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 95",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 96",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 97",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 98",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 99",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Batch",
+			"ComponentName":"Batch 100",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

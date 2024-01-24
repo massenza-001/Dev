@@ -1,0 +1,15 @@
+{
+	"@type":"Hierarchy",
+	"Name":"lrpPlanning_Rates_Global_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Credits",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"lrpPlanning_Rates_Global_Msr.subsets/Default.json"
+	]
+}

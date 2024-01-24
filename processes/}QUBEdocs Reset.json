@@ -1,0 +1,20 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs Reset",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs Reset.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pReset",
+			"Prompt":"Are you sure you want to reset QUBEdocs?",
+			"Value":"N",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

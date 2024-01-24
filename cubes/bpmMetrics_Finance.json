@@ -1,0 +1,38 @@
+{
+	"@type":"Cube",
+	"Name":"bpmMetrics_Finance",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmCountry')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Comparison')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmMetrics_Finance.rules",
+	"MeasuresDimension":
+	{
+		"@id":"Dimensions('bpmMetric_Indicator_Msr')"
+	},
+	"TimeDimension":
+	{
+		"@id":"Dimensions('bpmPeriod')"
+	},
+	"Views@Code.links":
+	[
+		"bpmMetrics_Finance.views/All.json",
+		"bpmMetrics_Finance.views/bpmMetrics_Finance.json",
+		"bpmMetrics_Finance.views/Dash_MetricTrend.json",
+		"bpmMetrics_Finance.views/LEECHECK - DataCopy.json"
+	]
+}

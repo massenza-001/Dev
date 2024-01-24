@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MS_GO_Scorecards}_GO Strategy Map",
+	"Hierarchies@Code.links":
+	[
+		"}MS_GO_Scorecards}_GO Strategy Map.hierarchies/}MS_GO_Scorecards}_GO Strategy Map.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MS_GO_Scorecards}_GO Strategy Map')/Hierarchies('}MS_GO_Scorecards}_GO Strategy Map')"
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs_OrphanConsolidationRebuild",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs_OrphanConsolidationRebuild.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDimName",
+			"Prompt":"Dim Name",
+			"Value":"Costing_Ingredient",
+			"Type":"String"
+		},
+		{
+			"Name":"pConsolidation",
+			"Prompt":"Consolidaton for Oprhans (those elements that have no home)",
+			"Value":"Orphans",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"}MI_bpmMetric_Finance",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')"
+		},
+		{
+			"@id":"Dimensions('}MI_bpmMetric_Finance_I')"
+		},
+		{
+			"@id":"Dimensions('}MI_bpmMetric_Finance_D')"
+		}
+	],
+	"Rules@Code.link":"}MI_bpmMetric_Finance.rules",
+	"Views@Code.links":[]
+}

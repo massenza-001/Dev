@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MI_bpmMetric_Finance_D",
+	"Hierarchies@Code.links":
+	[
+		"}MI_bpmMetric_Finance_D.hierarchies/}MI_bpmMetric_Finance_D.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MI_bpmMetric_Finance_D')/Hierarchies('}MI_bpmMetric_Finance_D')"
+	}
+}

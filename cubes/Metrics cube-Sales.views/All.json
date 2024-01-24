@@ -1,0 +1,60 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('product')/Hierarchies('product')/Subsets('All Members')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('retailer')/Hierarchies('retailer')/Subsets('All Members')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Elements('Actual')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('metric-sales')/Hierarchies('metric-sales')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('metric-sales')/Hierarchies('metric-sales')/Elements('Price')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

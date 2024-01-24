@@ -1,0 +1,65 @@
+{
+	"@type":"Process",
+	"Name":"}Drill_By_Company",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}Drill_By_Company.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"bpmFinance",
+		"dataSourceNameForClient":"bpmFinance",
+		"view":"zzDrillResults_bpmFinance_ByCompany"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"cubename",
+			"Prompt":"",
+			"Value":"bpmFinance",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmScenario",
+			"Prompt":"",
+			"Value":"Final Budget",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmCompany",
+			"Prompt":"",
+			"Value":"Select Element",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmDepartment",
+			"Prompt":"",
+			"Value":"Total Departments",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmAccount",
+			"Prompt":"",
+			"Value":"DriverAccounts",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmCurrency",
+			"Prompt":"",
+			"Value":"Total Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmBook",
+			"Prompt":"",
+			"Value":"Manual Adjustment",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmPeriod",
+			"Prompt":"",
+			"Value":"Total Years",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

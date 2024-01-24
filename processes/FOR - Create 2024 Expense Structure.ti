@@ -1,0 +1,69 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+# GLOBAL VARIABLES
+strRoot = '70';
+strOutputPath = 'C:\Work\Clients\Fordham\2023\Account Remap\';
+strOutputFile = strOutputPath | '2024StructureOutput.csv';
+
+numRecordCount = 1;
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+# SKIP RECORDS WHERE COL D IS BLANK
+IF ( vInclude @= '' );
+     ITEMSKIP;
+ENDIF;
+
+
+# CREATE HEADER RECORD
+IF ( numRecordCount = 1);
+     ASCIIOUTPUT ( strOutputFile, 'Parent', 'Child', 'Name');
+ENDIF;
+
+
+# DEFINE THE NUMBER OF CHARACTERS
+numChars = LONG(vAcct );
+
+
+# DEFINE THE PARENT AND CHILD BASED ON THE NUMBER OF CHARACTERS
+IF ( numChars = 2);
+     strTwoDigit = vAcct;
+     strParent = strRoot;
+     strChild = strTwoDigit;
+ELSEIF ( numChars = 3);
+     strThreeDigit = vAcct;
+     strParent = strTwoDigit;
+     strChild = strThreeDigit;
+ELSEIF ( numChars = 4);
+     strFourDigit = vAcct;
+     strParent = strThreeDigit;
+     strChild = strFourDigit ;
+ENDIF;
+
+
+# CREATE THE DATA RECORD
+ASCIIOUTPUT ( strOutputFile, strParent, strChild, vName);
+
+
+# INCREMENT THE RECORD COUNTER
+numRecordCount = numRecordCount + 1 ;
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

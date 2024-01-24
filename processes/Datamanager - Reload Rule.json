@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Reload Rule",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Reload Rule.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pFileName",
+			"Prompt":"atamanagerDetails",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":"me",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pCube",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

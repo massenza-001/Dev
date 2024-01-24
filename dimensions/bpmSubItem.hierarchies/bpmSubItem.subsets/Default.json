@@ -1,0 +1,52 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Total SubItems')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Case')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Motherboard')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Processor')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('32 GB Memory Card')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('64 GB Memory Card')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('500 GB Hard Drive')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('1 TB Hard Drive')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('2 TB Hard Drive')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('5.25 inch Floppy Drive')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Mouse')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Keyboard')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Monitor')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Printer')"
+		},
+		{
+			"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Power Cable')"
+		}
+	]
+}

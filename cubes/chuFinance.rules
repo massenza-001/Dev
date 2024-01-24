@@ -1,0 +1,25 @@
+SKIPCHECK;
+
+['Food COGS'] = N:  ['Sales'] * ['Food COGS Percent'];
+['Bar COGS'] = N:  ['Sales'] * ['Bar COGS Percent'];
+['Retail COGS'] = N:  ['Sales'] * ['Retail COGS Percent'];
+
+['Advertising'] = N:
+     IF ( DB('chuAssumptionsStore', !bpmScenario, ATTRS('bpmPeriod', !bpmPeriod, 'Current Year'), !chuStore, 'Advertising Percent') <> 0
+         ,
+          DB('chuAssumptionsStore', !bpmScenario, ATTRS('bpmPeriod', !bpmPeriod, 'Current Year'), !chuStore, 'Advertising Percent')
+          *
+          ['Sales']
+         ,
+          DB('chuAssumptionsGlobal', !bpmScenario, ATTRS('bpmPeriod', !bpmPeriod, 'Current Year'), 'Advertising Percent')
+          *
+          ['Sales']
+         );
+
+['Food Per Entree'] = ['Food Sales'] \ ['Entrees'];
+
+
+FEEDERS;
+['Sales'] => ['Food COGS'], ['Bar COGS'], ['Retail COGS'],
+             ['Advertising'];
+['Food Sales'] => ['Food Per Entree'];

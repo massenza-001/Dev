@@ -1,0 +1,48 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+# ======================================================
+# No entry without name
+# ======================================================
+
+['Plan','Allocation % - Entered'] = N:
+
+     IF(DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+               !bpmStaff_Employee,'Name') @= '',0,CONTINUE) ;
+
+# ======================================================
+# No entry for home company and department
+# ======================================================
+
+['Plan', 'Allocation % - Entered'] = N:
+
+ IF (  (!bpmCompany @= !bpmCompany_Target) &
+        (!bpmDepartment @= !bpmDepartment_Target),
+            0, STET ) ;
+
+# ======================================================
+# Home company/dept is whatever not otherwise allocated
+# ======================================================
+
+['Plan', 'Allocation % - Calculated'] = N:
+
+ IF (  (!bpmCompany @= !bpmCompany_Target) &
+         (!bpmDepartment @= !bpmDepartment_Target),
+              1 - ['Total Target Company','Total Target Department','Allocation % - Entered'], 0  ) ;
+
+
+FEEDERS;
+
+['Plan','Allocation % - Entered'] =>
+     DB('bpmStaff_Alloc',!bpmScenario,
+          !bpmCompany,!bpmCompany_Target, !bpmDepartment,!bpmDepartment_Target, !bpmStaff_Employee,
+          DB('bpmControls','Value','Plan Year'),
+          'Employed'),
+
+     DB('bpmStaff_Alloc',!bpmScenario,
+          !bpmCompany,!bpmCompany_Target, !bpmDepartment,!bpmDepartment_Target, !bpmStaff_Employee,
+          STR( NUMBR(DB('bpmControls','Value','Plan Year') ) + 1, 4, 0 ),
+          'Employed')
+;

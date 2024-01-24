@@ -1,0 +1,65 @@
+{
+	"@type":"Process",
+	"Name":"}Drill_Finance_by_Company",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"}Drill_Finance_by_Company.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"bpmFinance",
+		"dataSourceNameForClient":"bpmFinance",
+		"view":"zzDrill_Finance_By_Company"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"cubename",
+			"Prompt":"",
+			"Value":"bpmFinance",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmScenario",
+			"Prompt":"",
+			"Value":"Scenario Hierarchies",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmCompany",
+			"Prompt":"",
+			"Value":"Select Element",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmDepartment",
+			"Prompt":"",
+			"Value":"Total Departments",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmAccount",
+			"Prompt":"",
+			"Value":"Account Hiearchies",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmCurrency",
+			"Prompt":"",
+			"Value":"Total Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmPeriod",
+			"Prompt":"",
+			"Value":"Period Hierarchies",
+			"Type":"String"
+		},
+		{
+			"Name":"bpmFinance_Msr",
+			"Prompt":"",
+			"Value":"Balance Post-Alloc",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

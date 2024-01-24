@@ -1,0 +1,53 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region IsPlanMonth
+#======================================================
+# IsPlanMonth - Determine if Period is :
+# PLAN = 1
+# ACTUAL Current Year = 0
+# ACTUAL Prior Years = -1
+#======================================================
+[ 'IsPlanMonth' ]= N:
+     IF( DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Start Date' )  @<
+           DB( '}ElementAttributes_bpmPeriod',
+                'Jan ' | ' ' | SUBST( DB( 'bpmControls', 'Value', 'Last Actual Period for Plan' ), 1, 3),
+                'Start Date'
+           )
+	,
+# Prior Year Period
+		-1
+	,
+		IF( DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Start Date' )  @<=
+     		DB( '}ElementAttributes_bpmPeriod',
+            		     DB( 'bpmControls', 'Value', 'Last Actual Period for Plan' ),
+  		     'Start Date'
+          	                )
+     	,
+# Actual Period
+         	0
+		,
+# Future Plan Period
+     	     1
+		)
+	);
+#EndRegion
+
+#Region Percent of Year
+#======================================================
+# Percent of Year - Uses Calendar Days to determine % of Year for Period
+#======================================================
+[ 'Percent of Year' ]=
+     IF( DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year' )  @<> ''
+     ,
+          DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Calendar Days' ) \
+          DB( '}ElementAttributes_bpmPeriod',
+               DB( '}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year' ),
+               'Calendar Days'
+          )
+     ,
+          0
+    );
+#EndRegion

@@ -1,0 +1,28 @@
+{
+	"@type":"Cube",
+	"Name":"}MS_Metrics cube-InternalProcess}_Strategy Map-IP",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('country')"
+		},
+		{
+			"@id":"Dimensions('product')"
+		},
+		{
+			"@id":"Dimensions('Time')"
+		},
+		{
+			"@id":"Dimensions('}MS_Metrics cube-InternalProcess}_Strategy Map-IP')"
+		},
+		{
+			"@id":"Dimensions('Metric Indicators')"
+		}
+	],
+	"Rules@Code.link":"}MS_Metrics cube-InternalProcess}_Strategy Map-IP.rules",
+	"Views@Code.links":
+	[
+		"}MS_Metrics cube-InternalProcess}_Strategy Map-IP.views/All.json",
+		"}MS_Metrics cube-InternalProcess}_Strategy Map-IP.views/MS_Metrics cube-InternalProcess}_Strategy Map-IP.json"
+	]
+}

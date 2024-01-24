@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"nomTotalAllocated",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('nomProject')"
+		},
+		{
+			"@id":"Dimensions('nomDesk')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('nomTotalAllocated_msr')"
+		}
+	],
+	"Rules@Code.link":"nomTotalAllocated.rules",
+	"Views@Code.links":
+	[
+		"nomTotalAllocated.views/Default.json"
+	]
+}

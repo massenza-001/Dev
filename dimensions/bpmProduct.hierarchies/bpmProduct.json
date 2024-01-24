@@ -1,0 +1,306 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmProduct",
+	"Elements":
+	[
+		{
+			"Name":"Total Products",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jazz",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Helium Mushroom",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Fungus in the Grass",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Millennium",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nuclear Fusion",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Volcanic Eruption",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Ground Zero",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Age",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Quantum",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Elements of Nature",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Willows in the Breeze",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Oldies",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Huh",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Doobie Do",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sweet N' Lo",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mr. Serious",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"As the World Turns",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"One Life to Live",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Slow Mo",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Anthology of Time",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Lovin' Memories",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Pop/Rock",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Snap Crackle Pop",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Get Up and Go",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Electric Maze",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Killer Instinct",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sign of Destruction",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Hip Hop",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Bobby Wheeler",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Just OK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"So Happy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"So Sad",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Products",
+			"ComponentName":"Jazz",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Products",
+			"ComponentName":"New Age",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Products",
+			"ComponentName":"Oldies",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Products",
+			"ComponentName":"Pop/Rock",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Products",
+			"ComponentName":"Hip Hop",
+			"Weight":1
+		},
+		{
+			"ParentName":"Jazz",
+			"ComponentName":"Helium Mushroom",
+			"Weight":1
+		},
+		{
+			"ParentName":"Jazz",
+			"ComponentName":"Nuclear Fusion",
+			"Weight":1
+		},
+		{
+			"ParentName":"Helium Mushroom",
+			"ComponentName":"Fungus in the Grass",
+			"Weight":1
+		},
+		{
+			"ParentName":"Helium Mushroom",
+			"ComponentName":"Millennium",
+			"Weight":1
+		},
+		{
+			"ParentName":"Nuclear Fusion",
+			"ComponentName":"Volcanic Eruption",
+			"Weight":1
+		},
+		{
+			"ParentName":"Nuclear Fusion",
+			"ComponentName":"Ground Zero",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Age",
+			"ComponentName":"Quantum",
+			"Weight":1
+		},
+		{
+			"ParentName":"Quantum",
+			"ComponentName":"Elements of Nature",
+			"Weight":1
+		},
+		{
+			"ParentName":"Quantum",
+			"ComponentName":"Willows in the Breeze",
+			"Weight":1
+		},
+		{
+			"ParentName":"Oldies",
+			"ComponentName":"Huh",
+			"Weight":1
+		},
+		{
+			"ParentName":"Oldies",
+			"ComponentName":"Mr. Serious",
+			"Weight":1
+		},
+		{
+			"ParentName":"Oldies",
+			"ComponentName":"Slow Mo",
+			"Weight":1
+		},
+		{
+			"ParentName":"Huh",
+			"ComponentName":"Doobie Do",
+			"Weight":1
+		},
+		{
+			"ParentName":"Huh",
+			"ComponentName":"Sweet N' Lo",
+			"Weight":1
+		},
+		{
+			"ParentName":"Mr. Serious",
+			"ComponentName":"As the World Turns",
+			"Weight":1
+		},
+		{
+			"ParentName":"Mr. Serious",
+			"ComponentName":"One Life to Live",
+			"Weight":1
+		},
+		{
+			"ParentName":"Slow Mo",
+			"ComponentName":"Anthology of Time",
+			"Weight":1
+		},
+		{
+			"ParentName":"Slow Mo",
+			"ComponentName":"Lovin' Memories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Pop/Rock",
+			"ComponentName":"Snap Crackle Pop",
+			"Weight":1
+		},
+		{
+			"ParentName":"Pop/Rock",
+			"ComponentName":"Electric Maze",
+			"Weight":1
+		},
+		{
+			"ParentName":"Snap Crackle Pop",
+			"ComponentName":"Get Up and Go",
+			"Weight":1
+		},
+		{
+			"ParentName":"Electric Maze",
+			"ComponentName":"Killer Instinct",
+			"Weight":1
+		},
+		{
+			"ParentName":"Electric Maze",
+			"ComponentName":"Sign of Destruction",
+			"Weight":1
+		},
+		{
+			"ParentName":"Hip Hop",
+			"ComponentName":"Bobby Wheeler",
+			"Weight":1
+		},
+		{
+			"ParentName":"Bobby Wheeler",
+			"ComponentName":"Just OK",
+			"Weight":1
+		},
+		{
+			"ParentName":"Bobby Wheeler",
+			"ComponentName":"So Happy",
+			"Weight":1
+		},
+		{
+			"ParentName":"Bobby Wheeler",
+			"ComponentName":"So Sad",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmProduct.subsets/Default.json"
+	]
+}

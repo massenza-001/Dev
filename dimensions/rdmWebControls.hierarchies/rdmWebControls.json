@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmWebControls",
+	"Elements":
+	[
+		{
+			"Name":"Cube",
+			"Type":"String"
+		},
+		{
+			"Name":"Index",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

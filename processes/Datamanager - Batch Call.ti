@@ -1,0 +1,83 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#========================
+# Log Path
+#========================
+
+strTimeStamp = TIMST (NOW, '\Y\m\d\h\i\s' );
+strPath = CELLGETS ( 'rdmDatamanagerControls', 'Value', 'Export File Path') | 'Batch_' | pBatchName | 'Error' | strTimeStamp | '.txt';
+
+#========================
+# First Validate Batch is still good
+#========================
+
+numValid = CELLGETN ( 'rdmDataManagerBatch',  pBatchName, 'Total Batch', 'ValidBatch');
+
+IF ( numValid <>0);
+    ASCIIOUTPUT ( strPath, 'Batch did not validate. Please check all of the indexes');
+    PROCESSBREAK;
+ENDIF;
+
+
+#=========================
+# Data manager batch call process
+# This process will loop through the entire admDataManagerBatch cube and process everything with a Run flag set to Y
+#=========================
+
+IF ( numValid = 0);
+
+   intLoop = DIMSIZ ( 'rdmDataManagerBatchIndex') - 1;
+   intCTR = 1;
+   strInfoCube = 'rdmDataManagerBatch';
+
+   WHILE ( intCTR <= intLoop);
+
+     strBatch = 'Batch ' | NUMBERTOSTRING ( intCTR);
+
+     strCube = CELLGETS ( strInfoCube, pBatchName, strBatch, 'Cube');
+     strIndex = CELLGETS ( strInfoCube, pBatchName, strBatch, 'Index');
+     strFlag = CELLGETS ( strInfoCube, pBatchName, strBatch, 'Run');
+
+ IF ( strCube @<>'' & strIndex @<>'' & strFlag @<>'');
+     strType = CELLGETS ( 'rdmDatamanagerDetails', strCube, strIndex, 'VALUE', 'TYPE');
+     strProcess = CELLGETS ( strInfoCube, pBatchName, strBatch, 'Comment');
+    
+
+     IF ( strFlag @='Y');
+          IF ( strType @<>'CUSTOM PROCESS');
+                EXECUTEPROCESS ( 'Datamanager - Call Generic', 'pCube', strCube, 'pIndex', strIndex);
+          ELSE;
+                 EXECUTEPROCESS ( strProcess );
+          ENDIF;
+    ENDIF;
+
+
+ENDIF;
+
+  intCTR = intCTR +1;
+  END;
+
+ENDIF;
+
+
+     
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

@@ -1,0 +1,52 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MS_GO_Scorecards}_GO Strategy Map')/Hierarchies('}MS_GO_Scorecards}_GO Strategy Map')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MS_GO_Scorecards}_GO Strategy Map')/Hierarchies('}MS_GO_Scorecards}_GO Strategy Map')/Elements('Financial')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Elements('Total of  Country')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Elements('2013')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Elements('Status')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

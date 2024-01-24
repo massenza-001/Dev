@@ -1,0 +1,50 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - Zero Out",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Datamanager - Zero Out.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pView",
+			"Prompt":"cccdFinance",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pFileName",
+			"Prompt":"Finance",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pType",
+			"Prompt":"me",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pFactor",
+			"Prompt":"",
+			"Value":0,
+			"Type":"Numeric"
+		},
+		{
+			"Name":"pCube",
+			"Prompt":"r",
+			"Value":"cccdFinance",
+			"Type":"String"
+		},
+		{
+			"Name":"pIndex",
+			"Prompt":"",
+			"Value":"Index 1",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

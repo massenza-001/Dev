@@ -1,0 +1,44 @@
+{
+	"@type":"Process",
+	"Name":"}QUBEdocs Update",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"}QUBEdocs Update.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pUpdate",
+			"Prompt":"Update Definitions?",
+			"Value":"Y",
+			"Type":"String"
+		},
+		{
+			"Name":"pGenerate",
+			"Prompt":"Generate documentation?",
+			"Value":"N",
+			"Type":"String"
+		},
+		{
+			"Name":"pServer",
+			"Prompt":"QUBEdocs Server Name?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pConnection",
+			"Prompt":"Connection Name?",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pClearStats",
+			"Prompt":"Clear Stats after update?",
+			"Value":"N",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

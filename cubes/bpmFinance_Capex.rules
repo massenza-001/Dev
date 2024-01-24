@@ -1,0 +1,110 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region CONTROL DATA ENTRY
+
+# ======================================================
+# CONTROL DATA ENTRY -
+#  Force ACTUAL Months of the PLAN to 0
+# bpmPeriod IsPlanMont: 0= Actuals, 1 = Plan
+#======================================================
+[ 'Plan' ]= N:
+     IF( DB( 'bpmPeriod_Info', !bpmPeriod, 'IsPlanMonth' ) = 0
+     ,
+          0
+     ,
+          CONTINUE
+     );
+#EndRegion
+
+#Region Depreciation
+# ==========================================
+# Depreciation rule
+# ==========================================
+['Plan', 'Depreciation'] = N:
+
+	IF(
+# check for match on approval, asset type , project and currency
+		!bpmYesNo @=
+			DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany,
+                                                     !bpmDepartment, !bpmCapEx_Index, 'Final Approval') &
+
+		!bpmCapEx_AssetType @=
+			DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany,
+                                                     !bpmDepartment, !bpmCapEx_Index, 'Asset Type') &
+
+		!bpmCapEx_Project @=
+			DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany,
+                                                     !bpmDepartment, !bpmCapEx_Index, 'Project') &
+
+		!bpmCurrency @=
+			DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany,
+                                                     !bpmDepartment, !bpmCapEx_Index, 'Final Currency')
+                ,
+	IF(
+
+# purchase date less than this month's serial
+		(DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Purchase Date') <
+                  	NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date'))) &
+
+# asset life is not exceeded
+		(DB('bpmFinance_Capex_Info','Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Purchase Date') +
+		(366 * DB('bpmFinance_Capex_Info','Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Asset Life'))) >
+	 		(NUMBR(DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date')) - 31),
+
+# straight line calc
+		DB('bpmFinance_Capex_Info','Plan',!bpmCompany, !bpmDepartment, !bpmCapEx_Index,'Total Cost') \
+	               (DB('bpmFinance_Capex_Info','Plan',!bpmCompany, !bpmDepartment, !bpmCapEx_Index,'Asset Life')*12)
+                ,
+                     0 ) , 0 );
+
+#EndRegion
+
+#Region Asset Purchase
+# ==========================================
+# Asset Purchase
+# ==========================================
+
+['Plan', 'Asset Purchase'] = N:
+     IF(
+#                             check approval, asset type, project and currency
+          !bpmYesNo @= DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Final Approval')
+          &
+          !bpmCapEx_AssetType @= DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Asset Type')
+          &
+          !bpmCapEx_Project @= DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Project')
+          &
+          !bpmCurrency @= DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Final Currency')
+     ,
+          IF(
+#                             purchase date this month ?
+               ( DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Purchase Date') >=   NUMBR( DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Start Date') ) )
+               &
+               ( DB('bpmFinance_Capex_Info', 'Plan', !bpmCompany, !bpmDepartment, !bpmCapEx_Index, 'Purchase Date') <=
+                         NUMBR(DB('}ElementAttributes_bpmPeriod', DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'NextPeriod'),'Start Date') ) )
+
+#                           then cost goes into this month
+                , DB('bpmFinance_Capex_Info','Plan',!bpmCompany, !bpmDepartment,
+                                     !bpmCapEx_Index,'Total Cost')
+
+                ,
+                     0 ) , 0 );
+
+#EndRegion
+
+
+FEEDERS;
+
+['Plan', 'Depreciation' ] => ['Asset Purchase'] ;
+
+['Plan', 'Depreciation','Yes'] =>  DB('bpmFinance_LineItem',
+                                                        'Plan', !bpmCompany,  !bpmDepartment, '609000', !bpmCurrency,
+                                                        'Original', 'Line 1', !bpmPeriod)
+
+                                                  ,  DB('bpmDriver_Finance',
+                                                        'Plan', !bpmCompany,!bpmDepartment,  '609000',
+                                                        'Original',  SUBST (!bpmPeriod,1,3) | '-' | SUBST (!bpmPeriod,5,4) );
+
+

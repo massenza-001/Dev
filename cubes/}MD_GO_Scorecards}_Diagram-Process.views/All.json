@@ -1,0 +1,42 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Process_D')/Hierarchies('}MD_GO_Scorecards}_Diagram-Process_D')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Process_D')/Hierarchies('}MD_GO_Scorecards}_Diagram-Process_D')/Elements('Secondary Member')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Elements('2013')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Process_I')/Hierarchies('}MD_GO_Scorecards}_Diagram-Process_I')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Process_I')/Hierarchies('}MD_GO_Scorecards}_Diagram-Process_I')/Elements('1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

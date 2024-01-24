@@ -1,0 +1,150 @@
+{
+	"@type":"NativeView",
+	"Name":"Staff_Review",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')"
+				},
+				"Alias":"PeriodName",
+				"Expression":"TM1SubsetToSet([bpmPeriod], \"2016Months\")"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmStaff_Employee')/Hierarchies('bpmStaff_Employee')"
+				},
+				"Alias":"CodeName",
+				"Expression":"TM1TOGGLEDRILLSTATE({DESCENDANTS([bpmStaff_Employee].[Total Employees])} , {[bpmStaff_Employee].[Total Filled],[bpmStaff_Employee].[Total New],[bpmStaff_Employee].[Total Open]} , EXPAND_BELOW , RECURSIVE)"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Taxable Gross')"
+					},
+					{
+						"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Total Taxes')"
+					},
+					{
+						"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Total Benefits')"
+					},
+					{
+						"@id":"Dimensions('bpmStaff_Msr')/Hierarchies('bpmStaff_Msr')/Elements('Headcount FTPT')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')"
+				},
+				"Expression":"TM1SubsetToSet([bpmScenario], \"Default\")"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')"
+				},
+				"Alias":"CodeName",
+				"Expression":"TM1SubsetToSet([bpmCompany], \"Default\")"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmCompany')/Hierarchies('bpmCompany')/Elements('002')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')"
+				},
+				"Alias":"NameCode",
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('Total Departments')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('Sales and Marketing')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('40')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('46')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('47')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('54')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('55')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('56')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('Manufacturing and Distribution')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('General and Administrative')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('Finance')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('Production')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('30')"
+					},
+					{
+						"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('00')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmDepartment')/Hierarchies('bpmDepartment')/Elements('46')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":true,
+	"FormatString":""
+}

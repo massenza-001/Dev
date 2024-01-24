@@ -1,0 +1,148 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+# Define Dimensions
+
+#Page Dims
+#---------------------------------------------------------------------------------------
+dimScenario= 'bomScenario';
+dimDepartment = 'bpmDepartment';
+dimAccount = 'bpmAccount';
+dimCurrency = 'bpmCurrency';
+dimbook= 'bpmBook';
+
+#Row Dims
+#---------------------------------------------------------------------------------------
+dimCompany = 'bpmCompany';
+
+#Column Dims
+#---------------------------------------------------------------------------------------
+dimPeriod='bpmPeriod';
+
+# Convert Variables into base element rather than alias
+#---------------------------------------------------------------------------------------
+pScenario = DIMNM( dimScenario , DIMIX ( dimScenario , bpmScenario ) );
+pCompany = DIMNM( dimCompany , DIMIX ( dimCompany , bpmCompany ) );
+pDepartment = DIMNM( dimDepartment , DIMIX ( dimDepartment , bpmDepartment ) );
+pAccount = DIMNM( dimAccount , DIMIX ( dimAccount , bpmAccount ) );
+pBook = DIMNM( dimBook , DIMIX ( dimBook , bpmBook ) );
+pCurrency= DIMNM( dimCurrency, DIMIX( dimCurrency, bpmCurrency ));
+pPeriod = DIMNM( dimPeriod , DIMIX ( dimPeriod , bpmPeriod ) );
+
+# SUBSET and VIEW Name
+#---------------------------------------------------------------------------------------
+strCubeName='bpmFinance';
+subRef='zzDrillResults_bpmFinance_ByCompany';
+
+# DESTROY VIEW IF EXISTS
+#---------------------------------------------------------------------------------------
+IF( VIEWEXISTS( strCubeName, subRef )=1 );
+     VIEWDESTROY( strCubeName, subRef );
+ENDIF;
+
+# CREATE VIEW AND ASSIGN PAGE DIMENSIONS
+#---------------------------------------------------------------------------------------
+VIEWCREATE( strCubeName, subRef );
+VIEWROWSUPPRESSZEROESSET( strCubeName, subRef, 1 );
+VIEWCOLUMNSUPPRESSZEROESSET( strCubeName, subRef, 1 );
+
+dimRef=dimScenario;
+dimElemIndex= DIMIX( dimRef,  pScenario);
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, dimRef);
+VIEWTITLEELEMENTSET( strCubeName, subRef, dimRef, dimElemIndex );
+
+dimRef=dimCurrency;
+dimElemIndex= DIMIX( dimRef,  pCurrency);
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, dimRef);
+VIEWTITLEELEMENTSET( strCubeName, subRef, dimRef, dimElemIndex );
+
+dimRef=dimAccount;
+dimElem=pAccount;
+dimElemIndex= DIMIX( dimRef,  dimElem);
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, dimRef);
+VIEWTITLEELEMENTSET( strCubeName, subRef, dimRef, dimElemIndex );
+#--- DELETE SUBSET if Exists
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1);
+    SUBSETDESTROY( dimRef, subRef );
+ENDIF;
+SUBSETCREATE( dimRef, subRef );
+SUBSETELEMENTINSERT( dimRef, subRef, dimElem, 1 );
+SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+dimRef=dimDepartment;
+dimElem=pDepartment;
+dimElemIndex= DIMIX( dimRef,  dimElem);
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, dimRef);
+VIEWTITLEELEMENTSET( strCubeName, subRef, dimRef, dimElemIndex );
+#--- DELETE SUBSET if Exists
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1);
+    SUBSETDESTROY( dimRef, subRef );
+ENDIF;
+SUBSETCREATE( dimRef, subRef );
+SUBSETELEMENTINSERT( dimRef, subRef, dimElem, 1 );
+SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+dimRef=dimBook;
+dimElemIndex= DIMIX( dimRef,  pBook);
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, dimRef);
+VIEWTITLEELEMENTSET( strCubeName, subRef, dimRef, dimElemIndex );
+
+# SET ROW - The Rows of the VIEW are the descendants of the Priamry dimension of this drill
+#---------------------------------------------------------------------------------------
+dimRef=dimCompany;
+sParent=pCompany;
+
+#--- DELETE SUBSET if Exists
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDESTROY( dimRef, subRef );
+ENDIF;
+
+#--- Generate the subset based on MDX 
+SUBSETCREATEBYMDX( SubRef, '{TM1DRILLDOWNMEMBER( {[' | dimRef | '].[' | sParent | ']}, ALL, RECURSIVE )}' );
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'CodeName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+ENDIF;
+
+VIEWROWDIMENSIONSET( strCubeName, subRef, dimRef, 1);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+# SET COLUMN - The Columns of the VIEW are  based on Period dimension
+#---------------------------------------------------------------------------------------
+dimRef=dimPeriod;
+sParent=pPeriod;
+
+#--- DELETE SUBSET if Exists
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDESTROY( dimRef, subRef );
+ENDIF;
+
+#--- Generate the subset based on MDX 
+SUBSETCREATEBYMDX( SubRef, '{TM1DRILLDOWNMEMBER( {[' | dimRef | '].[' | sParent | ']}, ALL, RECURSIVE )}' );
+
+VIEWCOLUMNDIMENSIONSET( strCubeName, subRef, dimRef, 1);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+RETURNVIEWHANDLE('bpmFinance','zzDrillResults_bpmFinance_ByCompany');
+#****End: Generated Statements****
+#endregion

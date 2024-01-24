@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_Annual_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Annual Amount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Spread Method",
+			"Type":"String"
+		},
+		{
+			"Name":"Finance Value",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

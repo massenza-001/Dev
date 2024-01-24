@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MD_GO_Scorecards}_Diagram-Process",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Time')"
+		},
+		{
+			"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Process_I')"
+		},
+		{
+			"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Process_D')"
+		}
+	],
+	"Rules@Code.link":"}MD_GO_Scorecards}_Diagram-Process.rules",
+	"Views@Code.links":
+	[
+		"}MD_GO_Scorecards}_Diagram-Process.views/All.json",
+		"}MD_GO_Scorecards}_Diagram-Process.views/MD_GO_Scorecards}_Diagram-Process.json"
+	]
+}

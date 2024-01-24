@@ -1,0 +1,20 @@
+{
+	"@type":"Cube",
+	"Name":"chuAssumptionsGlobal",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')"
+		},
+		{
+			"@id":"Dimensions('chuAssumption')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"chuAssumptionsGlobal.views/Default.json"
+	]
+}

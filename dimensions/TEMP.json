@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"TEMP",
+	"Hierarchies@Code.links":
+	[
+		"TEMP.hierarchies/TEMP.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('TEMP')/Hierarchies('TEMP')"
+	}
+}

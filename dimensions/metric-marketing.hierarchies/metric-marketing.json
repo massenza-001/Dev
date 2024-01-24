@@ -1,0 +1,31 @@
+{
+	"@type":"Hierarchy",
+	"Name":"metric-marketing",
+	"Elements":
+	[
+		{
+			"Name":"Customer count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Campaign count",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"metric-marketing.subsets/All Members.json"
+	]
+}

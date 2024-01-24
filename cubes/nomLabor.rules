@@ -1,0 +1,11 @@
+SKIPCHECK;
+['Dollars' ] = N:
+     ['Hours'] *
+      DB('nomLaborInfo', !bpmScenario,
+          DB('}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'),
+          !nomPosition, 'Cost Per Hour');
+
+
+FEEDERS;
+['Hours'] => ['Dollars'] ;
+['Total Projects', 'Dollars'] => DB('nomTotal', !bpmScenario, !nomProject, !bpmPeriod, 'Amount');

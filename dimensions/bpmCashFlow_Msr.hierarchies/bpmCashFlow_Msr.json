@@ -1,0 +1,41 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCashFlow_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Cash Flow Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Balance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Original",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustment Comment",
+			"Type":"String"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Balance",
+			"ComponentName":"Original",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance",
+			"ComponentName":"Adjustment",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

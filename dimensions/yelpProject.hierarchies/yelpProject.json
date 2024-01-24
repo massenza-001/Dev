@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"yelpProject",
+	"ElementsSortType":"ByHierarchy",
+	"Elements":
+	[
+		{
+			"Name":"Project 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Project 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Project 3",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"yelpProject.subsets/All Members.json"
+	]
+}

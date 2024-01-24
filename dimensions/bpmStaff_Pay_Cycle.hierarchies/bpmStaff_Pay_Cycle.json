@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmStaff_Pay_Cycle",
+	"Elements":
+	[
+		{
+			"Name":"Monthly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BiWeekly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Weekly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Daily",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

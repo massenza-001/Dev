@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MD_GO_Scorecards}_Diagram-Region",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('country')"
+		},
+		{
+			"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_I')"
+		},
+		{
+			"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_D')"
+		}
+	],
+	"Rules@Code.link":"}MD_GO_Scorecards}_Diagram-Region.rules",
+	"Views@Code.links":
+	[
+		"}MD_GO_Scorecards}_Diagram-Region.views/All.json",
+		"}MD_GO_Scorecards}_Diagram-Region.views/MD_GO_Scorecards}_Diagram-Region.json"
+	]
+}

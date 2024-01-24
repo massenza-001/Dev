@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MS_Metrics cube-HumanResource}_Strategy Map-HR",
+	"Hierarchies@Code.links":
+	[
+		"}MS_Metrics cube-HumanResource}_Strategy Map-HR.hierarchies/}MS_Metrics cube-HumanResource}_Strategy Map-HR.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MS_Metrics cube-HumanResource}_Strategy Map-HR')/Hierarchies('}MS_Metrics cube-HumanResource}_Strategy Map-HR')"
+	}
+}

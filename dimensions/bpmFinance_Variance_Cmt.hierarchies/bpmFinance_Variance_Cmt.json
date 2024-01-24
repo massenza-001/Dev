@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFinance_Variance_Cmt",
+	"Elements":
+	[
+		{
+			"Name":"Variance Comment",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

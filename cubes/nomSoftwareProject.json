@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"nomSoftwareProject",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')"
+		},
+		{
+			"@id":"Dimensions('nomSoftware')"
+		},
+		{
+			"@id":"Dimensions('nomProject')"
+		},
+		{
+			"@id":"Dimensions('nomSoftwareProject_Msr')"
+		}
+	],
+	"Rules@Code.link":"nomSoftwareProject.rules",
+	"Views@Code.links":
+	[
+		"nomSoftwareProject.views/Default.json"
+	]
+}

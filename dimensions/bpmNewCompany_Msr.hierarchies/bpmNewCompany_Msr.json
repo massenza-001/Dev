@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmNewCompany_Msr",
+	"Elements":
+	[
+		{
+			"Name":"NewCompanyCode",
+			"Type":"String"
+		},
+		{
+			"Name":"NewCompanyName",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

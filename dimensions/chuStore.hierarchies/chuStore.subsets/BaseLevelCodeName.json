@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"BaseLevelCodeName",
+	"Alias":"CodeName",
+	"Expression":"{TM1FILTERBYLEVEL( {TM1SORT( {TM1SUBSETALL( [chuStore] )}, ASC)}, 0)}"
+}

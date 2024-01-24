@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"lrpBU",
+	"Hierarchies@Code.links":
+	[
+		"lrpBU.hierarchies/lrpBU.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('lrpBU')/Hierarchies('lrpBU')"
+	}
+}

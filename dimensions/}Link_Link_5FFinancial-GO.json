@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}Link_Link_5FFinancial-GO",
+	"Hierarchies@Code.links":
+	[
+		"}Link_Link_5FFinancial-GO.hierarchies/}Link_Link_5FFinancial-GO.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}Link_Link_5FFinancial-GO')/Hierarchies('}Link_Link_5FFinancial-GO')"
+	}
+}

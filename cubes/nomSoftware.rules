@@ -1,0 +1,25 @@
+SKIPCHECK;
+['Dollars',
+  { 'OPB 2014', 'OPB 2015', 'OPB 2016', 'OPB 2017', 'OPB 2018', 'OPB 2019', 'OPB 2020'} ] = N: 0 ;
+
+['Dollars'] = N:
+   IF ( DB('}ElementAttributes_bpmPeriod', !bpmPeriod, 'End Date')
+        @>=
+        DB('}ElementAttributes_bpmPeriod',
+           DB('nomSoftwareInfo', !bpmScenario, !nomSoftware, 'In Service Month'),
+           'End Date')
+   ,
+
+       DB('nomSoftwareInfo', !bpmScenario, !nomSoftware, 'Dollars')
+       *
+       DB('nomSoftwareProject', !bpmScenario,
+          DB('}ElementAttributes_bpmPeriod', !bpmPeriod, 'Current Year'),
+         !nomSoftware, !nomProject, 'Percent')
+       / 12
+   ,
+        0
+       );
+
+
+FEEDERS;
+['Total Software', 'Dollars'] => DB('nomTotal', !bpmScenario, !nomProject, !bpmPeriod, 'Amount');

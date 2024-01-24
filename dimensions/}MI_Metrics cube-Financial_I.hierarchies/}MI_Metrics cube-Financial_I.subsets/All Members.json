@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"All Members",
+	"Alias":"Caption_default",
+	"Expression":"[}MI_Metrics cube-Financial_I].MEMBERS"
+}

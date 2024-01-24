@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"bpmFinance_SubmissionStatus",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmCompany')"
+		},
+		{
+			"@id":"Dimensions('bpmDepartment')"
+		},
+		{
+			"@id":"Dimensions('bpmYear')"
+		},
+		{
+			"@id":"Dimensions('bpmSubmissionStatus_msr')"
+		}
+	],
+	"Rules@Code.link":"bpmFinance_SubmissionStatus.rules",
+	"Views@Code.links":
+	[
+		"bpmFinance_SubmissionStatus.views/All.json",
+		"bpmFinance_SubmissionStatus.views/Default.json",
+		"bpmFinance_SubmissionStatus.views/Submission_Status.json",
+		"bpmFinance_SubmissionStatus.views/zzDataManager.json"
+	]
+}

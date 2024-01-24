@@ -1,0 +1,22 @@
+{
+	"@type":"Subset",
+	"Name":"paw_KeyMetric",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Gross profit')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Gross margin')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Revenue')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Product cost')"
+		},
+		{
+			"@id":"Dimensions('bpmMetrics_Finance')/Hierarchies('bpmMetrics_Finance')/Elements('Employee expense')"
+		}
+	]
+}

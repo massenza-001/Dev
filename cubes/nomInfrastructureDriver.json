@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"nomInfrastructureDriver",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('nomInfrastructureAccount')"
+		},
+		{
+			"@id":"Dimensions('nomInfrastructureDriver_Msr')"
+		}
+	],
+	"Rules@Code.link":"nomInfrastructureDriver.rules",
+	"Views@Code.links":
+	[
+		"nomInfrastructureDriver.views/Default.json"
+	]
+}

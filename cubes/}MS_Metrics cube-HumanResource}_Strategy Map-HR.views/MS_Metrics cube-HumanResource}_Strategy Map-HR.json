@@ -1,0 +1,52 @@
+{
+	"@type":"NativeView",
+	"Name":"MS_Metrics cube-HumanResource}_Strategy Map-HR",
+	"Columns":[],
+	"Rows":[],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('}MS_Metrics cube-HumanResource}_Strategy Map-HR')/Hierarchies('}MS_Metrics cube-HumanResource}_Strategy Map-HR')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('}MS_Metrics cube-HumanResource}_Strategy Map-HR')/Hierarchies('}MS_Metrics cube-HumanResource}_Strategy Map-HR')/Elements('Innovation')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Elements('Total of  Country')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Elements('2013')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Elements('Status')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

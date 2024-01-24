@@ -1,0 +1,634 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region ZERO Actuals Periods for PLAN Scenario
+#======================================================
+# Actual data, controlled by }bpmPeriod_Info which determines which are plan months
+# -1 = Prior Year Actuals, 0 = Current Year Actuals, 1 = Plan
+#======================================================
+['Plan'] = N:
+     IF( DB( 'bpmPeriod_Info', !bpmPeriod, 'IsPlanMonth' ) < 0
+     ,
+# Actual Prior Year Period so ZERO
+          0
+     ,
+# Opening Balance so Zero
+		IF (SUBST(!bpmPeriod,1,3) @= 'OPB'
+		,
+			0
+		,
+			CONTINUE
+		)
+	);
+#EndRegion
+
+#Region Employed
+# ==========================================
+# DETERMINE IF THE EMPLOYEE IS EMPLOYED FOR THE MONTH
+# ==========================================
+['Plan', 'Employed'] = N:
+   IF ( ( DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,
+                  !bpmPeriod,!bpmStaff_Employee , 'Base End','Percent') +
+            DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,
+                  !bpmPeriod,!bpmStaff_Employee,'1st End','Percent')  +
+            DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,
+                   !bpmPeriod,!bpmStaff_Employee,'2nd End','Percent ') +
+            DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,
+                   !bpmPeriod,!bpmStaff_Employee,'3rd End','Percent')  +
+            DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,
+                   !bpmPeriod,!bpmStaff_Employee,'4th End','Percent')   +
+            DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,
+                   !bpmPeriod,!bpmStaff_Employee,'5th End','Percent')  +
+            DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,
+                   !bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'6th End','Percent') ) = 0, 0, 1)  ;
+#EndRegion
+
+#Region Gross Pay
+# ==========================================
+# CALCULATE THE MONTHLY GROSS PAY, INCLUDING 6 PAY RAISES
+# ==========================================
+['Plan', 'Gross Pay'] = N:
+IF( [ 'Employed' ] = 1
+,
+	[ 'Employed'] *
+
+     DB('}bpmStaff_Pay_Days',!bpmScenario,!bpmPeriod, DB('}ElementAttributes_bpmDepartment',!bpmDepartment,'Pay Method') ,'Percent of Year') *
+
+	( (  DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Annual Salary') *
+         DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'Base End','Percent')  )
+        +
+     (   DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Salary Post 1st Raise') *
+         DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'1st End','Percent')  )
+        +
+     (   DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Salary Post 2nd Raise') *
+         DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'2nd End','Percent')  )
+        +
+     (   DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Salary Post 3rd Raise') *
+         DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'3rd End','Percent')  )
+        +
+     (   DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Salary Post 4th Raise') *
+         DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'4th End','Percent')  )
+        +
+     (   DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Salary Post 5th Raise') *
+         DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'5th End','Percent')  )
+        +
+     (   DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Salary Post 6th Raise') *
+         DB('}bpmStaff_Date_Check',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmPeriod,!bpmStaff_Employee,'6th End','Percent')  ) )
+,
+	0
+);
+#EndRegion
+
+#Region Bonus
+# ==========================================
+# CALCULATE THE BONUS
+# AND DETERMINE IF THE BONUS IS SPREAD OR PAID IN A SINGLE MONTH
+# ==========================================
+
+['Plan', 'Bonus'] = N:
+     [ 'Employed'] *
+
+     #If Bonus month is defined
+     IF ( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Bonus Month') @<> ''
+          ,
+
+          #If current month = bonus month, pull bonus amount for that month and force 0 to all other months
+          IF ( UPPER(SUBST( ATTRS( 'bpmPeriod', !bpmPeriod, 'Period Name'),1,3)) @=
+                UPPER( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Bonus Month') )
+              ,
+               DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Bonus Amount')
+              ,
+               0
+               )
+          ,
+
+          #Else, pull spread bonus to each month using the same spread method as gross pay
+          DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'Bonus Amount') *
+          DB('}bpmStaff_Pay_Days',!bpmScenario,!bpmPeriod,  DB('}ElementAttributes_bpmDepartment',!bpmDepartment,'Pay Method') ,'Percent of Year')
+     );
+#EndRegion
+
+#Region TAXES
+# ==========================================
+# TAXES
+# ==========================================
+#Region FICA
+['Plan', 'FICA'] = N:
+
+# Special rule for start of Plan year
+# Based on lesser of Jan Taxable Gross and FICA Wage
+
+['Employed'] *
+
+IF ( SUBST(!bpmPeriod ,5, 2)@= '01',
+
+      ROUNDP(MIN(
+
+          ['Taxable Gross'] *
+
+          DB('bpmStaff_Rates_Company',
+          !bpmScenario,
+          DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+          !bpmCompany,
+          'FICA %'),
+
+          DB('bpmStaff_Rates_Company',
+          !bpmScenario,
+          DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+          !bpmCompany,
+          'FICA Wage') *
+
+          DB('bpmStaff_Rates_Company',
+          !bpmScenario,
+          DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+          !bpmCompany,
+          'FICA %') ) ,0)
+,
+
+# Rest of the months
+# Check if already paid max
+
+     IF( DB('bpmStaff', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmStaff_Employee,
+                DB('}ElementAttributes_bpmPeriod', !bpmPeriod,'Previous Period') | '  YTD' , 'Taxable Gross')  >
+                DB('bpmStaff_Rates_Company', !bpmScenario,
+                        DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'), !bpmCompany,
+     	           'FICA Wage')
+	,
+		0
+	,
+
+# Check if this month is still less than max
+
+          IF( DB('bpmStaff', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmStaff_Employee,
+                     !bpmPeriod | '  YTD' , 'Taxable Gross') <
+
+                DB('bpmStaff_Rates_Company',
+                     !bpmScenario,
+                     DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                     !bpmCompany,
+                     'FICA Wage'),
+
+# If not then calculate off of full month
+
+               ROUNDP(  ['Taxable Gross']*
+                               DB('bpmStaff_Rates_Company',
+                                     !bpmScenario,
+                                     DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                     !bpmCompany,
+                                     'FICA %') ,0),
+
+# If not then calculate off difference of total and last month YTD
+
+               ROUNDP( ( DB('bpmStaff_Rates_Company',
+                                    !bpmScenario,
+                                    DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                    !bpmCompany,
+                                    'FICA Wage') -
+
+                                 DB('bpmStaff',
+                                      !bpmScenario,
+                                      !bpmCompany,
+                                      !bpmDepartment,
+                                      !bpmStaff_Employee,
+                                      DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') | '  YTD',
+                                      'Taxable Gross')) *
+
+                                 DB('bpmStaff_Rates_Company',
+                                       !bpmScenario,
+                                       DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                       !bpmCompany,
+                                       'FICA %') , 0)))) ;
+#EndRegion
+
+#Region MEDICARE
+['Plan', 'Medicare']= N:
+     ['Employed'] *
+     ['Taxable Gross'] *
+       DB('bpmStaff_Rates_Company',
+             !bpmScenario,
+             DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+             !bpmCompany,
+             'Medicare %');
+#EndRegion
+
+#Region FEDERAL UNEMPLOYMENT
+['Plan', 'Federal Unemployment'] = N:
+      [ 'Employed'] *
+
+# Based on lesser of Jan Taxable Gross and State Un Wage
+
+IF ( SUBST(!bpmPeriod ,5, 2)@= '01',
+
+     ROUNDP(MIN( ['Taxable Gross'] *
+                              DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                    'Fed Un %'),
+
+                              DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                   'Fed Un Wage')  *
+
+                              DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                   'Fed Un %') ) , 0),
+
+# Check if already paid max
+
+     IF( DB('bpmStaff',
+                !bpmScenario,
+                !bpmCompany,
+                !bpmDepartment,
+                !bpmStaff_Employee,
+                DB('}ElementAttributes_bpmPeriod', !bpmPeriod, 'Previous Period') | ' YTD','Taxable Gross') >
+
+                DB('bpmStaff_Rates_Company',
+                     !bpmScenario,
+                     DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year') ,
+                     !bpmCompany,
+                     'Fed Un Wage'), 0,
+
+# Check if this month is still less than max
+
+             IF( DB('bpmStaff',
+                       !bpmScenario,
+                       !bpmCompany,
+                       !bpmDepartment,
+                       !bpmStaff_Employee,
+                       !bpmPeriod | 'YTD','Taxable Gross') <
+
+                       DB('bpmStaff_Rates_Company',
+                              !bpmScenario,
+                              DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                              !bpmCompany,
+                              'Fed Un Wage'),
+
+# If not then calculate off of full month
+
+                    ROUNDP(['Taxable Gross'] *
+                                   DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                   'Fed Un %'), 0),
+
+# If not then calculate off difference of total and last month YTD
+
+                    ROUNDP(( DB('bpmStaff_Rates_Company',
+                                    !bpmScenario,
+                                    DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                    !bpmCompany,
+                                    'Fed Un Wage') -
+
+                                     DB('bpmStaff',
+                                          !bpmScenario,
+                                          !bpmCompany,
+                                          !bpmDepartment,
+                                          !bpmStaff_Employee,
+                                          DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') | ' YTD','Taxable Gross')) *
+
+                                     DB('bpmStaff_Rates_Company',
+                                            !bpmScenario,
+                                            DB('}bpmControls','Value','Plan Year'), !bpmCompany, 'Fed Un %') , 0 ) ) ) ) ;
+#EndRegion
+
+#Region STATE UNEMPLOYMENT
+['Plan', 'State Unemployment'] = N:
+IF ( SUBST(!bpmPeriod ,5, 2)@= '01',
+
+     ROUNDP(MIN( ['Taxable Gross'] *
+                              DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                    'St Un %'),
+
+                              DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                   'St Un Wage')  *
+
+                              DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                   'St Un %') ) , 0),
+
+# Check if already paid max
+
+     IF( DB('bpmStaff',
+                !bpmScenario,
+                !bpmCompany,
+                !bpmDepartment,
+                !bpmStaff_Employee,
+                DB('}ElementAttributes_bpmPeriod', !bpmPeriod, 'Previous Period') | ' YTD','Taxable Gross') >
+
+                DB('bpmStaff_Rates_Company',
+                     !bpmScenario,
+                     DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year') ,
+                     !bpmCompany,
+                     'St Un Wage'), 0,
+
+# Check if this month is still less than max
+
+             IF( DB('bpmStaff',
+                       !bpmScenario,
+                       !bpmCompany,
+                       !bpmDepartment,
+                       !bpmStaff_Employee,
+                       !bpmPeriod | 'YTD','Taxable Gross') <
+
+                       DB('bpmStaff_Rates_Company',
+                              !bpmScenario,
+                              DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                              !bpmCompany,
+                              'St Un Wage'),
+
+# If not then calculate off of full month
+
+                    ROUNDP(['Taxable Gross'] *
+                                   DB('bpmStaff_Rates_Company',
+                                   !bpmScenario,
+                                   DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                   !bpmCompany,
+                                   'St Un %'), 0),
+
+# If not then calculate off difference of total and last month YTD
+
+                    ROUNDP(( DB('bpmStaff_Rates_Company',
+                                    !bpmScenario,
+                                    DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                                    !bpmCompany,
+                                    'St Un Wage') -
+
+                                     DB('bpmStaff',
+                                          !bpmScenario,
+                                          !bpmCompany,
+                                          !bpmDepartment,
+                                          !bpmStaff_Employee,
+                                          DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') | ' YTD','Taxable Gross')) *
+
+                                     DB('bpmStaff_Rates_Company',
+                                            !bpmScenario,
+                                            DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'), !bpmCompany, 'St Un %') , 0 ) ) ) ) ;
+#EndRegion
+
+#Region Other Taxes
+['Plan', 'Other Taxes'] = N :
+     IF ( DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Other Tax Rate %') = 0
+         ,
+           ['Taxable Gross'] *
+           DB('bpmStaff_Rates_Company',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmCompany,
+                'Other Tax Rate %')
+         ,
+           ['Taxable Gross'] *
+           DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Other Tax Rate %')
+         ) ;
+#EndRegion
+#EndRegion TAXES
+
+#Region BENEFITS
+# ==========================================
+# BENEFITS
+# All benefits are a dollar per month for the employed months
+# -- Get rates first from RatesDepartment cube and then RatesGlobal cube
+# ==========================================
+
+#Region - Medical
+['Plan', 'Medical'] = N:
+     IF ( DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Medical Rate') = 0
+         ,
+           ['Employed'] *
+           DB('bpmStaff_Rates_Company',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmCompany,
+                'Medical Rate')
+         ,
+           ['Employed'] *
+           DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Medical Rate')
+         ) ;
+#EndRegion
+
+#Region Dental
+['Plan', 'Dental'] = N:
+     IF ( DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Dental Rate') = 0
+         ,
+           ['Employed'] *
+           DB('bpmStaff_Rates_Company',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmCompany,
+                'Dental Rate')
+         ,
+           ['Employed'] *
+           DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Dental Rate')
+         ) ;
+#EndRegion
+
+#Region Life Insurance
+['Plan', 'Life Insurance'] = N:
+     IF ( DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Life Insurance Rate') = 0
+         ,
+           ['Employed'] *
+           DB('bpmStaff_Rates_Company',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmCompany,
+                'Life Insurance Rate')
+         ,
+           ['Employed'] *
+           DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Life Insurance Rate')
+         ) ;
+#EndRegion
+
+#Region Other Benefits
+['Plan', 'Other Benefits'] = N:
+     IF ( DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Other Benefits Rate') = 0
+         ,
+           ['Employed'] *
+           DB('bpmStaff_Rates_Company',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmCompany,
+                'Other Benefits Rate')
+         ,
+           ['Employed'] *
+           DB('bpmStaff_RatesDepartment',
+                !bpmScenario,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                !bpmDepartment,
+                'Other Benefits Rate')
+         ) ;
+#EndRegion
+
+#Region 401KMatch
+['Plan','401KMatch'] = N:
+# January is the lesser of actual 401k match or the threshhold
+     IF ( SUBST ( !bpmPeriod, 5, 2) @= '01'
+          ,
+           MIN (
+                   (  DB('bpmStaff_Rates_Company',!bpmScenario,
+                           DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                           !bpmCompany,
+                           '401K Wage')
+                      *
+                      DB('bpmStaff_Rates_Company',!bpmScenario,
+                            DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                            !bpmCompany,
+                            '401K Match %')
+                    )
+#                    -
+#                    DB('bpmStaff',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') | ' YTD','401KMatch')
+                 ,
+                    DB('bpmStaff',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,!bpmPeriod,'Taxable Gross')
+                      *
+                      DB('bpmStaff_Rates_Company',!bpmScenario,
+                            DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                            !bpmCompany,
+                            '401K Match %')
+                 )
+          ,
+           CONTINUE
+          );
+
+['Plan','401KMatch'] = N:
+     # If the max annual amount has been exceeded then don't calculate any more dollars
+     IF ( DB('bpmStaff',
+                !bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,
+                DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') | ' YTD',
+                'Taxable Gross')
+            >
+            DB('bpmStaff_Rates_Company',!bpmScenario,
+                 DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                 !bpmCompany,
+                 '401K Wage')
+           ,
+             MAX (
+                     (  DB('bpmStaff_Rates_Company',!bpmScenario,
+                             DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                             !bpmCompany,
+                             '401K Wage')
+                        *
+                        DB('bpmStaff_Rates_Company',!bpmScenario,
+                              DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                              !bpmCompany,
+                              '401K Match %')
+                      )
+                      -
+                      DB('bpmStaff',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') | ' YTD','401KMatch')
+                   ,
+                      0
+                   )
+
+           ,
+     # Otherwise take the mimimum of the full monthly amount vs. the amount that will bring the person to the YTD max
+            MIN (
+                     (  DB('bpmStaff_Rates_Company',!bpmScenario,
+                             DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                             !bpmCompany,
+                             '401K Wage')
+                        *
+                        DB('bpmStaff_Rates_Company',!bpmScenario,
+                              DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                              !bpmCompany,
+                              '401K Match %')
+                      )
+                      -
+                      DB('bpmStaff',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') | ' YTD','401KMatch')
+                   ,
+                      ['Taxable Gross']
+                      *
+                      DB('bpmStaff_Rates_Company',!bpmScenario,
+                           DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Year'),
+                           !bpmCompany,
+                           '401K Match %')
+                   )
+           );
+#EndRegion
+#EndRegion BENEFITS
+
+#Region HEADCOUNT
+# ==========================================
+# HEADCOUNT CALCULATIONS
+# ==========================================
+['Plan','Headcount - Full Time'] = N:
+     ['Employed'] *
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'PTE') @='', 1, 0) ;
+
+['Plan', 'Headcount - Part Time']= N:
+     ['Employed'] *
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,!bpmStaff_Employee,'PTE') @<>'', 1, 0) ;
+#EndRegion
+
+#Region FEEDERS
+
+FEEDERS;
+
+#Region Internal Feeders
+['Employed'] =>
+     ['Gross pay'], ['Bonus'],
+     ['FICA'], ['Medicare'], ['State Unemployment'], ['Federal Unemployment'], ['Other Taxes'],
+     ['401KMatch'], ['Medical'], ['Dental'], ['Life Insurance'], ['Other Benefits'],
+     ['Headcount - Full Time'], ['Headcount - Part Time']
+;
+#EndRegion
+
+#Region STAFF Alloc
+['Employed']=>
+     DB('bpmStaff_Alloc',
+          !bpmScenario,
+          !bpmCompany,!bpmCompany,
+          !bpmDepartment,!bpmDepartment,
+          !bpmStaff_Employee,!bpmPeriod,!bpmStaff_Msr)
+;
+#EndRegion
+#EndRegion
+

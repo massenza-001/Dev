@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MD_GO_Scorecards}_Diagram-Region_D",
+	"Hierarchies@Code.links":
+	[
+		"}MD_GO_Scorecards}_Diagram-Region_D.hierarchies/}MD_GO_Scorecards}_Diagram-Region_D.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Region_D')/Hierarchies('}MD_GO_Scorecards}_Diagram-Region_D')"
+	}
+}

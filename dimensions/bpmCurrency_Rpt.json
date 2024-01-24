@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmCurrency_Rpt",
+	"Hierarchies@Code.links":
+	[
+		"bpmCurrency_Rpt.hierarchies/bpmCurrency_Rpt.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmCurrency_Rpt')/Hierarchies('bpmCurrency_Rpt')"
+	}
+}

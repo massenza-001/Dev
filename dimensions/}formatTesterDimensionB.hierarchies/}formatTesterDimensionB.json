@@ -1,0 +1,15 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}formatTesterDimensionB",
+	"Elements":
+	[
+		{
+			"Name":"formatMemberAdmin",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}formatTesterDimensionB.subsets/All Members.json"
+	]
+}

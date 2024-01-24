@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"lrpPlanning_Rates_BU",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('lrpScenario')"
+		},
+		{
+			"@id":"Dimensions('lrpBU')"
+		},
+		{
+			"@id":"Dimensions('lrpYears')"
+		},
+		{
+			"@id":"Dimensions('lrpPlanning_Rates_Global_Msr')"
+		}
+	],
+	"Rules@Code.link":"lrpPlanning_Rates_BU.rules",
+	"Views@Code.links":
+	[
+		"lrpPlanning_Rates_BU.views/Default.json"
+	]
+}

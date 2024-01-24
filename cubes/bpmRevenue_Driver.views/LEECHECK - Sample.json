@@ -1,0 +1,145 @@
+{
+	"@type":"NativeView",
+	"Name":"LEECHECK - Sample",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Subsets('2016Months')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmRevenue_Driver_Msr')/Hierarchies('bpmRevenue_Driver_Msr')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmRevenue_Driver_Msr')/Hierarchies('bpmRevenue_Driver_Msr')/Elements('Units')"
+					},
+					{
+						"@id":"Dimensions('bpmRevenue_Driver_Msr')/Hierarchies('bpmRevenue_Driver_Msr')/Elements('Revenue')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Subsets('Default')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Worldwide')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Domestic')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Canada')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('USA')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Northeast')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Connecticut')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Maine')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Massachusetts')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('New Hampshire')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('New Jersey')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('New York')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Pennsylvania')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('Vermont')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Northwest')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Mid Atlantic')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Midwest')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US South')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US Southwest')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('US West')"
+					},
+					{
+						"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('International')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmRegion')/Hierarchies('bpmRegion')/Elements('New York')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Total Items')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Total Items')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"#,##0"
+}

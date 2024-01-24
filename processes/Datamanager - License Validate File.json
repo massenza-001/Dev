@@ -1,0 +1,29 @@
+{
+	"@type":"Process",
+	"Name":"Datamanager - License Validate File",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"Datamanager - License Validate File.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"dataSourceNameForServer":"C:/Work/Clients2/BPMSDevelopment/TM1Server/Logs/RDM_V5-SERVER_xxxxxx.LIC",
+		"dataSourceNameForClient":"C:\\Work\\Clients2\\BPMSDevelopment\\TM1Server\\Logs\\RDM_V5-SERVER_xxxxxx.LIC",
+		"asciiHeaderRecords":0,
+		"asciiQuoteCharacter":"\"",
+		"asciiDecimalSeparator":".",
+		"asciiThousandSeparator":",",
+		"asciiDelimiterType":"Character",
+		"asciiDelimiterChar":","
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vLic",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

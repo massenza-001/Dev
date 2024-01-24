@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"bpmRevenues_Assumptions",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')"
+		},
+		{
+			"@id":"Dimensions('bpmChannel')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Assumptions_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmRevenues_Assumptions.rules",
+	"Views@Code.links":
+	[
+		"bpmRevenues_Assumptions.views/Price_Entry.json"
+	]
+}

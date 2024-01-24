@@ -1,0 +1,120 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+['ReadOnly']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #CHO#, #ISB#, #FILE#, #FILEPICK#, #SHELL#, #URL#, #VBA#')=0,
+          STET,
+          ''
+     );
+
+['AutoOpen']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #CHO#, #ISB#, #FILE#, #FILEPICK#, #SHELL#, #URL#, #VBA#')=0,
+          STET,
+          ''
+     );
+
+['Recalc']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #CHO#, #ISB#, #FILE#, #FILEPICK#, #SHELL#, #URL#, #VBA#')=0,
+          STET,
+          ''
+     );
+
+
+['Macro']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#VBA#')<>0,
+          STET,
+          ''
+     );
+
+['Param1']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #FILE#, #CHO#, #OD#, #ODEXCEL#, #VBA#,#SHELL#,#URL#,#ISB#,#FILEPICK#')<>0,
+          STET,
+          ''
+     );
+
+['Param2']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #OD#, #VBA#,#ISB#,#FILEPICK#')<>0,
+          STET,
+          ''
+     );
+
+['Param3']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #VBA#,#FILEPICK#')<>0,
+          STET,
+          ''
+     );
+
+['Param4']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #VBA#,#FILEPICK#')<>0,
+          STET,
+          ''
+     );
+
+['Param5']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #VBA#')<>0,
+          STET,
+          ''
+     );
+
+['PromptParam']= S:
+     IF(
+          SCAN( UPPER( '#' | DB('}bpmMenu',!bpmMenu,'ItemType') | '#' ),
+                '#PRO#, #VBA#')<>0,
+          STET,
+          ''
+     );
+
+
+['Workbook'] =S:
+
+    IF ( DB('}bpmMenu',!bpmMenu,'WebSheet') @='Y',
+
+        DB('}bpmControls','Value','File Root') | DB('}bpmMenu',!bpmMenu,'FileName'), STET );
+
+
+
+#==========================
+# Added for RW Ribbon - ETK
+
+['ControlID'] =
+
+     DIMIX ( 'bpmMenu' , !bpmMenu);
+
+
+['RibbonFlag'] =S:
+
+   IF ( DTYPE ( 'bpmMenu', !bpmMenu) @='C', 'menu id',
+
+        IF ( !bpmMenu @='/menu', '',  'button id' ));
+
+
+['RibbonIcon'] =S:
+
+      IF ( DTYPE ( 'bpmMenu', !bpmMenu) @='C', 'FileOpen',
+
+                DB('}bpmMenuItemType',DB('}bpmMenu',!bpmMenu,'ItemType'),'ICON')
+
+
+                     );
+
+#==========================

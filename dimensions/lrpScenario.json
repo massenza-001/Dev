@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"lrpScenario",
+	"Hierarchies@Code.links":
+	[
+		"lrpScenario.hierarchies/lrpScenario.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('lrpScenario')/Hierarchies('lrpScenario')"
+	}
+}

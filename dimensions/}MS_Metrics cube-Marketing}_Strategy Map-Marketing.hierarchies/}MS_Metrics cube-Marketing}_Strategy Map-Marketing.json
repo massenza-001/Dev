@@ -1,0 +1,85 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MS_Metrics cube-Marketing}_Strategy Map-Marketing",
+	"Elements":
+	[
+		{
+			"Name":"Customer",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Reduce Complaints",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Customer count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Campaign count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Internal Processes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Customer satisfaction",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Customer survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product survey",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Customer",
+			"ComponentName":"Reduce Complaints",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Complaints",
+			"ComponentName":"Customer count",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Complaints",
+			"ComponentName":"Product count",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Complaints",
+			"ComponentName":"Campaign count",
+			"Weight":1
+		},
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Customer satisfaction",
+			"Weight":1
+		},
+		{
+			"ParentName":"Customer satisfaction",
+			"ComponentName":"Customer survey",
+			"Weight":1
+		},
+		{
+			"ParentName":"Customer satisfaction",
+			"ComponentName":"Product survey",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MS_Metrics cube-Marketing}_Strategy Map-Marketing.subsets/All Members.json"
+	]
+}

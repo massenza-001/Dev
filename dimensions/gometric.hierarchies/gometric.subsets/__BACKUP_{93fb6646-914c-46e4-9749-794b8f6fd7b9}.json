@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"__BACKUP_{93fb6646-914c-46e4-9749-794b8f6fd7b9}",
+	"Expression":"{[gometric].[level000].MEMBERS}"
+}

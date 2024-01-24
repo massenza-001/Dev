@@ -1,0 +1,55 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCapEx_Project",
+	"Elements":
+	[
+		{
+			"Name":"Total Projects",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Archive",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BPM",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inventory",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"No Project",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"Archive",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"BPM",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"Inventory",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"No Project",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmCapEx_Project.subsets/BaseLevel.json",
+		"bpmCapEx_Project.subsets/Default.json"
+	]
+}

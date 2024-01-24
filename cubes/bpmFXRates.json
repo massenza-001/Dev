@@ -1,0 +1,29 @@
+{
+	"@type":"Cube",
+	"Name":"bpmFXRates",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmCurrency')"
+		},
+		{
+			"@id":"Dimensions('bpmFX_Rpt')"
+		},
+		{
+			"@id":"Dimensions('bpmFX_RateType')"
+		},
+		{
+			"@id":"Dimensions('bpmFX_CurrencyType')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		}
+	],
+	"Rules@Code.link":"bpmFXRates.rules",
+	"Views@Code.links":
+	[
+		"bpmFXRates.views/All.json",
+		"bpmFXRates.views/bpmFXRates.json",
+		"bpmFXRates.views/Default.json"
+	]
+}

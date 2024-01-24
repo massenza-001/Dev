@@ -1,0 +1,53 @@
+{
+	"@type":"Process",
+	"Name":"}Drill_GO-HumanResource",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"}Drill_GO-HumanResource.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"Metrics cube-HumanResource",
+		"dataSourceNameForClient":"",
+		"view":"Metrics cube-HumanResource"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"cubename",
+			"Prompt":"",
+			"Value":"GO_Scorecards",
+			"Type":"String"
+		},
+		{
+			"Name":"Drill_ID",
+			"Prompt":"",
+			"Value":"Drill.1369412804180",
+			"Type":"String"
+		},
+		{
+			"Name":"Pcountry",
+			"Prompt":"country",
+			"Value":"Total of  Country",
+			"Type":"String"
+		},
+		{
+			"Name":"PTime",
+			"Prompt":"Time",
+			"Value":"2013",
+			"Type":"String"
+		},
+		{
+			"Name":"Pgometric",
+			"Prompt":"gometric",
+			"Value":"Gross profit",
+			"Type":"String"
+		},
+		{
+			"Name":"PMetric_Indicators",
+			"Prompt":"Metric Indicators",
+			"Value":"Status",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

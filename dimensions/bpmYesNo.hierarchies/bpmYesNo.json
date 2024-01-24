@@ -1,0 +1,33 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmYesNo",
+	"Elements":
+	[
+		{
+			"Name":"All",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Yes",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"No",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All",
+			"ComponentName":"Yes",
+			"Weight":1
+		},
+		{
+			"ParentName":"All",
+			"ComponentName":"No",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

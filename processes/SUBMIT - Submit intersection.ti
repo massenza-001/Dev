@@ -1,0 +1,58 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#======================================================================>
+#
+# LL - 02/21/2012
+#
+# This process will 'Submit' a cross section into the bpmFinance_SubmissionStatus cube
+#======================================================================>
+
+
+#LASTCHANGE     2/14/2018
+#GENERALCOMMENT     Populate values into Submission Status cube
+#DATASOURCECOMMENT     No source - all values come from parameters
+#PROLOGCOMMENT     Define current time; populate data into cube
+#METADATACOMMENT     None
+#DATACOMMENT     None
+#EPILOGCOMMENT     None
+
+
+
+# Define Global Values
+
+strCube = 'bpmFinance_SubmissionStatus';
+dimCompany = 'bpmCompany';
+dimDept = 'bpmDepartment';
+
+# Confirm values selected on interface are N: Level
+
+IF( ELLEV( dimCompany, pCompany ) <> 0 %
+     ELLEV( dimDept, pDept ) <> 0 );
+     PROCESSBREAK;
+ENDIF;
+
+strTime = TIMST( NOW(), '\M-\d-\Y / \h:\i:\s');
+
+CELLPUTS( 'Submitted', strCube, pCompany, pDept, pYear, 'Mgr submit status' );
+CELLPUTS( strTime, strCube, pCompany, pDept, pYear, 'Mgr submit timestamp' );
+CELLPUTS( pName, strCube, pCompany, pDept, pYear, 'Mgr submit name' );
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

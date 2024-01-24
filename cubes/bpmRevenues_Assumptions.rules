@@ -1,0 +1,13 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+[ 'Unit Net Sales Price'] = N:
+   ['Average Unit Price'] *
+   (1 - ['Incentive Discount']);
+
+
+FEEDERS;
+
+['Plan', 'Average Unit Price'] => ['Unit Net Sales Price'];

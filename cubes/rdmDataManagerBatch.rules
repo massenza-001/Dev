@@ -1,0 +1,53 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+['Filter'] =N:
+
+ IF ( DB('rdmDataManagerBatch',!rdmDataManagerBatchName,!rdmDataManagerBatchIndex,'Cube') @<>'', 1, 0);
+
+
+['Comment'] =S:
+
+IF ( DB('rdmDataManagerBatch',!rdmDataManagerBatchName,!rdmDataManagerBatchIndex,'ValidBatch') =1
+
+,
+
+    'Batch line is invalid, please correct or delete'
+,
+
+
+STET
+
+
+);
+
+
+
+['ValidBatch'] =N:
+
+IF ( DB('rdmDataManagerBatch',!rdmDataManagerBatchName,!rdmDataManagerBatchIndex,'Index') @<>'',
+
+    IF ( DB('rdmDatamanagerDetails', DB('rdmDataManagerBatch',!rdmDataManagerBatchName,!rdmDataManagerBatchIndex,'Cube'),
+               DB('rdmDataManagerBatch',!rdmDataManagerBatchName,!rdmDataManagerBatchIndex,'INDEX') ,'VALUE','TYPE') @=''
+
+    ,
+
+    1
+
+    ,
+
+    STET)
+
+,
+
+STET);
+
+
+
+
+
+FEEDERS;
+
+['Cube'] => ['Filter'], ['ValidBatch'];

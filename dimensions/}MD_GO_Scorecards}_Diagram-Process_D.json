@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MD_GO_Scorecards}_Diagram-Process_D",
+	"Hierarchies@Code.links":
+	[
+		"}MD_GO_Scorecards}_Diagram-Process_D.hierarchies/}MD_GO_Scorecards}_Diagram-Process_D.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MD_GO_Scorecards}_Diagram-Process_D')/Hierarchies('}MD_GO_Scorecards}_Diagram-Process_D')"
+	}
+}

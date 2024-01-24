@@ -1,0 +1,498 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#====================================================
+# De-activating Rule. Controlled by }bpmControls.
+#====================================================
+
+#['Plan'] = S:
+#     IF( UPPER(SUBST(DB('bpmControls','Value','DeActivate EmpInfo Rules'),1,1))  @= 'Y',
+#           STET,CONTINUE);
+
+#=====================================================
+#String Rules
+#=====================================================
+
+['Name', 'Total Filled']= S: 'Total Filled';
+['Name', 'Total Open']= S: 'Total Open';
+['Name', 'Total New']= S: 'Total New';
+
+['Plan', 'Name']= S:
+     IF( ELLEV( 'bpmScenario', !bpmScenario)<>0
+      % ELLEV( 'bpmCompany', !bpmCompany)<>0
+      %  ELLEV( 'bpmDepartment', !bpmDepartment)<>0,  '',  STET  );
+
+['Plan', 'Pay Method'] =S:
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+               !bpmStaff_Employee,'Name') @='',
+            '', ATTRS ( 'bpmDepartment', !bpmDepartment, 'Pay Method')  );
+
+['Plan','PTE']= S:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          '',  STET );
+
+['Plan', 'Bonus Eligible'] =S:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+               !bpmStaff_Employee,'Name') @='',
+          '', STET );
+
+['Plan', 'Bonus Month'] =S:
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+	     '',
+         IF ( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                    !bpmStaff_Employee,'Bonus Eligible')@='Y', STET, '') );
+
+#=======================================================
+# Currency logic: If line currency is entered, use it, else if company currency is not blank,
+#   use it, else default to USD
+#=======================================================
+
+['Plan', 'Company Currency'] = S:
+        IF( DB('bpmStaff_Emp_Info','Plan', !bpmCompany, !bpmDepartment,
+                   !bpmStaff_Employee,'Name') @='', '',
+                   DB('}ElementAttributes_bpmCompany',!bpmCompany, 'Currency'));
+
+['Plan', 'Final Currency'] = S:
+       IF( DB('bpmStaff_Emp_Info','Plan', !bpmCompany,!bpmDepartment,
+                  !bpmStaff_Employee,'Name') @='', '',
+
+             IF( DB('bpmStaff_Emp_Info','Plan',!bpmCompany,!bpmDepartment,
+                        !bpmStaff_Employee,'Line Currency') @<> '',
+                   DB('bpmStaff_Emp_Info','Plan',!bpmCompany,!bpmDepartment,
+                        !bpmStaff_Employee,'Line Currency') ,
+
+             IF( DB('bpmStaff_Emp_Info','Plan',!bpmCompany,!bpmDepartment,
+                        !bpmStaff_Employee,'Company Currency') @<> '',
+                   DB('bpmStaff_Emp_Info','Plan',!bpmCompany,!bpmDepartment,
+                        !bpmStaff_Employee,'Company Currency'), 'USD'  ))) ;
+
+
+#=======================================================
+# C level rules
+#=======================================================
+
+[ 'Plan', { 'Hire Date' , 'Last Date' , '1st Raise Date' , '2nd Raise Date' , '3rd Raise Date' ,
+               '4th Raise Date' , '5th Raise Date' , '6th Raise Date' , '1st Raise %' , '2nd Raise %' ,
+               '3rd Raise %' , '4th Raise %' , '5th Raise %' , '6th Raise %' ,  'Bonus Percent' } ]= C: 0;
+
+[ 'Plan','Hourly Rate']= C: ['Annual Salary'] \ ['Work Hours'];
+
+
+#=======================================================
+# Numeric rules
+#=======================================================
+
+# Deactive if flag is set =========================================
+
+#['Plan'] =N:
+#    IF( UPPER(SUBST(DB('bpmControls','Value','DeActivate EmpInfo Rules'),1,1))  @= 'Y',
+#          STET,CONTINUE);
+
+
+['Emp Count'] = N:
+IF ( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+            !bpmStaff_Employee,'Name') @<>'', 1, 0);
+
+
+['Plan','Hire Date']= N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          0,
+          STET
+     );
+
+['Plan','Transfer In Date']= N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          0,
+          STET
+     );
+
+['Plan','Transfer Out Date']= N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          0,
+          STET
+     );
+
+['Plan','Headcount']= N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          0,
+          1
+     );
+
+['Plan','FTE']= N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+
+          0
+         ,
+          IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                     !bpmStaff_Employee,'PTE') @='Y',
+               ['Work Hours'] \
+                       DB( 'bpmStaff_Rates_Company',!bpmScenario,
+                   DB('bpmControls','Value','Plan Year'),!bpmCompany, 'Total Work Hours in Pay Period'),
+               1)
+        );
+
+['Plan','Last Date']= N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+          !bpmStaff_Employee,'Name') @='',
+          0,
+          STET
+     );
+
+['Plan','Annual Salary']= N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+               !bpmStaff_Employee,'Name') @='',
+          0,
+          IF( UPPER(DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,
+                                 !bpmDepartment,!bpmStaff_Employee,'PTE') )@='Y',
+
+               ['Hourly Rate']*['Work Hours'] * 52,
+               STET
+          )
+     );
+
+['Plan','Hourly Rate']=N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+               !bpmStaff_Employee,'Name') @='',
+          0,
+          IF( UPPER(DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,
+                                 !bpmDepartment,!bpmStaff_Employee,'PTE') )@='Y',
+               STET,
+               IF( ['Annual Salary']=0,
+                    0,
+                    ['Annual Salary'] \ 24 \ ['Work Hours']
+               )
+          )
+     );
+
+['Plan','Work Hours']=N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          0,
+          IF( UPPER(DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,
+                                 !bpmDepartment,!bpmStaff_Employee,'PTE') )@='Y',
+               STET,
+              IF( ['Annual Salary']=0,
+                    STET,
+                       DB( 'bpmStaff_Rates_Company',!bpmScenario,
+                       DB('bpmControls','Value','Plan Year'),!bpmCompany, 'Total Work Hours in Pay Period')
+               )
+          )
+     );
+
+#===================================
+# Bonus Calcs
+#===================================
+
+['Plan', 'Bonus Percent'] =N:
+     IF ( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Bonus Eligible') @='Y',
+          STET,
+          0
+	     );
+
+['Plan', 'Bonus $'] = N:
+     IF ( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Bonus Eligible') @='Y',
+          STET,
+          0
+	     );
+
+['Plan', 'Bonus Amount'] = N:
+# Fixed Bonus Amount plus Percent of Salary
+     ['Bonus $'] +
+     ( ['Annual Salary'] * ['Bonus Percent'] ) ;
+
+
+#=======================================================
+# Raise Calculations
+#=======================================================
+
+['Plan','1st Raise Date'] = N:
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Annual Salary') =0,
+          0	,
+          STET
+     );
+
+
+['Plan','1st Raise %'] = N:
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='' %
+          ['1st Raise Date']=0,
+          0,
+          STET
+     );
+
+['Plan','Salary Post 1st Raise'] = N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          0,
+          IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                     !bpmStaff_Employee,'1st Raise Date') =0,
+               ['Annual Salary'],
+               IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                          !bpmStaff_Employee,'1st Raise Date')<=
+                    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmStaff_Employee,'Hire Date'),
+                    ['Annual Salary'],
+                    IF( ['1st Raise %']=0,
+                         STET,
+                         ['Annual Salary'] * ( 1 + ['1st Raise %'] )
+                    )
+               )
+          )
+     );
+
+['Plan','2nd Raise Date'] = N:
+     IF( ['1st Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','2nd Raise %'] = N:
+     IF( ['2nd Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','Salary Post 2nd Raise'] = N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name') @='',
+          0,
+          IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                     !bpmStaff_Employee,'2nd Raise Date')=0,
+               ['Salary Post 1st Raise'],
+               IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                          !bpmStaff_Employee,'2nd Raise Date')<=
+                    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmStaff_Employee,'Hire Date'),
+                    ['Salary Post 1st Raise'],
+                    IF( ['2nd Raise %']=0,
+                         STET,
+                         ['Salary Post 1st Raise'] * ( 1 + ['2nd Raise %'] )
+                    )
+               )
+          )
+     );
+
+['Plan','3rd Raise Date'] = N:
+     IF( ['2nd Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','3rd Raise %'] = N:
+# If name not entered, can not enter
+     IF( ['3rd Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','Salary Post 3rd Raise'] = N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name')@='',
+          0,
+          IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                     !bpmStaff_Employee,'3rd Raise Date')=0,
+               ['Salary Post 2nd Raise'],
+               IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                          !bpmStaff_Employee,'3rd Raise Date')<=
+                    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmStaff_Employee,'Hire Date'),
+                    ['Salary Post 2nd Raise'],
+                    IF( ['3rd Raise %']=0,
+                         STET,
+                         ['Salary Post 2nd Raise'] * ( 1 + ['3rd Raise %'] )
+                    )
+               )
+          )
+     );
+
+['Plan','4th Raise Date'] = N:
+     IF( ['3rd Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','4th Raise %'] = N:
+     IF( ['4th Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','Salary Post 4th Raise'] = N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name')@='',
+          0,
+          IF(DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                    !bpmStaff_Employee,'4th Raise Date')=0,
+
+               ['Salary Post 3rd Raise'],
+               IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                          !bpmStaff_Employee,'4th Raise Date')<=
+                    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmStaff_Employee,'Hire Date'),
+                    ['Salary Post 3rd Raise'],
+                    IF( ['4th Raise %']=0,
+                         STET,
+                         ['Salary Post 3rd Raise'] * ( 1 + ['4th Raise %'] )
+                    )
+               )
+          )
+     );
+
+['Plan','5th Raise Date'] = N:
+     IF( ['4th Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','5th Raise %'] = N:
+     IF( ['5th Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','Salary Post 5th Raise'] = N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name')@='',
+          0,
+          IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                    !bpmStaff_Employee,'5th Raise Date')=0,
+               ['Salary Post 4th Raise'],
+               IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                          !bpmStaff_Employee,'5th Raise Date')<=
+                    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmStaff_Employee,'Hire Date'),
+                    ['Salary Post 4th Raise'],
+                    IF( ['5th Raise %']=0,
+                         STET,
+                         ['Salary Post 4th Raise'] * ( 1 + ['5th Raise %'] )
+                    )
+               )
+          )
+     );
+
+['Plan','6th Raise Date'] = N:
+     IF( ['5th Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','6th Raise %'] = N:
+     IF( ['6th Raise Date']=0,
+          0,
+          STET
+     );
+
+
+['Plan','Salary Post 6th Raise'] = N:
+# If name not entered, can not enter
+     IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                !bpmStaff_Employee,'Name')@='',
+          0,
+          IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                    !bpmStaff_Employee,'6th Raise Date')=0,
+               ['Salary Post 5th Raise'],
+               IF( DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmStaff_Employee,'6th Raise Date')<=
+                    DB('bpmStaff_Emp_Info',!bpmScenario,!bpmCompany,!bpmDepartment,
+                         !bpmStaff_Employee,'Hire Date'),
+                    ['Salary Post 5th Raise'],
+                    IF( ['6th Raise %']=0,
+                         STET,
+                         ['Salary Post 5th Raise'] * ( 1 + ['6th Raise %'] )
+                    )
+               )
+          )
+     );
+
+
+#=======================================================
+#  FEEDERS
+#=======================================================
+
+FEEDERS;
+
+['Plan', 'Work Hours']=>['Annual Salary'];
+
+['Name'] => ['HeadCount'] ;
+
+# FEED INFO INTERNAL FEEDERS
+['Plan', 'Annual Salary']=>
+     ['1st Raise Date'], ['2nd Raise Date'], ['3rd Raise Date'], ['4th Raise Date'],
+     ['5th Raise Date'], ['6th Raise Date'], ['1st Raise %'], ['2nd Raise %'], ['3rd Raise %'],
+     ['4th Raise %'], ['5th Raise %'], ['6th Raise %'], ['Salary Post 1st Raise'],
+     ['Salary Post 2nd Raise'], ['Salary Post 3rd Raise'], ['Salary Post 4th Raise'],
+     ['Salary Post 5th Raise'], ['Salary Post 6th Raise'],
+     ['Hire Date'], ['Last Date'],  ['Hourly Rate'] , ['FTE'] , ['Bonus Amount']
+;
+
+# FEED STAFF EXTERNAL FEEDERS
+['Plan', 'Annual Salary']=>
+     DB('bpmStaff', !bpmScenario, !bpmCompany, !bpmDepartment,
+          !bpmStaff_Employee,
+          DB('bpmControls','Value','Plan Year'),
+          'Employed'),
+
+     DB('bpmStaff', !bpmScenario, !bpmCompany, !bpmDepartment,
+          !bpmStaff_Employee,
+          DB('bpmControls','Value','Plan Year'),
+          'Gross Pay'),
+
+     DB('bpmStaff', !bpmScenario, !bpmCompany, !bpmDepartment,
+          !bpmStaff_Employee,
+          STR( NUMBR(DB('bpmControls','Value','Plan Year') ) + 1, 4, 0 ),
+          'Employed'),
+
+     DB('bpmStaff', !bpmScenario, !bpmCompany, !bpmDepartment,
+          !bpmStaff_Employee,
+          STR( NUMBR(DB('bpmControls','Value','Plan Year') ) + 1, 4, 0 ),
+          'Gross Pay')
+
+;
+
+
+# ======================================================
+# Feed Salary into bpmStaff_Emp_Alloc_Info cube
+# ======================================================
+['Plan','Annual Salary']=>
+     DB('bpmStaff_Emp_Alloc_Info',!bpmScenario,
+          !bpmCompany,!bpmCompany,
+          !bpmDepartment,!bpmDepartment,
+          !bpmStaff_Employee,'Allocation % - Calculated')
+;

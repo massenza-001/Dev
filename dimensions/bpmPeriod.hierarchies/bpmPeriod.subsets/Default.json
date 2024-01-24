@@ -1,0 +1,26 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"PeriodName",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('Period Hierarchies')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('All ROY')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('All Years')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('All YTD')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('HasData')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('Plan Years')"
+		}
+	]
+}

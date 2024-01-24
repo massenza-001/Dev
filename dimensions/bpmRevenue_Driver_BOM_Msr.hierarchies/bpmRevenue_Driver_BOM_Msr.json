@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmRevenue_Driver_BOM_Msr",
+	"Elements":
+	[
+		{
+			"Name":"Units",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cost",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

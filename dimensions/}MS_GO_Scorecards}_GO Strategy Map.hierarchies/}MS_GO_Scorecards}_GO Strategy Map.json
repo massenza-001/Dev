@@ -1,0 +1,458 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MS_GO_Scorecards}_GO Strategy Map",
+	"Elements":
+	[
+		{
+			"Name":"Financial",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Reduce Expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Product cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee expense",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Training cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Improve margin",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Gross profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross margin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Grow revenue",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quantity sold",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Customer",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Improve customer experience",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Retailer survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Expand new markets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Customer count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Campaign count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Internal Processes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Develop peoducts",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Product count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Improve stock-handling",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Inventory Turn",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Control quality",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Returns-All reasons",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Defective product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Incomplete product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Unsatisfactory product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Wrong product ordered)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns(Wrong product shipped)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Update order method",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Orders-All methods",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(E-mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Fax)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Sales visit)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Special)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Telephone)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders(Web)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Learning & Innovation",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Motivate effective employees",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Headcount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee ranking",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee Termination",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Succession ready",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Recruitment days",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Financial",
+			"ComponentName":"Reduce Expenses",
+			"Weight":1
+		},
+		{
+			"ParentName":"Financial",
+			"ComponentName":"Improve margin",
+			"Weight":1
+		},
+		{
+			"ParentName":"Financial",
+			"ComponentName":"Grow revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Expenses",
+			"ComponentName":"Product cost",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Expenses",
+			"ComponentName":"Employee expense",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Expenses",
+			"ComponentName":"Salary",
+			"Weight":1
+		},
+		{
+			"ParentName":"Reduce Expenses",
+			"ComponentName":"Training cost",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve margin",
+			"ComponentName":"Gross profit",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve margin",
+			"ComponentName":"Gross margin",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve margin",
+			"ComponentName":"Bonus",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow revenue",
+			"ComponentName":"Revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow revenue",
+			"ComponentName":"Sales revenue",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow revenue",
+			"ComponentName":"Quantity sold",
+			"Weight":1
+		},
+		{
+			"ParentName":"Grow revenue",
+			"ComponentName":"Price discount",
+			"Weight":1
+		},
+		{
+			"ParentName":"Customer",
+			"ComponentName":"Improve customer experience",
+			"Weight":1
+		},
+		{
+			"ParentName":"Customer",
+			"ComponentName":"Expand new markets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve customer experience",
+			"ComponentName":"Retailer survey",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve customer experience",
+			"ComponentName":"Product survey",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve customer experience",
+			"ComponentName":"Price discount",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expand new markets",
+			"ComponentName":"Customer count",
+			"Weight":1
+		},
+		{
+			"ParentName":"Expand new markets",
+			"ComponentName":"Campaign count",
+			"Weight":1
+		},
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Develop peoducts",
+			"Weight":1
+		},
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Improve stock-handling",
+			"Weight":1
+		},
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Control quality",
+			"Weight":1
+		},
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Update order method",
+			"Weight":1
+		},
+		{
+			"ParentName":"Develop peoducts",
+			"ComponentName":"Product count",
+			"Weight":1
+		},
+		{
+			"ParentName":"Improve stock-handling",
+			"ComponentName":"Inventory Turn",
+			"Weight":1
+		},
+		{
+			"ParentName":"Control quality",
+			"ComponentName":"Returns-All reasons",
+			"Weight":1
+		},
+		{
+			"ParentName":"Control quality",
+			"ComponentName":"Returns(Defective product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Control quality",
+			"ComponentName":"Returns(Incomplete product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Control quality",
+			"ComponentName":"Returns(Unsatisfactory product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Control quality",
+			"ComponentName":"Returns(Wrong product ordered)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Control quality",
+			"ComponentName":"Returns(Wrong product shipped)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders-All methods",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders(E-mail)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders(Fax)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders(Mail)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders(Sales visit)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders(Special)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders(Telephone)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Update order method",
+			"ComponentName":"Orders(Web)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Learning & Innovation",
+			"ComponentName":"Motivate effective employees",
+			"Weight":1
+		},
+		{
+			"ParentName":"Motivate effective employees",
+			"ComponentName":"Headcount",
+			"Weight":1
+		},
+		{
+			"ParentName":"Motivate effective employees",
+			"ComponentName":"Employee ranking",
+			"Weight":1
+		},
+		{
+			"ParentName":"Motivate effective employees",
+			"ComponentName":"Employee survey",
+			"Weight":1
+		},
+		{
+			"ParentName":"Motivate effective employees",
+			"ComponentName":"Employee Termination",
+			"Weight":1
+		},
+		{
+			"ParentName":"Motivate effective employees",
+			"ComponentName":"Succession ready",
+			"Weight":1
+		},
+		{
+			"ParentName":"Motivate effective employees",
+			"ComponentName":"Recruitment days",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MS_GO_Scorecards}_GO Strategy Map.subsets/All Members.json"
+	]
+}

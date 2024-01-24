@@ -1,0 +1,60 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDataManagerTypes",
+	"Elements":
+	[
+		{
+			"Name":"COPY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ZERO OUT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MERGE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EXPORT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TOCUBE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TOCUBEMERGE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TOCUBEEXPORT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"REMOVE RULE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RELOAD RULE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUSTOM PROCESS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COMPLETE STRING COPY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ZERO VAL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ADVANCED EXPORT",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

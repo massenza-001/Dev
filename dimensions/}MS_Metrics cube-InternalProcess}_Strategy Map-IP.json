@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"}MS_Metrics cube-InternalProcess}_Strategy Map-IP",
+	"Hierarchies@Code.links":
+	[
+		"}MS_Metrics cube-InternalProcess}_Strategy Map-IP.hierarchies/}MS_Metrics cube-InternalProcess}_Strategy Map-IP.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('}MS_Metrics cube-InternalProcess}_Strategy Map-IP')/Hierarchies('}MS_Metrics cube-InternalProcess}_Strategy Map-IP')"
+	}
+}

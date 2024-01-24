@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"state",
+	"Elements":
+	[
+		{
+			"Name":"Euphoria",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Despair",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Uncertainty",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

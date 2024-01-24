@@ -1,0 +1,162 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MS_Metrics cube-InternalProcess}_Strategy Map-IP",
+	"Elements":
+	[
+		{
+			"Name":"Internal Processes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Orders by methods",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Orders (E-mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Fax)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Mail)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Sales visit)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Special)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Telephone)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders (Web)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns by reason",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Returns (Defective product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Incomplete product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Unsatisfactory product)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Wrong product ordered)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns (Wrong product shipped)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inventory",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Inventory Turn",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Orders by methods",
+			"Weight":1
+		},
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Returns by reason",
+			"Weight":1
+		},
+		{
+			"ParentName":"Internal Processes",
+			"ComponentName":"Inventory",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders by methods",
+			"ComponentName":"Orders (E-mail)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders by methods",
+			"ComponentName":"Orders (Fax)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders by methods",
+			"ComponentName":"Orders (Mail)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders by methods",
+			"ComponentName":"Orders (Sales visit)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders by methods",
+			"ComponentName":"Orders (Special)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders by methods",
+			"ComponentName":"Orders (Telephone)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Orders by methods",
+			"ComponentName":"Orders (Web)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns by reason",
+			"ComponentName":"Returns (Defective product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns by reason",
+			"ComponentName":"Returns (Incomplete product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns by reason",
+			"ComponentName":"Returns (Unsatisfactory product)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns by reason",
+			"ComponentName":"Returns (Wrong product ordered)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Returns by reason",
+			"ComponentName":"Returns (Wrong product shipped)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"Inventory Turn",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}MS_Metrics cube-InternalProcess}_Strategy Map-IP.subsets/All Members.json"
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"@type":"Process",
+	"Name":"DIM - Build Period Hierarchy",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"DIM - Build Period Hierarchy.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pYear",
+			"Prompt":"4-Digit Year",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pDim",
+			"Prompt":"Dimension Name",
+			"Value":"bpmPeriod",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

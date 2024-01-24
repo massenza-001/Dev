@@ -1,0 +1,160 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+# Define Dimensions
+
+#Page Dims
+dimScenario= 'bomScenario';
+dimYear= 'bpmyear';
+dimCurrency = 'bpmCurrency';
+dimFinance_Msr= 'bpmFinance_Msr';
+
+#Row Dims
+dimCompany = 'bpmCompany';
+dimDepartment = 'bpmDepartment';
+dimAccount = 'bpmAccount';
+
+#Column Dims
+dimPeriod='bpmPeriod';
+
+# Convert Variables into base element rather than alias
+
+pCompany = DIMNM( dimCompany , DIMIX ( dimCompany , bpmCompany ) );
+pDepartment = DIMNM( dimDepartment , DIMIX ( dimDepartment , bpmDepartment ) );
+pAccount = DIMNM( dimAccount , DIMIX ( dimAccount , bpmAccount ) );
+pCurrency= DIMNM( dimCurrency, DIMIX( dimCurrency, bpmCurrency ));
+pFinance_Msr = DIMNM( dimFinance_Msr , DIMIX ( dimFinance_Msr , bpmFinance_Msr ) );
+pPeriod = DIMNM( dimPeriod , DIMIX ( dimPeriod , bpmPeriod ) );
+
+# SUBSET and VIEW Name
+strCubeName='bpmFinance';
+subRef='zzDrill_Finance_TM1_Details';
+
+IF( VIEWEXISTS( strCubeName, subRef )=1 );
+     VIEWDESTROY( strCubeName, subRef );
+ENDIF;
+
+VIEWCREATE( strCubeName, subRef );
+VIEWROWSUPPRESSZEROESSET( strCubeName, subRef, 1 );
+VIEWCOLUMNSUPPRESSZEROESSET( strCubeName, subRef, 1 );
+
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, 'bpmScenario');
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, 'bpmBook');
+
+dimRef=dimCurrency;
+dimElemIndex= DIMIX( dimRef,  pCurrency);
+VIEWTITLEDIMENSIONSET( strCubeName, subRef, dimRef);
+VIEWTITLEELEMENTSET( strCubeName, subRef, dimRef, dimElemIndex );
+
+#The 7 Dims all have an existing MDX driven , ASC sorted, N-level subset, that has the same name.
+#SubsetName = 'LevelN_Sorted';
+#intIndex = SUBSETGETSIZE ( dimRef , SubsetName ) ;
+#   sChild = SUBSETGETELEMENTNAME ( dimRef , SubsetName , intIndex ) ;
+
+#UPDATE Subsets in VIEW
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimCompany;
+sParent=pCompany;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+#--- Generate the subset based on MDX 
+SUBSETCREATEBYMDX( SubRef, '{TM1SORT( {TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[' | dimRef | '].[' | sParent | ']}, ALL, RECURSIVE )},0)},ASC)}' );
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'CodeName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+ENDIF;
+
+VIEWROWDIMENSIONSET( strCubeName, subRef, dimRef, 1);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimDepartment;
+sParent=pDepartment;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+#--- Generate the subset based on MDX 
+SUBSETCREATEBYMDX( SubRef, '{TM1SORT( {TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[' | dimRef | '].[' | sParent | ']}, ALL, RECURSIVE )},0)},ASC)}' );
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'CodeName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+ENDIF;
+
+VIEWROWDIMENSIONSET( strCubeName, subRef, dimRef, 2);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimAccount;
+sParent=pAccount;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+#--- Generate the subset based on MDX 
+SUBSETCREATEBYMDX( SubRef, '{TM1SORT( {TM1FILTERBYLEVEL({TM1DRILLDOWNMEMBER( {[' | dimRef | '].[' | sParent | ']}, ALL, RECURSIVE )},0)},ASC)}' );
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'CodeName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'CodeName' );
+ENDIF;
+
+VIEWROWDIMENSIONSET( strCubeName, subRef, dimRef, 3);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+# -------------------------------------------------------------------------------------------------------
+dimRef=dimPeriod;
+sParent=pPeriod;
+
+#--- DELETE All Elements currently in SUBSET
+IF ( SUBSETEXISTS ( dimRef, subRef ) = 1 );
+    SUBSETDELETEALLELEMENTS( dimRef, subRef );
+ELSE;
+   SUBSETCREATE(  dimRef, subRef );
+ENDIF;
+
+#--- Generate the subset based on MDX 
+SUBSETCREATEBYMDX( SubRef, '{TM1DRILLDOWNMEMBER( {[' | dimRef | '].[' | sParent | ']}, ALL, RECURSIVE )}' );
+
+IF ( SUBSETALIASSET( dimRef , subRef, 'PeriodName' ) =1 );
+     SUBSETALIASSET( dimRef , subRef, 'PeriodName' );
+ENDIF;
+
+VIEWCOLUMNDIMENSIONSET( strCubeName, subRef, dimRef, 2);
+VIEWSUBSETASSIGN( strCubeName, subRef, dimRef, subRef );
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+RETURNVIEWHANDLE('bpmFinance','zzDrill_Finance_TM1_Details');
+#****End: Generated Statements****
+#endregion

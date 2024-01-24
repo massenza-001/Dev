@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmCurrency_Rpt",
+	"Elements":
+	[
+		{
+			"Name":"USD_Rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EUR_Rpt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAD_Rpt",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,36 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region Limit Entry - N Level for SPREAD; Amount needs Spread First
+
+[ 'Plan', 'Spread Method' ]= S:  IF( ISLEAF()<>0, STET, '');
+
+[ 'Plan', 'Annual Amount' ]= N:
+	IF( DB('bpmFinance_Annual', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, !bpmYear, 'Spread Method')@<> ''
+	,
+		STET
+	,
+		0
+	);
+
+#EndRegion
+
+#Region LINK to FINANCE Cube
+
+[ 'Plan', 'Finance Value' ]= N: DB('bpmFinance', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, !bpmYear , 'Original' );
+
+#EndRegion
+
+#Region FEEDERS
+
+FEEDERS;
+
+# ============================================================================
+# Feed Annual to bpmFinance (NOTE: Only link PLAN all other scenarios are NOT live linked)
+# ============================================================================
+['Plan','Annual Amount']=>
+       DB( 'bpmFinance', !bpmScenario, !bpmCompany, !bpmDepartment, !bpmAccount, !bpmCurrency, !bpmYear, 'Original' );
+
+#EndRegion

@@ -1,0 +1,70 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#=============================================================================================
+# 
+# PURPOSE - This process will create a txt file of dimensions that have both subsets created by MDX and an element security cube.
+# 
+#=============================================================================================
+
+
+
+#=============================================================================================
+#>>> Define variables associated with the file name 
+#=============================================================================================
+strFileName = 'DynamicSubsetsWithElementSecurity.txt';
+
+IF ( SUBST ( pFileLoc, LONG ( pFileLoc ) -1, 1) @= '\');
+     strFileLocation = pFileLoc;
+ELSE;
+     strFileLocation = pFileLoc | '\' ;
+ENDIF;
+
+strFullFileName = strFileLocation | strFileName ;
+
+
+
+#=============================================================================================
+#>>> Determine if element security exists
+#        - If it exists then find any subsets created by MDX and export details 
+#=============================================================================================
+
+strDimensionDim = '}Dimensions' ;
+numCount = 1 ;
+
+WHILE ( numCount <= DIMSIZ ( strDimensionDim ) ) ;
+     strDimensionEl = DIMNM ( strDimensionDim , numCount ) ;
+     strSecurityCube = '}ElementSecurity_' | strDimensionEl ;
+     strSubsetDim = '}Subsets_' | strDimensionEl ;
+     IF ( CUBEEXISTS ( strSecurityCube ) = 1 ) ;
+          IF ( DIMENSIONEXISTS ( strSubsetDim ) = 1 ) ;
+                numElementCount = 1 ;
+                WHILE ( numElementCount <= DIMSIZ ( strSubsetDim ) ) ;
+                     strSubsetElement = DIMNM ( strSubsetDim , numElementCount ) ;
+                     IF ( SUBSETMDXGET ( strDimensionEl , strSubsetElement ) @<> '' ) ;
+                          ASCIIOUTPUT ( strFullFileName , 'Dimension: ' | strDimensionEl | ' ... Subset: ' | strSubsetElement ) ;
+                     ENDIF ;
+                     numElementCount = numElementCount + 1 ;
+                END ;
+          ENDIF ;
+     ENDIF ;
+     numCount = numCount + 1 ;
+END ;  
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

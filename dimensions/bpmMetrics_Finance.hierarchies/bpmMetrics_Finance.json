@@ -1,0 +1,45 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmMetrics_Finance",
+	"Elements":
+	[
+		{
+			"Name":"Gross profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross margin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee expense",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Training cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"bpmMetrics_Finance.subsets/All Members.json",
+		"bpmMetrics_Finance.subsets/paw_KeyMetric.json",
+		"bpmMetrics_Finance.subsets/Report_Portal.json"
+	]
+}

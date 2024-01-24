@@ -1,0 +1,31 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Volume - Units')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Unit Net Sales Price')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Unit Direct Cost')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Gross Margin')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Gross Revenue')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Total Costs of Goods Sold')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Direct COGS')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')/Hierarchies('bpmRevenue_Msr')/Elements('Indirect COGS')"
+		}
+	]
+}

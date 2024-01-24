@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmMetrics_Revenue",
+	"Hierarchies@Code.links":
+	[
+		"bpmMetrics_Revenue.hierarchies/bpmMetrics_Revenue.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmMetrics_Revenue')/Hierarchies('bpmMetrics_Revenue')"
+	}
+}

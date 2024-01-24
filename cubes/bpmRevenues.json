@@ -1,0 +1,32 @@
+{
+	"@type":"Cube",
+	"Name":"bpmRevenues",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmProducts')"
+		},
+		{
+			"@id":"Dimensions('bpmChannel')"
+		},
+		{
+			"@id":"Dimensions('bpmCountry')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmRevenue_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmRevenues.rules",
+	"Views@Code.links":
+	[
+		"bpmRevenues.views/DemandPlan.json",
+		"bpmRevenues.views/Revenue_Analysis.json",
+		"bpmRevenues.views/ScenarioCompare.json"
+	]
+}

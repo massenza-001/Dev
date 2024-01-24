@@ -1,0 +1,171 @@
+{
+	"@type":"NativeView",
+	"Name":"GO_Scorecards",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Metric Indicators')/Hierarchies('Metric Indicators')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('gometric')/Hierarchies('gometric')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Gross profit')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Gross margin')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Calculated Bonus')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Bonus')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Revenue')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Product cost')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Quantity sold')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Employee expense')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Salary')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Training cost')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Price')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Recruitment days')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Order count')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Price discount')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Customer count')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Retailer survey')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Product count')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Product survey')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Campaign count')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Inventory Turn')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders-All methods')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders(E-mail)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders(Fax)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders(Mail)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders(Sales visit)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders(Special)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders(Telephone)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Orders(Web)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Returns-All reasons')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Returns(Defective product)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Returns(Incomplete product)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Returns(Unsatisfactory product)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Returns(Wrong product ordered)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Returns(Wrong product shipped)')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Headcount')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Employee ranking')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Employee survey')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Employee Termination')"
+					},
+					{
+						"@id":"Dimensions('gometric')/Hierarchies('gometric')/Elements('Succession ready')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('country')/Hierarchies('country')/Elements('United States')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Subsets('2014-2017')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Time')/Hierarchies('Time')/Elements('2012')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

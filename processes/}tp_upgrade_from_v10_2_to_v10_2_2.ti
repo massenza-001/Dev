@@ -1,0 +1,150 @@
+#region Prolog
+
+#################################################################
+## IBM Confidential
+##
+## OCO Source Materials
+##
+## BI and PM: pmpsvc
+##
+## (C) Copyright IBM Corp. 2012
+##
+## The source code for this program is not published or otherwise
+## divested of its trade secrets, irrespective of what has been
+## deposited with the U.S. Copyright Office.
+##################################################################
+
+
+cControlPrefix = '';
+If (pControl @= 'Y');
+	cControlPrefix = '}';
+EndIf;
+
+#*** Log File Name
+cConfigDim = cControlPrefix | 'tp_config';
+If (DimensionExists(cConfigDim) = 1);
+	cGenerateLog = ATTRS(cConfigDim, 'Generate TI Log', 'String Value');
+Else;
+	cGenerateLog = 'N';
+EndIf;
+
+cTM1Process = GetProcessName();
+StringGlobalVariable('gPrologLog');
+StringGlobalVariable('gEpilogLog');
+StringGlobalVariable('gDataLog');
+
+IF (cGenerateLog @= 'Y' % cGenerateLog @= 'T');
+	vReturnValue = ExecuteProcess(cControlPrefix | 'tp_get_log_file_names', 'pExecutionId', pExecutionId,
+		'pProcess', cTM1Process, 'pControl', pControl);
+	If (vReturnValue <> ProcessExitNormal());
+		ProcessError;
+	EndIf;
+EndIf;
+
+cPrologLog = gPrologLog;
+cEpilogLog = gEpilogLog;
+cDataLog = gDataLog;
+cTM1Log = cPrologLog;
+
+#*** Get approval dimension, approval subset and isActive
+
+If (cGenerateLog @= 'Y');
+	TextOutput(cTM1Log, TIMST(NOW, '\Y-\m-\d \h:\i:\s'), '****** Get approval dimension, approval subset and isActive');
+EndIf;
+
+StringGlobalVariable('gApprovalDim');
+StringGlobalVariable('gApprovalSubset');
+StringGlobalVariable('gIsActive');
+
+vReturnValue = ExecuteProcess(cControlPrefix | 'tp_get_application_attributes', 'pExecutionId', pExecutionId,
+	'pAppId', pAppId, 'pControl',  pControl);
+If (vReturnValue <> ProcessExitNormal());
+	ProcessError;
+EndIf;
+
+If (cGenerateLog @= 'Y');
+	TextOutput(cTM1Log, 'get application attributes', gApprovalDim, gApprovalSubset, gIsActive);
+EndIf;
+
+If (gApprovalDim @= '');
+
+	If (cGenerateLog @= 'Y');
+		TextOutput(cTM1Log, TIMST(NOW, '\Y-\m-\d \h:\i:\s'), '****** Granting owner rights for application');
+	EndIf;
+	
+	cOwnPermissionElement = 'OWN';
+	cAppSecurityCube = '}ElementSecurity_' | cControlPrefix | 'tp_applications';
+	cAppPermSecurityCube = '}CellSecurity_' | cControlPrefix | 'tp_application_root_permissions';
+	
+	cGroupsDimSize = DIMSIZ('}Groups');
+	vIndexI = 1;
+	While (vIndexI <= cGroupsDimSize);
+	
+		vGroup = DIMNM('}Groups', vIndexI);
+		If (vGroup @<> 'Admin' & vGroup @<> 'DataAdmin' & vGroup @<> 'SecurityAdmin');
+			vPerm = CellGetS(cAppSecurityCube, pAppId, vGroup);
+			If (vPerm @= 'READ');
+				CellPutS('READ', cAppPermSecurityCube, pAppId, cOwnPermissionElement, vGroup);
+			Else;
+				CellPutS('NONE', cAppPermSecurityCube, pAppId, cOwnPermissionElement, vGroup);
+			EndIf;
+		EndIf;
+	
+		vIndexI = vIndexI + 1;
+	End;
+EndIf;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endregion
+#region Epilog
+
+#################################################################
+## IBM Confidential
+##
+## OCO Source Materials
+##
+## BI and PM: pmpsvc
+##
+## (C) Copyright IBM Corp. 2010
+##
+## The source code for this program is not published or otherwise
+## divested of its trade secrets, irrespective of what has been
+## deposited with the U.S. Copyright Office.
+##################################################################
+
+cControlPrefix = '';
+If (pControl @= 'Y');
+	cControlPrefix = '}';
+EndIf;
+
+### Set value to version attribute
+cApplicationsDim = cControlPrefix | 'tp_applications';
+If (DIMIX(cApplicationsDim, pAppId) = 0);
+	ProcessError;
+EndIf;
+
+cVersionAttr = 'Version';
+AttrPutS(pVersion, cApplicationsDim, pAppId, cVersionAttr);
+
+
+
+#endregion

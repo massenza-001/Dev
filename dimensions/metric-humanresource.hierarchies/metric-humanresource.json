@@ -1,0 +1,47 @@
+{
+	"@type":"Hierarchy",
+	"Name":"metric-humanresource",
+	"Elements":
+	[
+		{
+			"Name":"Head count",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee survey",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Training days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee ranking",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sick days taken",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Vacation days taken",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee termination",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Succession ready",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Recruitment days",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"metric-humanresource.subsets/All Members.json"
+	]
+}

@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Summary Net Incoime",
+	"Alias":"CodeName",
+	"Expression":"{[bpmAccount].[Net Income After Allocations^Net Income],[bpmAccount].[Net Income After Allocations^Net Income^EBITDA],TM1TOGGLEDRILLSTATE({[bpmAccount].[Net Income After Allocations^Net Income^EBITDA^Gross Margin]} , {[bpmAccount].[Net Income After Allocations^Net Income^EBITDA^Gross Margin]} , EXPAND_BELOW , RECURSIVE),TM1TOGGLEDRILLSTATE({[bpmAccount].[Net Income After Allocations^Net Income^EBITDA^Operating Expenses]} , {[bpmAccount].[Net Income After Allocations^Net Income^EBITDA^Operating Expenses]} , EXPAND_BELOW , RECURSIVE),[bpmAccount].[Net Income After Allocations^Net Income^Other Expenses]}"
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmPeriodInfo_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmPeriodInfo_Msr.hierarchies/bpmPeriodInfo_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmPeriodInfo_Msr')/Hierarchies('bpmPeriodInfo_Msr')"
+	}
+}

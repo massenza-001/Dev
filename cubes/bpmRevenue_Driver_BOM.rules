@@ -1,0 +1,7 @@
+SKIPCHECK;
+['Cost'] = N: ['Units'] *
+               DB('bpmRevenue_Driver_BOM_Detail', !bpmScenario, !bpmSubItem, !bpmPeriod, 'Cost');
+
+
+FEEDERS;
+['Units'] => ['Cost'];

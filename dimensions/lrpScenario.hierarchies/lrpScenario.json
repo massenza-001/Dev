@@ -1,0 +1,23 @@
+{
+	"@type":"Hierarchy",
+	"Name":"lrpScenario",
+	"Elements":
+	[
+		{
+			"Name":"Plan",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Plan V1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Final Budget",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"lrpScenario.subsets/Default.json"
+	]
+}

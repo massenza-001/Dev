@@ -1,0 +1,49 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Status')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Trend')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Tolerance')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Actual')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Target')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Variance')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Variance Percent')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Score')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Score Change')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Actual Change Percent')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Status_1_Count')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Status_0_Count')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Status_-1_Count')"
+		},
+		{
+			"@id":"Dimensions('bpmMetric_Indicator_Msr')/Hierarchies('bpmMetric_Indicator_Msr')/Elements('Status_Incomplete_Count')"
+		}
+	]
+}

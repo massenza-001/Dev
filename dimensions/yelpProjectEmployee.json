@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"yelpProjectEmployee",
+	"Hierarchies@Code.links":
+	[
+		"yelpProjectEmployee.hierarchies/yelpProjectEmployee.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('yelpProjectEmployee')/Hierarchies('yelpProjectEmployee')"
+	}
+}

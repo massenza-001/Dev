@@ -1,0 +1,31 @@
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+#EndRegion
+
+#Region Cash and Cash Equiv at Beginning of Period
+['Cash and Cash Equivalents at Beginning of Period','Original']= N:
+
+   IF(
+      SUBST( !bpmPeriod, 5, 2 )@='00'
+   ,
+# IF Opening Balance - Pull Period from bpmFinance
+      DB('bpmFinance', !bpmScenario, !bpmCompany, 'Total Departments', !bpmAccount_CashFlow, 'Total Currency', !bpmPeriod, 'Balance Post-Alloc')
+   ,
+# ELSE Pull from Prior Period of Cash Flow End of Period
+      DB('bpmFinance_CashFlow',!bpmScenario,!bpmCompany,'Cash and Cash Equivalents at End of Period',
+         IF( SUBST( !bpmPeriod, 5, 2 )@='01', SUBST( !bpmPeriod, 1, 4) | '00', DB('}ElementAttributes_bpmPeriod',!bpmPeriod,'Previous Period') ),
+         'Balance')
+   );
+#EndRegion
+
+#Region All Other Cash Flow Items
+['Original']= N:
+   IF(
+      SUBST( !bpmPeriod, 5, 2 )@='00'
+   ,
+      0
+   ,
+      DB('bpmFinance', !bpmScenario, !bpmCompany, 'Total Departments', !bpmAccount_CashFlow, 'Total Currency', !bpmPeriod,  'Balance Post-Alloc')
+   );
+#EndRegion

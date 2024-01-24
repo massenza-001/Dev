@@ -1,0 +1,307 @@
+{
+	"@type":"Hierarchy",
+	"Name":"rdmDatamanagerDim",
+	"Elements":
+	[
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Dim 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 24",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 25",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 26",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 27",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 28",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 29",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 31",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dim 32",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 5",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 6",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 7",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 8",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 9",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 19",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 21",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 22",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 23",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 24",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 25",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 26",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 27",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 28",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 29",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 30",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 31",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Dim 32",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

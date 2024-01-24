@@ -1,0 +1,17 @@
+{
+	"@type":"Process",
+	"Name":"PURPOSEFUL ERROR",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"PURPOSEFUL ERROR.ti",
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForServer":"bpmFinance",
+		"dataSourceNameForClient":"bpmFinance",
+		"view":"Default"
+	},
+	"Parameters":[],
+	"Variables":[],
+	"UIData": "_ParameterConstraints=e30=\f",
+	"VariablesUIData": []
+}

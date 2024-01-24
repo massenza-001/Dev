@@ -1,0 +1,49 @@
+{
+	"@type":"Hierarchy",
+	"Name":"bpmFX_CurrencyType",
+	"Elements":
+	[
+		{
+			"Name":"None",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Average",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Ending Change",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Ending",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Previous Ending",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"YoY Ending Change",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"YoY Average Change",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Ending Change",
+			"ComponentName":"Ending",
+			"Weight":1
+		},
+		{
+			"ParentName":"Ending Change",
+			"ComponentName":"Previous Ending",
+			"Weight":-1
+		}
+	],
+	"Subsets@Code.links":[]
+}

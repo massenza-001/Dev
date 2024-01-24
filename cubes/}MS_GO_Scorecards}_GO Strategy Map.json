@@ -1,0 +1,25 @@
+{
+	"@type":"Cube",
+	"Name":"}MS_GO_Scorecards}_GO Strategy Map",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('country')"
+		},
+		{
+			"@id":"Dimensions('Time')"
+		},
+		{
+			"@id":"Dimensions('}MS_GO_Scorecards}_GO Strategy Map')"
+		},
+		{
+			"@id":"Dimensions('Metric Indicators')"
+		}
+	],
+	"Rules@Code.link":"}MS_GO_Scorecards}_GO Strategy Map.rules",
+	"Views@Code.links":
+	[
+		"}MS_GO_Scorecards}_GO Strategy Map.views/All.json",
+		"}MS_GO_Scorecards}_GO Strategy Map.views/MS_GO_Scorecards}_GO Strategy Map.json"
+	]
+}

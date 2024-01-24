@@ -1,0 +1,23 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}QUBEdocs Stat Instance",
+	"Elements":
+	[
+		{
+			"Name":"LATEST",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2018-02-14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2018-02-15",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"}QUBEdocs Stat Instance.subsets/All Periods.json"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"}MI_Metrics cube-Financial",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Metric-Financial')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-Financial_I')"
+		},
+		{
+			"@id":"Dimensions('}MI_Metrics cube-Financial_D')"
+		}
+	],
+	"Rules@Code.link":"}MI_Metrics cube-Financial.rules",
+	"Views@Code.links":
+	[
+		"}MI_Metrics cube-Financial.views/All.json",
+		"}MI_Metrics cube-Financial.views/MI_Metrics cube-Financial.json"
+	]
+}

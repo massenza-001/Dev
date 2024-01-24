@@ -1,0 +1,28 @@
+{
+	"@type":"Cube",
+	"Name":"bpmFinance_CashFlow",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('bpmScenario')"
+		},
+		{
+			"@id":"Dimensions('bpmCompany')"
+		},
+		{
+			"@id":"Dimensions('bpmAccount_CashFlow')"
+		},
+		{
+			"@id":"Dimensions('bpmPeriod')"
+		},
+		{
+			"@id":"Dimensions('bpmCashFlow_Msr')"
+		}
+	],
+	"Rules@Code.link":"bpmFinance_CashFlow.rules",
+	"Views@Code.links":
+	[
+		"bpmFinance_CashFlow.views/All.json",
+		"bpmFinance_CashFlow.views/Default.json"
+	]
+}

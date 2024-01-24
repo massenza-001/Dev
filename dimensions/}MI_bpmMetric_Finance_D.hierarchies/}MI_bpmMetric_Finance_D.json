@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"}MI_bpmMetric_Finance_D",
+	"Elements":
+	[
+		{
+			"Name":"Impacting Metric",
+			"Type":"String"
+		},
+		{
+			"Name":"Strength",
+			"Type":"String"
+		},
+		{
+			"Name":"Calculated Type",
+			"Type":"String"
+		},
+		{
+			"Name":"Nature of Impact",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"bpmSales_Msr",
+	"Hierarchies@Code.links":
+	[
+		"bpmSales_Msr.hierarchies/bpmSales_Msr.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('bpmSales_Msr')/Hierarchies('bpmSales_Msr')"
+	}
+}

@@ -1,0 +1,151 @@
+{
+	"@type":"NativeView",
+	"Name":"LEECHECK - Sample",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Low End Computer')"
+					},
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Mid Range Computer')"
+					},
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('High End Computer')"
+					},
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Monitor')"
+					},
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Printer')"
+					},
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Kit 1')"
+					},
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Kit 2')"
+					},
+					{
+						"@id":"Dimensions('bpmItem')/Hierarchies('bpmItem')/Elements('Kit 3')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Total SubItems')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Case')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Motherboard')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Processor')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('32 GB Memory Card')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('64 GB Memory Card')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('500 GB Hard Drive')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('1 TB Hard Drive')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('2 TB Hard Drive')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('5.25 inch Floppy Drive')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Mouse')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Keyboard')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Monitor')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Printer')"
+					},
+					{
+						"@id":"Dimensions('bpmSubItem')/Hierarchies('bpmSubItem')/Elements('Power Cable')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Subsets('Default')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Subsets('2016Months')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Elements('201612')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmRevenue_Driver_BOM_Msr')/Hierarchies('bpmRevenue_Driver_BOM_Msr')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmRevenue_Driver_BOM_Msr')/Hierarchies('bpmRevenue_Driver_BOM_Msr')/Elements('Units')"
+					},
+					{
+						"@id":"Dimensions('bpmRevenue_Driver_BOM_Msr')/Hierarchies('bpmRevenue_Driver_BOM_Msr')/Elements('Cost')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmRevenue_Driver_BOM_Msr')/Hierarchies('bpmRevenue_Driver_BOM_Msr')/Elements('Units')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

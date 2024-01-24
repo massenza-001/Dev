@@ -1,0 +1,104 @@
+{
+	"@type":"NativeView",
+	"Name":"Price_Entry",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmPeriod')/Hierarchies('bpmPeriod')/Subsets('2016Months')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Total of Product')"
+					},
+					{
+						"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Insect Repellents')"
+					},
+					{
+						"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Sunscreen')"
+					},
+					{
+						"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Tents')"
+					},
+					{
+						"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('BackPacks')"
+					},
+					{
+						"@id":"Dimensions('bpmProducts')/Hierarchies('bpmProducts')/Elements('Accessories')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Subsets('Default')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmScenario')/Hierarchies('bpmScenario')/Elements('Plan')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmChannel')/Hierarchies('bpmChannel')"
+				},
+				"Expression":"TM1SubsetAll([bpmChannel])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmChannel')/Hierarchies('bpmChannel')/Elements('Total Channels')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('bpmRevenue_Assumptions_Msr')/Hierarchies('bpmRevenue_Assumptions_Msr')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('bpmRevenue_Assumptions_Msr')/Hierarchies('bpmRevenue_Assumptions_Msr')/Elements('Average Unit Price')"
+					},
+					{
+						"@id":"Dimensions('bpmRevenue_Assumptions_Msr')/Hierarchies('bpmRevenue_Assumptions_Msr')/Elements('Incentive Discount')"
+					},
+					{
+						"@id":"Dimensions('bpmRevenue_Assumptions_Msr')/Hierarchies('bpmRevenue_Assumptions_Msr')/Elements('Unit Net Sales Price')"
+					},
+					{
+						"@id":"Dimensions('bpmRevenue_Assumptions_Msr')/Hierarchies('bpmRevenue_Assumptions_Msr')/Elements('Unit Direct Cost')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('bpmRevenue_Assumptions_Msr')/Hierarchies('bpmRevenue_Assumptions_Msr')/Elements('Average Unit Price')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

@@ -1,0 +1,39 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+s_TimeStamp1 = TimSt (Now, '\Y\m\d\h\i\s');
+uniqueRunSuffix = TM1User() | '.' | s_TimeStamp1;
+
+#Link id:}Link_Link_5FHumanResource-GO
+#Create per-run Source View for this regular link process
+varRunSrcViewName = Drill_ID;
+ViewDestroy('Metrics cube-HumanResource', varRunSrcViewName);
+ViewCreate('Metrics cube-HumanResource', varRunSrcViewName );
+
+var1SourceViewSubset = varRunSrcViewName;
+
+#Set view orientation
+ViewRowDimensionSet('Metrics cube-HumanResource', varRunSrcViewName, 'metric-humanresource', 1 );
+ViewColumnDimensionSet('Metrics cube-HumanResource', varRunSrcViewName, 'Metric Indicators', 1 );
+ViewTitleDimensionSet('Metrics cube-HumanResource', varRunSrcViewName, 'Time');
+ViewTitleDimensionSet('Metrics cube-HumanResource', varRunSrcViewName, 'country');
+
+
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+varRunSrcViewName = Drill_ID;
+var1SourceViewSubset = varRunSrcViewName;
+
+#Auto mapped dimension: 'country'
+vTitle = Pcountry;
+ViewTitleElementSet('Metrics cube-HumanResource', varRunSrcViewName,'country', DIMIX('country', vTitle));
+
+#Auto mapped dimension: 'Time'
+vTitle = PTime;
+ViewTitleElementSet('Metrics cube-HumanResource', varRunSrcViewName,'Time', DIMIX('Time', vTitle));
+
+ReturnViewHandle('Metrics cube-HumanResource',Drill_ID);
+
+#endregion
