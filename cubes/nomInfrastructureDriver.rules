@@ -1,6 +1,0 @@
-SKIPCHECK;
-['Percent'] = N: IF ( ELLEV ('nomInfrastructureAccount', !nomInfrastructureAccount) <> 0, 0, CONTINUE );
-['Driver Account'] = S: IF ( ELLEV ('nomInfrastructureAccount', !nomInfrastructureAccount) <> 0, '', CONTINUE );
-
-FEEDERS;
-['Percent'] => DB('nomInfrastructure', 'Plan', 'Total Projects', !nomInfrastructureAccount, '2017');

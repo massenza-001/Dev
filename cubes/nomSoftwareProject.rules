@@ -1,6 +1,0 @@
-SKIPCHECK;
-['Total Software'] = C: 0;
-
-
-FEEDERS;
-[ ] => DB('nomSoftware', !bpmScenario, !nomSoftware, !nomProject, !bpmYear, 'Dollars');

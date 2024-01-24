@@ -1,7 +1,0 @@
-SKIPCHECK;
-['Benefits and Taxes' ] = N: ['Annual Salary'] * ['Total Rate'] ;
-
-['Cost Per Hour'] = N: ['Total Cost'] \ 2080 ;
-
-FEEDERS;
-['Annual Salary'] => ['Benefits and Taxes' ], ['Cost Per Hour'] ;

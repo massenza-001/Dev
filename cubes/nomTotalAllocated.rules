@@ -1,7 +1,0 @@
-SKIPCHECK;
-['Amount'] = N:
-     DB('nomTotal', !bpmScenario, !nomProject, !bpmPeriod, 'Amount')
-     *
-     DB('nomDeskAllocation', !bpmScenario, !nomProject, !nomDesk, 'Percent') ;
-
-FEEDERS;
